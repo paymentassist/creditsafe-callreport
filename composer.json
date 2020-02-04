@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpro/soap-client": "^1.1"
+    },
+    "require-dev": {
+        "zendframework/zend-code": "^3.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PaymentAssist\\": "src/"
+        }
+    }
+}
