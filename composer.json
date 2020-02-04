@@ -1,6 +1,13 @@
 {
     "require": {
-        "phpro/soap-client": "^1.1"
+        "phpro/soap-client": "^1.1",
+        "psr/http-message": "^1.0",
+        "php-http/httplug": "^2.1",
+        "php-http/message-factory": "^1.0",
+        "php-http/discovery": "^1.7",
+        "php-http/message": "^1.8",
+        "php-http/client-common": "^2.1",
+        "php-http/guzzle6-adapter": "^2.0"
     },
     "require-dev": {
         "zendframework/zend-code": "^3.1.0"
