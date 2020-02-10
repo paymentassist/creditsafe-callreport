@@ -6,13 +6,15 @@ Installation
 
 Install with [composer][2]:
 
-`php composer.phar require paymentassist/creditsafe-callreport`
+`composer require paymentassist/creditsafe-callreport`
 
-Ensure the following ENV variables are available for authentication:
+`src/CreditsafeMiddleware.php` handles authentication, ensure the following ENV variables are available:
 
-`CREDITSAFE_COMPANY`
-`CREDITSAFE_USERNAME`
-`CREDITSAFE_PASSWORD`
+```
+export CREDITSAFE_COMPANY="your company"
+export CREDITSAFE_USERNAME="your username"
+export CREDITSAFE_PASSWORD="your password"
+```
 
 Usage
 -----
