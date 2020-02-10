@@ -17,7 +17,7 @@ $handler = HttPlugHandle::createForClient(
 );
 $handler->addMiddleware(new CreditsafeMiddleware());
 
-$wsdl = __DIR__ . '/config/CallReport7.wsdl';
+$wsdl = __DIR__ . '/config/CallReport7Test.wsdl'; // CallReport7.wsdl for live
 $engine = ExtSoapEngineFactory::fromOptionsWithHandler(
     ExtSoapOptions::defaults($wsdl, [])->withClassMap(CreditsafeClassmap::getCollection()),
     $handler
