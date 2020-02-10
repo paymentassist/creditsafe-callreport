@@ -1,4 +1,9 @@
 {
+
+    "name": "paymentassist/creditsafe-callreport",
+    "description": "PHP client for accessing the CreditSafe CallReport API ",
+    "keywords": ["creditsafe", "callreport", "transunion"],
+    "license": "MIT",
     "require": {
         "phpro/soap-client": "^1.1",
         "psr/http-message": "^1.0",
