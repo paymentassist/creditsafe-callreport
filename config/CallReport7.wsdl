@@ -5071,10 +5071,10 @@
 	<wsdl:service name="CallReport7">
 		<wsdl:documentation>The CallReport7 service is the fundamental gateway through which the entire functionality of the CallReport API is exposed.</wsdl:documentation>
 		<wsdl:port name="Soap11" binding="tns:Soap11">
-			<soap:address location="https://ct.callcreditsecure.co.uk/Services/CallReport/callreport7.asmx"/>
+			<soap:address location="https://www.callcreditsecure.co.uk/Services/CallReport/callreport7.asmx"/>
 		</wsdl:port>
 		<wsdl:port name="Soap12" binding="tns:Soap12">
-			<soap12:address location="https://ct.callcreditsecure.co.uk/Services/CallReport/callreport7.asmx"/>
+			<soap12:address location="https://www.callcreditsecure.co.uk/Services/CallReport/callreport7.asmx"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
