@@ -8,6 +8,12 @@ Install with [composer][2]:
 
 `php composer.phar require paymentassist/creditsafe-callreport`
 
+Ensure the following ENV variables are available for authentication:
+
+`CREDITSAFE_COMPANY`
+`CREDITSAFE_USERNAME`
+`CREDITSAFE_PASSWORD`
+
 Usage
 -----
 
