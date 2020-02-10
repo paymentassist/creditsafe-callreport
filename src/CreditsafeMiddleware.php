@@ -15,6 +15,8 @@ class CreditsafeMiddleware extends \Phpro\SoapClient\Middleware\MiddleWare
     }
 
     /**
+     * Adds the necessary authentication header
+     *
      * @param callable         $handler
      * @param RequestInterface $request
      * @param array            $options
@@ -25,9 +27,9 @@ class CreditsafeMiddleware extends \Phpro\SoapClient\Middleware\MiddleWare
     {
         $xml = SoapXml::fromStream($request->getBody());
         $headers = [
-            'company' => 'COMPANY',
-            'username' => 'USERNAME',
-            'password' => 'PASSWORD'
+            'company' => env('CREDITSAFE_COMPANY'),
+            'username' => env('CREDITSAFE_USERNAME'),
+            'password' => env('CREDITSAFE_PASSWORD')
         ];
         $newHeader = $xml->createSoapHeader();
 
@@ -53,4 +55,5 @@ class CreditsafeMiddleware extends \Phpro\SoapClient\Middleware\MiddleWare
     {
         return $response;
     }
+
 }
