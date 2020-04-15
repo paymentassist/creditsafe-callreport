@@ -2,7 +2,9 @@
 
 namespace PaymentAssist\Type;
 
-class ChangePassword07a
+use Phpro\SoapClient\Type\RequestInterface;
+
+class ChangePassword07a implements RequestInterface
 {
 
     /**
