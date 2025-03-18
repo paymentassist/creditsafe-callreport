@@ -2,13 +2,19 @@
 
 namespace PaymentAssist;
 
-use PaymentAssist\Type;
+use Phpro\SoapClient\Caller\Caller;
 use Phpro\SoapClient\Type\RequestInterface;
 use Phpro\SoapClient\Type\ResultInterface;
 use Phpro\SoapClient\Exception\SoapException;
 
-class CreditsafeClient extends \Phpro\SoapClient\Client
+class CreditsafeClient
 {
+    private Caller $caller;
+
+    public function __construct(Caller $caller)
+    {
+        $this->caller = $caller;
+    }
 
     /**
      * @param RequestInterface|Type\CTSearch $parameters
@@ -17,7 +23,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function search07a(\PaymentAssist\Type\CTSearch $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
-        return $this->call('Search07a', $parameters);
+        return ($this->caller)('Search07a', $parameters);
     }
 
     /**
@@ -27,7 +33,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function addressLinkSearch07a(\PaymentAssist\Type\CTLinkSearch $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
-        return $this->call('AddressLinkSearch07a', $parameters);
+        return ($this->caller)('AddressLinkSearch07a', $parameters);
     }
 
     /**
@@ -37,7 +43,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function associateLinkSearch07a(\PaymentAssist\Type\CTLinkSearch $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
-        return $this->call('AssociateLinkSearch07a', $parameters);
+        return ($this->caller)('AssociateLinkSearch07a', $parameters);
     }
 
     /**
@@ -47,7 +53,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function subsequentSearch07a(\PaymentAssist\Type\CTSubsequentSearch $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
-        return $this->call('SubsequentSearch07a', $parameters);
+        return ($this->caller)('SubsequentSearch07a', $parameters);
     }
 
     /**
@@ -57,7 +63,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function subsequentAddressLinkSearch07a(\PaymentAssist\Type\CTSubsequentSearch $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
-        return $this->call('SubsequentAddressLinkSearch07a', $parameters);
+        return ($this->caller)('SubsequentAddressLinkSearch07a', $parameters);
     }
 
     /**
@@ -67,7 +73,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function subsequentAssociateLinkSearch07a(\PaymentAssist\Type\CTSubsequentSearch $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
-        return $this->call('SubsequentAssociateLinkSearch07a', $parameters);
+        return ($this->caller)('SubsequentAssociateLinkSearch07a', $parameters);
     }
 
     /**
@@ -77,7 +83,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function changePassword07a(\PaymentAssist\Type\ChangePassword07a $parameters) : \PaymentAssist\Type\ChangePassword07aResponse
     {
-        return $this->call('ChangePassword07a', $parameters);
+        return ($this->caller)('ChangePassword07a', $parameters);
     }
 
     /**
@@ -87,7 +93,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function lookupData07a(\PaymentAssist\Type\AnyType $parameters) : \PaymentAssist\Type\CTLookupDataResponse
     {
-        return $this->call('LookupData07a', $parameters);
+        return ($this->caller)('LookupData07a', $parameters);
     }
 
     /**
@@ -97,7 +103,7 @@ class CreditsafeClient extends \Phpro\SoapClient\Client
      */
     public function test07a(\PaymentAssist\Type\AnyType $parameters) : \PaymentAssist\Type\CTTestResponse
     {
-        return $this->call('Test07a', $parameters);
+        return ($this->caller)('Test07a', $parameters);
     }
 
 
