@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTOutputthirdpartyalerts
 {
+    /**
+     * Alert Decision information for Same Person Associates
+     *
+     * @var null | \PaymentAssist\Type\CTAlert
+     */
+    private ?\PaymentAssist\Type\CTAlert $decision = null;
 
     /**
-     * @var \PaymentAssist\Type\CTAlert
+     * Alert Review information for Un-associated Same Family individuals
+     *
+     * @var null | \PaymentAssist\Type\CTAlert
      */
-    private $decision;
+    private ?\PaymentAssist\Type\CTAlert $review = null;
 
     /**
-     * @var \PaymentAssist\Type\CTAlert
+     * Household Override information for Same Family Individuals
+     *
+     * @var null | \PaymentAssist\Type\CTHho
      */
-    private $review;
+    private ?\PaymentAssist\Type\CTHho $hho = null;
 
     /**
-     * @var \PaymentAssist\Type\CTHho
+     * @return null | \PaymentAssist\Type\CTAlert
      */
-    private $hho;
-
-    /**
-     * @return \PaymentAssist\Type\CTAlert
-     */
-    public function getDecision()
+    public function getDecision() : ?\PaymentAssist\Type\CTAlert
     {
         return $this->decision;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAlert $decision
-     * @return CTOutputthirdpartyalerts
+     * @param null | \PaymentAssist\Type\CTAlert $decision
+     * @return static
      */
-    public function withDecision($decision)
+    public function withDecision(?\PaymentAssist\Type\CTAlert $decision) : static
     {
         $new = clone $this;
         $new->decision = $decision;
@@ -41,18 +46,18 @@ class CTOutputthirdpartyalerts
     }
 
     /**
-     * @return \PaymentAssist\Type\CTAlert
+     * @return null | \PaymentAssist\Type\CTAlert
      */
-    public function getReview()
+    public function getReview() : ?\PaymentAssist\Type\CTAlert
     {
         return $this->review;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAlert $review
-     * @return CTOutputthirdpartyalerts
+     * @param null | \PaymentAssist\Type\CTAlert $review
+     * @return static
      */
-    public function withReview($review)
+    public function withReview(?\PaymentAssist\Type\CTAlert $review) : static
     {
         $new = clone $this;
         $new->review = $review;
@@ -61,25 +66,23 @@ class CTOutputthirdpartyalerts
     }
 
     /**
-     * @return \PaymentAssist\Type\CTHho
+     * @return null | \PaymentAssist\Type\CTHho
      */
-    public function getHho()
+    public function getHho() : ?\PaymentAssist\Type\CTHho
     {
         return $this->hho;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTHho $hho
-     * @return CTOutputthirdpartyalerts
+     * @param null | \PaymentAssist\Type\CTHho $hho
+     * @return static
      */
-    public function withHho($hho)
+    public function withHho(?\PaymentAssist\Type\CTHho $hho) : static
     {
         $new = clone $this;
         $new->hho = $hho;
 
         return $new;
     }
-
-
 }
 

@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class Economicactivity
 {
+    /**
+     * Working females indices
+     *
+     * @var null | int
+     */
+    private ?int $wkfem_ind = null;
 
     /**
-     * @var int
+     * Students indices
+     *
+     * @var null | int
      */
-    private $wkfem_ind;
+    private ?int $stu_ind = null;
 
     /**
-     * @var int
+     * Residents with long-term illness indices
+     *
+     * @var null | int
      */
-    private $stu_ind;
+    private ?int $sick_ind = null;
 
     /**
-     * @var int
+     * Residents with degrees indices
+     *
+     * @var null | int
      */
-    private $sick_ind;
+    private ?int $degree_ind = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $degree_ind;
-
-    /**
-     * @return int
-     */
-    public function getWkfem_ind()
+    public function getWkfemInd() : ?int
     {
         return $this->wkfem_ind;
     }
 
     /**
-     * @param int $wkfem_ind
-     * @return Economicactivity
+     * @param null | int $wkfem_ind
+     * @return static
      */
-    public function withWkfem_ind($wkfem_ind)
+    public function withWkfemInd(?int $wkfem_ind) : static
     {
         $new = clone $this;
         $new->wkfem_ind = $wkfem_ind;
@@ -46,18 +53,18 @@ class Economicactivity
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getStu_ind()
+    public function getStuInd() : ?int
     {
         return $this->stu_ind;
     }
 
     /**
-     * @param int $stu_ind
-     * @return Economicactivity
+     * @param null | int $stu_ind
+     * @return static
      */
-    public function withStu_ind($stu_ind)
+    public function withStuInd(?int $stu_ind) : static
     {
         $new = clone $this;
         $new->stu_ind = $stu_ind;
@@ -66,18 +73,18 @@ class Economicactivity
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getSick_ind()
+    public function getSickInd() : ?int
     {
         return $this->sick_ind;
     }
 
     /**
-     * @param int $sick_ind
-     * @return Economicactivity
+     * @param null | int $sick_ind
+     * @return static
      */
-    public function withSick_ind($sick_ind)
+    public function withSickInd(?int $sick_ind) : static
     {
         $new = clone $this;
         $new->sick_ind = $sick_ind;
@@ -86,25 +93,23 @@ class Economicactivity
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getDegree_ind()
+    public function getDegreeInd() : ?int
     {
         return $this->degree_ind;
     }
 
     /**
-     * @param int $degree_ind
-     * @return Economicactivity
+     * @param null | int $degree_ind
+     * @return static
      */
-    public function withDegree_ind($degree_ind)
+    public function withDegreeInd(?int $degree_ind) : static
     {
         $new = clone $this;
         $new->degree_ind = $degree_ind;
 
         return $new;
     }
-
-
 }
 

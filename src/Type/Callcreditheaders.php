@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class Callcreditheaders
 {
-
     /**
+     * The login name of the organisation
+     *
      * @var string
      */
-    private $company;
+    private string $company;
 
     /**
+     * The user's login identity
+     *
      * @var string
      */
-    private $username;
+    private string $username;
 
     /**
+     * The user's password
+     *
      * @var string
      */
-    private $password;
+    private string $password;
 
     /**
      * @return string
      */
-    public function getCompany()
+    public function getCompany() : string
     {
         return $this->company;
     }
 
     /**
      * @param string $company
-     * @return Callcreditheaders
+     * @return static
      */
-    public function withCompany($company)
+    public function withCompany(string $company) : static
     {
         $new = clone $this;
         $new->company = $company;
@@ -43,16 +48,16 @@ class Callcreditheaders
     /**
      * @return string
      */
-    public function getUsername()
+    public function getUsername() : string
     {
         return $this->username;
     }
 
     /**
      * @param string $username
-     * @return Callcreditheaders
+     * @return static
      */
-    public function withUsername($username)
+    public function withUsername(string $username) : static
     {
         $new = clone $this;
         $new->username = $username;
@@ -63,23 +68,21 @@ class Callcreditheaders
     /**
      * @return string
      */
-    public function getPassword()
+    public function getPassword() : string
     {
         return $this->password;
     }
 
     /**
      * @param string $password
-     * @return Callcreditheaders
+     * @return static
      */
-    public function withPassword($password)
+    public function withPassword(string $password) : static
     {
         $new = clone $this;
         $new->password = $password;
 
         return $new;
     }
-
-
 }
 

@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class CTOutputaddresslinks
 {
+    /**
+     * Output structure for an Address Link
+     *
+     * @var non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputaddresslink>
+     */
+    private array $link;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddresslink
+     * @return non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputaddresslink>
      */
-    private $link;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputaddresslink
-     */
-    public function getLink()
+    public function getLink() : array
     {
         return $this->link;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddresslink $link
-     * @return CTOutputaddresslinks
+     * @param non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputaddresslink> $link
+     * @return static
      */
-    public function withLink($link)
+    public function withLink(array $link) : static
     {
         $new = clone $this;
         $new->link = $link;
 
         return $new;
     }
-
-
 }
 

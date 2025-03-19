@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Bais
 {
+    /**
+     * Output structure for an Insolvency
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputinsolvency>
+     */
+    private array $bai;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputinsolvency
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputinsolvency>
      */
-    private $bai;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputinsolvency
-     */
-    public function getBai()
+    public function getBai() : array
     {
         return $this->bai;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputinsolvency $bai
-     * @return Bais
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputinsolvency> $bai
+     * @return static
      */
-    public function withBai($bai)
+    public function withBai(array $bai) : static
     {
         $new = clone $this;
         $new->bai = $bai;
 
         return $new;
     }
-
-
 }
 

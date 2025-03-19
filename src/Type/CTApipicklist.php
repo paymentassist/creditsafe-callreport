@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class CTApipicklist
 {
-
     /**
-     * @var \PaymentAssist\Type\CTPicklistapplicant
+     * Input and matched name and address details for an applicant (primary or secondary)
+     *
+     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\CTPicklistapplicant>
      */
-    private $applicant;
+    private array $applicant;
 
     /**
+     * Maximum number of address items in picklist
+     *
      * @var int
      */
-    private $maxaddressitems;
+    private int $maxaddressitems;
 
     /**
+     * Maximum number of name items in picklist (for each address)
+     *
      * @var int
      */
-    private $maxnameitems;
+    private int $maxnameitems;
 
     /**
+     * A value of 1 indicates that picklists are switched on
+     *
      * @var int
      */
-    private $picklist;
+    private int $picklist;
 
     /**
-     * @var int
+     * If this attribute is present and has a value of 1 then the picklist has been re-generated and any selection must be redone.
+     *
+     * @var null | int
      */
-    private $regenerated;
+    private ?int $regenerated = null;
 
     /**
-     * @return \PaymentAssist\Type\CTPicklistapplicant
+     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\CTPicklistapplicant>
      */
-    public function getApplicant()
+    public function getApplicant() : array
     {
         return $this->applicant;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTPicklistapplicant $applicant
-     * @return CTApipicklist
+     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\CTPicklistapplicant> $applicant
+     * @return static
      */
-    public function withApplicant($applicant)
+    public function withApplicant(array $applicant) : static
     {
         $new = clone $this;
         $new->applicant = $applicant;
@@ -53,16 +62,16 @@ class CTApipicklist
     /**
      * @return int
      */
-    public function getMaxaddressitems()
+    public function getMaxaddressitems() : int
     {
         return $this->maxaddressitems;
     }
 
     /**
      * @param int $maxaddressitems
-     * @return CTApipicklist
+     * @return static
      */
-    public function withMaxaddressitems($maxaddressitems)
+    public function withMaxaddressitems(int $maxaddressitems) : static
     {
         $new = clone $this;
         $new->maxaddressitems = $maxaddressitems;
@@ -73,16 +82,16 @@ class CTApipicklist
     /**
      * @return int
      */
-    public function getMaxnameitems()
+    public function getMaxnameitems() : int
     {
         return $this->maxnameitems;
     }
 
     /**
      * @param int $maxnameitems
-     * @return CTApipicklist
+     * @return static
      */
-    public function withMaxnameitems($maxnameitems)
+    public function withMaxnameitems(int $maxnameitems) : static
     {
         $new = clone $this;
         $new->maxnameitems = $maxnameitems;
@@ -93,16 +102,16 @@ class CTApipicklist
     /**
      * @return int
      */
-    public function getPicklist()
+    public function getPicklist() : int
     {
         return $this->picklist;
     }
 
     /**
      * @param int $picklist
-     * @return CTApipicklist
+     * @return static
      */
-    public function withPicklist($picklist)
+    public function withPicklist(int $picklist) : static
     {
         $new = clone $this;
         $new->picklist = $picklist;
@@ -111,25 +120,23 @@ class CTApipicklist
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getRegenerated()
+    public function getRegenerated() : ?int
     {
         return $this->regenerated;
     }
 
     /**
-     * @param int $regenerated
-     * @return CTApipicklist
+     * @param null | int $regenerated
+     * @return static
      */
-    public function withRegenerated($regenerated)
+    public function withRegenerated(?int $regenerated) : static
     {
         $new = clone $this;
         $new->regenerated = $regenerated;
 
         return $new;
     }
-
-
 }
 

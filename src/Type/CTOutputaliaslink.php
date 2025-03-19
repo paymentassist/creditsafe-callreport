@@ -4,55 +4,68 @@ namespace PaymentAssist\Type;
 
 class CTOutputaliaslink
 {
-
     /**
-     * @var string
+     * Name that the applicant was known by before the Alias Link was received
+     *
+     * @var null | string
      */
-    private $name;
+    private ?string $name = null;
 
     /**
-     * @var string
+     * Name that applicant was known as after the Alias Link was received
+     *
+     * @var null | string
      */
-    private $alias;
+    private ?string $alias = null;
 
     /**
+     * Date that the Alias Link was created
+     *
      * @var \DateTimeInterface
      */
-    private $creationdate;
+    private \DateTimeInterface $creationdate;
 
     /**
+     * Most recent date that the Alias Link was confirmed
+     *
      * @var \DateTimeInterface
      */
-    private $lastconfdate;
+    private \DateTimeInterface $lastconfdate;
 
     /**
+     * Information regarding the supplier of the Alias Link
+     *
      * @var \PaymentAssist\Type\CTSupplierdetails
      */
-    private $supplierdetails;
+    private \PaymentAssist\Type\CTSupplierdetails $supplierdetails;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of Dispute Notices against an Alias Link
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
+     * A value of 1 indicates that this alias was declared on input.
+     *
      * @var int
      */
-    private $declared;
+    private int $declared;
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return CTOutputaliaslink
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -61,18 +74,18 @@ class CTOutputaliaslink
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getAlias()
+    public function getAlias() : ?string
     {
         return $this->alias;
     }
 
     /**
-     * @param string $alias
-     * @return CTOutputaliaslink
+     * @param null | string $alias
+     * @return static
      */
-    public function withAlias($alias)
+    public function withAlias(?string $alias) : static
     {
         $new = clone $this;
         $new->alias = $alias;
@@ -83,16 +96,16 @@ class CTOutputaliaslink
     /**
      * @return \DateTimeInterface
      */
-    public function getCreationdate()
+    public function getCreationdate() : \DateTimeInterface
     {
         return $this->creationdate;
     }
 
     /**
      * @param \DateTimeInterface $creationdate
-     * @return CTOutputaliaslink
+     * @return static
      */
-    public function withCreationdate($creationdate)
+    public function withCreationdate(\DateTimeInterface $creationdate) : static
     {
         $new = clone $this;
         $new->creationdate = $creationdate;
@@ -103,16 +116,16 @@ class CTOutputaliaslink
     /**
      * @return \DateTimeInterface
      */
-    public function getLastconfdate()
+    public function getLastconfdate() : \DateTimeInterface
     {
         return $this->lastconfdate;
     }
 
     /**
      * @param \DateTimeInterface $lastconfdate
-     * @return CTOutputaliaslink
+     * @return static
      */
-    public function withLastconfdate($lastconfdate)
+    public function withLastconfdate(\DateTimeInterface $lastconfdate) : static
     {
         $new = clone $this;
         $new->lastconfdate = $lastconfdate;
@@ -123,16 +136,16 @@ class CTOutputaliaslink
     /**
      * @return \PaymentAssist\Type\CTSupplierdetails
      */
-    public function getSupplierdetails()
+    public function getSupplierdetails() : \PaymentAssist\Type\CTSupplierdetails
     {
         return $this->supplierdetails;
     }
 
     /**
      * @param \PaymentAssist\Type\CTSupplierdetails $supplierdetails
-     * @return CTOutputaliaslink
+     * @return static
      */
-    public function withSupplierdetails($supplierdetails)
+    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails) : static
     {
         $new = clone $this;
         $new->supplierdetails = $supplierdetails;
@@ -141,18 +154,18 @@ class CTOutputaliaslink
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputaliaslink
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -163,23 +176,21 @@ class CTOutputaliaslink
     /**
      * @return int
      */
-    public function getDeclared()
+    public function getDeclared() : int
     {
         return $this->declared;
     }
 
     /**
      * @param int $declared
-     * @return CTOutputaliaslink
+     * @return static
      */
-    public function withDeclared($declared)
+    public function withDeclared(int $declared) : static
     {
         $new = clone $this;
         $new->declared = $declared;
 
         return $new;
     }
-
-
 }
 

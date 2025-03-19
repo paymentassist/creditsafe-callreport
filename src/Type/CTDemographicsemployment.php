@@ -4,50 +4,65 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsemployment
 {
+    /**
+     * Occupation Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsoccupationtype
+     *
+     * @var null | string
+     */
+    private ?string $occupation = null;
 
     /**
-     * @var string
+     * Employment Status Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsemploymentstatus
+     *
+     * @var null | string
      */
-    private $occupation;
+    private ?string $employmentstatus = null;
 
     /**
-     * @var string
+     * Employment Expiry Data - dependent on the Employment Status Code
+     *
+     * @var null | \DateTimeInterface
      */
-    private $employmentstatus;
+    private ?\DateTimeInterface $expirydate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Employment Recency Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsemploymentrecencytype
+     *
+     * @var null | string
      */
-    private $expirydate;
+    private ?string $employmentrecency = null;
 
     /**
-     * @var string
+     * Employer Category Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsemployercategory
+     *
+     * @var null | string
      */
-    private $employmentrecency;
+    private ?string $employercategory = null;
 
     /**
-     * @var string
+     * Total number of months with the current employer
+     *
+     * @var null | mixed
      */
-    private $employercategory;
+    private mixed $timeatcurrentemployer = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $timeatcurrentemployer;
-
-    /**
-     * @return string
-     */
-    public function getOccupation()
+    public function getOccupation() : ?string
     {
         return $this->occupation;
     }
 
     /**
-     * @param string $occupation
-     * @return CTDemographicsemployment
+     * @param null | string $occupation
+     * @return static
      */
-    public function withOccupation($occupation)
+    public function withOccupation(?string $occupation) : static
     {
         $new = clone $this;
         $new->occupation = $occupation;
@@ -56,18 +71,18 @@ class CTDemographicsemployment
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getEmploymentstatus()
+    public function getEmploymentstatus() : ?string
     {
         return $this->employmentstatus;
     }
 
     /**
-     * @param string $employmentstatus
-     * @return CTDemographicsemployment
+     * @param null | string $employmentstatus
+     * @return static
      */
-    public function withEmploymentstatus($employmentstatus)
+    public function withEmploymentstatus(?string $employmentstatus) : static
     {
         $new = clone $this;
         $new->employmentstatus = $employmentstatus;
@@ -76,18 +91,18 @@ class CTDemographicsemployment
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getExpirydate()
+    public function getExpirydate() : ?\DateTimeInterface
     {
         return $this->expirydate;
     }
 
     /**
-     * @param \DateTimeInterface $expirydate
-     * @return CTDemographicsemployment
+     * @param null | \DateTimeInterface $expirydate
+     * @return static
      */
-    public function withExpirydate($expirydate)
+    public function withExpirydate(?\DateTimeInterface $expirydate) : static
     {
         $new = clone $this;
         $new->expirydate = $expirydate;
@@ -96,18 +111,18 @@ class CTDemographicsemployment
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getEmploymentrecency()
+    public function getEmploymentrecency() : ?string
     {
         return $this->employmentrecency;
     }
 
     /**
-     * @param string $employmentrecency
-     * @return CTDemographicsemployment
+     * @param null | string $employmentrecency
+     * @return static
      */
-    public function withEmploymentrecency($employmentrecency)
+    public function withEmploymentrecency(?string $employmentrecency) : static
     {
         $new = clone $this;
         $new->employmentrecency = $employmentrecency;
@@ -116,18 +131,18 @@ class CTDemographicsemployment
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getEmployercategory()
+    public function getEmployercategory() : ?string
     {
         return $this->employercategory;
     }
 
     /**
-     * @param string $employercategory
-     * @return CTDemographicsemployment
+     * @param null | string $employercategory
+     * @return static
      */
-    public function withEmployercategory($employercategory)
+    public function withEmployercategory(?string $employercategory) : static
     {
         $new = clone $this;
         $new->employercategory = $employercategory;
@@ -136,25 +151,23 @@ class CTDemographicsemployment
     }
 
     /**
-     * @return string
+     * @return null | mixed
      */
-    public function getTimeatcurrentemployer()
+    public function getTimeatcurrentemployer() : mixed
     {
         return $this->timeatcurrentemployer;
     }
 
     /**
-     * @param string $timeatcurrentemployer
-     * @return CTDemographicsemployment
+     * @param null | mixed $timeatcurrentemployer
+     * @return static
      */
-    public function withTimeatcurrentemployer($timeatcurrentemployer)
+    public function withTimeatcurrentemployer(mixed $timeatcurrentemployer) : static
     {
         $new = clone $this;
         $new->timeatcurrentemployer = $timeatcurrentemployer;
 
         return $new;
     }
-
-
 }
 

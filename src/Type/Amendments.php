@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Amendments
 {
+    /**
+     * Set of amended subsequent search type amendments
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTInputamendment>
+     */
+    private array $amendment;
 
     /**
-     * @var \PaymentAssist\Type\CTInputamendment
+     * @return array<int<0,max>, \PaymentAssist\Type\CTInputamendment>
      */
-    private $amendment;
-
-    /**
-     * @return \PaymentAssist\Type\CTInputamendment
-     */
-    public function getAmendment()
+    public function getAmendment() : array
     {
         return $this->amendment;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTInputamendment $amendment
-     * @return Amendments
+     * @param array<int<0,max>, \PaymentAssist\Type\CTInputamendment> $amendment
+     * @return static
      */
-    public function withAmendment($amendment)
+    public function withAmendment(array $amendment) : static
     {
         $new = clone $this;
         $new->amendment = $amendment;
 
         return $new;
     }
-
-
 }
 

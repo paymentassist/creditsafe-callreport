@@ -4,70 +4,92 @@ namespace PaymentAssist\Type;
 
 class Details
 {
-
     /**
+     * Owning member reference number
+     *
      * @var int
      */
-    private $membernumber;
+    private int $membernumber;
 
     /**
+     * Case reference number
+     *
      * @var string
      */
-    private $casereferenceno;
+    private string $casereferenceno;
 
     /**
+     * Member name
+     *
+     * @var null | string
+     */
+    private ?string $name = null;
+
+    /**
+     * Product code
+     * The list of possible values can be obtained from the web method LookupData07a table id = cifasproductcode
+     *
      * @var string
      */
-    private $name;
+    private string $productcode;
 
     /**
+     * Fraud category
+     * The list of possible values can be obtained from the web method LookupData07a table id = cifascategory
+     *
      * @var string
      */
-    private $productcode;
+    private string $fraudcategory;
 
     /**
-     * @var string
+     * Description of product code
+     *
+     * @var null | string
      */
-    private $fraudcategory;
+    private ?string $productdesc = null;
 
     /**
-     * @var string
+     * Description of fraud category
+     *
+     * @var null | string
      */
-    private $productdesc;
+    private ?string $frauddesc = null;
 
     /**
-     * @var string
-     */
-    private $frauddesc;
-
-    /**
+     * The exact date upon which a confirmed fraud originally became live on the CIFAS database
+     *
      * @var \DateTimeInterface
      */
-    private $inputdate;
+    private \DateTimeInterface $inputdate;
 
     /**
-     * @var \DateTimeInterface
+     * The date upon which a confirmed fraud becomes expired on the CIFAS database
+     *
+     * @var null | \DateTimeInterface
      */
-    private $expirydate;
+    private ?\DateTimeInterface $expirydate = null;
 
     /**
+     * Transaction type
+     * The list of possible values can be obtained from the web method LookupData07a table id = cifastransaction
+     *
      * @var string
      */
-    private $transactiontype;
+    private string $transactiontype;
 
     /**
      * @return int
      */
-    public function getMembernumber()
+    public function getMembernumber() : int
     {
         return $this->membernumber;
     }
 
     /**
      * @param int $membernumber
-     * @return Details
+     * @return static
      */
-    public function withMembernumber($membernumber)
+    public function withMembernumber(int $membernumber) : static
     {
         $new = clone $this;
         $new->membernumber = $membernumber;
@@ -78,16 +100,16 @@ class Details
     /**
      * @return string
      */
-    public function getCasereferenceno()
+    public function getCasereferenceno() : string
     {
         return $this->casereferenceno;
     }
 
     /**
      * @param string $casereferenceno
-     * @return Details
+     * @return static
      */
-    public function withCasereferenceno($casereferenceno)
+    public function withCasereferenceno(string $casereferenceno) : static
     {
         $new = clone $this;
         $new->casereferenceno = $casereferenceno;
@@ -96,18 +118,18 @@ class Details
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return Details
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -118,16 +140,16 @@ class Details
     /**
      * @return string
      */
-    public function getProductcode()
+    public function getProductcode() : string
     {
         return $this->productcode;
     }
 
     /**
      * @param string $productcode
-     * @return Details
+     * @return static
      */
-    public function withProductcode($productcode)
+    public function withProductcode(string $productcode) : static
     {
         $new = clone $this;
         $new->productcode = $productcode;
@@ -138,16 +160,16 @@ class Details
     /**
      * @return string
      */
-    public function getFraudcategory()
+    public function getFraudcategory() : string
     {
         return $this->fraudcategory;
     }
 
     /**
      * @param string $fraudcategory
-     * @return Details
+     * @return static
      */
-    public function withFraudcategory($fraudcategory)
+    public function withFraudcategory(string $fraudcategory) : static
     {
         $new = clone $this;
         $new->fraudcategory = $fraudcategory;
@@ -156,18 +178,18 @@ class Details
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getProductdesc()
+    public function getProductdesc() : ?string
     {
         return $this->productdesc;
     }
 
     /**
-     * @param string $productdesc
-     * @return Details
+     * @param null | string $productdesc
+     * @return static
      */
-    public function withProductdesc($productdesc)
+    public function withProductdesc(?string $productdesc) : static
     {
         $new = clone $this;
         $new->productdesc = $productdesc;
@@ -176,18 +198,18 @@ class Details
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getFrauddesc()
+    public function getFrauddesc() : ?string
     {
         return $this->frauddesc;
     }
 
     /**
-     * @param string $frauddesc
-     * @return Details
+     * @param null | string $frauddesc
+     * @return static
      */
-    public function withFrauddesc($frauddesc)
+    public function withFrauddesc(?string $frauddesc) : static
     {
         $new = clone $this;
         $new->frauddesc = $frauddesc;
@@ -198,16 +220,16 @@ class Details
     /**
      * @return \DateTimeInterface
      */
-    public function getInputdate()
+    public function getInputdate() : \DateTimeInterface
     {
         return $this->inputdate;
     }
 
     /**
      * @param \DateTimeInterface $inputdate
-     * @return Details
+     * @return static
      */
-    public function withInputdate($inputdate)
+    public function withInputdate(\DateTimeInterface $inputdate) : static
     {
         $new = clone $this;
         $new->inputdate = $inputdate;
@@ -216,18 +238,18 @@ class Details
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getExpirydate()
+    public function getExpirydate() : ?\DateTimeInterface
     {
         return $this->expirydate;
     }
 
     /**
-     * @param \DateTimeInterface $expirydate
-     * @return Details
+     * @param null | \DateTimeInterface $expirydate
+     * @return static
      */
-    public function withExpirydate($expirydate)
+    public function withExpirydate(?\DateTimeInterface $expirydate) : static
     {
         $new = clone $this;
         $new->expirydate = $expirydate;
@@ -238,23 +260,21 @@ class Details
     /**
      * @return string
      */
-    public function getTransactiontype()
+    public function getTransactiontype() : string
     {
         return $this->transactiontype;
     }
 
     /**
      * @param string $transactiontype
-     * @return Details
+     * @return static
      */
-    public function withTransactiontype($transactiontype)
+    public function withTransactiontype(string $transactiontype) : static
     {
         $new = clone $this;
         $new->transactiontype = $transactiontype;
 
         return $new;
     }
-
-
 }
 

@@ -2,46 +2,33 @@
 
 namespace PaymentAssist\Type;
 
-use Phpro\SoapClient\Type\RequestInterface;
-
-class CTSearch implements RequestInterface
+class CTSearch
 {
-
     /**
-     * @var \PaymentAssist\Type\CTSearchDefinition
-     */
-    private $SearchDefinition;
-
-    /**
-     * Constructor
+     * Search Definition container type for Credit Search and BSB Web Methods
      *
-     * @var \PaymentAssist\Type\CTSearchDefinition $SearchDefinition
+     * @var null | \PaymentAssist\Type\CTSearchDefinition
      */
-    public function __construct($SearchDefinition)
-    {
-        $this->SearchDefinition = $SearchDefinition;
-    }
+    private ?\PaymentAssist\Type\CTSearchDefinition $SearchDefinition = null;
 
     /**
-     * @return \PaymentAssist\Type\CTSearchDefinition
+     * @return null | \PaymentAssist\Type\CTSearchDefinition
      */
-    public function getSearchDefinition()
+    public function getSearchDefinition() : ?\PaymentAssist\Type\CTSearchDefinition
     {
         return $this->SearchDefinition;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSearchDefinition $SearchDefinition
-     * @return CTSearch
+     * @param null | \PaymentAssist\Type\CTSearchDefinition $SearchDefinition
+     * @return static
      */
-    public function withSearchDefinition($SearchDefinition)
+    public function withSearchDefinition(?\PaymentAssist\Type\CTSearchDefinition $SearchDefinition) : static
     {
         $new = clone $this;
         $new->SearchDefinition = $SearchDefinition;
 
         return $new;
     }
-
-
 }
 

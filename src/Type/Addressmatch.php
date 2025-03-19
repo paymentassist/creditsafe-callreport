@@ -2,34 +2,35 @@
 
 namespace PaymentAssist\Type;
 
-class Addressmatch
+use \PaymentAssist\Type\CTAddress;
+
+class Addressmatch extends CTAddress
 {
+    /**
+     * Domicile identifier
+     *
+     * @var null | int
+     */
+    private ?int $domicileid = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $domicileid;
-
-    /**
-     * @return int
-     */
-    public function getDomicileid()
+    public function getDomicileid() : ?int
     {
         return $this->domicileid;
     }
 
     /**
-     * @param int $domicileid
-     * @return Addressmatch
+     * @param null | int $domicileid
+     * @return static
      */
-    public function withDomicileid($domicileid)
+    public function withDomicileid(?int $domicileid) : static
     {
         $new = clone $this;
         $new->domicileid = $domicileid;
 
         return $new;
     }
-
-
 }
 

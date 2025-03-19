@@ -4,45 +4,57 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsperson
 {
+    /**
+     * Customer Applicant Status Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicscustomerstatus
+     *
+     * @var null | string
+     */
+    private ?string $customerstatus = null;
 
     /**
-     * @var string
+     * Applicant's Marital Status Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsmaritalstatus
+     *
+     * @var null | string
      */
-    private $customerstatus;
+    private ?string $maritalstatus = null;
 
     /**
-     * @var string
+     * Total number of dependent children
+     *
+     * @var null | int
      */
-    private $maritalstatus;
+    private ?int $totaldependents = null;
 
     /**
-     * @var int
+     * Language Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicslanguage
+     *
+     * @var null | string
      */
-    private $totaldependents;
+    private ?string $language = null;
 
     /**
-     * @var string
+     * Set of types of identity provided by the Applicant
+     *
+     * @var array<int<0,3>, \PaymentAssist\Type\CTDemographicsidentity>
      */
-    private $language;
+    private array $identity;
 
     /**
-     * @var \PaymentAssist\Type\CTDemographicsidentity
+     * @return null | string
      */
-    private $identity;
-
-    /**
-     * @return string
-     */
-    public function getCustomerstatus()
+    public function getCustomerstatus() : ?string
     {
         return $this->customerstatus;
     }
 
     /**
-     * @param string $customerstatus
-     * @return CTDemographicsperson
+     * @param null | string $customerstatus
+     * @return static
      */
-    public function withCustomerstatus($customerstatus)
+    public function withCustomerstatus(?string $customerstatus) : static
     {
         $new = clone $this;
         $new->customerstatus = $customerstatus;
@@ -51,18 +63,18 @@ class CTDemographicsperson
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getMaritalstatus()
+    public function getMaritalstatus() : ?string
     {
         return $this->maritalstatus;
     }
 
     /**
-     * @param string $maritalstatus
-     * @return CTDemographicsperson
+     * @param null | string $maritalstatus
+     * @return static
      */
-    public function withMaritalstatus($maritalstatus)
+    public function withMaritalstatus(?string $maritalstatus) : static
     {
         $new = clone $this;
         $new->maritalstatus = $maritalstatus;
@@ -71,18 +83,18 @@ class CTDemographicsperson
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotaldependents()
+    public function getTotaldependents() : ?int
     {
         return $this->totaldependents;
     }
 
     /**
-     * @param int $totaldependents
-     * @return CTDemographicsperson
+     * @param null | int $totaldependents
+     * @return static
      */
-    public function withTotaldependents($totaldependents)
+    public function withTotaldependents(?int $totaldependents) : static
     {
         $new = clone $this;
         $new->totaldependents = $totaldependents;
@@ -91,18 +103,18 @@ class CTDemographicsperson
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getLanguage()
+    public function getLanguage() : ?string
     {
         return $this->language;
     }
 
     /**
-     * @param string $language
-     * @return CTDemographicsperson
+     * @param null | string $language
+     * @return static
      */
-    public function withLanguage($language)
+    public function withLanguage(?string $language) : static
     {
         $new = clone $this;
         $new->language = $language;
@@ -111,25 +123,23 @@ class CTDemographicsperson
     }
 
     /**
-     * @return \PaymentAssist\Type\CTDemographicsidentity
+     * @return array<int<0,3>, \PaymentAssist\Type\CTDemographicsidentity>
      */
-    public function getIdentity()
+    public function getIdentity() : array
     {
         return $this->identity;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTDemographicsidentity $identity
-     * @return CTDemographicsperson
+     * @param array<int<0,3>, \PaymentAssist\Type\CTDemographicsidentity> $identity
+     * @return static
      */
-    public function withIdentity($identity)
+    public function withIdentity(array $identity) : static
     {
         $new = clone $this;
         $new->identity = $identity;
 
         return $new;
     }
-
-
 }
 

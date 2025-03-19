@@ -4,50 +4,62 @@ namespace PaymentAssist\Type;
 
 class Accholderdetails
 {
+    /**
+     * Account holder's name details
+     *
+     * @var null | string
+     */
+    private ?string $name = null;
 
     /**
+     * Account holder's address
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddress
+     */
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
+
+    /**
+     * Account holder's date of birth
+     *
+     * @var null | \DateTimeInterface
+     */
+    private ?\DateTimeInterface $dob = null;
+
+    /**
+     * Account holder status code
+     * The list of possible values can be obtained from the web method LookupData07a table id = accountholderstatus
+     *
      * @var string
      */
-    private $name;
+    private string $statuscode;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * Date that account holder first appeared on the account
+     *
+     * @var null | \DateTimeInterface
      */
-    private $address;
+    private ?\DateTimeInterface $startdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Date that account holder left account
+     *
+     * @var null | \DateTimeInterface
      */
-    private $dob;
+    private ?\DateTimeInterface $enddate = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $statuscode;
-
-    /**
-     * @var \DateTimeInterface
-     */
-    private $startdate;
-
-    /**
-     * @var \DateTimeInterface
-     */
-    private $enddate;
-
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return Accholderdetails
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -56,18 +68,18 @@ class Accholderdetails
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress()
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return Accholderdetails
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -76,18 +88,18 @@ class Accholderdetails
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDob()
+    public function getDob() : ?\DateTimeInterface
     {
         return $this->dob;
     }
 
     /**
-     * @param \DateTimeInterface $dob
-     * @return Accholderdetails
+     * @param null | \DateTimeInterface $dob
+     * @return static
      */
-    public function withDob($dob)
+    public function withDob(?\DateTimeInterface $dob) : static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -98,16 +110,16 @@ class Accholderdetails
     /**
      * @return string
      */
-    public function getStatuscode()
+    public function getStatuscode() : string
     {
         return $this->statuscode;
     }
 
     /**
      * @param string $statuscode
-     * @return Accholderdetails
+     * @return static
      */
-    public function withStatuscode($statuscode)
+    public function withStatuscode(string $statuscode) : static
     {
         $new = clone $this;
         $new->statuscode = $statuscode;
@@ -116,18 +128,18 @@ class Accholderdetails
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getStartdate()
+    public function getStartdate() : ?\DateTimeInterface
     {
         return $this->startdate;
     }
 
     /**
-     * @param \DateTimeInterface $startdate
-     * @return Accholderdetails
+     * @param null | \DateTimeInterface $startdate
+     * @return static
      */
-    public function withStartdate($startdate)
+    public function withStartdate(?\DateTimeInterface $startdate) : static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -136,25 +148,23 @@ class Accholderdetails
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getEnddate()
+    public function getEnddate() : ?\DateTimeInterface
     {
         return $this->enddate;
     }
 
     /**
-     * @param \DateTimeInterface $enddate
-     * @return Accholderdetails
+     * @param null | \DateTimeInterface $enddate
+     * @return static
      */
-    public function withEnddate($enddate)
+    public function withEnddate(?\DateTimeInterface $enddate) : static
     {
         $new = clone $this;
         $new->enddate = $enddate;
 
         return $new;
     }
-
-
 }
 

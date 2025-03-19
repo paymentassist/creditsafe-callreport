@@ -4,30 +4,32 @@ namespace PaymentAssist\Type;
 
 class Score
 {
-
     /**
      * @var int
      */
-    private $_;
+    private int $_;
 
     /**
+     * Class of scorecard
+     * The list of possible values can be obtained from the web method LookupData07a table id = scorecardclass
+     *
      * @var int
      */
-    private $class;
+    private int $class;
 
     /**
      * @return int
      */
-    public function get_()
+    public function get_() : int
     {
         return $this->_;
     }
 
     /**
      * @param int $_
-     * @return Score
+     * @return static
      */
-    public function with_($_)
+    public function with_(int $_) : static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -38,23 +40,21 @@ class Score
     /**
      * @return int
      */
-    public function getClass()
+    public function getClass() : int
     {
         return $this->class;
     }
 
     /**
      * @param int $class
-     * @return Score
+     * @return static
      */
-    public function withClass($class)
+    public function withClass(int $class) : static
     {
         $new = clone $this;
         $new->class = $class;
 
         return $new;
     }
-
-
 }
 

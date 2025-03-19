@@ -4,40 +4,50 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsincomedetails
 {
+    /**
+     * Amount of income received according to frequency
+     *
+     * @var null | int
+     */
+    private ?int $amount = null;
 
     /**
-     * @var int
+     * Income Type Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsincometype
+     *
+     * @var null | string
      */
-    private $amount;
+    private ?string $type = null;
 
     /**
-     * @var string
+     * Income Payment Method Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsincomepaymentmethod
+     *
+     * @var null | string
      */
-    private $type;
+    private ?string $paymentmethod = null;
 
     /**
-     * @var string
+     * Income Frequency Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsincomefrequency
+     *
+     * @var null | string
      */
-    private $paymentmethod;
+    private ?string $frequency = null;
 
     /**
-     * @var string
+     * @return null | int
      */
-    private $frequency;
-
-    /**
-     * @return int
-     */
-    public function getAmount()
+    public function getAmount() : ?int
     {
         return $this->amount;
     }
 
     /**
-     * @param int $amount
-     * @return CTDemographicsincomedetails
+     * @param null | int $amount
+     * @return static
      */
-    public function withAmount($amount)
+    public function withAmount(?int $amount) : static
     {
         $new = clone $this;
         $new->amount = $amount;
@@ -46,18 +56,18 @@ class CTDemographicsincomedetails
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getType()
+    public function getType() : ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
-     * @return CTDemographicsincomedetails
+     * @param null | string $type
+     * @return static
      */
-    public function withType($type)
+    public function withType(?string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -66,18 +76,18 @@ class CTDemographicsincomedetails
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getPaymentmethod()
+    public function getPaymentmethod() : ?string
     {
         return $this->paymentmethod;
     }
 
     /**
-     * @param string $paymentmethod
-     * @return CTDemographicsincomedetails
+     * @param null | string $paymentmethod
+     * @return static
      */
-    public function withPaymentmethod($paymentmethod)
+    public function withPaymentmethod(?string $paymentmethod) : static
     {
         $new = clone $this;
         $new->paymentmethod = $paymentmethod;
@@ -86,25 +96,23 @@ class CTDemographicsincomedetails
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getFrequency()
+    public function getFrequency() : ?string
     {
         return $this->frequency;
     }
 
     /**
-     * @param string $frequency
-     * @return CTDemographicsincomedetails
+     * @param null | string $frequency
+     * @return static
      */
-    public function withFrequency($frequency)
+    public function withFrequency(?string $frequency) : static
     {
         $new = clone $this;
         $new->frequency = $frequency;
 
         return $new;
     }
-
-
 }
 

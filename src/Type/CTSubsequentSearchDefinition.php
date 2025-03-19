@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTSubsequentSearchDefinition
 {
+    /**
+     * Container for client's own data - returned in the response message
+     *
+     * @var null | \PaymentAssist\Type\CTPayload
+     */
+    private ?\PaymentAssist\Type\CTPayload $payload = null;
 
     /**
-     * @var \PaymentAssist\Type\CTPayload
+     * Your Reference will allow you to include a reference which can be used to internally identify applications
+     *
+     * @var null | string
      */
-    private $payload;
+    private ?string $yourreference = null;
 
     /**
-     * @var string
+     * Set of subsequent search parameters to search
+     *
+     * @var null | \PaymentAssist\Type\CTAmendsubsequent
      */
-    private $yourreference;
+    private ?\PaymentAssist\Type\CTAmendsubsequent $secondaryrequest = null;
 
     /**
-     * @var \PaymentAssist\Type\CTAmendsubsequent
+     * @return null | \PaymentAssist\Type\CTPayload
      */
-    private $secondaryrequest;
-
-    /**
-     * @return \PaymentAssist\Type\CTPayload
-     */
-    public function getPayload()
+    public function getPayload() : ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTPayload $payload
-     * @return CTSubsequentSearchDefinition
+     * @param null | \PaymentAssist\Type\CTPayload $payload
+     * @return static
      */
-    public function withPayload($payload)
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -41,18 +46,18 @@ class CTSubsequentSearchDefinition
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getYourreference()
+    public function getYourreference() : ?string
     {
         return $this->yourreference;
     }
 
     /**
-     * @param string $yourreference
-     * @return CTSubsequentSearchDefinition
+     * @param null | string $yourreference
+     * @return static
      */
-    public function withYourreference($yourreference)
+    public function withYourreference(?string $yourreference) : static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -61,25 +66,23 @@ class CTSubsequentSearchDefinition
     }
 
     /**
-     * @return \PaymentAssist\Type\CTAmendsubsequent
+     * @return null | \PaymentAssist\Type\CTAmendsubsequent
      */
-    public function getSecondaryrequest()
+    public function getSecondaryrequest() : ?\PaymentAssist\Type\CTAmendsubsequent
     {
         return $this->secondaryrequest;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAmendsubsequent $secondaryrequest
-     * @return CTSubsequentSearchDefinition
+     * @param null | \PaymentAssist\Type\CTAmendsubsequent $secondaryrequest
+     * @return static
      */
-    public function withSecondaryrequest($secondaryrequest)
+    public function withSecondaryrequest(?\PaymentAssist\Type\CTAmendsubsequent $secondaryrequest) : static
     {
         $new = clone $this;
         $new->secondaryrequest = $secondaryrequest;
 
         return $new;
     }
-
-
 }
 

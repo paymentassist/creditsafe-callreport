@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class CTSummaryrtr
 {
+    /**
+     * Indicates if the report contains RTR accounts data.
+     *
+     * @var null | int
+     */
+    private ?int $hasupdates = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $hasupdates;
-
-    /**
-     * @return int
-     */
-    public function getHasupdates()
+    public function getHasupdates() : ?int
     {
         return $this->hasupdates;
     }
 
     /**
-     * @param int $hasupdates
-     * @return CTSummaryrtr
+     * @param null | int $hasupdates
+     * @return static
      */
-    public function withHasupdates($hasupdates)
+    public function withHasupdates(?int $hasupdates) : static
     {
         $new = clone $this;
         $new->hasupdates = $hasupdates;
 
         return $new;
     }
-
-
 }
 

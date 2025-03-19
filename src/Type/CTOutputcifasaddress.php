@@ -4,30 +4,34 @@ namespace PaymentAssist\Type;
 
 class CTOutputcifasaddress
 {
-
     /**
+     * CIFAS Address Type
+     * The list of possible values can be obtained from the web method LookupData07a table id = cifasaddresstype
+     *
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
+     * Address details
+     *
      * @var \PaymentAssist\Type\CTOutputaddress
      */
-    private $address;
+    private \PaymentAssist\Type\CTOutputaddress $address;
 
     /**
      * @return string
      */
-    public function getType()
+    public function getType() : string
     {
         return $this->type;
     }
 
     /**
      * @param string $type
-     * @return CTOutputcifasaddress
+     * @return static
      */
-    public function withType($type)
+    public function withType(string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -38,23 +42,21 @@ class CTOutputcifasaddress
     /**
      * @return \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress()
+    public function getAddress() : \PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
      * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return CTOutputcifasaddress
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
 
         return $new;
     }
-
-
 }
 

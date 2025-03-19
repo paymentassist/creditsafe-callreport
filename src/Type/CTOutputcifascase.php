@@ -4,40 +4,45 @@ namespace PaymentAssist\Type;
 
 class CTOutputcifascase
 {
-
     /**
+     * Each Case within FIND is identified by a unique reference number
+     *
      * @var int
      */
-    private $caseid;
+    private int $caseid;
 
     /**
+     * CIFAS
+     *
      * @var \PaymentAssist\Type\CTOutputcifascasedata
      */
-    private $details;
+    private \PaymentAssist\Type\CTOutputcifascasedata $details;
 
     /**
      * @var \PaymentAssist\Type\Dmrs
      */
-    private $dmrs;
+    private \PaymentAssist\Type\Dmrs $dmrs;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of CIFAS Filing Dispute and Correction Notices
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
      * @return int
      */
-    public function getCaseid()
+    public function getCaseid() : int
     {
         return $this->caseid;
     }
 
     /**
      * @param int $caseid
-     * @return CTOutputcifascase
+     * @return static
      */
-    public function withCaseid($caseid)
+    public function withCaseid(int $caseid) : static
     {
         $new = clone $this;
         $new->caseid = $caseid;
@@ -48,16 +53,16 @@ class CTOutputcifascase
     /**
      * @return \PaymentAssist\Type\CTOutputcifascasedata
      */
-    public function getDetails()
+    public function getDetails() : \PaymentAssist\Type\CTOutputcifascasedata
     {
         return $this->details;
     }
 
     /**
      * @param \PaymentAssist\Type\CTOutputcifascasedata $details
-     * @return CTOutputcifascase
+     * @return static
      */
-    public function withDetails($details)
+    public function withDetails(\PaymentAssist\Type\CTOutputcifascasedata $details) : static
     {
         $new = clone $this;
         $new->details = $details;
@@ -68,16 +73,16 @@ class CTOutputcifascase
     /**
      * @return \PaymentAssist\Type\Dmrs
      */
-    public function getDmrs()
+    public function getDmrs() : \PaymentAssist\Type\Dmrs
     {
         return $this->dmrs;
     }
 
     /**
      * @param \PaymentAssist\Type\Dmrs $dmrs
-     * @return CTOutputcifascase
+     * @return static
      */
-    public function withDmrs($dmrs)
+    public function withDmrs(\PaymentAssist\Type\Dmrs $dmrs) : static
     {
         $new = clone $this;
         $new->dmrs = $dmrs;
@@ -86,25 +91,23 @@ class CTOutputcifascase
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputcifascase
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
 
         return $new;
     }
-
-
 }
 

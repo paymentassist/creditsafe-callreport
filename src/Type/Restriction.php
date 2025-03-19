@@ -4,35 +4,41 @@ namespace PaymentAssist\Type;
 
 class Restriction
 {
+    /**
+     * Restriction type
+     * The list of possible values can be obtained from the web method LookupData07a table id = insolvencyrestrictiontype
+     *
+     * @var null | string
+     */
+    private ?string $type = null;
 
     /**
-     * @var string
+     * Restriction start date
+     *
+     * @var null | \DateTimeInterface
      */
-    private $type;
+    private ?\DateTimeInterface $startdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Restriction end date
+     *
+     * @var null | \DateTimeInterface
      */
-    private $startdate;
+    private ?\DateTimeInterface $enddate = null;
 
     /**
-     * @var \DateTimeInterface
+     * @return null | string
      */
-    private $enddate;
-
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType() : ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
-     * @return Restriction
+     * @param null | string $type
+     * @return static
      */
-    public function withType($type)
+    public function withType(?string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -41,18 +47,18 @@ class Restriction
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getStartdate()
+    public function getStartdate() : ?\DateTimeInterface
     {
         return $this->startdate;
     }
 
     /**
-     * @param \DateTimeInterface $startdate
-     * @return Restriction
+     * @param null | \DateTimeInterface $startdate
+     * @return static
      */
-    public function withStartdate($startdate)
+    public function withStartdate(?\DateTimeInterface $startdate) : static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -61,25 +67,23 @@ class Restriction
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getEnddate()
+    public function getEnddate() : ?\DateTimeInterface
     {
         return $this->enddate;
     }
 
     /**
-     * @param \DateTimeInterface $enddate
-     * @return Restriction
+     * @param null | \DateTimeInterface $enddate
+     * @return static
      */
-    public function withEnddate($enddate)
+    public function withEnddate(?\DateTimeInterface $enddate) : static
     {
         $new = clone $this;
         $new->enddate = $enddate;
 
         return $new;
     }
-
-
 }
 

@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Tenure
 {
+    /**
+     * Tenure Score
+     *
+     * @var null | float
+     */
+    private ?float $tenrscore = null;
 
     /**
-     * @var float
+     * Tenure Band
+     *
+     * @var null | int
      */
-    private $tenrscore;
+    private ?int $tenrband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $tenrband;
-
-    /**
-     * @return float
-     */
-    public function getTenrscore()
+    public function getTenrscore() : ?float
     {
         return $this->tenrscore;
     }
 
     /**
-     * @param float $tenrscore
-     * @return Tenure
+     * @param null | float $tenrscore
+     * @return static
      */
-    public function withTenrscore($tenrscore)
+    public function withTenrscore(?float $tenrscore) : static
     {
         $new = clone $this;
         $new->tenrscore = $tenrscore;
@@ -36,25 +39,23 @@ class Tenure
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTenrband()
+    public function getTenrband() : ?int
     {
         return $this->tenrband;
     }
 
     /**
-     * @param int $tenrband
-     * @return Tenure
+     * @param null | int $tenrband
+     * @return static
      */
-    public function withTenrband($tenrband)
+    public function withTenrband(?int $tenrband) : static
     {
         $new = clone $this;
         $new->tenrband = $tenrband;
 
         return $new;
     }
-
-
 }
 

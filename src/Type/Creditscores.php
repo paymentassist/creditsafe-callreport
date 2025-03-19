@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Creditscores
 {
+    /**
+     * Output structure for a credit score
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputscore>
+     */
+    private array $creditscore;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputscore
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputscore>
      */
-    private $creditscore;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputscore
-     */
-    public function getCreditscore()
+    public function getCreditscore() : array
     {
         return $this->creditscore;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputscore $creditscore
-     * @return Creditscores
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputscore> $creditscore
+     * @return static
      */
-    public function withCreditscore($creditscore)
+    public function withCreditscore(array $creditscore) : static
     {
         $new = clone $this;
         $new->creditscore = $creditscore;
 
         return $new;
     }
-
-
 }
 

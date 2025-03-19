@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Associatelinks
 {
+    /**
+     * Output structure for an Associate Link
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputassociatelink>
+     */
+    private array $associatelink;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputassociatelink
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputassociatelink>
      */
-    private $associatelink;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputassociatelink
-     */
-    public function getAssociatelink()
+    public function getAssociatelink() : array
     {
         return $this->associatelink;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputassociatelink $associatelink
-     * @return Associatelinks
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputassociatelink> $associatelink
+     * @return static
      */
-    public function withAssociatelink($associatelink)
+    public function withAssociatelink(array $associatelink) : static
     {
         $new = clone $this;
         $new->associatelink = $associatelink;
 
         return $new;
     }
-
-
 }
 

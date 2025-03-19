@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class CTInputname
 {
+    /**
+     * Title
+     *
+     * @var null | string
+     */
+    private ?string $title = null;
 
     /**
+     * Forename
+     *
+     * @var null | string
+     */
+    private ?string $forename = null;
+
+    /**
+     * Middle names / initials
+     *
+     * @var null | string
+     */
+    private ?string $othernames = null;
+
+    /**
+     * Surname
+     *
      * @var string
      */
-    private $title;
+    private string $surname;
 
     /**
-     * @var string
+     * Suffix
+     *
+     * @var null | string
      */
-    private $forename;
+    private ?string $suffix = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $othernames;
-
-    /**
-     * @var string
-     */
-    private $surname;
-
-    /**
-     * @var string
-     */
-    private $suffix;
-
-    /**
-     * @return string
-     */
-    public function getTitle()
+    public function getTitle() : ?string
     {
         return $this->title;
     }
 
     /**
-     * @param string $title
-     * @return CTInputname
+     * @param null | string $title
+     * @return static
      */
-    public function withTitle($title)
+    public function withTitle(?string $title) : static
     {
         $new = clone $this;
         $new->title = $title;
@@ -51,18 +60,18 @@ class CTInputname
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getForename()
+    public function getForename() : ?string
     {
         return $this->forename;
     }
 
     /**
-     * @param string $forename
-     * @return CTInputname
+     * @param null | string $forename
+     * @return static
      */
-    public function withForename($forename)
+    public function withForename(?string $forename) : static
     {
         $new = clone $this;
         $new->forename = $forename;
@@ -71,18 +80,18 @@ class CTInputname
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getOthernames()
+    public function getOthernames() : ?string
     {
         return $this->othernames;
     }
 
     /**
-     * @param string $othernames
-     * @return CTInputname
+     * @param null | string $othernames
+     * @return static
      */
-    public function withOthernames($othernames)
+    public function withOthernames(?string $othernames) : static
     {
         $new = clone $this;
         $new->othernames = $othernames;
@@ -93,16 +102,16 @@ class CTInputname
     /**
      * @return string
      */
-    public function getSurname()
+    public function getSurname() : string
     {
         return $this->surname;
     }
 
     /**
      * @param string $surname
-     * @return CTInputname
+     * @return static
      */
-    public function withSurname($surname)
+    public function withSurname(string $surname) : static
     {
         $new = clone $this;
         $new->surname = $surname;
@@ -111,25 +120,23 @@ class CTInputname
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getSuffix()
+    public function getSuffix() : ?string
     {
         return $this->suffix;
     }
 
     /**
-     * @param string $suffix
-     * @return CTInputname
+     * @param null | string $suffix
+     * @return static
      */
-    public function withSuffix($suffix)
+    public function withSuffix(?string $suffix) : static
     {
         $new = clone $this;
         $new->suffix = $suffix;
 
         return $new;
     }
-
-
 }
 

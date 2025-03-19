@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Family
 {
+    /**
+     * Family Composition Descriptor
+     *
+     * @var null | string
+     */
+    private ?string $cameoukfam = null;
 
     /**
-     * @var string
+     * Single Adult Index
+     *
+     * @var null | int
      */
-    private $cameoukfam;
+    private ?int $ind_adult1 = null;
 
     /**
-     * @var int
+     * @return null | string
      */
-    private $ind_adult1;
-
-    /**
-     * @return string
-     */
-    public function getCameoukfam()
+    public function getCameoukfam() : ?string
     {
         return $this->cameoukfam;
     }
 
     /**
-     * @param string $cameoukfam
-     * @return Family
+     * @param null | string $cameoukfam
+     * @return static
      */
-    public function withCameoukfam($cameoukfam)
+    public function withCameoukfam(?string $cameoukfam) : static
     {
         $new = clone $this;
         $new->cameoukfam = $cameoukfam;
@@ -36,25 +39,23 @@ class Family
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getInd_adult1()
+    public function getIndAdult1() : ?int
     {
         return $this->ind_adult1;
     }
 
     /**
-     * @param int $ind_adult1
-     * @return Family
+     * @param null | int $ind_adult1
+     * @return static
      */
-    public function withInd_adult1($ind_adult1)
+    public function withIndAdult1(?int $ind_adult1) : static
     {
         $new = clone $this;
         $new->ind_adult1 = $ind_adult1;
 
         return $new;
     }
-
-
 }
 

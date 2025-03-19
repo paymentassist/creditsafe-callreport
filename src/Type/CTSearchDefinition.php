@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class CTSearchDefinition
 {
+    /**
+     * Container for client's own data - returned in the response message
+     *
+     * @var null | \PaymentAssist\Type\CTPayload
+     */
+    private ?\PaymentAssist\Type\CTPayload $payload = null;
 
     /**
-     * @var \PaymentAssist\Type\CTPayload
+     * Your Reference will allow you to include a reference which can be used to internally identify applications
+     *
+     * @var null | string
      */
-    private $payload;
+    private ?string $yourreference = null;
 
     /**
-     * @var string
+     * Set of applicant name and address details to search for in addition to search related parameters
+     *
+     * @var null | \PaymentAssist\Type\CTSearchrequest
      */
-    private $yourreference;
+    private ?\PaymentAssist\Type\CTSearchrequest $creditrequest = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSearchrequest
+     * Name and address picklist
+     *
+     * @var null | \PaymentAssist\Type\CTApipicklist
      */
-    private $creditrequest;
+    private ?\PaymentAssist\Type\CTApipicklist $picklist = null;
 
     /**
-     * @var \PaymentAssist\Type\CTApipicklist
+     * Reserved for future use
+     *
+     * @var null | string
      */
-    private $picklist;
+    private ?string $token = null;
 
     /**
-     * @var string
+     * @return null | \PaymentAssist\Type\CTPayload
      */
-    private $token;
-
-    /**
-     * @return \PaymentAssist\Type\CTPayload
-     */
-    public function getPayload()
+    public function getPayload() : ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTPayload $payload
-     * @return CTSearchDefinition
+     * @param null | \PaymentAssist\Type\CTPayload $payload
+     * @return static
      */
-    public function withPayload($payload)
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -51,18 +60,18 @@ class CTSearchDefinition
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getYourreference()
+    public function getYourreference() : ?string
     {
         return $this->yourreference;
     }
 
     /**
-     * @param string $yourreference
-     * @return CTSearchDefinition
+     * @param null | string $yourreference
+     * @return static
      */
-    public function withYourreference($yourreference)
+    public function withYourreference(?string $yourreference) : static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -71,18 +80,18 @@ class CTSearchDefinition
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSearchrequest
+     * @return null | \PaymentAssist\Type\CTSearchrequest
      */
-    public function getCreditrequest()
+    public function getCreditrequest() : ?\PaymentAssist\Type\CTSearchrequest
     {
         return $this->creditrequest;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSearchrequest $creditrequest
-     * @return CTSearchDefinition
+     * @param null | \PaymentAssist\Type\CTSearchrequest $creditrequest
+     * @return static
      */
-    public function withCreditrequest($creditrequest)
+    public function withCreditrequest(?\PaymentAssist\Type\CTSearchrequest $creditrequest) : static
     {
         $new = clone $this;
         $new->creditrequest = $creditrequest;
@@ -91,18 +100,18 @@ class CTSearchDefinition
     }
 
     /**
-     * @return \PaymentAssist\Type\CTApipicklist
+     * @return null | \PaymentAssist\Type\CTApipicklist
      */
-    public function getPicklist()
+    public function getPicklist() : ?\PaymentAssist\Type\CTApipicklist
     {
         return $this->picklist;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTApipicklist $picklist
-     * @return CTSearchDefinition
+     * @param null | \PaymentAssist\Type\CTApipicklist $picklist
+     * @return static
      */
-    public function withPicklist($picklist)
+    public function withPicklist(?\PaymentAssist\Type\CTApipicklist $picklist) : static
     {
         $new = clone $this;
         $new->picklist = $picklist;
@@ -111,25 +120,23 @@ class CTSearchDefinition
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getToken()
+    public function getToken() : ?string
     {
         return $this->token;
     }
 
     /**
-     * @param string $token
-     * @return CTSearchDefinition
+     * @param null | string $token
+     * @return static
      */
-    public function withToken($token)
+    public function withToken(?string $token) : static
     {
         $new = clone $this;
         $new->token = $token;
 
         return $new;
     }
-
-
 }
 

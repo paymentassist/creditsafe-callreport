@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Mortgage
 {
+    /**
+     * Mortgage and House Size Score
+     *
+     * @var null | float
+     */
+    private ?float $mortscore = null;
 
     /**
-     * @var float
+     * Mortgage and House Size Band
+     *
+     * @var null | int
      */
-    private $mortscore;
+    private ?int $mortband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $mortband;
-
-    /**
-     * @return float
-     */
-    public function getMortscore()
+    public function getMortscore() : ?float
     {
         return $this->mortscore;
     }
 
     /**
-     * @param float $mortscore
-     * @return Mortgage
+     * @param null | float $mortscore
+     * @return static
      */
-    public function withMortscore($mortscore)
+    public function withMortscore(?float $mortscore) : static
     {
         $new = clone $this;
         $new->mortscore = $mortscore;
@@ -36,25 +39,23 @@ class Mortgage
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getMortband()
+    public function getMortband() : ?int
     {
         return $this->mortband;
     }
 
     /**
-     * @param int $mortband
-     * @return Mortgage
+     * @param null | int $mortband
+     * @return static
      */
-    public function withMortband($mortband)
+    public function withMortband(?int $mortband) : static
     {
         $new = clone $this;
         $new->mortband = $mortband;
 
         return $new;
     }
-
-
 }
 

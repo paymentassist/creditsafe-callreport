@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class CTPayload
 {
+    /**
+     * Any elements or attributes can be placed within the payload container
+     *
+     * @var array<int<0,max>, mixed>
+     */
+    private array $any;
 
     /**
-     * @var \PaymentAssist\Type\AnyXML
+     * @return array<int<0,max>, mixed>
      */
-    private $any;
-
-    /**
-     * @return \PaymentAssist\Type\AnyXML
-     */
-    public function getAny()
+    public function getAny() : array
     {
         return $this->any;
     }
 
     /**
-     * @param \PaymentAssist\Type\AnyXML $any
-     * @return CTPayload
+     * @param array<int<0,max>, mixed> $any
+     * @return static
      */
-    public function withAny($any)
+    public function withAny(array $any) : static
     {
         $new = clone $this;
         $new->any = $any;
 
         return $new;
     }
-
-
 }
 

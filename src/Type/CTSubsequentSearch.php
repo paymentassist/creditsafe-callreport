@@ -2,46 +2,33 @@
 
 namespace PaymentAssist\Type;
 
-use Phpro\SoapClient\Type\RequestInterface;
-
-class CTSubsequentSearch implements RequestInterface
+class CTSubsequentSearch
 {
-
     /**
-     * @var \PaymentAssist\Type\CTSubsequentSearchDefinition
-     */
-    private $SearchDefinition;
-
-    /**
-     * Constructor
+     * Search Definition container type for Subsequent Search Api Request
      *
-     * @var \PaymentAssist\Type\CTSubsequentSearchDefinition $SearchDefinition
+     * @var null | \PaymentAssist\Type\CTSubsequentSearchDefinition
      */
-    public function __construct($SearchDefinition)
-    {
-        $this->SearchDefinition = $SearchDefinition;
-    }
+    private ?\PaymentAssist\Type\CTSubsequentSearchDefinition $SearchDefinition = null;
 
     /**
-     * @return \PaymentAssist\Type\CTSubsequentSearchDefinition
+     * @return null | \PaymentAssist\Type\CTSubsequentSearchDefinition
      */
-    public function getSearchDefinition()
+    public function getSearchDefinition() : ?\PaymentAssist\Type\CTSubsequentSearchDefinition
     {
         return $this->SearchDefinition;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSubsequentSearchDefinition $SearchDefinition
-     * @return CTSubsequentSearch
+     * @param null | \PaymentAssist\Type\CTSubsequentSearchDefinition $SearchDefinition
+     * @return static
      */
-    public function withSearchDefinition($SearchDefinition)
+    public function withSearchDefinition(?\PaymentAssist\Type\CTSubsequentSearchDefinition $SearchDefinition) : static
     {
         $new = clone $this;
         $new->SearchDefinition = $SearchDefinition;
 
         return $new;
     }
-
-
 }
 

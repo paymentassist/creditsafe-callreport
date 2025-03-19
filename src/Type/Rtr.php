@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Rtr
 {
+    /**
+     * Output structure for a RTR account
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputrtraccount>
+     */
+    private array $account;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputrtraccount
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputrtraccount>
      */
-    private $account;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputrtraccount
-     */
-    public function getAccount()
+    public function getAccount() : array
     {
         return $this->account;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputrtraccount $account
-     * @return Rtr
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputrtraccount> $account
+     * @return static
      */
-    public function withAccount($account)
+    public function withAccount(array $account) : static
     {
         $new = clone $this;
         $new->account = $account;
 
         return $new;
     }
-
-
 }
 

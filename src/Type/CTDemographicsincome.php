@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsincome
 {
+    /**
+     * Applicant's Main Income details
+     *
+     * @var null | \PaymentAssist\Type\CTDemographicsincomedetails
+     */
+    private ?\PaymentAssist\Type\CTDemographicsincomedetails $primary = null;
 
     /**
-     * @var \PaymentAssist\Type\CTDemographicsincomedetails
+     * Set of details for any additional income
+     *
+     * @var null | \PaymentAssist\Type\CTDemographicsincomedetails
      */
-    private $primary;
+    private ?\PaymentAssist\Type\CTDemographicsincomedetails $additional = null;
 
     /**
-     * @var \PaymentAssist\Type\CTDemographicsincomedetails
+     * @return null | \PaymentAssist\Type\CTDemographicsincomedetails
      */
-    private $additional;
-
-    /**
-     * @return \PaymentAssist\Type\CTDemographicsincomedetails
-     */
-    public function getPrimary()
+    public function getPrimary() : ?\PaymentAssist\Type\CTDemographicsincomedetails
     {
         return $this->primary;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTDemographicsincomedetails $primary
-     * @return CTDemographicsincome
+     * @param null | \PaymentAssist\Type\CTDemographicsincomedetails $primary
+     * @return static
      */
-    public function withPrimary($primary)
+    public function withPrimary(?\PaymentAssist\Type\CTDemographicsincomedetails $primary) : static
     {
         $new = clone $this;
         $new->primary = $primary;
@@ -36,25 +39,23 @@ class CTDemographicsincome
     }
 
     /**
-     * @return \PaymentAssist\Type\CTDemographicsincomedetails
+     * @return null | \PaymentAssist\Type\CTDemographicsincomedetails
      */
-    public function getAdditional()
+    public function getAdditional() : ?\PaymentAssist\Type\CTDemographicsincomedetails
     {
         return $this->additional;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTDemographicsincomedetails $additional
-     * @return CTDemographicsincome
+     * @param null | \PaymentAssist\Type\CTDemographicsincomedetails $additional
+     * @return static
      */
-    public function withAdditional($additional)
+    public function withAdditional(?\PaymentAssist\Type\CTDemographicsincomedetails $additional) : static
     {
         $new = clone $this;
         $new->additional = $additional;
 
         return $new;
     }
-
-
 }
 

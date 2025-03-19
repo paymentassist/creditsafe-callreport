@@ -4,95 +4,126 @@ namespace PaymentAssist\Type;
 
 class CTAlertsummaryshare
 {
+    /**
+     * Total number of SHARE Accounts
+     *
+     * @var null | int
+     */
+    private ?int $totalaccounts = null;
 
     /**
+     * Total number of active SHARE Accounts
+     *
+     * @var null | int
+     */
+    private ?int $totalactiveaccounts = null;
+
+    /**
+     * Total value of active SHARE Accounts
+     *
+     * @var null | int
+     */
+    private ?int $totalactiveaccountsamount = null;
+
+    /**
+     * Total number of SHARE Accounts with zero balance
+     *
+     * @var null | int
+     */
+    private ?int $totalaccountszerobal = null;
+
+    /**
+     * Total value of settled SHARE Accounts
+     *
+     * @var null | int
+     */
+    private ?int $totalsettledaccountsamount = null;
+
+    /**
+     * Worst payment status on SHARE Accounts in the last 12 months
+     * The list of possible values can be obtained from the web method LookupData07a table id = payment
+     *
+     * @var null | string
+     */
+    private ?string $worsepaystatus12m = null;
+
+    /**
+     * Worst payment status on SHARE Accounts in the last 24 months
+     * The list of possible values can be obtained from the web method LookupData07a table id = payment
+     *
+     * @var null | string
+     */
+    private ?string $worsepaystatus24m = null;
+
+    /**
+     * Total number of SHARE Accounts in default
+     *
      * @var int
      */
-    private $totalaccounts;
+    private int $totaldefaults;
 
     /**
+     * Total number of SHARE Accounts that have defaulted in the last 12 months
+     *
      * @var int
      */
-    private $totalactiveaccounts;
+    private int $totaldefaults12m;
 
     /**
+     * Total number of SHARE Accounts that have been satisifed
+     *
      * @var int
      */
-    private $totalactiveaccountsamount;
+    private int $totalsettleddefaults;
 
     /**
+     * Total value of SHARE Accounts in default
+     *
      * @var int
      */
-    private $totalaccountszerobal;
+    private int $totaldefaultsamount;
 
     /**
+     * Total number of SHARE Accounts that have been written off
+     *
      * @var int
      */
-    private $totalsettledaccountsamount;
+    private int $totalwriteoffs;
 
     /**
-     * @var string
-     */
-    private $worsepaystatus12m;
-
-    /**
-     * @var string
-     */
-    private $worsepaystatus24m;
-
-    /**
+     * Total value of SHARE Accounts that have been written off
+     *
      * @var int
      */
-    private $totaldefaults;
+    private int $totalwriteoffsamount;
 
     /**
-     * @var int
+     * Total number of delinquent SHARE Accounts
+     *
+     * @var null | int
      */
-    private $totaldefaults12m;
+    private ?int $totaldelinqs = null;
 
     /**
-     * @var int
+     * Total value of delinquent SHARE Accounts
+     *
+     * @var null | int
      */
-    private $totalsettleddefaults;
+    private ?int $totaldelinqsamount = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $totaldefaultsamount;
-
-    /**
-     * @var int
-     */
-    private $totalwriteoffs;
-
-    /**
-     * @var int
-     */
-    private $totalwriteoffsamount;
-
-    /**
-     * @var int
-     */
-    private $totaldelinqs;
-
-    /**
-     * @var int
-     */
-    private $totaldelinqsamount;
-
-    /**
-     * @return int
-     */
-    public function getTotalaccounts()
+    public function getTotalaccounts() : ?int
     {
         return $this->totalaccounts;
     }
 
     /**
-     * @param int $totalaccounts
-     * @return CTAlertsummaryshare
+     * @param null | int $totalaccounts
+     * @return static
      */
-    public function withTotalaccounts($totalaccounts)
+    public function withTotalaccounts(?int $totalaccounts) : static
     {
         $new = clone $this;
         $new->totalaccounts = $totalaccounts;
@@ -101,18 +132,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalactiveaccounts()
+    public function getTotalactiveaccounts() : ?int
     {
         return $this->totalactiveaccounts;
     }
 
     /**
-     * @param int $totalactiveaccounts
-     * @return CTAlertsummaryshare
+     * @param null | int $totalactiveaccounts
+     * @return static
      */
-    public function withTotalactiveaccounts($totalactiveaccounts)
+    public function withTotalactiveaccounts(?int $totalactiveaccounts) : static
     {
         $new = clone $this;
         $new->totalactiveaccounts = $totalactiveaccounts;
@@ -121,18 +152,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalactiveaccountsamount()
+    public function getTotalactiveaccountsamount() : ?int
     {
         return $this->totalactiveaccountsamount;
     }
 
     /**
-     * @param int $totalactiveaccountsamount
-     * @return CTAlertsummaryshare
+     * @param null | int $totalactiveaccountsamount
+     * @return static
      */
-    public function withTotalactiveaccountsamount($totalactiveaccountsamount)
+    public function withTotalactiveaccountsamount(?int $totalactiveaccountsamount) : static
     {
         $new = clone $this;
         $new->totalactiveaccountsamount = $totalactiveaccountsamount;
@@ -141,18 +172,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalaccountszerobal()
+    public function getTotalaccountszerobal() : ?int
     {
         return $this->totalaccountszerobal;
     }
 
     /**
-     * @param int $totalaccountszerobal
-     * @return CTAlertsummaryshare
+     * @param null | int $totalaccountszerobal
+     * @return static
      */
-    public function withTotalaccountszerobal($totalaccountszerobal)
+    public function withTotalaccountszerobal(?int $totalaccountszerobal) : static
     {
         $new = clone $this;
         $new->totalaccountszerobal = $totalaccountszerobal;
@@ -161,18 +192,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalsettledaccountsamount()
+    public function getTotalsettledaccountsamount() : ?int
     {
         return $this->totalsettledaccountsamount;
     }
 
     /**
-     * @param int $totalsettledaccountsamount
-     * @return CTAlertsummaryshare
+     * @param null | int $totalsettledaccountsamount
+     * @return static
      */
-    public function withTotalsettledaccountsamount($totalsettledaccountsamount)
+    public function withTotalsettledaccountsamount(?int $totalsettledaccountsamount) : static
     {
         $new = clone $this;
         $new->totalsettledaccountsamount = $totalsettledaccountsamount;
@@ -181,18 +212,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getWorsepaystatus12m()
+    public function getWorsepaystatus12m() : ?string
     {
         return $this->worsepaystatus12m;
     }
 
     /**
-     * @param string $worsepaystatus12m
-     * @return CTAlertsummaryshare
+     * @param null | string $worsepaystatus12m
+     * @return static
      */
-    public function withWorsepaystatus12m($worsepaystatus12m)
+    public function withWorsepaystatus12m(?string $worsepaystatus12m) : static
     {
         $new = clone $this;
         $new->worsepaystatus12m = $worsepaystatus12m;
@@ -201,18 +232,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getWorsepaystatus24m()
+    public function getWorsepaystatus24m() : ?string
     {
         return $this->worsepaystatus24m;
     }
 
     /**
-     * @param string $worsepaystatus24m
-     * @return CTAlertsummaryshare
+     * @param null | string $worsepaystatus24m
+     * @return static
      */
-    public function withWorsepaystatus24m($worsepaystatus24m)
+    public function withWorsepaystatus24m(?string $worsepaystatus24m) : static
     {
         $new = clone $this;
         $new->worsepaystatus24m = $worsepaystatus24m;
@@ -223,16 +254,16 @@ class CTAlertsummaryshare
     /**
      * @return int
      */
-    public function getTotaldefaults()
+    public function getTotaldefaults() : int
     {
         return $this->totaldefaults;
     }
 
     /**
      * @param int $totaldefaults
-     * @return CTAlertsummaryshare
+     * @return static
      */
-    public function withTotaldefaults($totaldefaults)
+    public function withTotaldefaults(int $totaldefaults) : static
     {
         $new = clone $this;
         $new->totaldefaults = $totaldefaults;
@@ -243,16 +274,16 @@ class CTAlertsummaryshare
     /**
      * @return int
      */
-    public function getTotaldefaults12m()
+    public function getTotaldefaults12m() : int
     {
         return $this->totaldefaults12m;
     }
 
     /**
      * @param int $totaldefaults12m
-     * @return CTAlertsummaryshare
+     * @return static
      */
-    public function withTotaldefaults12m($totaldefaults12m)
+    public function withTotaldefaults12m(int $totaldefaults12m) : static
     {
         $new = clone $this;
         $new->totaldefaults12m = $totaldefaults12m;
@@ -263,16 +294,16 @@ class CTAlertsummaryshare
     /**
      * @return int
      */
-    public function getTotalsettleddefaults()
+    public function getTotalsettleddefaults() : int
     {
         return $this->totalsettleddefaults;
     }
 
     /**
      * @param int $totalsettleddefaults
-     * @return CTAlertsummaryshare
+     * @return static
      */
-    public function withTotalsettleddefaults($totalsettleddefaults)
+    public function withTotalsettleddefaults(int $totalsettleddefaults) : static
     {
         $new = clone $this;
         $new->totalsettleddefaults = $totalsettleddefaults;
@@ -283,16 +314,16 @@ class CTAlertsummaryshare
     /**
      * @return int
      */
-    public function getTotaldefaultsamount()
+    public function getTotaldefaultsamount() : int
     {
         return $this->totaldefaultsamount;
     }
 
     /**
      * @param int $totaldefaultsamount
-     * @return CTAlertsummaryshare
+     * @return static
      */
-    public function withTotaldefaultsamount($totaldefaultsamount)
+    public function withTotaldefaultsamount(int $totaldefaultsamount) : static
     {
         $new = clone $this;
         $new->totaldefaultsamount = $totaldefaultsamount;
@@ -303,16 +334,16 @@ class CTAlertsummaryshare
     /**
      * @return int
      */
-    public function getTotalwriteoffs()
+    public function getTotalwriteoffs() : int
     {
         return $this->totalwriteoffs;
     }
 
     /**
      * @param int $totalwriteoffs
-     * @return CTAlertsummaryshare
+     * @return static
      */
-    public function withTotalwriteoffs($totalwriteoffs)
+    public function withTotalwriteoffs(int $totalwriteoffs) : static
     {
         $new = clone $this;
         $new->totalwriteoffs = $totalwriteoffs;
@@ -323,16 +354,16 @@ class CTAlertsummaryshare
     /**
      * @return int
      */
-    public function getTotalwriteoffsamount()
+    public function getTotalwriteoffsamount() : int
     {
         return $this->totalwriteoffsamount;
     }
 
     /**
      * @param int $totalwriteoffsamount
-     * @return CTAlertsummaryshare
+     * @return static
      */
-    public function withTotalwriteoffsamount($totalwriteoffsamount)
+    public function withTotalwriteoffsamount(int $totalwriteoffsamount) : static
     {
         $new = clone $this;
         $new->totalwriteoffsamount = $totalwriteoffsamount;
@@ -341,18 +372,18 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotaldelinqs()
+    public function getTotaldelinqs() : ?int
     {
         return $this->totaldelinqs;
     }
 
     /**
-     * @param int $totaldelinqs
-     * @return CTAlertsummaryshare
+     * @param null | int $totaldelinqs
+     * @return static
      */
-    public function withTotaldelinqs($totaldelinqs)
+    public function withTotaldelinqs(?int $totaldelinqs) : static
     {
         $new = clone $this;
         $new->totaldelinqs = $totaldelinqs;
@@ -361,25 +392,23 @@ class CTAlertsummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotaldelinqsamount()
+    public function getTotaldelinqsamount() : ?int
     {
         return $this->totaldelinqsamount;
     }
 
     /**
-     * @param int $totaldelinqsamount
-     * @return CTAlertsummaryshare
+     * @param null | int $totaldelinqsamount
+     * @return static
      */
-    public function withTotaldelinqsamount($totaldelinqsamount)
+    public function withTotaldelinqsamount(?int $totaldelinqsamount) : static
     {
         $new = clone $this;
         $new->totaldelinqsamount = $totaldelinqsamount;
 
         return $new;
     }
-
-
 }
 

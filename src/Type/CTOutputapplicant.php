@@ -4,113 +4,162 @@ namespace PaymentAssist\Type;
 
 class CTOutputapplicant
 {
-    private ?CTOutputsummaryblock $summary;
-
     /**
-     * @var \PaymentAssist\Type\Creditscores
+     * Summarised report data
+     *
+     * @var null | \PaymentAssist\Type\CTOutputsummaryblock
      */
-    private $creditscores;
+    private ?\PaymentAssist\Type\CTOutputsummaryblock $summary = null;
 
     /**
-     * @var \PaymentAssist\Type\Addressconfs
+     * Credit scores and reason codes
+     *
+     * @var null | \PaymentAssist\Type\Creditscores
      */
-    private $addressconfs;
+    private ?\PaymentAssist\Type\Creditscores $creditscores = null;
 
     /**
-     * @var \PaymentAssist\Type\Judgments
+     * Address Confirmation data-set
+     *
+     * @var null | \PaymentAssist\Type\Addressconfs
      */
-    private $judgments;
+    private ?\PaymentAssist\Type\Addressconfs $addressconfs = null;
 
     /**
-     * @var \PaymentAssist\Type\Bais
+     * Judgment data-set
+     *
+     * @var null | \PaymentAssist\Type\Judgments
      */
-    private $bais;
+    private ?\PaymentAssist\Type\Judgments $judgments = null;
 
     /**
-     * @var \PaymentAssist\Type\Nocs
+     * Insolvency data-set
+     *
+     * @var null | \PaymentAssist\Type\Bais
      */
-    private $nocs;
+    private ?\PaymentAssist\Type\Bais $bais = null;
 
     /**
-     * @var \PaymentAssist\Type\Searches
+     * Notice of Correction data-set
+     *
+     * @var null | \PaymentAssist\Type\Nocs
      */
-    private $searches;
+    private ?\PaymentAssist\Type\Nocs $nocs = null;
 
     /**
-     * @var \PaymentAssist\Type\Addresslinks
+     * Search History data-set
+     *
+     * @var null | \PaymentAssist\Type\Searches
      */
-    private $addresslinks;
+    private ?\PaymentAssist\Type\Searches $searches = null;
 
     /**
-     * @var \PaymentAssist\Type\Aliaslinks
+     * Address Links data-set
+     *
+     * @var null | \PaymentAssist\Type\Addresslinks
      */
-    private $aliaslinks;
+    private ?\PaymentAssist\Type\Addresslinks $addresslinks = null;
 
     /**
-     * @var \PaymentAssist\Type\Associatelinks
+     * Alias Links data-set
+     *
+     * @var null | \PaymentAssist\Type\Aliaslinks
      */
-    private $associatelinks;
+    private ?\PaymentAssist\Type\Aliaslinks $aliaslinks = null;
 
     /**
-     * @var \PaymentAssist\Type\Cifas
+     * Associate Links data-set
+     *
+     * @var null | \PaymentAssist\Type\Associatelinks
      */
-    private $cifas;
+    private ?\PaymentAssist\Type\Associatelinks $associatelinks = null;
 
     /**
-     * @var \PaymentAssist\Type\Rtr
+     * CIFAS data-set
+     *
+     * @var null | \PaymentAssist\Type\Cifas
      */
-    private $rtr;
+    private ?\PaymentAssist\Type\Cifas $cifas = null;
 
     /**
-     * @var \PaymentAssist\Type\Accs
+     * RTR data-set
+     *
+     * @var null | \PaymentAssist\Type\Rtr
      */
-    private $accs;
+    private ?\PaymentAssist\Type\Rtr $rtr = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputdemographics
+     * SHARE data-set
+     *
+     * @var null | \PaymentAssist\Type\Accs
      */
-    private $demographics;
+    private ?\PaymentAssist\Type\Accs $accs = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputdemographics2006
+     * Demographic data-set
+     *
+     * @var null | \PaymentAssist\Type\CTOutputdemographics
      */
-    private $demographics2006;
+    private ?\PaymentAssist\Type\CTOutputdemographics $demographics = null;
 
     /**
+     * CAMEO Analysis data-set
+     *
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006
+     */
+    private ?\PaymentAssist\Type\CTOutputdemographics2006 $demographics2006 = null;
+
+    /**
+     * Used to indicate type of report for a given applicant.
+     * The list of possible values can be obtained from the web method LookupData07a table id = reporttype
+     *
      * @var string
      */
-    private $reporttype;
+    private string $reporttype;
 
     /**
-     * @var int
+     * A value of 1 indicates that the applicant has opted out of use of third party data. Note that the use of this attribute is required for the main report applicants. However for Opt-in Associate reports this attribute will not be added.
+     *
+     * @var null | int
      */
-    private $tpoptout;
+    private ?int $tpoptout = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that the maximum number of Address Links to be searched has exceeded the limit defined in the Admin area.
+     * Addresses not automatically searched can be searched manually.
+     *
+     * @var null | int
      */
-    private $autosearchmaxexceeded;
+    private ?int $autosearchmaxexceeded = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that the applicant is under 18 or over 110 and/or deceased
+     * The list of possible values can be obtained from the web method LookupData07a table id = ageinvalidcode
+     *
+     * @var null | int
      */
-    private $ageflag;
+    private ?int $ageflag = null;
 
     /**
-     * @var string
+     * Applicant report title
+     *
+     * @var null | string
      */
-    private $reporttitle;
+    private ?string $reporttitle = null;
 
-    public function getSummary(): ?CTOutputsummaryblock
+    /**
+     * @return null | \PaymentAssist\Type\CTOutputsummaryblock
+     */
+    public function getSummary() : ?\PaymentAssist\Type\CTOutputsummaryblock
     {
         return $this->summary;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputsummaryblock $summary
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\CTOutputsummaryblock $summary
+     * @return static
      */
-    public function withSummary($summary)
+    public function withSummary(?\PaymentAssist\Type\CTOutputsummaryblock $summary) : static
     {
         $new = clone $this;
         $new->summary = $summary;
@@ -119,18 +168,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Creditscores
+     * @return null | \PaymentAssist\Type\Creditscores
      */
-    public function getCreditscores()
+    public function getCreditscores() : ?\PaymentAssist\Type\Creditscores
     {
         return $this->creditscores;
     }
 
     /**
-     * @param \PaymentAssist\Type\Creditscores $creditscores
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Creditscores $creditscores
+     * @return static
      */
-    public function withCreditscores($creditscores)
+    public function withCreditscores(?\PaymentAssist\Type\Creditscores $creditscores) : static
     {
         $new = clone $this;
         $new->creditscores = $creditscores;
@@ -139,18 +188,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Addressconfs
+     * @return null | \PaymentAssist\Type\Addressconfs
      */
-    public function getAddressconfs()
+    public function getAddressconfs() : ?\PaymentAssist\Type\Addressconfs
     {
         return $this->addressconfs;
     }
 
     /**
-     * @param \PaymentAssist\Type\Addressconfs $addressconfs
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Addressconfs $addressconfs
+     * @return static
      */
-    public function withAddressconfs($addressconfs)
+    public function withAddressconfs(?\PaymentAssist\Type\Addressconfs $addressconfs) : static
     {
         $new = clone $this;
         $new->addressconfs = $addressconfs;
@@ -159,18 +208,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Judgments
+     * @return null | \PaymentAssist\Type\Judgments
      */
-    public function getJudgments()
+    public function getJudgments() : ?\PaymentAssist\Type\Judgments
     {
         return $this->judgments;
     }
 
     /**
-     * @param \PaymentAssist\Type\Judgments $judgments
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Judgments $judgments
+     * @return static
      */
-    public function withJudgments($judgments)
+    public function withJudgments(?\PaymentAssist\Type\Judgments $judgments) : static
     {
         $new = clone $this;
         $new->judgments = $judgments;
@@ -179,18 +228,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Bais
+     * @return null | \PaymentAssist\Type\Bais
      */
-    public function getBais()
+    public function getBais() : ?\PaymentAssist\Type\Bais
     {
         return $this->bais;
     }
 
     /**
-     * @param \PaymentAssist\Type\Bais $bais
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Bais $bais
+     * @return static
      */
-    public function withBais($bais)
+    public function withBais(?\PaymentAssist\Type\Bais $bais) : static
     {
         $new = clone $this;
         $new->bais = $bais;
@@ -199,18 +248,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Nocs
+     * @return null | \PaymentAssist\Type\Nocs
      */
-    public function getNocs()
+    public function getNocs() : ?\PaymentAssist\Type\Nocs
     {
         return $this->nocs;
     }
 
     /**
-     * @param \PaymentAssist\Type\Nocs $nocs
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Nocs $nocs
+     * @return static
      */
-    public function withNocs($nocs)
+    public function withNocs(?\PaymentAssist\Type\Nocs $nocs) : static
     {
         $new = clone $this;
         $new->nocs = $nocs;
@@ -219,18 +268,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Searches
+     * @return null | \PaymentAssist\Type\Searches
      */
-    public function getSearches()
+    public function getSearches() : ?\PaymentAssist\Type\Searches
     {
         return $this->searches;
     }
 
     /**
-     * @param \PaymentAssist\Type\Searches $searches
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Searches $searches
+     * @return static
      */
-    public function withSearches($searches)
+    public function withSearches(?\PaymentAssist\Type\Searches $searches) : static
     {
         $new = clone $this;
         $new->searches = $searches;
@@ -239,18 +288,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Addresslinks
+     * @return null | \PaymentAssist\Type\Addresslinks
      */
-    public function getAddresslinks()
+    public function getAddresslinks() : ?\PaymentAssist\Type\Addresslinks
     {
         return $this->addresslinks;
     }
 
     /**
-     * @param \PaymentAssist\Type\Addresslinks $addresslinks
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Addresslinks $addresslinks
+     * @return static
      */
-    public function withAddresslinks($addresslinks)
+    public function withAddresslinks(?\PaymentAssist\Type\Addresslinks $addresslinks) : static
     {
         $new = clone $this;
         $new->addresslinks = $addresslinks;
@@ -259,18 +308,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Aliaslinks
+     * @return null | \PaymentAssist\Type\Aliaslinks
      */
-    public function getAliaslinks()
+    public function getAliaslinks() : ?\PaymentAssist\Type\Aliaslinks
     {
         return $this->aliaslinks;
     }
 
     /**
-     * @param \PaymentAssist\Type\Aliaslinks $aliaslinks
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Aliaslinks $aliaslinks
+     * @return static
      */
-    public function withAliaslinks($aliaslinks)
+    public function withAliaslinks(?\PaymentAssist\Type\Aliaslinks $aliaslinks) : static
     {
         $new = clone $this;
         $new->aliaslinks = $aliaslinks;
@@ -279,18 +328,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Associatelinks
+     * @return null | \PaymentAssist\Type\Associatelinks
      */
-    public function getAssociatelinks()
+    public function getAssociatelinks() : ?\PaymentAssist\Type\Associatelinks
     {
         return $this->associatelinks;
     }
 
     /**
-     * @param \PaymentAssist\Type\Associatelinks $associatelinks
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Associatelinks $associatelinks
+     * @return static
      */
-    public function withAssociatelinks($associatelinks)
+    public function withAssociatelinks(?\PaymentAssist\Type\Associatelinks $associatelinks) : static
     {
         $new = clone $this;
         $new->associatelinks = $associatelinks;
@@ -299,18 +348,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Cifas
+     * @return null | \PaymentAssist\Type\Cifas
      */
-    public function getCifas()
+    public function getCifas() : ?\PaymentAssist\Type\Cifas
     {
         return $this->cifas;
     }
 
     /**
-     * @param \PaymentAssist\Type\Cifas $cifas
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Cifas $cifas
+     * @return static
      */
-    public function withCifas($cifas)
+    public function withCifas(?\PaymentAssist\Type\Cifas $cifas) : static
     {
         $new = clone $this;
         $new->cifas = $cifas;
@@ -319,18 +368,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Rtr
+     * @return null | \PaymentAssist\Type\Rtr
      */
-    public function getRtr()
+    public function getRtr() : ?\PaymentAssist\Type\Rtr
     {
         return $this->rtr;
     }
 
     /**
-     * @param \PaymentAssist\Type\Rtr $rtr
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Rtr $rtr
+     * @return static
      */
-    public function withRtr($rtr)
+    public function withRtr(?\PaymentAssist\Type\Rtr $rtr) : static
     {
         $new = clone $this;
         $new->rtr = $rtr;
@@ -339,18 +388,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Accs
+     * @return null | \PaymentAssist\Type\Accs
      */
-    public function getAccs()
+    public function getAccs() : ?\PaymentAssist\Type\Accs
     {
         return $this->accs;
     }
 
     /**
-     * @param \PaymentAssist\Type\Accs $accs
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\Accs $accs
+     * @return static
      */
-    public function withAccs($accs)
+    public function withAccs(?\PaymentAssist\Type\Accs $accs) : static
     {
         $new = clone $this;
         $new->accs = $accs;
@@ -359,18 +408,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputdemographics
+     * @return null | \PaymentAssist\Type\CTOutputdemographics
      */
-    public function getDemographics()
+    public function getDemographics() : ?\PaymentAssist\Type\CTOutputdemographics
     {
         return $this->demographics;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputdemographics $demographics
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\CTOutputdemographics $demographics
+     * @return static
      */
-    public function withDemographics($demographics)
+    public function withDemographics(?\PaymentAssist\Type\CTOutputdemographics $demographics) : static
     {
         $new = clone $this;
         $new->demographics = $demographics;
@@ -379,18 +428,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputdemographics2006
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006
      */
-    public function getDemographics2006()
+    public function getDemographics2006() : ?\PaymentAssist\Type\CTOutputdemographics2006
     {
         return $this->demographics2006;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputdemographics2006 $demographics2006
-     * @return CTOutputapplicant
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006 $demographics2006
+     * @return static
      */
-    public function withDemographics2006($demographics2006)
+    public function withDemographics2006(?\PaymentAssist\Type\CTOutputdemographics2006 $demographics2006) : static
     {
         $new = clone $this;
         $new->demographics2006 = $demographics2006;
@@ -401,16 +450,16 @@ class CTOutputapplicant
     /**
      * @return string
      */
-    public function getReporttype()
+    public function getReporttype() : string
     {
         return $this->reporttype;
     }
 
     /**
      * @param string $reporttype
-     * @return CTOutputapplicant
+     * @return static
      */
-    public function withReporttype($reporttype)
+    public function withReporttype(string $reporttype) : static
     {
         $new = clone $this;
         $new->reporttype = $reporttype;
@@ -419,18 +468,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTpoptout()
+    public function getTpoptout() : ?int
     {
         return $this->tpoptout;
     }
 
     /**
-     * @param int $tpoptout
-     * @return CTOutputapplicant
+     * @param null | int $tpoptout
+     * @return static
      */
-    public function withTpoptout($tpoptout)
+    public function withTpoptout(?int $tpoptout) : static
     {
         $new = clone $this;
         $new->tpoptout = $tpoptout;
@@ -439,18 +488,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAutosearchmaxexceeded()
+    public function getAutosearchmaxexceeded() : ?int
     {
         return $this->autosearchmaxexceeded;
     }
 
     /**
-     * @param int $autosearchmaxexceeded
-     * @return CTOutputapplicant
+     * @param null | int $autosearchmaxexceeded
+     * @return static
      */
-    public function withAutosearchmaxexceeded($autosearchmaxexceeded)
+    public function withAutosearchmaxexceeded(?int $autosearchmaxexceeded) : static
     {
         $new = clone $this;
         $new->autosearchmaxexceeded = $autosearchmaxexceeded;
@@ -459,18 +508,18 @@ class CTOutputapplicant
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAgeflag()
+    public function getAgeflag() : ?int
     {
         return $this->ageflag;
     }
 
     /**
-     * @param int $ageflag
-     * @return CTOutputapplicant
+     * @param null | int $ageflag
+     * @return static
      */
-    public function withAgeflag($ageflag)
+    public function withAgeflag(?int $ageflag) : static
     {
         $new = clone $this;
         $new->ageflag = $ageflag;
@@ -479,25 +528,23 @@ class CTOutputapplicant
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getReporttitle()
+    public function getReporttitle() : ?string
     {
         return $this->reporttitle;
     }
 
     /**
-     * @param string $reporttitle
-     * @return CTOutputapplicant
+     * @param null | string $reporttitle
+     * @return static
      */
-    public function withReporttitle($reporttitle)
+    public function withReporttitle(?string $reporttitle) : static
     {
         $new = clone $this;
         $new->reporttitle = $reporttitle;
 
         return $new;
     }
-
-
 }
 

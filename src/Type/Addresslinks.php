@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Addresslinks
 {
+    /**
+     * Output structure for Addresses held against Address Links
+     *
+     * @var null | \PaymentAssist\Type\CTOutputlinkaddresses
+     */
+    private ?\PaymentAssist\Type\CTOutputlinkaddresses $addresses = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputlinkaddresses
+     * Output structure for Address Links
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddresslinks
      */
-    private $addresses;
+    private ?\PaymentAssist\Type\CTOutputaddresslinks $links = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddresslinks
+     * @return null | \PaymentAssist\Type\CTOutputlinkaddresses
      */
-    private $links;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputlinkaddresses
-     */
-    public function getAddresses()
+    public function getAddresses() : ?\PaymentAssist\Type\CTOutputlinkaddresses
     {
         return $this->addresses;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputlinkaddresses $addresses
-     * @return Addresslinks
+     * @param null | \PaymentAssist\Type\CTOutputlinkaddresses $addresses
+     * @return static
      */
-    public function withAddresses($addresses)
+    public function withAddresses(?\PaymentAssist\Type\CTOutputlinkaddresses $addresses) : static
     {
         $new = clone $this;
         $new->addresses = $addresses;
@@ -36,25 +39,23 @@ class Addresslinks
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddresslinks
+     * @return null | \PaymentAssist\Type\CTOutputaddresslinks
      */
-    public function getLinks()
+    public function getLinks() : ?\PaymentAssist\Type\CTOutputaddresslinks
     {
         return $this->links;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddresslinks $links
-     * @return Addresslinks
+     * @param null | \PaymentAssist\Type\CTOutputaddresslinks $links
+     * @return static
      */
-    public function withLinks($links)
+    public function withLinks(?\PaymentAssist\Type\CTOutputaddresslinks $links) : static
     {
         $new = clone $this;
         $new->links = $links;
 
         return $new;
     }
-
-
 }
 

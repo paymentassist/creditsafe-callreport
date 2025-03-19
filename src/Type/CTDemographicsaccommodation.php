@@ -4,45 +4,56 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsaccommodation
 {
+    /**
+     * Accommodation Type Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsaccommodationtype
+     *
+     * @var null | string
+     */
+    private ?string $type = null;
 
     /**
-     * @var string
+     * Estimate of how much the property is worth
+     *
+     * @var null | int
      */
-    private $type;
+    private ?int $propertyvalue = null;
 
     /**
-     * @var int
+     * The total amount of the mortgage still to be repaid
+     *
+     * @var null | int
      */
-    private $propertyvalue;
+    private ?int $mortgagebalance = null;
 
     /**
-     * @var int
+     * The price that the applicant pays the home's owner for using the home
+     *
+     * @var null | int
      */
-    private $mortgagebalance;
+    private ?int $monthlyrental = null;
 
     /**
-     * @var int
+     * Residential Status Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsresidentialstatus
+     *
+     * @var null | string
      */
-    private $monthlyrental;
+    private ?string $residentialstatus = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $residentialstatus;
-
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType() : ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
-     * @return CTDemographicsaccommodation
+     * @param null | string $type
+     * @return static
      */
-    public function withType($type)
+    public function withType(?string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -51,18 +62,18 @@ class CTDemographicsaccommodation
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getPropertyvalue()
+    public function getPropertyvalue() : ?int
     {
         return $this->propertyvalue;
     }
 
     /**
-     * @param int $propertyvalue
-     * @return CTDemographicsaccommodation
+     * @param null | int $propertyvalue
+     * @return static
      */
-    public function withPropertyvalue($propertyvalue)
+    public function withPropertyvalue(?int $propertyvalue) : static
     {
         $new = clone $this;
         $new->propertyvalue = $propertyvalue;
@@ -71,18 +82,18 @@ class CTDemographicsaccommodation
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getMortgagebalance()
+    public function getMortgagebalance() : ?int
     {
         return $this->mortgagebalance;
     }
 
     /**
-     * @param int $mortgagebalance
-     * @return CTDemographicsaccommodation
+     * @param null | int $mortgagebalance
+     * @return static
      */
-    public function withMortgagebalance($mortgagebalance)
+    public function withMortgagebalance(?int $mortgagebalance) : static
     {
         $new = clone $this;
         $new->mortgagebalance = $mortgagebalance;
@@ -91,18 +102,18 @@ class CTDemographicsaccommodation
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getMonthlyrental()
+    public function getMonthlyrental() : ?int
     {
         return $this->monthlyrental;
     }
 
     /**
-     * @param int $monthlyrental
-     * @return CTDemographicsaccommodation
+     * @param null | int $monthlyrental
+     * @return static
      */
-    public function withMonthlyrental($monthlyrental)
+    public function withMonthlyrental(?int $monthlyrental) : static
     {
         $new = clone $this;
         $new->monthlyrental = $monthlyrental;
@@ -111,25 +122,23 @@ class CTDemographicsaccommodation
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getResidentialstatus()
+    public function getResidentialstatus() : ?string
     {
         return $this->residentialstatus;
     }
 
     /**
-     * @param string $residentialstatus
-     * @return CTDemographicsaccommodation
+     * @param null | string $residentialstatus
+     * @return static
      */
-    public function withResidentialstatus($residentialstatus)
+    public function withResidentialstatus(?string $residentialstatus) : static
     {
         $new = clone $this;
         $new->residentialstatus = $residentialstatus;
 
         return $new;
     }
-
-
 }
 

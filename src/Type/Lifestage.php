@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Lifestage
 {
+    /**
+     * Lifestage Score
+     *
+     * @var null | float
+     */
+    private ?float $lifescore = null;
 
     /**
-     * @var float
+     * Lifestage Band
+     *
+     * @var null | int
      */
-    private $lifescore;
+    private ?int $lifeband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $lifeband;
-
-    /**
-     * @return float
-     */
-    public function getLifescore()
+    public function getLifescore() : ?float
     {
         return $this->lifescore;
     }
 
     /**
-     * @param float $lifescore
-     * @return Lifestage
+     * @param null | float $lifescore
+     * @return static
      */
-    public function withLifescore($lifescore)
+    public function withLifescore(?float $lifescore) : static
     {
         $new = clone $this;
         $new->lifescore = $lifescore;
@@ -36,25 +39,23 @@ class Lifestage
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getLifeband()
+    public function getLifeband() : ?int
     {
         return $this->lifeband;
     }
 
     /**
-     * @param int $lifeband
-     * @return Lifestage
+     * @param null | int $lifeband
+     * @return static
      */
-    public function withLifeband($lifeband)
+    public function withLifeband(?int $lifeband) : static
     {
         $new = clone $this;
         $new->lifeband = $lifeband;
 
         return $new;
     }
-
-
 }
 

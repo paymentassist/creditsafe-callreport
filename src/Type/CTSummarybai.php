@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTSummarybai
 {
+    /**
+     * Total number of discharged Insolvencies
+     *
+     * @var null | int
+     */
+    private ?int $totaldischarged = null;
 
     /**
+     * A value of 1 indicates currently insolvent
+     *
      * @var int
      */
-    private $totaldischarged;
+    private int $currentlyinsolvent;
 
     /**
-     * @var int
+     * A value of 1 indicates that a restriction exists
+     *
+     * @var null | int
      */
-    private $currentlyinsolvent;
+    private ?int $restricted = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $restricted;
-
-    /**
-     * @return int
-     */
-    public function getTotaldischarged()
+    public function getTotaldischarged() : ?int
     {
         return $this->totaldischarged;
     }
 
     /**
-     * @param int $totaldischarged
-     * @return CTSummarybai
+     * @param null | int $totaldischarged
+     * @return static
      */
-    public function withTotaldischarged($totaldischarged)
+    public function withTotaldischarged(?int $totaldischarged) : static
     {
         $new = clone $this;
         $new->totaldischarged = $totaldischarged;
@@ -43,16 +48,16 @@ class CTSummarybai
     /**
      * @return int
      */
-    public function getCurrentlyinsolvent()
+    public function getCurrentlyinsolvent() : int
     {
         return $this->currentlyinsolvent;
     }
 
     /**
      * @param int $currentlyinsolvent
-     * @return CTSummarybai
+     * @return static
      */
-    public function withCurrentlyinsolvent($currentlyinsolvent)
+    public function withCurrentlyinsolvent(int $currentlyinsolvent) : static
     {
         $new = clone $this;
         $new->currentlyinsolvent = $currentlyinsolvent;
@@ -61,25 +66,23 @@ class CTSummarybai
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getRestricted()
+    public function getRestricted() : ?int
     {
         return $this->restricted;
     }
 
     /**
-     * @param int $restricted
-     * @return CTSummarybai
+     * @param null | int $restricted
+     * @return static
      */
-    public function withRestricted($restricted)
+    public function withRestricted(?int $restricted) : static
     {
         $new = clone $this;
         $new->restricted = $restricted;
 
         return $new;
     }
-
-
 }
 

@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class CTJobdetails
 {
+    /**
+     * Unique identifier for Credit Reports - this is required for subsequent enquiries
+     *
+     * @var null | string
+     */
+    private ?string $searchid = null;
 
     /**
-     * @var string
+     * Callcredit System Specific Information
+     *
+     * @var null | string
      */
-    private $searchid;
+    private ?string $cast = null;
 
     /**
-     * @var string
+     * Callcredit System Specific Information
+     *
+     * @var null | int
      */
-    private $cast;
+    private ?int $pstv = null;
 
     /**
-     * @var int
+     * Callcredit System Specific Information
+     *
+     * @var null | int
      */
-    private $pstv;
+    private ?int $ls = null;
 
     /**
-     * @var int
+     * Date and time that Search was carried out
+     *
+     * @var null | \DateTimeInterface
      */
-    private $ls;
+    private ?\DateTimeInterface $searchdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * @return null | string
      */
-    private $searchdate;
-
-    /**
-     * @return string
-     */
-    public function getSearchid()
+    public function getSearchid() : ?string
     {
         return $this->searchid;
     }
 
     /**
-     * @param string $searchid
-     * @return CTJobdetails
+     * @param null | string $searchid
+     * @return static
      */
-    public function withSearchid($searchid)
+    public function withSearchid(?string $searchid) : static
     {
         $new = clone $this;
         $new->searchid = $searchid;
@@ -51,18 +60,18 @@ class CTJobdetails
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCast()
+    public function getCast() : ?string
     {
         return $this->cast;
     }
 
     /**
-     * @param string $cast
-     * @return CTJobdetails
+     * @param null | string $cast
+     * @return static
      */
-    public function withCast($cast)
+    public function withCast(?string $cast) : static
     {
         $new = clone $this;
         $new->cast = $cast;
@@ -71,18 +80,18 @@ class CTJobdetails
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getPstv()
+    public function getPstv() : ?int
     {
         return $this->pstv;
     }
 
     /**
-     * @param int $pstv
-     * @return CTJobdetails
+     * @param null | int $pstv
+     * @return static
      */
-    public function withPstv($pstv)
+    public function withPstv(?int $pstv) : static
     {
         $new = clone $this;
         $new->pstv = $pstv;
@@ -91,18 +100,18 @@ class CTJobdetails
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getLs()
+    public function getLs() : ?int
     {
         return $this->ls;
     }
 
     /**
-     * @param int $ls
-     * @return CTJobdetails
+     * @param null | int $ls
+     * @return static
      */
-    public function withLs($ls)
+    public function withLs(?int $ls) : static
     {
         $new = clone $this;
         $new->ls = $ls;
@@ -111,25 +120,23 @@ class CTJobdetails
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getSearchdate()
+    public function getSearchdate() : ?\DateTimeInterface
     {
         return $this->searchdate;
     }
 
     /**
-     * @param \DateTimeInterface $searchdate
-     * @return CTJobdetails
+     * @param null | \DateTimeInterface $searchdate
+     * @return static
      */
-    public function withSearchdate($searchdate)
+    public function withSearchdate(?\DateTimeInterface $searchdate) : static
     {
         $new = clone $this;
         $new->searchdate = $searchdate;
 
         return $new;
     }
-
-
 }
 

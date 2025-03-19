@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTAlertsummary
 {
+    /**
+     * Judgments Summary
+     *
+     * @var null | \PaymentAssist\Type\CTSummaryjudgment
+     */
+    private ?\PaymentAssist\Type\CTSummaryjudgment $judgments = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryjudgment
+     * Insolvencies Summary
+     *
+     * @var null | \PaymentAssist\Type\CTSummarybai
      */
-    private $judgments;
+    private ?\PaymentAssist\Type\CTSummarybai $bais = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummarybai
+     * SHARE Account Alert Summary. Not returned if SHARE data is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTAlertsummaryshare
      */
-    private $bais;
+    private ?\PaymentAssist\Type\CTAlertsummaryshare $share = null;
 
     /**
-     * @var \PaymentAssist\Type\CTAlertsummaryshare
+     * @return null | \PaymentAssist\Type\CTSummaryjudgment
      */
-    private $share;
-
-    /**
-     * @return \PaymentAssist\Type\CTSummaryjudgment
-     */
-    public function getJudgments()
+    public function getJudgments() : ?\PaymentAssist\Type\CTSummaryjudgment
     {
         return $this->judgments;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryjudgment $judgments
-     * @return CTAlertsummary
+     * @param null | \PaymentAssist\Type\CTSummaryjudgment $judgments
+     * @return static
      */
-    public function withJudgments($judgments)
+    public function withJudgments(?\PaymentAssist\Type\CTSummaryjudgment $judgments) : static
     {
         $new = clone $this;
         $new->judgments = $judgments;
@@ -41,18 +46,18 @@ class CTAlertsummary
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummarybai
+     * @return null | \PaymentAssist\Type\CTSummarybai
      */
-    public function getBais()
+    public function getBais() : ?\PaymentAssist\Type\CTSummarybai
     {
         return $this->bais;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarybai $bais
-     * @return CTAlertsummary
+     * @param null | \PaymentAssist\Type\CTSummarybai $bais
+     * @return static
      */
-    public function withBais($bais)
+    public function withBais(?\PaymentAssist\Type\CTSummarybai $bais) : static
     {
         $new = clone $this;
         $new->bais = $bais;
@@ -61,25 +66,23 @@ class CTAlertsummary
     }
 
     /**
-     * @return \PaymentAssist\Type\CTAlertsummaryshare
+     * @return null | \PaymentAssist\Type\CTAlertsummaryshare
      */
-    public function getShare()
+    public function getShare() : ?\PaymentAssist\Type\CTAlertsummaryshare
     {
         return $this->share;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAlertsummaryshare $share
-     * @return CTAlertsummary
+     * @param null | \PaymentAssist\Type\CTAlertsummaryshare $share
+     * @return static
      */
-    public function withShare($share)
+    public function withShare(?\PaymentAssist\Type\CTAlertsummaryshare $share) : static
     {
         $new = clone $this;
         $new->share = $share;
 
         return $new;
     }
-
-
 }
 

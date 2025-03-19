@@ -4,65 +4,84 @@ namespace PaymentAssist\Type;
 
 class Ah
 {
-
     /**
+     * Year and month that history record applies to
+     *
      * @var string
      */
-    private $m;
+    private string $m;
 
     /**
-     * @var int
+     * Balance amount for account history record
+     *
+     * @var null | int
      */
-    private $bal;
+    private ?int $bal = null;
 
     /**
-     * @var int
+     * Credit limit for account history record
+     *
+     * @var null | int
      */
-    private $limit;
+    private ?int $limit = null;
 
     /**
+     * Account status code for account history record
+     * The list of possible values can be obtained from the web method LookupData07a table id = accountstatuscode
+     *
      * @var string
      */
-    private $acc;
+    private string $acc;
 
     /**
-     * @var string
+     * Payment status code for account history record
+     * The list of possible values can be obtained from the web method LookupData07a table id = payment
+     *
+     * @var null | string
      */
-    private $pay;
+    private ?string $pay = null;
 
     /**
-     * @var int
+     * Statement balance amount for account history record (returned only to customers who are authorised to see Behavoural Data)
+     *
+     * @var null | int
      */
-    private $stmtbal;
+    private ?int $stmtbal = null;
 
     /**
-     * @var int
+     * Payment amount for account history record (returned only to customers who are authorised to see Behavoural Data)
+     *
+     * @var null | int
      */
-    private $payamt;
+    private ?int $payamt = null;
 
     /**
-     * @var int
+     * The number of cash advances for account history record (returned only to customers who are authorised to see Behavoural Data)
+     *
+     * @var null | int
      */
-    private $cashadvcount;
+    private ?int $cashadvcount = null;
 
     /**
-     * @var int
+     * Total value of cash advances for account history record (returned only to customers who are authorised to see Behavoural Data)
+     *
+     * @var null | int
      */
-    private $cashadvtotal;
+    private ?int $cashadvtotal = null;
 
     /**
      * @return string
      */
-    public function getM()
+    public function getM() : string
     {
         return $this->m;
     }
 
     /**
      * @param string $m
-     * @return Ah
+     * @return static
      */
-    public function withM($m)
+    public function withM(string $m) : static
     {
         $new = clone $this;
         $new->m = $m;
@@ -71,18 +90,18 @@ class Ah
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getBal()
+    public function getBal() : ?int
     {
         return $this->bal;
     }
 
     /**
-     * @param int $bal
-     * @return Ah
+     * @param null | int $bal
+     * @return static
      */
-    public function withBal($bal)
+    public function withBal(?int $bal) : static
     {
         $new = clone $this;
         $new->bal = $bal;
@@ -91,18 +110,18 @@ class Ah
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getLimit()
+    public function getLimit() : ?int
     {
         return $this->limit;
     }
 
     /**
-     * @param int $limit
-     * @return Ah
+     * @param null | int $limit
+     * @return static
      */
-    public function withLimit($limit)
+    public function withLimit(?int $limit) : static
     {
         $new = clone $this;
         $new->limit = $limit;
@@ -113,16 +132,16 @@ class Ah
     /**
      * @return string
      */
-    public function getAcc()
+    public function getAcc() : string
     {
         return $this->acc;
     }
 
     /**
      * @param string $acc
-     * @return Ah
+     * @return static
      */
-    public function withAcc($acc)
+    public function withAcc(string $acc) : static
     {
         $new = clone $this;
         $new->acc = $acc;
@@ -131,18 +150,18 @@ class Ah
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getPay()
+    public function getPay() : ?string
     {
         return $this->pay;
     }
 
     /**
-     * @param string $pay
-     * @return Ah
+     * @param null | string $pay
+     * @return static
      */
-    public function withPay($pay)
+    public function withPay(?string $pay) : static
     {
         $new = clone $this;
         $new->pay = $pay;
@@ -151,18 +170,18 @@ class Ah
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getStmtbal()
+    public function getStmtbal() : ?int
     {
         return $this->stmtbal;
     }
 
     /**
-     * @param int $stmtbal
-     * @return Ah
+     * @param null | int $stmtbal
+     * @return static
      */
-    public function withStmtbal($stmtbal)
+    public function withStmtbal(?int $stmtbal) : static
     {
         $new = clone $this;
         $new->stmtbal = $stmtbal;
@@ -171,18 +190,18 @@ class Ah
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getPayamt()
+    public function getPayamt() : ?int
     {
         return $this->payamt;
     }
 
     /**
-     * @param int $payamt
-     * @return Ah
+     * @param null | int $payamt
+     * @return static
      */
-    public function withPayamt($payamt)
+    public function withPayamt(?int $payamt) : static
     {
         $new = clone $this;
         $new->payamt = $payamt;
@@ -191,18 +210,18 @@ class Ah
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getCashadvcount()
+    public function getCashadvcount() : ?int
     {
         return $this->cashadvcount;
     }
 
     /**
-     * @param int $cashadvcount
-     * @return Ah
+     * @param null | int $cashadvcount
+     * @return static
      */
-    public function withCashadvcount($cashadvcount)
+    public function withCashadvcount(?int $cashadvcount) : static
     {
         $new = clone $this;
         $new->cashadvcount = $cashadvcount;
@@ -211,25 +230,23 @@ class Ah
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getCashadvtotal()
+    public function getCashadvtotal() : ?int
     {
         return $this->cashadvtotal;
     }
 
     /**
-     * @param int $cashadvtotal
-     * @return Ah
+     * @param null | int $cashadvtotal
+     * @return static
      */
-    public function withCashadvtotal($cashadvtotal)
+    public function withCashadvtotal(?int $cashadvtotal) : static
     {
         $new = clone $this;
         $new->cashadvtotal = $cashadvtotal;
 
         return $new;
     }
-
-
 }
 

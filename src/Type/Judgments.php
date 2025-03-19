@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Judgments
 {
+    /**
+     * Output structure for a Judgment
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputjudgment>
+     */
+    private array $judgment;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputjudgment
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputjudgment>
      */
-    private $judgment;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputjudgment
-     */
-    public function getJudgment()
+    public function getJudgment() : array
     {
         return $this->judgment;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputjudgment $judgment
-     * @return Judgments
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputjudgment> $judgment
+     * @return static
      */
-    public function withJudgment($judgment)
+    public function withJudgment(array $judgment) : static
     {
         $new = clone $this;
         $new->judgment = $judgment;
 
         return $new;
     }
-
-
 }
 

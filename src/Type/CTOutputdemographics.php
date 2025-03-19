@@ -4,95 +4,122 @@ namespace PaymentAssist\Type;
 
 class CTOutputdemographics
 {
+    /**
+     * CAMEO UK Code - Refer to CAMEO Manual
+     *
+     * @var null | string
+     */
+    private ?string $cameouk = null;
 
     /**
-     * @var string
+     * CAMEO UK Code - Refer to CAMEO Manual
+     *
+     * @var null | string
      */
-    private $cameouk;
+    private ?string $cameoinvestor = null;
 
     /**
-     * @var string
+     * CAMEO Income Code - Refer to CAMEO Manual
+     *
+     * @var null | string
      */
-    private $cameoinvestor;
+    private ?string $cameoincome = null;
 
     /**
-     * @var string
+     * CAMEO Unemployment Code - Refer to CAMEO Manual
+     *
+     * @var null | string
      */
-    private $cameoincome;
+    private ?string $cameounemployment = null;
 
     /**
-     * @var string
+     * CAMEO Property Code - Refer to CAMEO Manual
+     *
+     * @var null | string
      */
-    private $cameounemployment;
+    private ?string $cameoproperty = null;
 
     /**
-     * @var string
+     * CAMEO Finance Code - Refer to CAMEO Manual
+     *
+     * @var null | string
      */
-    private $cameoproperty;
+    private ?string $cameofinance = null;
 
     /**
-     * @var string
+     * Family status and life-stage codes
+     *
+     * @var null | \PaymentAssist\Type\Family
      */
-    private $cameofinance;
+    private ?\PaymentAssist\Type\Family $family = null;
 
     /**
-     * @var \PaymentAssist\Type\Family
+     * Adult household composition percentages
+     *
+     * @var null | \PaymentAssist\Type\Household
      */
-    private $family;
+    private ?\PaymentAssist\Type\Household $household = null;
 
     /**
-     * @var \PaymentAssist\Type\Household
+     * @var null | \PaymentAssist\Type\Age
      */
-    private $household;
+    private ?\PaymentAssist\Type\Age $age = null;
 
     /**
-     * @var \PaymentAssist\Type\Age
+     * Economic and social status information
+     *
+     * @var null | \PaymentAssist\Type\Economic
      */
-    private $age;
+    private ?\PaymentAssist\Type\Economic $economic = null;
 
     /**
-     * @var \PaymentAssist\Type\Economic
+     * Economic activity information
+     *
+     * @var null | \PaymentAssist\Type\Economicactivity
      */
-    private $economic;
+    private ?\PaymentAssist\Type\Economicactivity $economicactivity = null;
 
     /**
-     * @var \PaymentAssist\Type\Economicactivity
+     * Social class information
+     *
+     * @var null | \PaymentAssist\Type\Socialclass
      */
-    private $economicactivity;
+    private ?\PaymentAssist\Type\Socialclass $socialclass = null;
 
     /**
-     * @var \PaymentAssist\Type\Socialclass
+     * Housing type and property price information
+     *
+     * @var null | \PaymentAssist\Type\Housing
      */
-    private $socialclass;
+    private ?\PaymentAssist\Type\Housing $housing = null;
 
     /**
-     * @var \PaymentAssist\Type\Housing
+     * Property price indices
+     *
+     * @var null | \PaymentAssist\Type\Propertyprice
      */
-    private $housing;
+    private ?\PaymentAssist\Type\Propertyprice $propertyprice = null;
 
     /**
-     * @var \PaymentAssist\Type\Propertyprice
+     * Movement characteristics
+     *
+     * @var null | \PaymentAssist\Type\Movement
      */
-    private $propertyprice;
+    private ?\PaymentAssist\Type\Movement $movement = null;
 
     /**
-     * @var \PaymentAssist\Type\Movement
+     * @return null | string
      */
-    private $movement;
-
-    /**
-     * @return string
-     */
-    public function getCameouk()
+    public function getCameouk() : ?string
     {
         return $this->cameouk;
     }
 
     /**
-     * @param string $cameouk
-     * @return CTOutputdemographics
+     * @param null | string $cameouk
+     * @return static
      */
-    public function withCameouk($cameouk)
+    public function withCameouk(?string $cameouk) : static
     {
         $new = clone $this;
         $new->cameouk = $cameouk;
@@ -101,18 +128,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCameoinvestor()
+    public function getCameoinvestor() : ?string
     {
         return $this->cameoinvestor;
     }
 
     /**
-     * @param string $cameoinvestor
-     * @return CTOutputdemographics
+     * @param null | string $cameoinvestor
+     * @return static
      */
-    public function withCameoinvestor($cameoinvestor)
+    public function withCameoinvestor(?string $cameoinvestor) : static
     {
         $new = clone $this;
         $new->cameoinvestor = $cameoinvestor;
@@ -121,18 +148,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCameoincome()
+    public function getCameoincome() : ?string
     {
         return $this->cameoincome;
     }
 
     /**
-     * @param string $cameoincome
-     * @return CTOutputdemographics
+     * @param null | string $cameoincome
+     * @return static
      */
-    public function withCameoincome($cameoincome)
+    public function withCameoincome(?string $cameoincome) : static
     {
         $new = clone $this;
         $new->cameoincome = $cameoincome;
@@ -141,18 +168,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCameounemployment()
+    public function getCameounemployment() : ?string
     {
         return $this->cameounemployment;
     }
 
     /**
-     * @param string $cameounemployment
-     * @return CTOutputdemographics
+     * @param null | string $cameounemployment
+     * @return static
      */
-    public function withCameounemployment($cameounemployment)
+    public function withCameounemployment(?string $cameounemployment) : static
     {
         $new = clone $this;
         $new->cameounemployment = $cameounemployment;
@@ -161,18 +188,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCameoproperty()
+    public function getCameoproperty() : ?string
     {
         return $this->cameoproperty;
     }
 
     /**
-     * @param string $cameoproperty
-     * @return CTOutputdemographics
+     * @param null | string $cameoproperty
+     * @return static
      */
-    public function withCameoproperty($cameoproperty)
+    public function withCameoproperty(?string $cameoproperty) : static
     {
         $new = clone $this;
         $new->cameoproperty = $cameoproperty;
@@ -181,18 +208,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCameofinance()
+    public function getCameofinance() : ?string
     {
         return $this->cameofinance;
     }
 
     /**
-     * @param string $cameofinance
-     * @return CTOutputdemographics
+     * @param null | string $cameofinance
+     * @return static
      */
-    public function withCameofinance($cameofinance)
+    public function withCameofinance(?string $cameofinance) : static
     {
         $new = clone $this;
         $new->cameofinance = $cameofinance;
@@ -201,18 +228,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Family
+     * @return null | \PaymentAssist\Type\Family
      */
-    public function getFamily()
+    public function getFamily() : ?\PaymentAssist\Type\Family
     {
         return $this->family;
     }
 
     /**
-     * @param \PaymentAssist\Type\Family $family
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Family $family
+     * @return static
      */
-    public function withFamily($family)
+    public function withFamily(?\PaymentAssist\Type\Family $family) : static
     {
         $new = clone $this;
         $new->family = $family;
@@ -221,18 +248,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Household
+     * @return null | \PaymentAssist\Type\Household
      */
-    public function getHousehold()
+    public function getHousehold() : ?\PaymentAssist\Type\Household
     {
         return $this->household;
     }
 
     /**
-     * @param \PaymentAssist\Type\Household $household
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Household $household
+     * @return static
      */
-    public function withHousehold($household)
+    public function withHousehold(?\PaymentAssist\Type\Household $household) : static
     {
         $new = clone $this;
         $new->household = $household;
@@ -241,18 +268,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Age
+     * @return null | \PaymentAssist\Type\Age
      */
-    public function getAge()
+    public function getAge() : ?\PaymentAssist\Type\Age
     {
         return $this->age;
     }
 
     /**
-     * @param \PaymentAssist\Type\Age $age
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Age $age
+     * @return static
      */
-    public function withAge($age)
+    public function withAge(?\PaymentAssist\Type\Age $age) : static
     {
         $new = clone $this;
         $new->age = $age;
@@ -261,18 +288,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Economic
+     * @return null | \PaymentAssist\Type\Economic
      */
-    public function getEconomic()
+    public function getEconomic() : ?\PaymentAssist\Type\Economic
     {
         return $this->economic;
     }
 
     /**
-     * @param \PaymentAssist\Type\Economic $economic
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Economic $economic
+     * @return static
      */
-    public function withEconomic($economic)
+    public function withEconomic(?\PaymentAssist\Type\Economic $economic) : static
     {
         $new = clone $this;
         $new->economic = $economic;
@@ -281,18 +308,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Economicactivity
+     * @return null | \PaymentAssist\Type\Economicactivity
      */
-    public function getEconomicactivity()
+    public function getEconomicactivity() : ?\PaymentAssist\Type\Economicactivity
     {
         return $this->economicactivity;
     }
 
     /**
-     * @param \PaymentAssist\Type\Economicactivity $economicactivity
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Economicactivity $economicactivity
+     * @return static
      */
-    public function withEconomicactivity($economicactivity)
+    public function withEconomicactivity(?\PaymentAssist\Type\Economicactivity $economicactivity) : static
     {
         $new = clone $this;
         $new->economicactivity = $economicactivity;
@@ -301,18 +328,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Socialclass
+     * @return null | \PaymentAssist\Type\Socialclass
      */
-    public function getSocialclass()
+    public function getSocialclass() : ?\PaymentAssist\Type\Socialclass
     {
         return $this->socialclass;
     }
 
     /**
-     * @param \PaymentAssist\Type\Socialclass $socialclass
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Socialclass $socialclass
+     * @return static
      */
-    public function withSocialclass($socialclass)
+    public function withSocialclass(?\PaymentAssist\Type\Socialclass $socialclass) : static
     {
         $new = clone $this;
         $new->socialclass = $socialclass;
@@ -321,18 +348,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Housing
+     * @return null | \PaymentAssist\Type\Housing
      */
-    public function getHousing()
+    public function getHousing() : ?\PaymentAssist\Type\Housing
     {
         return $this->housing;
     }
 
     /**
-     * @param \PaymentAssist\Type\Housing $housing
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Housing $housing
+     * @return static
      */
-    public function withHousing($housing)
+    public function withHousing(?\PaymentAssist\Type\Housing $housing) : static
     {
         $new = clone $this;
         $new->housing = $housing;
@@ -341,18 +368,18 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Propertyprice
+     * @return null | \PaymentAssist\Type\Propertyprice
      */
-    public function getPropertyprice()
+    public function getPropertyprice() : ?\PaymentAssist\Type\Propertyprice
     {
         return $this->propertyprice;
     }
 
     /**
-     * @param \PaymentAssist\Type\Propertyprice $propertyprice
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Propertyprice $propertyprice
+     * @return static
      */
-    public function withPropertyprice($propertyprice)
+    public function withPropertyprice(?\PaymentAssist\Type\Propertyprice $propertyprice) : static
     {
         $new = clone $this;
         $new->propertyprice = $propertyprice;
@@ -361,25 +388,23 @@ class CTOutputdemographics
     }
 
     /**
-     * @return \PaymentAssist\Type\Movement
+     * @return null | \PaymentAssist\Type\Movement
      */
-    public function getMovement()
+    public function getMovement() : ?\PaymentAssist\Type\Movement
     {
         return $this->movement;
     }
 
     /**
-     * @param \PaymentAssist\Type\Movement $movement
-     * @return CTOutputdemographics
+     * @param null | \PaymentAssist\Type\Movement $movement
+     * @return static
      */
-    public function withMovement($movement)
+    public function withMovement(?\PaymentAssist\Type\Movement $movement) : static
     {
         $new = clone $this;
         $new->movement = $movement;
 
         return $new;
     }
-
-
 }
 

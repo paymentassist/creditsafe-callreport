@@ -4,35 +4,41 @@ namespace PaymentAssist\Type;
 
 class CTPicklistapplicant
 {
+    /**
+     * Set of full matches and input details relating to a single address (current or previous)
+     *
+     * @var non-empty-array<int<0,max>, \PaymentAssist\Type\CTInputaddressandmatches>
+     */
+    private array $address;
 
     /**
-     * @var \PaymentAssist\Type\CTInputaddressandmatches
+     * Applicant identifier
+     *
+     * @var null | int
      */
-    private $address;
+    private ?int $id = null;
 
     /**
-     * @var int
+     * Used to indicate type of report available for a given applicant within the picklist.
+     * The list of possible values can be obtained from the web method LookupData07a table id = reporttype
+     *
+     * @var null | string
      */
-    private $id;
+    private ?string $reporttype = null;
 
     /**
-     * @var string
+     * @return non-empty-array<int<0,max>, \PaymentAssist\Type\CTInputaddressandmatches>
      */
-    private $reporttype;
-
-    /**
-     * @return \PaymentAssist\Type\CTInputaddressandmatches
-     */
-    public function getAddress()
+    public function getAddress() : array
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTInputaddressandmatches $address
-     * @return CTPicklistapplicant
+     * @param non-empty-array<int<0,max>, \PaymentAssist\Type\CTInputaddressandmatches> $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(array $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -41,18 +47,18 @@ class CTPicklistapplicant
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getId()
+    public function getId() : ?int
     {
         return $this->id;
     }
 
     /**
-     * @param int $id
-     * @return CTPicklistapplicant
+     * @param null | int $id
+     * @return static
      */
-    public function withId($id)
+    public function withId(?int $id) : static
     {
         $new = clone $this;
         $new->id = $id;
@@ -61,25 +67,23 @@ class CTPicklistapplicant
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getReporttype()
+    public function getReporttype() : ?string
     {
         return $this->reporttype;
     }
 
     /**
-     * @param string $reporttype
-     * @return CTPicklistapplicant
+     * @param null | string $reporttype
+     * @return static
      */
-    public function withReporttype($reporttype)
+    public function withReporttype(?string $reporttype) : static
     {
         $new = clone $this;
         $new->reporttype = $reporttype;
 
         return $new;
     }
-
-
 }
 

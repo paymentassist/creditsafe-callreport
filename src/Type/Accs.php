@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Accs
 {
+    /**
+     * Output structure for a SHARE account
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputshareaccount>
+     */
+    private array $acc;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputshareaccount
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputshareaccount>
      */
-    private $acc;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputshareaccount
-     */
-    public function getAcc()
+    public function getAcc() : array
     {
         return $this->acc;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputshareaccount $acc
-     * @return Accs
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputshareaccount> $acc
+     * @return static
      */
-    public function withAcc($acc)
+    public function withAcc(array $acc) : static
     {
         $new = clone $this;
         $new->acc = $acc;
 
         return $new;
     }
-
-
 }
 

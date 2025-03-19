@@ -2,12 +2,13 @@
 
 namespace PaymentAssist;
 
-use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use PaymentAssist\Type;
 use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
 
 class CreditsafeClassmap
 {
-    public static function getCollection() : ClassMapCollection
+    public static function getCollection() : \Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection(
             new ClassMap('CT_demographicsidentity', Type\CTDemographicsidentity::class),
@@ -54,7 +55,6 @@ class CreditsafeClassmap
             new ClassMap('row', Type\Row::class),
             new ClassMap('CT_TestResponse', Type\CTTestResponse::class),
             new ClassMap('CT_TestResult', Type\CTTestResult::class),
-            new ClassMap('callcreditheaders', Type\Callcreditheaders::class),
             new ClassMap('CT_outputaddress', Type\CTOutputaddress::class),
             new ClassMap('CT_outputerhistory', Type\CTOutputerhistory::class),
             new ClassMap('CT_outputscore', Type\CTOutputscore::class),
@@ -70,11 +70,11 @@ class CreditsafeClassmap
             new ClassMap('CT_outputaddresslinks', Type\CTOutputaddresslinks::class),
             new ClassMap('CT_outputaddresslink', Type\CTOutputaddresslink::class),
             new ClassMap('CT_outputcifasfiling', Type\CTOutputcifasfiling::class),
+            new ClassMap('person', Type\Person::class),
+            new ClassMap('company', Type\Company::class),
             new ClassMap('details', Type\Details::class),
             new ClassMap('CT_outputcifasaddress', Type\CTOutputcifasaddress::class),
             new ClassMap('CT_outputcifassubject', Type\CTOutputcifassubject::class),
-            new ClassMap('person', Type\Person::class),
-            new ClassMap('company', Type\Company::class),
             new ClassMap('CT_outputcifascasedata', Type\CTOutputcifascasedata::class),
             new ClassMap('filingreasons', Type\Filingreasons::class),
             new ClassMap('subjects', Type\Subjects::class),
@@ -91,16 +91,16 @@ class CreditsafeClassmap
             new ClassMap('CT_outputdemographics', Type\CTOutputdemographics::class),
             new ClassMap('family', Type\Family::class),
             new ClassMap('household', Type\Household::class),
+            new ClassMap('age', Type\Age::class),
+            new ClassMap('economic', Type\Economic::class),
             new ClassMap('economicactivity', Type\Economicactivity::class),
             new ClassMap('socialclass', Type\Socialclass::class),
             new ClassMap('housing', Type\Housing::class),
             new ClassMap('propertyprice', Type\Propertyprice::class),
             new ClassMap('movement', Type\Movement::class),
             new ClassMap('CT_outputdemographics2006', Type\CTOutputdemographics2006::class),
-            new ClassMap('age', Type\Age::class),
             new ClassMap('tenure', Type\Tenure::class),
             new ClassMap('hhcomp', Type\Hhcomp::class),
-            new ClassMap('economic', Type\Economic::class),
             new ClassMap('lifestage', Type\Lifestage::class),
             new ClassMap('social', Type\Social::class),
             new ClassMap('occupation', Type\Occupation::class),
@@ -129,6 +129,7 @@ class CreditsafeClassmap
             new ClassMap('CT_summaryresidency', Type\CTSummaryresidency::class),
             new ClassMap('CT_alertindividual', Type\CTAlertindividual::class),
             new ClassMap('CT_alert', Type\CTAlert::class),
+            new ClassMap('creditscores', Type\Creditscores::class),
             new ClassMap('CT_hho', Type\CTHho::class),
             new ClassMap('CT_outputthirdpartyalerts', Type\CTOutputthirdpartyalerts::class),
             new ClassMap('CT_addressconfresident', Type\CTAddressconfresident::class),
@@ -137,7 +138,6 @@ class CreditsafeClassmap
             new ClassMap('CT_outputassociatelink', Type\CTOutputassociatelink::class),
             new ClassMap('CT_outputnotice', Type\CTOutputnotice::class),
             new ClassMap('CT_outputapplicant', Type\CTOutputapplicant::class),
-            new ClassMap('creditscores', Type\Creditscores::class),
             new ClassMap('addressconfs', Type\Addressconfs::class),
             new ClassMap('judgments', Type\Judgments::class),
             new ClassMap('bais', Type\Bais::class),
@@ -158,8 +158,23 @@ class CreditsafeClassmap
             new ClassMap('holder', Type\Holder::class),
             new ClassMap('CT_SearchResponse', Type\CTSearchResponse::class),
             new ClassMap('CT_SearchResult', Type\CTSearchResult::class),
+            new ClassMap('callcreditheaders', Type\Callcreditheaders::class),
+            new ClassMap('Search07a', Type\Search07a::class),
+            new ClassMap('Search07aResponse', Type\Search07aResponse::class),
+            new ClassMap('AddressLinkSearch07a', Type\AddressLinkSearch07a::class),
+            new ClassMap('AddressLinkSearch07aResponse', Type\AddressLinkSearch07aResponse::class),
+            new ClassMap('AssociateLinkSearch07a', Type\AssociateLinkSearch07a::class),
+            new ClassMap('AssociateLinkSearch07aResponse', Type\AssociateLinkSearch07aResponse::class),
+            new ClassMap('SubsequentSearch07a', Type\SubsequentSearch07a::class),
+            new ClassMap('SubsequentSearch07aResponse', Type\SubsequentSearch07aResponse::class),
+            new ClassMap('SubsequentAddressLinkSearch07a', Type\SubsequentAddressLinkSearch07a::class),
+            new ClassMap('SubsequentAddressLinkSearch07aResponse', Type\SubsequentAddressLinkSearch07aResponse::class),
+            new ClassMap('SubsequentAssociateLinkSearch07a', Type\SubsequentAssociateLinkSearch07a::class),
+            new ClassMap('SubsequentAssociateLinkSearch07aResponse', Type\SubsequentAssociateLinkSearch07aResponse::class),
             new ClassMap('ChangePassword07a', Type\ChangePassword07a::class),
             new ClassMap('ChangePassword07aResponse', Type\ChangePassword07aResponse::class),
+            new ClassMap('LookupData07aResponse', Type\LookupData07aResponse::class),
+            new ClassMap('Test07aResponse', Type\Test07aResponse::class),
         );
     }
 }

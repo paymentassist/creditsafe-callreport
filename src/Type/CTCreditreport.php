@@ -4,35 +4,41 @@ namespace PaymentAssist\Type;
 
 class CTCreditreport
 {
-
     /**
-     * @var \PaymentAssist\Type\CTOutputapplicant
+     * Credit Report
+     *
+     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
      */
-    private $applicant;
+    private array $applicant;
 
     /**
+     * Unique Report Identifier (used for subsequent searches). Note that this is the same as the searchid element within the jobdetails block. Note that any included Opt-in Associate reports have their own unique identifier.
+     *
      * @var string
      */
-    private $searchid;
+    private string $searchid;
 
     /**
+     * Provides the link type of report (e.g. Address Link or Associate Link and other variants)
+     * The list of possible values can be obtained from the web method LookupData07a table id = linkreporttype
+     *
      * @var int
      */
-    private $linktype;
+    private int $linktype;
 
     /**
-     * @return \PaymentAssist\Type\CTOutputapplicant
+     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
      */
-    public function getApplicant()
+    public function getApplicant() : array
     {
         return $this->applicant;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputapplicant $applicant
-     * @return CTCreditreport
+     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant> $applicant
+     * @return static
      */
-    public function withApplicant($applicant)
+    public function withApplicant(array $applicant) : static
     {
         $new = clone $this;
         $new->applicant = $applicant;
@@ -43,16 +49,16 @@ class CTCreditreport
     /**
      * @return string
      */
-    public function getSearchid()
+    public function getSearchid() : string
     {
         return $this->searchid;
     }
 
     /**
      * @param string $searchid
-     * @return CTCreditreport
+     * @return static
      */
-    public function withSearchid($searchid)
+    public function withSearchid(string $searchid) : static
     {
         $new = clone $this;
         $new->searchid = $searchid;
@@ -63,23 +69,21 @@ class CTCreditreport
     /**
      * @return int
      */
-    public function getLinktype()
+    public function getLinktype() : int
     {
         return $this->linktype;
     }
 
     /**
      * @param int $linktype
-     * @return CTCreditreport
+     * @return static
      */
-    public function withLinktype($linktype)
+    public function withLinktype(int $linktype) : static
     {
         $new = clone $this;
         $new->linktype = $linktype;
 
         return $new;
     }
-
-
 }
 

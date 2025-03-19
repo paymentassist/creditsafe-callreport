@@ -2,37 +2,58 @@
 
 namespace PaymentAssist\Type;
 
-class CTSummaryresidency
+use \PaymentAssist\Type\CTOutputaddress;
+
+class CTSummaryresidency extends CTOutputaddress
 {
-
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * Output structure for a single address line
+     *
+     * @var string
      */
-    private $_;
-
-    /**
-     * @var int
-     */
-    private $messagecode;
+    private string $_;
 
     /**
      * @var int
      */
-    private $id;
+    private int $current;
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * The type of undeclared address
+     * The list of possible values can be obtained from the web method LookupData07a table id = undeclaredaddresstype
+     *
+     * @var null | int
      */
-    public function get_()
+    private ?int $undeclaredaddresstype = null;
+
+    /**
+     * Message code indicating the level of confirmation
+     * The list of possible values can be obtained from the web method LookupData07a table id = residencymessagecode
+     *
+     * @var null | int
+     */
+    private ?int $messagecode = null;
+
+    /**
+     * Address identifier
+     *
+     * @var null | int
+     */
+    private ?int $id = null;
+
+    /**
+     * @return string
+     */
+    public function get_() : string
     {
         return $this->_;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $_
-     * @return CTSummaryresidency
+     * @param string $_
+     * @return static
      */
-    public function with_($_)
+    public function with_(string $_) : static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -43,16 +64,56 @@ class CTSummaryresidency
     /**
      * @return int
      */
-    public function getMessagecode()
+    public function getCurrent() : int
+    {
+        return $this->current;
+    }
+
+    /**
+     * @param int $current
+     * @return static
+     */
+    public function withCurrent(int $current) : static
+    {
+        $new = clone $this;
+        $new->current = $current;
+
+        return $new;
+    }
+
+    /**
+     * @return null | int
+     */
+    public function getUndeclaredaddresstype() : ?int
+    {
+        return $this->undeclaredaddresstype;
+    }
+
+    /**
+     * @param null | int $undeclaredaddresstype
+     * @return static
+     */
+    public function withUndeclaredaddresstype(?int $undeclaredaddresstype) : static
+    {
+        $new = clone $this;
+        $new->undeclaredaddresstype = $undeclaredaddresstype;
+
+        return $new;
+    }
+
+    /**
+     * @return null | int
+     */
+    public function getMessagecode() : ?int
     {
         return $this->messagecode;
     }
 
     /**
-     * @param int $messagecode
-     * @return CTSummaryresidency
+     * @param null | int $messagecode
+     * @return static
      */
-    public function withMessagecode($messagecode)
+    public function withMessagecode(?int $messagecode) : static
     {
         $new = clone $this;
         $new->messagecode = $messagecode;
@@ -61,25 +122,23 @@ class CTSummaryresidency
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getId()
+    public function getId() : ?int
     {
         return $this->id;
     }
 
     /**
-     * @param int $id
-     * @return CTSummaryresidency
+     * @param null | int $id
+     * @return static
      */
-    public function withId($id)
+    public function withId(?int $id) : static
     {
         $new = clone $this;
         $new->id = $id;
 
         return $new;
     }
-
-
 }
 

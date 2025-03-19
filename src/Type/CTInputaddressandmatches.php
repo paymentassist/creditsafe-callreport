@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTInputaddressandmatches
 {
-
     /**
+     * Address details as entered by the user
+     *
      * @var \PaymentAssist\Type\CTAddress
      */
-    private $addressinput;
+    private \PaymentAssist\Type\CTAddress $addressinput;
 
     /**
+     * Contains a set of matches for this specific address
+     *
      * @var \PaymentAssist\Type\Fullmatches
      */
-    private $fullmatches;
+    private \PaymentAssist\Type\Fullmatches $fullmatches;
 
     /**
-     * @var int
+     * Address identifier
+     *
+     * @var null | int
      */
-    private $addressid;
+    private ?int $addressid = null;
 
     /**
      * @return \PaymentAssist\Type\CTAddress
      */
-    public function getAddressinput()
+    public function getAddressinput() : \PaymentAssist\Type\CTAddress
     {
         return $this->addressinput;
     }
 
     /**
      * @param \PaymentAssist\Type\CTAddress $addressinput
-     * @return CTInputaddressandmatches
+     * @return static
      */
-    public function withAddressinput($addressinput)
+    public function withAddressinput(\PaymentAssist\Type\CTAddress $addressinput) : static
     {
         $new = clone $this;
         $new->addressinput = $addressinput;
@@ -43,16 +48,16 @@ class CTInputaddressandmatches
     /**
      * @return \PaymentAssist\Type\Fullmatches
      */
-    public function getFullmatches()
+    public function getFullmatches() : \PaymentAssist\Type\Fullmatches
     {
         return $this->fullmatches;
     }
 
     /**
      * @param \PaymentAssist\Type\Fullmatches $fullmatches
-     * @return CTInputaddressandmatches
+     * @return static
      */
-    public function withFullmatches($fullmatches)
+    public function withFullmatches(\PaymentAssist\Type\Fullmatches $fullmatches) : static
     {
         $new = clone $this;
         $new->fullmatches = $fullmatches;
@@ -61,25 +66,23 @@ class CTInputaddressandmatches
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAddressid()
+    public function getAddressid() : ?int
     {
         return $this->addressid;
     }
 
     /**
-     * @param int $addressid
-     * @return CTInputaddressandmatches
+     * @param null | int $addressid
+     * @return static
      */
-    public function withAddressid($addressid)
+    public function withAddressid(?int $addressid) : static
     {
         $new = clone $this;
         $new->addressid = $addressid;
 
         return $new;
     }
-
-
 }
 

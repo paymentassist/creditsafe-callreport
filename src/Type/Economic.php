@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class Economic
 {
+    /**
+     * Average Percentage unemployed
+     *
+     * @var null | float
+     */
+    private ?float $unem_prob = null;
 
     /**
-     * @var float
+     * Index of economic inactivity
+     *
+     * @var null | int
      */
-    private $unem_prob;
+    private ?int $unem_index = null;
 
     /**
-     * @var int
+     * Economic Activity Score
+     *
+     * @var null | float
      */
-    private $unem_index;
+    private ?float $econscore = null;
 
     /**
-     * @var float
+     * Economic Activity Band
+     *
+     * @var null | int
      */
-    private $econscore;
+    private ?int $econband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $econband;
-
-    /**
-     * @return float
-     */
-    public function getUnem_prob()
+    public function getUnemProb() : ?float
     {
         return $this->unem_prob;
     }
 
     /**
-     * @param float $unem_prob
-     * @return Economic
+     * @param null | float $unem_prob
+     * @return static
      */
-    public function withUnem_prob($unem_prob)
+    public function withUnemProb(?float $unem_prob) : static
     {
         $new = clone $this;
         $new->unem_prob = $unem_prob;
@@ -46,18 +53,18 @@ class Economic
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getUnem_index()
+    public function getUnemIndex() : ?int
     {
         return $this->unem_index;
     }
 
     /**
-     * @param int $unem_index
-     * @return Economic
+     * @param null | int $unem_index
+     * @return static
      */
-    public function withUnem_index($unem_index)
+    public function withUnemIndex(?int $unem_index) : static
     {
         $new = clone $this;
         $new->unem_index = $unem_index;
@@ -66,18 +73,18 @@ class Economic
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getEconscore()
+    public function getEconscore() : ?float
     {
         return $this->econscore;
     }
 
     /**
-     * @param float $econscore
-     * @return Economic
+     * @param null | float $econscore
+     * @return static
      */
-    public function withEconscore($econscore)
+    public function withEconscore(?float $econscore) : static
     {
         $new = clone $this;
         $new->econscore = $econscore;
@@ -86,25 +93,23 @@ class Economic
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getEconband()
+    public function getEconband() : ?int
     {
         return $this->econband;
     }
 
     /**
-     * @param int $econband
-     * @return Economic
+     * @param null | int $econband
+     * @return static
      */
-    public function withEconband($econband)
+    public function withEconband(?int $econband) : static
     {
         $new = clone $this;
         $new->econband = $econband;
 
         return $new;
     }
-
-
 }
 

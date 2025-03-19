@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Subjects
 {
+    /**
+     * Each CIFAS Case may have one or more subjects
+     *
+     * @var non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputcifassubject>
+     */
+    private array $subject;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputcifassubject
+     * @return non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputcifassubject>
      */
-    private $subject;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputcifassubject
-     */
-    public function getSubject()
+    public function getSubject() : array
     {
         return $this->subject;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputcifassubject $subject
-     * @return Subjects
+     * @param non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputcifassubject> $subject
+     * @return static
      */
-    public function withSubject($subject)
+    public function withSubject(array $subject) : static
     {
         $new = clone $this;
         $new->subject = $subject;
 
         return $new;
     }
-
-
 }
 

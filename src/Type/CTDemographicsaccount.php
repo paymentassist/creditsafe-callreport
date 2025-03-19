@@ -4,45 +4,56 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsaccount
 {
+    /**
+     * Bank sort code of main banking relationship
+     *
+     * @var null | string
+     */
+    private ?string $sortcode = null;
 
     /**
-     * @var string
+     * Account number of main banking relationship
+     *
+     * @var null | string
      */
-    private $sortcode;
+    private ?string $accountnumber = null;
 
     /**
-     * @var string
+     * Total number of months with the current bank
+     *
+     * @var null | mixed
      */
-    private $accountnumber;
+    private mixed $timeatbank = null;
 
     /**
-     * @var string
+     * Account's Payment Method Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicspaymentmethod
+     *
+     * @var null | string
      */
-    private $timeatbank;
+    private ?string $paymentmethod = null;
 
     /**
-     * @var string
+     * Finance/Non Finance Type Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsfinancetype
+     *
+     * @var null | string
      */
-    private $paymentmethod;
+    private ?string $financetype = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $financetype;
-
-    /**
-     * @return string
-     */
-    public function getSortcode()
+    public function getSortcode() : ?string
     {
         return $this->sortcode;
     }
 
     /**
-     * @param string $sortcode
-     * @return CTDemographicsaccount
+     * @param null | string $sortcode
+     * @return static
      */
-    public function withSortcode($sortcode)
+    public function withSortcode(?string $sortcode) : static
     {
         $new = clone $this;
         $new->sortcode = $sortcode;
@@ -51,18 +62,18 @@ class CTDemographicsaccount
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getAccountnumber()
+    public function getAccountnumber() : ?string
     {
         return $this->accountnumber;
     }
 
     /**
-     * @param string $accountnumber
-     * @return CTDemographicsaccount
+     * @param null | string $accountnumber
+     * @return static
      */
-    public function withAccountnumber($accountnumber)
+    public function withAccountnumber(?string $accountnumber) : static
     {
         $new = clone $this;
         $new->accountnumber = $accountnumber;
@@ -71,18 +82,18 @@ class CTDemographicsaccount
     }
 
     /**
-     * @return string
+     * @return null | mixed
      */
-    public function getTimeatbank()
+    public function getTimeatbank() : mixed
     {
         return $this->timeatbank;
     }
 
     /**
-     * @param string $timeatbank
-     * @return CTDemographicsaccount
+     * @param null | mixed $timeatbank
+     * @return static
      */
-    public function withTimeatbank($timeatbank)
+    public function withTimeatbank(mixed $timeatbank) : static
     {
         $new = clone $this;
         $new->timeatbank = $timeatbank;
@@ -91,18 +102,18 @@ class CTDemographicsaccount
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getPaymentmethod()
+    public function getPaymentmethod() : ?string
     {
         return $this->paymentmethod;
     }
 
     /**
-     * @param string $paymentmethod
-     * @return CTDemographicsaccount
+     * @param null | string $paymentmethod
+     * @return static
      */
-    public function withPaymentmethod($paymentmethod)
+    public function withPaymentmethod(?string $paymentmethod) : static
     {
         $new = clone $this;
         $new->paymentmethod = $paymentmethod;
@@ -111,25 +122,23 @@ class CTDemographicsaccount
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getFinancetype()
+    public function getFinancetype() : ?string
     {
         return $this->financetype;
     }
 
     /**
-     * @param string $financetype
-     * @return CTDemographicsaccount
+     * @param null | string $financetype
+     * @return static
      */
-    public function withFinancetype($financetype)
+    public function withFinancetype(?string $financetype) : static
     {
         $new = clone $this;
         $new->financetype = $financetype;
 
         return $new;
     }
-
-
 }
 
