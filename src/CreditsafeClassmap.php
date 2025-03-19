@@ -2,16 +2,14 @@
 
 namespace PaymentAssist;
 
-use PaymentAssist\Type;
-use Phpro\SoapClient\Soap\ClassMap\ClassMapCollection;
-use Phpro\SoapClient\Soap\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMap;
+use Soap\ExtSoapEngine\Configuration\ClassMap\ClassMapCollection;
 
 class CreditsafeClassmap
 {
-
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection() : ClassMapCollection
     {
-        return new ClassMapCollection([
+        return new ClassMapCollection(
             new ClassMap('CT_demographicsidentity', Type\CTDemographicsidentity::class),
             new ClassMap('CT_demographicsperson', Type\CTDemographicsperson::class),
             new ClassMap('CT_demographicsaccommodation', Type\CTDemographicsaccommodation::class),
@@ -162,9 +160,7 @@ class CreditsafeClassmap
             new ClassMap('CT_SearchResult', Type\CTSearchResult::class),
             new ClassMap('ChangePassword07a', Type\ChangePassword07a::class),
             new ClassMap('ChangePassword07aResponse', Type\ChangePassword07aResponse::class),
-        ]);
+        );
     }
-
-
 }
 
