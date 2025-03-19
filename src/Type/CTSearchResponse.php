@@ -6,32 +6,19 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class CTSearchResponse implements ResultInterface
 {
+    private ?CTSearchResult $SearchResult;
 
-    /**
-     * @var \PaymentAssist\Type\CTSearchResult
-     */
-    private $SearchResult;
-
-    /**
-     * @return \PaymentAssist\Type\CTSearchResult
-     */
-    public function getSearchResult()
+    public function getSearchResult(): ?CTSearchResult
     {
         return $this->SearchResult;
     }
 
-    /**
-     * @param \PaymentAssist\Type\CTSearchResult $SearchResult
-     * @return CTSearchResponse
-     */
-    public function withSearchResult($SearchResult)
+    public function withSearchResult(CTSearchResult $SearchResult): CTSearchResponse
     {
         $new = clone $this;
         $new->SearchResult = $SearchResult;
 
         return $new;
     }
-
-
 }
 

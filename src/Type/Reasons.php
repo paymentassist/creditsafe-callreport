@@ -4,32 +4,19 @@ namespace PaymentAssist\Type;
 
 class Reasons
 {
+    private array $code;
 
-    /**
-     * @var int
-     */
-    private $code;
-
-    /**
-     * @return int
-     */
-    public function getCode()
+    public function getCode(): array
     {
         return $this->code;
     }
 
-    /**
-     * @param int $code
-     * @return Reasons
-     */
-    public function withCode($code)
+    public function withCode(array $code)
     {
         $new = clone $this;
         $new->code = $code;
 
         return $new;
     }
-
-
 }
 

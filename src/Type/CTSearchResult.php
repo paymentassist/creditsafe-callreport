@@ -45,10 +45,7 @@ class CTSearchResult
      */
     private $token;
 
-    /**
-     * @var \PaymentAssist\Type\CTCreditreport
-     */
-    private $creditreport;
+    private ?CTCreditreport $creditreport;
 
     /**
      * @return \PaymentAssist\Type\CTJobdetails
@@ -210,10 +207,7 @@ class CTSearchResult
         return $new;
     }
 
-    /**
-     * @return \PaymentAssist\Type\CTCreditreport
-     */
-    public function getCreditreport()
+    public function getCreditreport(): ?CTCreditreport
     {
         return $this->creditreport;
     }
@@ -229,7 +223,5 @@ class CTSearchResult
 
         return $new;
     }
-
-
 }
 

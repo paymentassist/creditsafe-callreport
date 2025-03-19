@@ -4,11 +4,7 @@ namespace PaymentAssist\Type;
 
 class CTOutputapplicant
 {
-
-    /**
-     * @var \PaymentAssist\Type\CTOutputsummaryblock
-     */
-    private $summary;
+    private ?CTOutputsummaryblock $summary;
 
     /**
      * @var \PaymentAssist\Type\Creditscores
@@ -105,10 +101,7 @@ class CTOutputapplicant
      */
     private $reporttitle;
 
-    /**
-     * @return \PaymentAssist\Type\CTOutputsummaryblock
-     */
-    public function getSummary()
+    public function getSummary(): ?CTOutputsummaryblock
     {
         return $this->summary;
     }
