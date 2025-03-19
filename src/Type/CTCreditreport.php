@@ -7,7 +7,7 @@ class CTCreditreport
     /**
      * Credit Report
      *
-     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
+     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\CTOutputapplicant>
      */
     private array $applicant;
 
