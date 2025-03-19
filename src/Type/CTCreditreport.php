@@ -6,7 +6,7 @@ class CTCreditreport
 {
 
     /**
-     * @var \PaymentAssist\Type\Applicant
+     * @var \PaymentAssist\Type\CTOutputapplicant
      */
     private $applicant;
 
@@ -21,7 +21,7 @@ class CTCreditreport
     private $linktype;
 
     /**
-     * @return \PaymentAssist\Type\Applicant
+     * @return \PaymentAssist\Type\CTOutputapplicant
      */
     public function getApplicant()
     {
@@ -29,7 +29,7 @@ class CTCreditreport
     }
 
     /**
-     * @param \PaymentAssist\Type\Applicant $applicant
+     * @param \PaymentAssist\Type\CTOutputapplicant $applicant
      * @return CTCreditreport
      */
     public function withApplicant($applicant)
