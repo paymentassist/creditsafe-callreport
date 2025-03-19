@@ -26,7 +26,7 @@ class CreditsafeMiddleware implements Plugin
             $request,
             fn (Document $document) => $document->manipulate(
                 function (DOMDocument $dom) {
-                    $header = $dom->createElement('soap:Header');
+                    $header = $dom->createElementNS('http://schemas.xmlsoap.org/soap/envelope/', 'SOAP-ENV:Header');
 
                     $authNode = $dom->createElementNS('urn:callcredit.co.uk/soap:callreport7', 'callcreditheaders');
                     $authNode->appendChild($dom->createElement('company', getenv('CREDITSAFE_COMPANY')));
@@ -34,7 +34,10 @@ class CreditsafeMiddleware implements Plugin
                     $authNode->appendChild($dom->createElement('password', getenv('CREDITSAFE_PASSWORD')));
 
                     $header->appendChild($authNode);
-                    $dom->insertBefore($header, $dom->documentElement->firstChild);
+
+                    $body = $dom->getElementsByTagNameNS('http://schemas.xmlsoap.org/soap/envelope/', 'Body')->item(0);
+
+                    $dom->documentElement->insertBefore($header, $body);
                 }
             )
         );

@@ -2,31 +2,13 @@
 
 require_once 'vendor/autoload.php';
 
-use Http\Adapter\Guzzle7\Client;
-use PaymentAssist\CreditsafeClassmap;
-use PaymentAssist\CreditsafeClient;
-use PaymentAssist\CreditsafeMiddleware;
+use PaymentAssist\CreditsafeClientFactory;
 use PaymentAssist\Type\CTSearch;
 use PaymentAssist\Type\CTSearchapplicant;
+use PaymentAssist\Type\CTSearchDefinition;
 use PaymentAssist\Type\CTSearchrequest;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapEngineFactory;
-use Phpro\SoapClient\Soap\Driver\ExtSoap\ExtSoapOptions;
-use Phpro\SoapClient\Soap\Handler\HttPlugHandle;
-use Symfony\Component\EventDispatcher\EventDispatcher;
 
-$handler = HttPlugHandle::createForClient(
-    Client::createWithConfig(['headers' => ['User-Agent' => 'Payment Assist Client/1.0']])
-);
-$handler->addMiddleware(new CreditsafeMiddleware());
-
-$wsdl   = __DIR__ . '/config/CallReport7Test.wsdl'; // CallReport7.wsdl for live
-$engine = ExtSoapEngineFactory::fromOptionsWithHandler(
-    ExtSoapOptions::defaults($wsdl, [])->withClassMap(CreditsafeClassmap::getCollection()),
-    $handler
-);
-
-$eventDispatcher = new EventDispatcher();
-$client          = new CreditsafeClient($engine, $eventDispatcher);
+$client = CreditsafeClientFactory::factory(__DIR__ . '/config/CallReport7Test.wsdl'); // CallReport7.wsdl for live
 
 $address = [
     'buildingno' => '26',
@@ -57,7 +39,7 @@ $request = (new CTSearchrequest())
     ->withAutosearch(1)
     ->withAutosearchmaximum(2);
 
-$definition = (new \PaymentAssist\Type\CTSearchDefinition())
+$definition = (new CTSearchDefinition())
     ->withYourreference('123-123')
     ->withCreditrequest($request);
 
