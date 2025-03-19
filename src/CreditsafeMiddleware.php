@@ -2,58 +2,43 @@
 
 namespace PaymentAssist;
 
-use Phpro\SoapClient\Xml\SoapXml;
+use DOMDocument;
+use Http\Client\Common\Plugin;
 use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
 use Http\Promise\Promise;
+use Soap\Psr18Transport\Xml\XmlMessageManipulator;
+use VeeWee\Xml\Dom\Document;
 
-class CreditsafeMiddleware extends \Phpro\SoapClient\Middleware\MiddleWare
+class CreditsafeMiddleware implements Plugin
 {
-    public function getName(): string
-    {
-        return 'creditsafe_middleware';
-    }
-
     /**
-     * Adds the necessary authentication header
+     * Handles the request and returns the response coming from the next callable.
      *
-     * @param callable         $handler
-     * @param RequestInterface $request
-     * @param array            $options
+     * @param RequestInterface $request Request to use.
+     * @param callable         $next    Callback to call to have the request, it must have the request as its first argument.
+     * @param callable         $first   First element in the plugin chain, used to restart a request from the beginning.
      *
-     * @return PromiseInterface
+     * @return Promise
      */
-    public function beforeRequest(callable $handler, RequestInterface $request, $options = []): Promise
+    public function handleRequest(RequestInterface $request, callable $next, callable $first): Promise
     {
-        $xml = SoapXml::fromStream($request->getBody());
-        $headers = [
-            'company' => getenv('CREDITSAFE_COMPANY'),
-            'username' => getenv('CREDITSAFE_USERNAME'),
-            'password' => getenv('CREDITSAFE_PASSWORD')
-        ];
-        $newHeader = $xml->createSoapHeader();
+        $request = (new XmlMessageManipulator)(
+            $request,
+            fn (Document $document) => $document->manipulate(
+                function (DOMDocument $dom) {
+                    $header = $dom->createElement('soap:Header');
 
-        // add our auth
-        $node = $xml->getXmlDocument()->createElementNS('urn:callcredit.co.uk/soap:callreport7', 'callcreditheaders');
-        foreach($headers as $k => $v) {
-            $node->appendChild($xml->getXmlDocument()->createElement($k, $v));
-        }
+                    $authNode = $dom->createElementNS('urn:callcredit.co.uk/soap:callreport7', 'callcreditheaders');
+                    $authNode->appendChild($dom->createElement('company', getenv('CREDITSAFE_COMPANY')));
+                    $authNode->appendChild($dom->createElement('username', getenv('CREDITSAFE_USERNAME')));
+                    $authNode->appendChild($dom->createElement('password', getenv('CREDITSAFE_PASSWORD')));
 
-        $newHeader->appendChild($node);
-        $xml->prependSoapHeader($newHeader);
-        $request = $request->withBody($xml->toStream());
+                    $header->appendChild($authNode);
+                    $dom->insertBefore($header, $dom->documentElement->firstChild);
+                }
+            )
+        );
 
-        return $handler($request, $options);
+        return $next($request);
     }
-
-    /**
-     * @param ResponseInterface $response
-     *
-     * @return ResponseInterface
-     */
-    public function afterResponse(ResponseInterface $response): ResponseInterface
-    {
-        return $response;
-    }
-
 }
