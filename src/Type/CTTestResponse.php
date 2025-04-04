@@ -2,7 +2,9 @@
 
 namespace PaymentAssist\Type;
 
-class CTTestResponse
+use Phpro\SoapClient\Type\ResultInterface;
+
+class CTTestResponse implements ResultInterface
 {
     /**
      * Response type for Lookup Data Web Method

@@ -35,7 +35,7 @@ class Socialclass
     /**
      * @return null | int
      */
-    public function getAbInd() : ?int
+    public function getAb_ind() : ?int
     {
         return $this->ab_ind;
     }
@@ -44,7 +44,7 @@ class Socialclass
      * @param null | int $ab_ind
      * @return static
      */
-    public function withAbInd(?int $ab_ind) : static
+    public function withAb_ind(?int $ab_ind) : static
     {
         $new = clone $this;
         $new->ab_ind = $ab_ind;
@@ -55,7 +55,7 @@ class Socialclass
     /**
      * @return null | int
      */
-    public function getC1Ind() : ?int
+    public function getC1_ind() : ?int
     {
         return $this->c1_ind;
     }
@@ -64,7 +64,7 @@ class Socialclass
      * @param null | int $c1_ind
      * @return static
      */
-    public function withC1Ind(?int $c1_ind) : static
+    public function withC1_ind(?int $c1_ind) : static
     {
         $new = clone $this;
         $new->c1_ind = $c1_ind;
@@ -75,7 +75,7 @@ class Socialclass
     /**
      * @return null | int
      */
-    public function getC2Ind() : ?int
+    public function getC2_ind() : ?int
     {
         return $this->c2_ind;
     }
@@ -84,7 +84,7 @@ class Socialclass
      * @param null | int $c2_ind
      * @return static
      */
-    public function withC2Ind(?int $c2_ind) : static
+    public function withC2_ind(?int $c2_ind) : static
     {
         $new = clone $this;
         $new->c2_ind = $c2_ind;
@@ -95,7 +95,7 @@ class Socialclass
     /**
      * @return null | int
      */
-    public function getDeInd() : ?int
+    public function getDe_ind() : ?int
     {
         return $this->de_ind;
     }
@@ -104,7 +104,7 @@ class Socialclass
      * @param null | int $de_ind
      * @return static
      */
-    public function withDeInd(?int $de_ind) : static
+    public function withDe_ind(?int $de_ind) : static
     {
         $new = clone $this;
         $new->de_ind = $de_ind;

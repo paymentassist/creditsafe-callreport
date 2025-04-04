@@ -2,7 +2,9 @@
 
 namespace PaymentAssist\Type;
 
-class CTSearchResponse
+use Phpro\SoapClient\Type\ResultInterface;
+
+class CTSearchResponse implements ResultInterface
 {
     /**
      * Response type for Credit Search Web Methods

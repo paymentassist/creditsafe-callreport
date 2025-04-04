@@ -63,7 +63,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getDIndex() : ?int
+    public function getD_index() : ?int
     {
         return $this->d_index;
     }
@@ -72,7 +72,7 @@ class Propertyprice
      * @param null | int $d_index
      * @return static
      */
-    public function withDIndex(?int $d_index) : static
+    public function withD_index(?int $d_index) : static
     {
         $new = clone $this;
         $new->d_index = $d_index;
@@ -83,7 +83,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getDRIndex() : ?int
+    public function getD_r_index() : ?int
     {
         return $this->d_r_index;
     }
@@ -92,7 +92,7 @@ class Propertyprice
      * @param null | int $d_r_index
      * @return static
      */
-    public function withDRIndex(?int $d_r_index) : static
+    public function withD_r_index(?int $d_r_index) : static
     {
         $new = clone $this;
         $new->d_r_index = $d_r_index;
@@ -103,7 +103,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getSIndex() : ?int
+    public function getS_index() : ?int
     {
         return $this->s_index;
     }
@@ -112,7 +112,7 @@ class Propertyprice
      * @param null | int $s_index
      * @return static
      */
-    public function withSIndex(?int $s_index) : static
+    public function withS_index(?int $s_index) : static
     {
         $new = clone $this;
         $new->s_index = $s_index;
@@ -123,7 +123,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getSRIndex() : ?int
+    public function getS_r_index() : ?int
     {
         return $this->s_r_index;
     }
@@ -132,7 +132,7 @@ class Propertyprice
      * @param null | int $s_r_index
      * @return static
      */
-    public function withSRIndex(?int $s_r_index) : static
+    public function withS_r_index(?int $s_r_index) : static
     {
         $new = clone $this;
         $new->s_r_index = $s_r_index;
@@ -143,7 +143,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getTIndex() : ?int
+    public function getT_index() : ?int
     {
         return $this->t_index;
     }
@@ -152,7 +152,7 @@ class Propertyprice
      * @param null | int $t_index
      * @return static
      */
-    public function withTIndex(?int $t_index) : static
+    public function withT_index(?int $t_index) : static
     {
         $new = clone $this;
         $new->t_index = $t_index;
@@ -163,7 +163,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getTRIndex() : ?int
+    public function getT_r_index() : ?int
     {
         return $this->t_r_index;
     }
@@ -172,7 +172,7 @@ class Propertyprice
      * @param null | int $t_r_index
      * @return static
      */
-    public function withTRIndex(?int $t_r_index) : static
+    public function withT_r_index(?int $t_r_index) : static
     {
         $new = clone $this;
         $new->t_r_index = $t_r_index;
@@ -183,7 +183,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getFIndex() : ?int
+    public function getF_index() : ?int
     {
         return $this->f_index;
     }
@@ -192,7 +192,7 @@ class Propertyprice
      * @param null | int $f_index
      * @return static
      */
-    public function withFIndex(?int $f_index) : static
+    public function withF_index(?int $f_index) : static
     {
         $new = clone $this;
         $new->f_index = $f_index;
@@ -203,7 +203,7 @@ class Propertyprice
     /**
      * @return null | int
      */
-    public function getFRIndex() : ?int
+    public function getF_r_index() : ?int
     {
         return $this->f_r_index;
     }
@@ -212,7 +212,7 @@ class Propertyprice
      * @param null | int $f_r_index
      * @return static
      */
-    public function withFRIndex(?int $f_r_index) : static
+    public function withF_r_index(?int $f_r_index) : static
     {
         $new = clone $this;
         $new->f_r_index = $f_r_index;

@@ -2,8 +2,6 @@
 
 namespace PaymentAssist\Type;
 
-use \PaymentAssist\Type\CTInputname;
-
 class Namematch extends CTInputname
 {
     /**

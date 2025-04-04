@@ -2,8 +2,6 @@
 
 namespace PaymentAssist\Type;
 
-use \PaymentAssist\Type\CTOutputaddress;
-
 class CTSummaryresidency extends CTOutputaddress
 {
     /**

@@ -28,7 +28,7 @@ class Household
     /**
      * @return null | int
      */
-    public function getAdult1() : ?int
+    public function getAdult_1() : ?int
     {
         return $this->adult_1;
     }
@@ -37,7 +37,7 @@ class Household
      * @param null | int $adult_1
      * @return static
      */
-    public function withAdult1(?int $adult_1) : static
+    public function withAdult_1(?int $adult_1) : static
     {
         $new = clone $this;
         $new->adult_1 = $adult_1;
@@ -48,7 +48,7 @@ class Household
     /**
      * @return null | int
      */
-    public function getAdults2() : ?int
+    public function getAdults_2() : ?int
     {
         return $this->adults_2;
     }
@@ -57,7 +57,7 @@ class Household
      * @param null | int $adults_2
      * @return static
      */
-    public function withAdults2(?int $adults_2) : static
+    public function withAdults_2(?int $adults_2) : static
     {
         $new = clone $this;
         $new->adults_2 = $adults_2;
@@ -68,7 +68,7 @@ class Household
     /**
      * @return null | int
      */
-    public function getAdult3pl() : ?int
+    public function getAdult_3pl() : ?int
     {
         return $this->adult_3pl;
     }
@@ -77,7 +77,7 @@ class Household
      * @param null | int $adult_3pl
      * @return static
      */
-    public function withAdult3pl(?int $adult_3pl) : static
+    public function withAdult_3pl(?int $adult_3pl) : static
     {
         $new = clone $this;
         $new->adult_3pl = $adult_3pl;

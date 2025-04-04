@@ -2,8 +2,6 @@
 
 namespace PaymentAssist\Type;
 
-use \PaymentAssist\Type\CTOutputaddress;
-
 class CTOutputlinkaddress extends CTOutputaddress
 {
     /**

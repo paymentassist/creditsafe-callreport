@@ -35,7 +35,7 @@ class Economic
     /**
      * @return null | float
      */
-    public function getUnemProb() : ?float
+    public function getUnem_prob() : ?float
     {
         return $this->unem_prob;
     }
@@ -44,7 +44,7 @@ class Economic
      * @param null | float $unem_prob
      * @return static
      */
-    public function withUnemProb(?float $unem_prob) : static
+    public function withUnem_prob(?float $unem_prob) : static
     {
         $new = clone $this;
         $new->unem_prob = $unem_prob;
@@ -55,7 +55,7 @@ class Economic
     /**
      * @return null | int
      */
-    public function getUnemIndex() : ?int
+    public function getUnem_index() : ?int
     {
         return $this->unem_index;
     }
@@ -64,7 +64,7 @@ class Economic
      * @param null | int $unem_index
      * @return static
      */
-    public function withUnemIndex(?int $unem_index) : static
+    public function withUnem_index(?int $unem_index) : static
     {
         $new = clone $this;
         $new->unem_index = $unem_index;

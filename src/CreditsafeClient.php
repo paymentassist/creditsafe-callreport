@@ -22,110 +22,96 @@ class CreditsafeClient
     }
 
     /**
-     * Method to Request a Credit Report (based on the requested Search Purpose)
-     *
      * @param RequestInterface & Type\Search07a $parameters
-     * @return ResultInterface & Type\Search07aResponse
+     * @return ResultInterface & Type\CTSearchResponse
      * @throws SoapException
      */
-    public function search07a(\PaymentAssist\Type\Search07a $parameters) : \PaymentAssist\Type\Search07aResponse
+    public function search07a(\PaymentAssist\Type\Search07a $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
         $response = ($this->caller)('Search07a', $parameters);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\Search07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTSearchResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method to Request a Credit Report for the specified Address Link (requires both the original Search Identifier and a Link Navigation Identifier)
-     *
      * @param RequestInterface & Type\AddressLinkSearch07a $parameters
-     * @return ResultInterface & Type\AddressLinkSearch07aResponse
+     * @return ResultInterface & Type\CTSearchResponse
      * @throws SoapException
      */
-    public function addressLinkSearch07a(\PaymentAssist\Type\AddressLinkSearch07a $parameters) : \PaymentAssist\Type\AddressLinkSearch07aResponse
+    public function addressLinkSearch07a(\PaymentAssist\Type\AddressLinkSearch07a $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
         $response = ($this->caller)('AddressLinkSearch07a', $parameters);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\AddressLinkSearch07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTSearchResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method to Request a Credit Report for the specified Associate Link (requires both the original Search Identifier and a Link Navigation Identifier)
-     *
      * @param RequestInterface & Type\AssociateLinkSearch07a $parameters
-     * @return ResultInterface & Type\AssociateLinkSearch07aResponse
+     * @return ResultInterface & Type\CTSearchResponse
      * @throws SoapException
      */
-    public function associateLinkSearch07a(\PaymentAssist\Type\AssociateLinkSearch07a $parameters) : \PaymentAssist\Type\AssociateLinkSearch07aResponse
+    public function associateLinkSearch07a(\PaymentAssist\Type\AssociateLinkSearch07a $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
         $response = ($this->caller)('AssociateLinkSearch07a', $parameters);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\AssociateLinkSearch07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTSearchResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method to Request a Subsequent copy of a Credit Report (requires the original Search Identifier)
-     *
      * @param RequestInterface & Type\SubsequentSearch07a $parameters
-     * @return ResultInterface & Type\SubsequentSearch07aResponse
+     * @return ResultInterface & Type\CTSearchResponse
      * @throws SoapException
      */
-    public function subsequentSearch07a(\PaymentAssist\Type\SubsequentSearch07a $parameters) : \PaymentAssist\Type\SubsequentSearch07aResponse
+    public function subsequentSearch07a(\PaymentAssist\Type\SubsequentSearch07a $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
         $response = ($this->caller)('SubsequentSearch07a', $parameters);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\SubsequentSearch07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTSearchResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method to Request a Subsequent copy of a Credit Report Address Link Search (requires the original Search Identifier)
-     *
      * @param RequestInterface & Type\SubsequentAddressLinkSearch07a $parameters
-     * @return ResultInterface & Type\SubsequentAddressLinkSearch07aResponse
+     * @return ResultInterface & Type\CTSearchResponse
      * @throws SoapException
      */
-    public function subsequentAddressLinkSearch07a(\PaymentAssist\Type\SubsequentAddressLinkSearch07a $parameters) : \PaymentAssist\Type\SubsequentAddressLinkSearch07aResponse
+    public function subsequentAddressLinkSearch07a(\PaymentAssist\Type\SubsequentAddressLinkSearch07a $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
         $response = ($this->caller)('SubsequentAddressLinkSearch07a', $parameters);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\SubsequentAddressLinkSearch07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTSearchResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method to Request a Subsequent copy of a Credit Report Associate Link Search (requires the original Search Identifier)
-     *
      * @param RequestInterface & Type\SubsequentAssociateLinkSearch07a $parameters
-     * @return ResultInterface & Type\SubsequentAssociateLinkSearch07aResponse
+     * @return ResultInterface & Type\CTSearchResponse
      * @throws SoapException
      */
-    public function subsequentAssociateLinkSearch07a(\PaymentAssist\Type\SubsequentAssociateLinkSearch07a $parameters) : \PaymentAssist\Type\SubsequentAssociateLinkSearch07aResponse
+    public function subsequentAssociateLinkSearch07a(\PaymentAssist\Type\SubsequentAssociateLinkSearch07a $parameters) : \PaymentAssist\Type\CTSearchResponse
     {
         $response = ($this->caller)('SubsequentAssociateLinkSearch07a', $parameters);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\SubsequentAssociateLinkSearch07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTSearchResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method for changing current user's password
-     *
      * @param RequestInterface & Type\ChangePassword07a $parameters
      * @return ResultInterface & Type\ChangePassword07aResponse
      * @throws SoapException
@@ -141,42 +127,38 @@ class CreditsafeClient
     }
 
     /**
-     * Method for looking up reference data
-     *
      * MultiArgumentRequest with following params:
      *
      * \PaymentAssist\Type\LookupData07a $parameters
      *
      * @param MultiArgumentRequest $multiArgumentRequest
-     * @return ResultInterface & Type\LookupData07aResponse
+     * @return ResultInterface & Type\CTLookupDataResponse
      * @throws SoapException
      */
-    public function lookupData07a(\Phpro\SoapClient\Type\MultiArgumentRequest $multiArgumentRequest) : \PaymentAssist\Type\LookupData07aResponse
+    public function lookupData07a(\Phpro\SoapClient\Type\MultiArgumentRequest $multiArgumentRequest) : \PaymentAssist\Type\CTLookupDataResponse
     {
         $response = ($this->caller)('LookupData07a', $multiArgumentRequest);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\LookupData07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTLookupDataResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;
     }
 
     /**
-     * Method for testing system availability
-     *
      * MultiArgumentRequest with following params:
      *
      * \PaymentAssist\Type\Test07a $parameters
      *
      * @param MultiArgumentRequest $multiArgumentRequest
-     * @return ResultInterface & Type\Test07aResponse
+     * @return ResultInterface & Type\CTTestResponse
      * @throws SoapException
      */
-    public function test07a(\Phpro\SoapClient\Type\MultiArgumentRequest $multiArgumentRequest) : \PaymentAssist\Type\Test07aResponse
+    public function test07a(\Phpro\SoapClient\Type\MultiArgumentRequest $multiArgumentRequest) : \PaymentAssist\Type\CTTestResponse
     {
         $response = ($this->caller)('Test07a', $multiArgumentRequest);
 
-        \Psl\Type\instance_of(\PaymentAssist\Type\Test07aResponse::class)->assert($response);
+        \Psl\Type\instance_of(\PaymentAssist\Type\CTTestResponse::class)->assert($response);
         \Psl\Type\instance_of(\Phpro\SoapClient\Type\ResultInterface::class)->assert($response);
 
         return $response;

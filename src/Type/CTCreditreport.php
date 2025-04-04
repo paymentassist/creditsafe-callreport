@@ -7,7 +7,7 @@ class CTCreditreport
     /**
      * Credit Report
      *
-     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\CTOutputapplicant>
+     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
      */
     private array $applicant;
 
@@ -27,7 +27,7 @@ class CTCreditreport
     private int $linktype;
 
     /**
-     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\CTOutputapplicant>
+     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
      */
     public function getApplicant() : array
     {
@@ -35,7 +35,7 @@ class CTCreditreport
     }
 
     /**
-     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\CTOutputapplicant> $applicant
+     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant> $applicant
      * @return static
      */
     public function withApplicant(array $applicant) : static

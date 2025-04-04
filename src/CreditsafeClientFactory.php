@@ -2,21 +2,34 @@
 
 namespace PaymentAssist;
 
-use PaymentAssist\CreditsafeClient;
-use PaymentAssist\CreditsafeClassmap;
+use Http\Client\Common\PluginClient;
+use Http\Discovery\Psr18ClientDiscovery;
+use Phpro\SoapClient\Soap\EngineOptions;
+use Soap\Encoding\EncoderRegistry;
+use Soap\Psr18Transport\Psr18Transport;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Phpro\SoapClient\Soap\DefaultEngineFactory;
-use Soap\ExtSoapEngine\ExtSoapOptions;
 use Phpro\SoapClient\Caller\EventDispatchingCaller;
 use Phpro\SoapClient\Caller\EngineCaller;
 
 class CreditsafeClientFactory
 {
-    public static function factory(string $wsdl) : \PaymentAssist\CreditsafeClient
+    public static function factory(string $wsdl) : CreditsafeClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults($wsdl, [])
-                ->withClassMap(CreditsafeClassmap::getCollection())
+            EngineOptions::defaults($wsdl)
+                ->withEncoderRegistry(
+                    EncoderRegistry::default()
+                        ->addClassMapCollection(CreditsafeClassmap::types())
+                )
+                ->withTransport(
+                    Psr18Transport::createForClient(
+                        new PluginClient(
+                            Psr18ClientDiscovery::find(),
+                            [new CreditsafeMiddleware()]
+                        )
+                    )
+                )
         );
 
         $eventDispatcher = new EventDispatcher();

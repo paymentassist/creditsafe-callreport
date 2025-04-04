@@ -21,7 +21,7 @@ class Movement
     /**
      * @return null | float
      */
-    public function getLOfRes() : ?float
+    public function getL_of_res() : ?float
     {
         return $this->l_of_res;
     }
@@ -30,7 +30,7 @@ class Movement
      * @param null | float $l_of_res
      * @return static
      */
-    public function withLOfRes(?float $l_of_res) : static
+    public function withL_of_res(?float $l_of_res) : static
     {
         $new = clone $this;
         $new->l_of_res = $l_of_res;
@@ -41,7 +41,7 @@ class Movement
     /**
      * @return null | int
      */
-    public function getMoveRate() : ?int
+    public function getMove_rate() : ?int
     {
         return $this->move_rate;
     }
@@ -50,7 +50,7 @@ class Movement
      * @param null | int $move_rate
      * @return static
      */
-    public function withMoveRate(?int $move_rate) : static
+    public function withMove_rate(?int $move_rate) : static
     {
         $new = clone $this;
         $new->move_rate = $move_rate;

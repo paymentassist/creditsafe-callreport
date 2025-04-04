@@ -77,7 +77,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge017() : ?int
+    public function getAge0_17() : ?int
     {
         return $this->age0_17;
     }
@@ -86,7 +86,7 @@ class Age
      * @param null | int $age0_17
      * @return static
      */
-    public function withAge017(?int $age0_17) : static
+    public function withAge0_17(?int $age0_17) : static
     {
         $new = clone $this;
         $new->age0_17 = $age0_17;
@@ -97,7 +97,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge1824() : ?int
+    public function getAge18_24() : ?int
     {
         return $this->age18_24;
     }
@@ -106,7 +106,7 @@ class Age
      * @param null | int $age18_24
      * @return static
      */
-    public function withAge1824(?int $age18_24) : static
+    public function withAge18_24(?int $age18_24) : static
     {
         $new = clone $this;
         $new->age18_24 = $age18_24;
@@ -117,7 +117,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge2534() : ?int
+    public function getAge25_34() : ?int
     {
         return $this->age25_34;
     }
@@ -126,7 +126,7 @@ class Age
      * @param null | int $age25_34
      * @return static
      */
-    public function withAge2534(?int $age25_34) : static
+    public function withAge25_34(?int $age25_34) : static
     {
         $new = clone $this;
         $new->age25_34 = $age25_34;
@@ -137,7 +137,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge3544() : ?int
+    public function getAge35_44() : ?int
     {
         return $this->age35_44;
     }
@@ -146,7 +146,7 @@ class Age
      * @param null | int $age35_44
      * @return static
      */
-    public function withAge3544(?int $age35_44) : static
+    public function withAge35_44(?int $age35_44) : static
     {
         $new = clone $this;
         $new->age35_44 = $age35_44;
@@ -157,7 +157,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge4554() : ?int
+    public function getAge45_54() : ?int
     {
         return $this->age45_54;
     }
@@ -166,7 +166,7 @@ class Age
      * @param null | int $age45_54
      * @return static
      */
-    public function withAge4554(?int $age45_54) : static
+    public function withAge45_54(?int $age45_54) : static
     {
         $new = clone $this;
         $new->age45_54 = $age45_54;
@@ -177,7 +177,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge5564() : ?int
+    public function getAge55_64() : ?int
     {
         return $this->age55_64;
     }
@@ -186,7 +186,7 @@ class Age
      * @param null | int $age55_64
      * @return static
      */
-    public function withAge5564(?int $age55_64) : static
+    public function withAge55_64(?int $age55_64) : static
     {
         $new = clone $this;
         $new->age55_64 = $age55_64;
@@ -197,7 +197,7 @@ class Age
     /**
      * @return null | int
      */
-    public function getAge6574() : ?int
+    public function getAge65_74() : ?int
     {
         return $this->age65_74;
     }
@@ -206,7 +206,7 @@ class Age
      * @param null | int $age65_74
      * @return static
      */
-    public function withAge6574(?int $age65_74) : static
+    public function withAge65_74(?int $age65_74) : static
     {
         $new = clone $this;
         $new->age65_74 = $age65_74;

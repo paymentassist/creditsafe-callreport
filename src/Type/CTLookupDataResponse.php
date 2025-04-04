@@ -2,7 +2,9 @@
 
 namespace PaymentAssist\Type;
 
-class CTLookupDataResponse
+use Phpro\SoapClient\Type\ResultInterface;
+
+class CTLookupDataResponse implements ResultInterface
 {
     /**
      * Response type for Lookup Data Web Method

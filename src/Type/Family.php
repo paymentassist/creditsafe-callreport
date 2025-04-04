@@ -41,7 +41,7 @@ class Family
     /**
      * @return null | int
      */
-    public function getIndAdult1() : ?int
+    public function getInd_adult1() : ?int
     {
         return $this->ind_adult1;
     }
@@ -50,7 +50,7 @@ class Family
      * @param null | int $ind_adult1
      * @return static
      */
-    public function withIndAdult1(?int $ind_adult1) : static
+    public function withInd_adult1(?int $ind_adult1) : static
     {
         $new = clone $this;
         $new->ind_adult1 = $ind_adult1;

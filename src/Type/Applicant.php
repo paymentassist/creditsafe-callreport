@@ -2,8 +2,6 @@
 
 namespace PaymentAssist\Type;
 
-use \PaymentAssist\Type\CTOutputapplicant;
-
 class Applicant extends CTOutputapplicant
 {
     /**

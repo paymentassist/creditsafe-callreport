@@ -2,8 +2,6 @@
 
 namespace PaymentAssist\Type;
 
-use \PaymentAssist\Type\CTSupplierdetails;
-
 class Supplierdetails extends CTSupplierdetails
 {
     /**

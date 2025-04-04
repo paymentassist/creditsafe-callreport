@@ -7,12 +7,12 @@ class CTPayload
     /**
      * Any elements or attributes can be placed within the payload container
      *
-     * @var array<int<0,max>, mixed>
+     * @var array<int<0,max>, string>
      */
     private array $any;
 
     /**
-     * @return array<int<0,max>, mixed>
+     * @return array<int<0,max>, string>
      */
     public function getAny() : array
     {
@@ -20,7 +20,7 @@ class CTPayload
     }
 
     /**
-     * @param array<int<0,max>, mixed> $any
+     * @param array<int<0,max>, string> $any
      * @return static
      */
     public function withAny(array $any) : static

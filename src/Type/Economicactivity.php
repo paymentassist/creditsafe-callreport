@@ -35,7 +35,7 @@ class Economicactivity
     /**
      * @return null | int
      */
-    public function getWkfemInd() : ?int
+    public function getWkfem_ind() : ?int
     {
         return $this->wkfem_ind;
     }
@@ -44,7 +44,7 @@ class Economicactivity
      * @param null | int $wkfem_ind
      * @return static
      */
-    public function withWkfemInd(?int $wkfem_ind) : static
+    public function withWkfem_ind(?int $wkfem_ind) : static
     {
         $new = clone $this;
         $new->wkfem_ind = $wkfem_ind;
@@ -55,7 +55,7 @@ class Economicactivity
     /**
      * @return null | int
      */
-    public function getStuInd() : ?int
+    public function getStu_ind() : ?int
     {
         return $this->stu_ind;
     }
@@ -64,7 +64,7 @@ class Economicactivity
      * @param null | int $stu_ind
      * @return static
      */
-    public function withStuInd(?int $stu_ind) : static
+    public function withStu_ind(?int $stu_ind) : static
     {
         $new = clone $this;
         $new->stu_ind = $stu_ind;
@@ -75,7 +75,7 @@ class Economicactivity
     /**
      * @return null | int
      */
-    public function getSickInd() : ?int
+    public function getSick_ind() : ?int
     {
         return $this->sick_ind;
     }
@@ -84,7 +84,7 @@ class Economicactivity
      * @param null | int $sick_ind
      * @return static
      */
-    public function withSickInd(?int $sick_ind) : static
+    public function withSick_ind(?int $sick_ind) : static
     {
         $new = clone $this;
         $new->sick_ind = $sick_ind;
@@ -95,7 +95,7 @@ class Economicactivity
     /**
      * @return null | int
      */
-    public function getDegreeInd() : ?int
+    public function getDegree_ind() : ?int
     {
         return $this->degree_ind;
     }
@@ -104,7 +104,7 @@ class Economicactivity
      * @param null | int $degree_ind
      * @return static
      */
-    public function withDegreeInd(?int $degree_ind) : static
+    public function withDegree_ind(?int $degree_ind) : static
     {
         $new = clone $this;
         $new->degree_ind = $degree_ind;

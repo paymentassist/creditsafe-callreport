@@ -3,19 +3,19 @@
 use Phpro\SoapClient\CodeGenerator\Assembler;
 use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
-use Soap\ExtSoapEngine\ExtSoapOptions;
-use Phpro\SoapClient\Soap\CodeGeneratorEngineFactory;
+use Phpro\SoapClient\Soap\EngineOptions;
+use Phpro\SoapClient\Soap\DefaultEngineFactory;
 
 return Config::create()
-    ->setEngine($engine = CodeGeneratorEngineFactory::create(
-        'config/CallReport7.wsdl'
+    ->setEngine($engine = DefaultEngineFactory::create(
+        EngineOptions::defaults('./config/CallReport7.wsdl')
     ))
-    ->setTypeDestination('src//Type')
+    ->setTypeDestination('./src//Type')
     ->setTypeNamespace('PaymentAssist\Type')
-    ->setClientDestination('src/')
+    ->setClientDestination('./src/')
     ->setClientName('CreditsafeClient')
     ->setClientNamespace('PaymentAssist')
-    ->setClassMapDestination('src/')
+    ->setClassMapDestination('./src/')
     ->setClassMapName('CreditsafeClassmap')
     ->setClassMapNamespace('PaymentAssist')
     ->addRule(new Rules\AssembleRule(new Assembler\GetterAssembler(new Assembler\GetterAssemblerOptions())))

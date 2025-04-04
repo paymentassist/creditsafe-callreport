@@ -21,9 +21,9 @@ class Person
     /**
      * Address details
      *
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * @var null | \PaymentAssist\Type\CTOutputaddress
      */
-    private \PaymentAssist\Type\CTOutputaddress $address;
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
 
     /**
      * @return null | string
@@ -66,18 +66,18 @@ class Person
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress() : \PaymentAssist\Type\CTOutputaddress
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
      * @return static
      */
-    public function withAddress(\PaymentAssist\Type\CTOutputaddress $address) : static
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;

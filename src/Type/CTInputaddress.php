@@ -2,8 +2,6 @@
 
 namespace PaymentAssist\Type;
 
-use \PaymentAssist\Type\CTAddress;
-
 class CTInputaddress extends CTAddress
 {
     /**
