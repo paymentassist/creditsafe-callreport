@@ -4,35 +4,42 @@ namespace PaymentAssist\Type;
 
 class Namematches
 {
+    /**
+     * Contains name details as found on the database for an individual match
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\Namematch>
+     */
+    private array $namematch;
 
     /**
-     * @var \PaymentAssist\Type\Namematch
+     * Used to indicate type of report available for a given applicant name and address within the picklist.
+     * The list of possible values can be obtained from the web method LookupData07a table id = reporttype
+     *
+     * @var null | string
      */
-    private $namematch;
+    private ?string $reporttype = null;
 
     /**
-     * @var string
+     * Status of user's selection for a given applicant's name and address within the picklist
+     * The list of possible values can be obtained from the web method LookupData07a table id = matchstatus
+     *
+     * @var null | string
      */
-    private $reporttype;
+    private ?string $matchstatus = null;
 
     /**
-     * @var string
+     * @return array<int<0,max>, \PaymentAssist\Type\Namematch>
      */
-    private $matchstatus;
-
-    /**
-     * @return \PaymentAssist\Type\Namematch
-     */
-    public function getNamematch()
+    public function getNamematch() : array
     {
         return $this->namematch;
     }
 
     /**
-     * @param \PaymentAssist\Type\Namematch $namematch
-     * @return Namematches
+     * @param array<int<0,max>, \PaymentAssist\Type\Namematch> $namematch
+     * @return static
      */
-    public function withNamematch($namematch)
+    public function withNamematch(array $namematch) : static
     {
         $new = clone $this;
         $new->namematch = $namematch;
@@ -41,18 +48,18 @@ class Namematches
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getReporttype()
+    public function getReporttype() : ?string
     {
         return $this->reporttype;
     }
 
     /**
-     * @param string $reporttype
-     * @return Namematches
+     * @param null | string $reporttype
+     * @return static
      */
-    public function withReporttype($reporttype)
+    public function withReporttype(?string $reporttype) : static
     {
         $new = clone $this;
         $new->reporttype = $reporttype;
@@ -61,25 +68,23 @@ class Namematches
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getMatchstatus()
+    public function getMatchstatus() : ?string
     {
         return $this->matchstatus;
     }
 
     /**
-     * @param string $matchstatus
-     * @return Namematches
+     * @param null | string $matchstatus
+     * @return static
      */
-    public function withMatchstatus($matchstatus)
+    public function withMatchstatus(?string $matchstatus) : static
     {
         $new = clone $this;
         $new->matchstatus = $matchstatus;
 
         return $new;
     }
-
-
 }
 

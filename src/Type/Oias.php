@@ -4,30 +4,31 @@ namespace PaymentAssist\Type;
 
 class Oias
 {
-
     /**
-     * @var \PaymentAssist\Type\Oia
+     * @var array<int<0,max>, \PaymentAssist\Type\Oia>
      */
-    private $oia;
+    private array $oia;
 
     /**
+     * Total number of Opt-in associates
+     *
      * @var int
      */
-    private $total;
+    private int $total;
 
     /**
-     * @return \PaymentAssist\Type\Oia
+     * @return array<int<0,max>, \PaymentAssist\Type\Oia>
      */
-    public function getOia()
+    public function getOia() : array
     {
         return $this->oia;
     }
 
     /**
-     * @param \PaymentAssist\Type\Oia $oia
-     * @return Oias
+     * @param array<int<0,max>, \PaymentAssist\Type\Oia> $oia
+     * @return static
      */
-    public function withOia($oia)
+    public function withOia(array $oia) : static
     {
         $new = clone $this;
         $new->oia = $oia;
@@ -38,23 +39,21 @@ class Oias
     /**
      * @return int
      */
-    public function getTotal()
+    public function getTotal() : int
     {
         return $this->total;
     }
 
     /**
      * @param int $total
-     * @return Oias
+     * @return static
      */
-    public function withTotal($total)
+    public function withTotal(int $total) : static
     {
         $new = clone $this;
         $new->total = $total;
 
         return $new;
     }
-
-
 }
 

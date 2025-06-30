@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Movement
 {
+    /**
+     * Average length of residency
+     *
+     * @var null | float
+     */
+    private ?float $l_of_res = null;
 
     /**
-     * @var float
+     * Movement rate (and %) from Electoral Roll historical activity
+     *
+     * @var null | int
      */
-    private $l_of_res;
+    private ?int $move_rate = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $move_rate;
-
-    /**
-     * @return float
-     */
-    public function getL_of_res()
+    public function getL_of_res() : ?float
     {
         return $this->l_of_res;
     }
 
     /**
-     * @param float $l_of_res
-     * @return Movement
+     * @param null | float $l_of_res
+     * @return static
      */
-    public function withL_of_res($l_of_res)
+    public function withL_of_res(?float $l_of_res) : static
     {
         $new = clone $this;
         $new->l_of_res = $l_of_res;
@@ -36,25 +39,23 @@ class Movement
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getMove_rate()
+    public function getMove_rate() : ?int
     {
         return $this->move_rate;
     }
 
     /**
-     * @param int $move_rate
-     * @return Movement
+     * @param null | int $move_rate
+     * @return static
      */
-    public function withMove_rate($move_rate)
+    public function withMove_rate(?int $move_rate) : static
     {
         $new = clone $this;
         $new->move_rate = $move_rate;
 
         return $new;
     }
-
-
 }
 

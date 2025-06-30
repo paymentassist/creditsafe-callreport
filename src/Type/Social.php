@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class Social
 {
+    /**
+     * Proportion of "Millionaire Club" households in postcode.
+     *
+     * @var null | float
+     */
+    private ?float $millhhld = null;
 
     /**
-     * @var float
+     * Proportion of company director households in postcode.
+     *
+     * @var null | float
      */
-    private $millhhld;
+    private ?float $dirhhld = null;
 
     /**
-     * @var float
+     * Social Class Score
+     *
+     * @var null | float
      */
-    private $dirhhld;
+    private ?float $socscore = null;
 
     /**
-     * @var float
+     * Social Class Band
+     *
+     * @var null | int
      */
-    private $socscore;
+    private ?int $socband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $socband;
-
-    /**
-     * @return float
-     */
-    public function getMillhhld()
+    public function getMillhhld() : ?float
     {
         return $this->millhhld;
     }
 
     /**
-     * @param float $millhhld
-     * @return Social
+     * @param null | float $millhhld
+     * @return static
      */
-    public function withMillhhld($millhhld)
+    public function withMillhhld(?float $millhhld) : static
     {
         $new = clone $this;
         $new->millhhld = $millhhld;
@@ -46,18 +53,18 @@ class Social
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getDirhhld()
+    public function getDirhhld() : ?float
     {
         return $this->dirhhld;
     }
 
     /**
-     * @param float $dirhhld
-     * @return Social
+     * @param null | float $dirhhld
+     * @return static
      */
-    public function withDirhhld($dirhhld)
+    public function withDirhhld(?float $dirhhld) : static
     {
         $new = clone $this;
         $new->dirhhld = $dirhhld;
@@ -66,18 +73,18 @@ class Social
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getSocscore()
+    public function getSocscore() : ?float
     {
         return $this->socscore;
     }
 
     /**
-     * @param float $socscore
-     * @return Social
+     * @param null | float $socscore
+     * @return static
      */
-    public function withSocscore($socscore)
+    public function withSocscore(?float $socscore) : static
     {
         $new = clone $this;
         $new->socscore = $socscore;
@@ -86,25 +93,23 @@ class Social
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getSocband()
+    public function getSocband() : ?int
     {
         return $this->socband;
     }
 
     /**
-     * @param int $socband
-     * @return Social
+     * @param null | int $socband
+     * @return static
      */
-    public function withSocband($socband)
+    public function withSocband(?int $socband) : static
     {
         $new = clone $this;
         $new->socband = $socband;
 
         return $new;
     }
-
-
 }
 

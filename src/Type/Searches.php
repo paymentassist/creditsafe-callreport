@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Searches
 {
+    /**
+     * Output structure for a Search
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputsearchhistory>
+     */
+    private array $search;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputsearchhistory
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputsearchhistory>
      */
-    private $search;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputsearchhistory
-     */
-    public function getSearch()
+    public function getSearch() : array
     {
         return $this->search;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputsearchhistory $search
-     * @return Searches
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputsearchhistory> $search
+     * @return static
      */
-    public function withSearch($search)
+    public function withSearch(array $search) : static
     {
         $new = clone $this;
         $new->search = $search;
 
         return $new;
     }
-
-
 }
 

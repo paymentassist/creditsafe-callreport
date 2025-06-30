@@ -4,55 +4,40 @@ namespace PaymentAssist\Type;
 
 class Person
 {
+    /**
+     * Name details
+     *
+     * @var null | string
+     */
+    private ?string $name = null;
 
     /**
-     * @var string
+     * Date of birth
+     *
+     * @var null | \DateTimeInterface
      */
-    private $name;
+    private ?\DateTimeInterface $dob = null;
 
     /**
-     * @var \DateTimeInterface
+     * Address details
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddress
      */
-    private $dob;
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * @return null | string
      */
-    private $address;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputaddress
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return Person
-     */
-    public function withAddress($address)
-    {
-        $new = clone $this;
-        $new->address = $address;
-
-        return $new;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return Person
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -61,18 +46,18 @@ class Person
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDob()
+    public function getDob() : ?\DateTimeInterface
     {
         return $this->dob;
     }
 
     /**
-     * @param \DateTimeInterface $dob
-     * @return Person
+     * @param null | \DateTimeInterface $dob
+     * @return static
      */
-    public function withDob($dob)
+    public function withDob(?\DateTimeInterface $dob) : static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -80,6 +65,24 @@ class Person
         return $new;
     }
 
+    /**
+     * @return null | \PaymentAssist\Type\CTOutputaddress
+     */
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
+    {
+        return $this->address;
+    }
 
+    /**
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
+     * @return static
+     */
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
+    {
+        $new = clone $this;
+        $new->address = $address;
+
+        return $new;
+    }
 }
 

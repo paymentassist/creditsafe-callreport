@@ -2,37 +2,42 @@
 
 namespace PaymentAssist\Type;
 
-class CTInputaddress
+class CTInputaddress extends CTAddress
 {
+    /**
+     * The date the applicant moved into the residence
+     *
+     * @var null | \DateTimeInterface
+     */
+    private ?\DateTimeInterface $startdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * The date the applicant moved out of the residence
+     *
+     * @var null | \DateTimeInterface
      */
-    private $startdate;
+    private ?\DateTimeInterface $enddate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Duration of residency
+     *
+     * @var null | mixed
      */
-    private $enddate;
+    private mixed $duration = null;
 
     /**
-     * @var string
+     * @return null | \DateTimeInterface
      */
-    private $duration;
-
-    /**
-     * @return \DateTimeInterface
-     */
-    public function getStartdate()
+    public function getStartdate() : ?\DateTimeInterface
     {
         return $this->startdate;
     }
 
     /**
-     * @param \DateTimeInterface $startdate
-     * @return CTInputaddress
+     * @param null | \DateTimeInterface $startdate
+     * @return static
      */
-    public function withStartdate($startdate)
+    public function withStartdate(?\DateTimeInterface $startdate) : static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -41,18 +46,18 @@ class CTInputaddress
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getEnddate()
+    public function getEnddate() : ?\DateTimeInterface
     {
         return $this->enddate;
     }
 
     /**
-     * @param \DateTimeInterface $enddate
-     * @return CTInputaddress
+     * @param null | \DateTimeInterface $enddate
+     * @return static
      */
-    public function withEnddate($enddate)
+    public function withEnddate(?\DateTimeInterface $enddate) : static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -61,25 +66,23 @@ class CTInputaddress
     }
 
     /**
-     * @return string
+     * @return null | mixed
      */
-    public function getDuration()
+    public function getDuration() : mixed
     {
         return $this->duration;
     }
 
     /**
-     * @param string $duration
-     * @return CTInputaddress
+     * @param null | mixed $duration
+     * @return static
      */
-    public function withDuration($duration)
+    public function withDuration(mixed $duration) : static
     {
         $new = clone $this;
         $new->duration = $duration;
 
         return $new;
     }
-
-
 }
 

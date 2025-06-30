@@ -6,32 +6,31 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class CTTestResponse implements ResultInterface
 {
+    /**
+     * Response type for Lookup Data Web Method
+     *
+     * @var null | \PaymentAssist\Type\CTTestResult
+     */
+    private ?\PaymentAssist\Type\CTTestResult $TestResult = null;
 
     /**
-     * @var \PaymentAssist\Type\CTTestResult
+     * @return null | \PaymentAssist\Type\CTTestResult
      */
-    private $TestResult;
-
-    /**
-     * @return \PaymentAssist\Type\CTTestResult
-     */
-    public function getTestResult()
+    public function getTestResult() : ?\PaymentAssist\Type\CTTestResult
     {
         return $this->TestResult;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTTestResult $TestResult
-     * @return CTTestResponse
+     * @param null | \PaymentAssist\Type\CTTestResult $TestResult
+     * @return static
      */
-    public function withTestResult($TestResult)
+    public function withTestResult(?\PaymentAssist\Type\CTTestResult $TestResult) : static
     {
         $new = clone $this;
         $new->TestResult = $TestResult;
 
         return $new;
     }
-
-
 }
 

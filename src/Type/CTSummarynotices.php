@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class CTSummarynotices
 {
-
     /**
+     * A value of 1 indicates that there is a notice of correction
+     *
      * @var int
      */
-    private $nocflag;
+    private int $nocflag;
 
     /**
+     * Total number of notice of disputes
+     *
      * @var int
      */
-    private $totaldisputes;
+    private int $totaldisputes;
 
     /**
      * @return int
      */
-    public function getNocflag()
+    public function getNocflag() : int
     {
         return $this->nocflag;
     }
 
     /**
      * @param int $nocflag
-     * @return CTSummarynotices
+     * @return static
      */
-    public function withNocflag($nocflag)
+    public function withNocflag(int $nocflag) : static
     {
         $new = clone $this;
         $new->nocflag = $nocflag;
@@ -38,23 +41,21 @@ class CTSummarynotices
     /**
      * @return int
      */
-    public function getTotaldisputes()
+    public function getTotaldisputes() : int
     {
         return $this->totaldisputes;
     }
 
     /**
      * @param int $totaldisputes
-     * @return CTSummarynotices
+     * @return static
      */
-    public function withTotaldisputes($totaldisputes)
+    public function withTotaldisputes(int $totaldisputes) : static
     {
         $new = clone $this;
         $new->totaldisputes = $totaldisputes;
 
         return $new;
     }
-
-
 }
 

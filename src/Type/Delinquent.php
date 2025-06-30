@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Delinquent
 {
-
     /**
-     * @var \DateTimeInterface
+     * Delinquency date
+     *
+     * @var null | \DateTimeInterface
      */
-    private $delinqdate;
+    private ?\DateTimeInterface $delinqdate = null;
 
     /**
+     * Delinquency balance
+     *
      * @var int
      */
-    private $delinqbal;
+    private int $delinqbal;
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDelinqdate()
+    public function getDelinqdate() : ?\DateTimeInterface
     {
         return $this->delinqdate;
     }
 
     /**
-     * @param \DateTimeInterface $delinqdate
-     * @return Delinquent
+     * @param null | \DateTimeInterface $delinqdate
+     * @return static
      */
-    public function withDelinqdate($delinqdate)
+    public function withDelinqdate(?\DateTimeInterface $delinqdate) : static
     {
         $new = clone $this;
         $new->delinqdate = $delinqdate;
@@ -38,23 +41,21 @@ class Delinquent
     /**
      * @return int
      */
-    public function getDelinqbal()
+    public function getDelinqbal() : int
     {
         return $this->delinqbal;
     }
 
     /**
      * @param int $delinqbal
-     * @return Delinquent
+     * @return static
      */
-    public function withDelinqbal($delinqbal)
+    public function withDelinqbal(int $delinqbal) : static
     {
         $new = clone $this;
         $new->delinqbal = $delinqbal;
 
         return $new;
     }
-
-
 }
 

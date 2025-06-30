@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsexpenditure
 {
+    /**
+     * Total number of cheque of debit cards linked directly to the customer's bank account
+     *
+     * @var null | int
+     */
+    private ?int $totaldebitcards = null;
 
     /**
-     * @var int
+     * Total number of credit or charge cards used to purchase goods and services on credit
+     *
+     * @var null | int
      */
-    private $totaldebitcards;
+    private ?int $totalcreditcards = null;
 
     /**
-     * @var int
+     * Monthly unsecured financial obligation owed to creditors
+     *
+     * @var null | int
      */
-    private $totalcreditcards;
+    private ?int $monthlyunsecuredamount = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $monthlyunsecuredamount;
-
-    /**
-     * @return int
-     */
-    public function getTotaldebitcards()
+    public function getTotaldebitcards() : ?int
     {
         return $this->totaldebitcards;
     }
 
     /**
-     * @param int $totaldebitcards
-     * @return CTDemographicsexpenditure
+     * @param null | int $totaldebitcards
+     * @return static
      */
-    public function withTotaldebitcards($totaldebitcards)
+    public function withTotaldebitcards(?int $totaldebitcards) : static
     {
         $new = clone $this;
         $new->totaldebitcards = $totaldebitcards;
@@ -41,18 +46,18 @@ class CTDemographicsexpenditure
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalcreditcards()
+    public function getTotalcreditcards() : ?int
     {
         return $this->totalcreditcards;
     }
 
     /**
-     * @param int $totalcreditcards
-     * @return CTDemographicsexpenditure
+     * @param null | int $totalcreditcards
+     * @return static
      */
-    public function withTotalcreditcards($totalcreditcards)
+    public function withTotalcreditcards(?int $totalcreditcards) : static
     {
         $new = clone $this;
         $new->totalcreditcards = $totalcreditcards;
@@ -61,25 +66,23 @@ class CTDemographicsexpenditure
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getMonthlyunsecuredamount()
+    public function getMonthlyunsecuredamount() : ?int
     {
         return $this->monthlyunsecuredamount;
     }
 
     /**
-     * @param int $monthlyunsecuredamount
-     * @return CTDemographicsexpenditure
+     * @param null | int $monthlyunsecuredamount
+     * @return static
      */
-    public function withMonthlyunsecuredamount($monthlyunsecuredamount)
+    public function withMonthlyunsecuredamount(?int $monthlyunsecuredamount) : static
     {
         $new = clone $this;
         $new->monthlyunsecuredamount = $monthlyunsecuredamount;
 
         return $new;
     }
-
-
 }
 

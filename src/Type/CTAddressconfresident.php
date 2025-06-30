@@ -4,70 +4,91 @@ namespace PaymentAssist\Type;
 
 class CTAddressconfresident
 {
-
     /**
-     * @var string
+     * Confirmation of individual's details
+     *
+     * @var null | string
      */
-    private $name;
+    private ?string $name = null;
 
     /**
-     * @var string
+     * Effective duration of residency (based on search purpose and Electoral Roll Opt-out history)
+     *
+     * @var null | mixed
      */
-    private $duration;
+    private mixed $duration = null;
 
     /**
-     * @var \DateTimeInterface
+     * Effective start date of residency (based on search purpose and Electoral Roll Opt-out history)
+     *
+     * @var null | \DateTimeInterface
      */
-    private $startdate;
+    private ?\DateTimeInterface $startdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Effective end date of residency (based on search purpose and Electoral Roll Opt-out history)
+     *
+     * @var null | \DateTimeInterface
      */
-    private $enddate;
+    private ?\DateTimeInterface $enddate = null;
 
     /**
+     * Electoral Roll validation identifier
+     * The list of possible values can be obtained from the web method LookupData07a table id = erstatuscode
+     *
      * @var int
      */
-    private $ervalid;
+    private int $ervalid;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputerhistory
+     * Ordered list of Electoral Roll History items - most recent first.
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputerhistory>
      */
-    private $erhistory;
+    private array $erhistory;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of Dispute and Correction Notices against a Resident
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
+     * Indicates whether resident is individual match (matches applicant's full name or alias), surname match, house match, CIFAS match or no match.
+     * The list of possible values can be obtained from the web method LookupData07a table id = appmatch
+     *
      * @var string
      */
-    private $matchtype;
+    private string $matchtype;
 
     /**
+     * A value of 1 indicates that the resident is based on the current name
+     *
      * @var int
      */
-    private $currentname;
+    private int $currentname;
 
     /**
+     * A value of 1 indicates that the resident is based on a declared alias
+     *
      * @var int
      */
-    private $declaredalias;
+    private int $declaredalias;
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return CTAddressconfresident
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -76,18 +97,18 @@ class CTAddressconfresident
     }
 
     /**
-     * @return string
+     * @return null | mixed
      */
-    public function getDuration()
+    public function getDuration() : mixed
     {
         return $this->duration;
     }
 
     /**
-     * @param string $duration
-     * @return CTAddressconfresident
+     * @param null | mixed $duration
+     * @return static
      */
-    public function withDuration($duration)
+    public function withDuration(mixed $duration) : static
     {
         $new = clone $this;
         $new->duration = $duration;
@@ -96,18 +117,18 @@ class CTAddressconfresident
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getStartdate()
+    public function getStartdate() : ?\DateTimeInterface
     {
         return $this->startdate;
     }
 
     /**
-     * @param \DateTimeInterface $startdate
-     * @return CTAddressconfresident
+     * @param null | \DateTimeInterface $startdate
+     * @return static
      */
-    public function withStartdate($startdate)
+    public function withStartdate(?\DateTimeInterface $startdate) : static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -116,18 +137,18 @@ class CTAddressconfresident
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getEnddate()
+    public function getEnddate() : ?\DateTimeInterface
     {
         return $this->enddate;
     }
 
     /**
-     * @param \DateTimeInterface $enddate
-     * @return CTAddressconfresident
+     * @param null | \DateTimeInterface $enddate
+     * @return static
      */
-    public function withEnddate($enddate)
+    public function withEnddate(?\DateTimeInterface $enddate) : static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -138,16 +159,16 @@ class CTAddressconfresident
     /**
      * @return int
      */
-    public function getErvalid()
+    public function getErvalid() : int
     {
         return $this->ervalid;
     }
 
     /**
      * @param int $ervalid
-     * @return CTAddressconfresident
+     * @return static
      */
-    public function withErvalid($ervalid)
+    public function withErvalid(int $ervalid) : static
     {
         $new = clone $this;
         $new->ervalid = $ervalid;
@@ -156,18 +177,18 @@ class CTAddressconfresident
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputerhistory
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputerhistory>
      */
-    public function getErhistory()
+    public function getErhistory() : array
     {
         return $this->erhistory;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputerhistory $erhistory
-     * @return CTAddressconfresident
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputerhistory> $erhistory
+     * @return static
      */
-    public function withErhistory($erhistory)
+    public function withErhistory(array $erhistory) : static
     {
         $new = clone $this;
         $new->erhistory = $erhistory;
@@ -176,18 +197,18 @@ class CTAddressconfresident
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTAddressconfresident
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -198,16 +219,16 @@ class CTAddressconfresident
     /**
      * @return string
      */
-    public function getMatchtype()
+    public function getMatchtype() : string
     {
         return $this->matchtype;
     }
 
     /**
      * @param string $matchtype
-     * @return CTAddressconfresident
+     * @return static
      */
-    public function withMatchtype($matchtype)
+    public function withMatchtype(string $matchtype) : static
     {
         $new = clone $this;
         $new->matchtype = $matchtype;
@@ -218,16 +239,16 @@ class CTAddressconfresident
     /**
      * @return int
      */
-    public function getCurrentname()
+    public function getCurrentname() : int
     {
         return $this->currentname;
     }
 
     /**
      * @param int $currentname
-     * @return CTAddressconfresident
+     * @return static
      */
-    public function withCurrentname($currentname)
+    public function withCurrentname(int $currentname) : static
     {
         $new = clone $this;
         $new->currentname = $currentname;
@@ -238,23 +259,21 @@ class CTAddressconfresident
     /**
      * @return int
      */
-    public function getDeclaredalias()
+    public function getDeclaredalias() : int
     {
         return $this->declaredalias;
     }
 
     /**
      * @param int $declaredalias
-     * @return CTAddressconfresident
+     * @return static
      */
-    public function withDeclaredalias($declaredalias)
+    public function withDeclaredalias(int $declaredalias) : static
     {
         $new = clone $this;
         $new->declaredalias = $declaredalias;
 
         return $new;
     }
-
-
 }
 

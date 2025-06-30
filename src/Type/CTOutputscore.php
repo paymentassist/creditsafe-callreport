@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class CTOutputscore
 {
+    /**
+     * Calculated credit score
+     *
+     * @var null | \PaymentAssist\Type\Score
+     */
+    private ?\PaymentAssist\Type\Score $score = null;
 
     /**
-     * @var \PaymentAssist\Type\Score
+     * Set of reason codes for the credit score
+     *
+     * @var null | \PaymentAssist\Type\Reasons
      */
-    private $score;
+    private ?\PaymentAssist\Type\Reasons $reasons = null;
 
     /**
-     * @var \PaymentAssist\Type\Reasons
+     * @return null | \PaymentAssist\Type\Score
      */
-    private $reasons;
-
-    /**
-     * @return \PaymentAssist\Type\Score
-     */
-    public function getScore()
+    public function getScore() : ?\PaymentAssist\Type\Score
     {
         return $this->score;
     }
 
     /**
-     * @param \PaymentAssist\Type\Score $score
-     * @return CTOutputscore
+     * @param null | \PaymentAssist\Type\Score $score
+     * @return static
      */
-    public function withScore($score)
+    public function withScore(?\PaymentAssist\Type\Score $score) : static
     {
         $new = clone $this;
         $new->score = $score;
@@ -36,25 +39,23 @@ class CTOutputscore
     }
 
     /**
-     * @return \PaymentAssist\Type\Reasons
+     * @return null | \PaymentAssist\Type\Reasons
      */
-    public function getReasons()
+    public function getReasons() : ?\PaymentAssist\Type\Reasons
     {
         return $this->reasons;
     }
 
     /**
-     * @param \PaymentAssist\Type\Reasons $reasons
-     * @return CTOutputscore
+     * @param null | \PaymentAssist\Type\Reasons $reasons
+     * @return static
      */
-    public function withReasons($reasons)
+    public function withReasons(?\PaymentAssist\Type\Reasons $reasons) : static
     {
         $new = clone $this;
         $new->reasons = $reasons;
 
         return $new;
     }
-
-
 }
 

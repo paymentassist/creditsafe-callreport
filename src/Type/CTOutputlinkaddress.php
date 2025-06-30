@@ -2,42 +2,62 @@
 
 namespace PaymentAssist\Type;
 
-class CTOutputlinkaddress
+class CTOutputlinkaddress extends CTOutputaddress
 {
-
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
-     */
-    private $_;
-
-    /**
-     * @var int
-     */
-    private $addressid;
-
-    /**
-     * @var int
-     */
-    private $declared;
-
-    /**
+     * Output structure for a single address line
+     *
      * @var string
      */
-    private $navlinkid;
+    private string $_;
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * @var int
      */
-    public function get_()
+    private int $current;
+
+    /**
+     * The type of undeclared address
+     * The list of possible values can be obtained from the web method LookupData07a table id = undeclaredaddresstype
+     *
+     * @var null | int
+     */
+    private ?int $undeclaredaddresstype = null;
+
+    /**
+     * Address id indicator to identify the address later within an Address Link
+     *
+     * @var int
+     */
+    private int $addressid;
+
+    /**
+     * A value of 1 indicates that the address declared on the application.
+     *
+     * @var int
+     */
+    private int $declared;
+
+    /**
+     * Identifier required for Address Link navigation
+     *
+     * @var null | string
+     */
+    private ?string $navlinkid = null;
+
+    /**
+     * @return string
+     */
+    public function get_() : string
     {
         return $this->_;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $_
-     * @return CTOutputlinkaddress
+     * @param string $_
+     * @return static
      */
-    public function with_($_)
+    public function with_(string $_) : static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -48,16 +68,56 @@ class CTOutputlinkaddress
     /**
      * @return int
      */
-    public function getAddressid()
+    public function getCurrent() : int
+    {
+        return $this->current;
+    }
+
+    /**
+     * @param int $current
+     * @return static
+     */
+    public function withCurrent(int $current) : static
+    {
+        $new = clone $this;
+        $new->current = $current;
+
+        return $new;
+    }
+
+    /**
+     * @return null | int
+     */
+    public function getUndeclaredaddresstype() : ?int
+    {
+        return $this->undeclaredaddresstype;
+    }
+
+    /**
+     * @param null | int $undeclaredaddresstype
+     * @return static
+     */
+    public function withUndeclaredaddresstype(?int $undeclaredaddresstype) : static
+    {
+        $new = clone $this;
+        $new->undeclaredaddresstype = $undeclaredaddresstype;
+
+        return $new;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAddressid() : int
     {
         return $this->addressid;
     }
 
     /**
      * @param int $addressid
-     * @return CTOutputlinkaddress
+     * @return static
      */
-    public function withAddressid($addressid)
+    public function withAddressid(int $addressid) : static
     {
         $new = clone $this;
         $new->addressid = $addressid;
@@ -68,16 +128,16 @@ class CTOutputlinkaddress
     /**
      * @return int
      */
-    public function getDeclared()
+    public function getDeclared() : int
     {
         return $this->declared;
     }
 
     /**
      * @param int $declared
-     * @return CTOutputlinkaddress
+     * @return static
      */
-    public function withDeclared($declared)
+    public function withDeclared(int $declared) : static
     {
         $new = clone $this;
         $new->declared = $declared;
@@ -86,25 +146,23 @@ class CTOutputlinkaddress
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getNavlinkid()
+    public function getNavlinkid() : ?string
     {
         return $this->navlinkid;
     }
 
     /**
-     * @param string $navlinkid
-     * @return CTOutputlinkaddress
+     * @param null | string $navlinkid
+     * @return static
      */
-    public function withNavlinkid($navlinkid)
+    public function withNavlinkid(?string $navlinkid) : static
     {
         $new = clone $this;
         $new->navlinkid = $navlinkid;
 
         return $new;
     }
-
-
 }
 

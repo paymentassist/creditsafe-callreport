@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Hhcomp
 {
+    /**
+     * Household Composition Score
+     *
+     * @var null | float
+     */
+    private ?float $compscore = null;
 
     /**
-     * @var float
+     * Household Composition Band
+     *
+     * @var null | int
      */
-    private $compscore;
+    private ?int $compband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $compband;
-
-    /**
-     * @return float
-     */
-    public function getCompscore()
+    public function getCompscore() : ?float
     {
         return $this->compscore;
     }
 
     /**
-     * @param float $compscore
-     * @return Hhcomp
+     * @param null | float $compscore
+     * @return static
      */
-    public function withCompscore($compscore)
+    public function withCompscore(?float $compscore) : static
     {
         $new = clone $this;
         $new->compscore = $compscore;
@@ -36,25 +39,23 @@ class Hhcomp
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getCompband()
+    public function getCompband() : ?int
     {
         return $this->compband;
     }
 
     /**
-     * @param int $compband
-     * @return Hhcomp
+     * @param null | int $compband
+     * @return static
      */
-    public function withCompband($compband)
+    public function withCompband(?int $compband) : static
     {
         $new = clone $this;
         $new->compband = $compband;
 
         return $new;
     }
-
-
 }
 

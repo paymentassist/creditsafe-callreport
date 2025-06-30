@@ -4,65 +4,82 @@ namespace PaymentAssist\Type;
 
 class CTSearchResult
 {
+    /**
+     * Operation specific details
+     *
+     * @var null | \PaymentAssist\Type\CTJobdetails
+     */
+    private ?\PaymentAssist\Type\CTJobdetails $jobdetails = null;
 
     /**
-     * @var \PaymentAssist\Type\CTJobdetails
+     * Container for client's own data - returned in the response message
+     *
+     * @var null | \PaymentAssist\Type\CTPayload
      */
-    private $jobdetails;
+    private ?\PaymentAssist\Type\CTPayload $payload = null;
 
     /**
-     * @var \PaymentAssist\Type\CTPayload
+     * Your Reference will allow you to include a reference which can be used to internally identify applications
+     *
+     * @var null | string
      */
-    private $payload;
+    private ?string $yourreference = null;
 
     /**
-     * @var string
+     * Request for an API based Address or Associate Link report.
+     *
+     * @var null | \PaymentAssist\Type\CTLinkrequest
      */
-    private $yourreference;
+    private ?\PaymentAssist\Type\CTLinkrequest $linkrequest = null;
 
     /**
-     * @var \PaymentAssist\Type\CTLinkrequest
+     * Request for a subsequent enquiry (including subsequent link enquiries) including an optional set of amendments to the previously carried out Search
+     *
+     * @var null | \PaymentAssist\Type\CTAmendsubsequent
      */
-    private $linkrequest;
+    private ?\PaymentAssist\Type\CTAmendsubsequent $secondaryrequest = null;
 
     /**
-     * @var \PaymentAssist\Type\CTAmendsubsequent
+     * Set of applicant name and address details to search for in addition to search related parameters
+     *
+     * @var null | \PaymentAssist\Type\CTSearchrequest
      */
-    private $secondaryrequest;
+    private ?\PaymentAssist\Type\CTSearchrequest $creditrequest = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSearchrequest
+     * Name and address picklist
+     *
+     * @var null | \PaymentAssist\Type\CTApipicklist
      */
-    private $creditrequest;
+    private ?\PaymentAssist\Type\CTApipicklist $picklist = null;
 
     /**
-     * @var \PaymentAssist\Type\CTApipicklist
+     * Reserved for future use
+     *
+     * @var null | string
      */
-    private $picklist;
+    private ?string $token = null;
 
     /**
-     * @var string
+     * Set of applicant credit reports
+     *
+     * @var null | \PaymentAssist\Type\CTCreditreport
      */
-    private $token;
+    private ?\PaymentAssist\Type\CTCreditreport $creditreport = null;
 
     /**
-     * @var \PaymentAssist\Type\CTCreditreport
+     * @return null | \PaymentAssist\Type\CTJobdetails
      */
-    private $creditreport;
-
-    /**
-     * @return \PaymentAssist\Type\CTJobdetails
-     */
-    public function getJobdetails()
+    public function getJobdetails() : ?\PaymentAssist\Type\CTJobdetails
     {
         return $this->jobdetails;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTJobdetails $jobdetails
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTJobdetails $jobdetails
+     * @return static
      */
-    public function withJobdetails($jobdetails)
+    public function withJobdetails(?\PaymentAssist\Type\CTJobdetails $jobdetails) : static
     {
         $new = clone $this;
         $new->jobdetails = $jobdetails;
@@ -71,18 +88,18 @@ class CTSearchResult
     }
 
     /**
-     * @return \PaymentAssist\Type\CTPayload
+     * @return null | \PaymentAssist\Type\CTPayload
      */
-    public function getPayload()
+    public function getPayload() : ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTPayload $payload
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTPayload $payload
+     * @return static
      */
-    public function withPayload($payload)
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -91,18 +108,18 @@ class CTSearchResult
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getYourreference()
+    public function getYourreference() : ?string
     {
         return $this->yourreference;
     }
 
     /**
-     * @param string $yourreference
-     * @return CTSearchResult
+     * @param null | string $yourreference
+     * @return static
      */
-    public function withYourreference($yourreference)
+    public function withYourreference(?string $yourreference) : static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -111,18 +128,18 @@ class CTSearchResult
     }
 
     /**
-     * @return \PaymentAssist\Type\CTLinkrequest
+     * @return null | \PaymentAssist\Type\CTLinkrequest
      */
-    public function getLinkrequest()
+    public function getLinkrequest() : ?\PaymentAssist\Type\CTLinkrequest
     {
         return $this->linkrequest;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTLinkrequest $linkrequest
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTLinkrequest $linkrequest
+     * @return static
      */
-    public function withLinkrequest($linkrequest)
+    public function withLinkrequest(?\PaymentAssist\Type\CTLinkrequest $linkrequest) : static
     {
         $new = clone $this;
         $new->linkrequest = $linkrequest;
@@ -131,18 +148,18 @@ class CTSearchResult
     }
 
     /**
-     * @return \PaymentAssist\Type\CTAmendsubsequent
+     * @return null | \PaymentAssist\Type\CTAmendsubsequent
      */
-    public function getSecondaryrequest()
+    public function getSecondaryrequest() : ?\PaymentAssist\Type\CTAmendsubsequent
     {
         return $this->secondaryrequest;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAmendsubsequent $secondaryrequest
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTAmendsubsequent $secondaryrequest
+     * @return static
      */
-    public function withSecondaryrequest($secondaryrequest)
+    public function withSecondaryrequest(?\PaymentAssist\Type\CTAmendsubsequent $secondaryrequest) : static
     {
         $new = clone $this;
         $new->secondaryrequest = $secondaryrequest;
@@ -151,18 +168,18 @@ class CTSearchResult
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSearchrequest
+     * @return null | \PaymentAssist\Type\CTSearchrequest
      */
-    public function getCreditrequest()
+    public function getCreditrequest() : ?\PaymentAssist\Type\CTSearchrequest
     {
         return $this->creditrequest;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSearchrequest $creditrequest
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTSearchrequest $creditrequest
+     * @return static
      */
-    public function withCreditrequest($creditrequest)
+    public function withCreditrequest(?\PaymentAssist\Type\CTSearchrequest $creditrequest) : static
     {
         $new = clone $this;
         $new->creditrequest = $creditrequest;
@@ -171,18 +188,18 @@ class CTSearchResult
     }
 
     /**
-     * @return \PaymentAssist\Type\CTApipicklist
+     * @return null | \PaymentAssist\Type\CTApipicklist
      */
-    public function getPicklist()
+    public function getPicklist() : ?\PaymentAssist\Type\CTApipicklist
     {
         return $this->picklist;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTApipicklist $picklist
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTApipicklist $picklist
+     * @return static
      */
-    public function withPicklist($picklist)
+    public function withPicklist(?\PaymentAssist\Type\CTApipicklist $picklist) : static
     {
         $new = clone $this;
         $new->picklist = $picklist;
@@ -191,18 +208,18 @@ class CTSearchResult
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getToken()
+    public function getToken() : ?string
     {
         return $this->token;
     }
 
     /**
-     * @param string $token
-     * @return CTSearchResult
+     * @param null | string $token
+     * @return static
      */
-    public function withToken($token)
+    public function withToken(?string $token) : static
     {
         $new = clone $this;
         $new->token = $token;
@@ -211,25 +228,23 @@ class CTSearchResult
     }
 
     /**
-     * @return \PaymentAssist\Type\CTCreditreport
+     * @return null | \PaymentAssist\Type\CTCreditreport
      */
-    public function getCreditreport()
+    public function getCreditreport() : ?\PaymentAssist\Type\CTCreditreport
     {
         return $this->creditreport;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTCreditreport $creditreport
-     * @return CTSearchResult
+     * @param null | \PaymentAssist\Type\CTCreditreport $creditreport
+     * @return static
      */
-    public function withCreditreport($creditreport)
+    public function withCreditreport(?\PaymentAssist\Type\CTCreditreport $creditreport) : static
     {
         $new = clone $this;
         $new->creditreport = $creditreport;
 
         return $new;
     }
-
-
 }
 

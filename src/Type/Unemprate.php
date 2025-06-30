@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class Unemprate
 {
+    /**
+     * Unemployment Rate (count of all unemplyed claimants, at the post sector level, espressed as a rate per 1000 households)
+     *
+     * @var null | float
+     */
+    private ?float $unemrate = null;
 
     /**
-     * @var float
+     * Unemployment Rate Difference (the change in the unemployed claimant count between 1999 and 2002)
+     *
+     * @var null | float
      */
-    private $unemrate;
+    private ?float $unemdiff = null;
 
     /**
-     * @var float
+     * Unemployment Rate Index (against national average)
+     *
+     * @var null | int
      */
-    private $unemdiff;
+    private ?int $unemind = null;
 
     /**
-     * @var int
+     * Overall Unemployment Rating
+     *
+     * @var null | float
      */
-    private $unemind;
+    private ?float $unemall = null;
 
     /**
-     * @var float
+     * Overall Unemployment Rating Index
+     *
+     * @var null | int
      */
-    private $unemall;
+    private ?int $unemallindex = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $unemallindex;
-
-    /**
-     * @return float
-     */
-    public function getUnemrate()
+    public function getUnemrate() : ?float
     {
         return $this->unemrate;
     }
 
     /**
-     * @param float $unemrate
-     * @return Unemprate
+     * @param null | float $unemrate
+     * @return static
      */
-    public function withUnemrate($unemrate)
+    public function withUnemrate(?float $unemrate) : static
     {
         $new = clone $this;
         $new->unemrate = $unemrate;
@@ -51,18 +60,18 @@ class Unemprate
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getUnemdiff()
+    public function getUnemdiff() : ?float
     {
         return $this->unemdiff;
     }
 
     /**
-     * @param float $unemdiff
-     * @return Unemprate
+     * @param null | float $unemdiff
+     * @return static
      */
-    public function withUnemdiff($unemdiff)
+    public function withUnemdiff(?float $unemdiff) : static
     {
         $new = clone $this;
         $new->unemdiff = $unemdiff;
@@ -71,18 +80,18 @@ class Unemprate
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getUnemind()
+    public function getUnemind() : ?int
     {
         return $this->unemind;
     }
 
     /**
-     * @param int $unemind
-     * @return Unemprate
+     * @param null | int $unemind
+     * @return static
      */
-    public function withUnemind($unemind)
+    public function withUnemind(?int $unemind) : static
     {
         $new = clone $this;
         $new->unemind = $unemind;
@@ -91,18 +100,18 @@ class Unemprate
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getUnemall()
+    public function getUnemall() : ?float
     {
         return $this->unemall;
     }
 
     /**
-     * @param float $unemall
-     * @return Unemprate
+     * @param null | float $unemall
+     * @return static
      */
-    public function withUnemall($unemall)
+    public function withUnemall(?float $unemall) : static
     {
         $new = clone $this;
         $new->unemall = $unemall;
@@ -111,25 +120,23 @@ class Unemprate
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getUnemallindex()
+    public function getUnemallindex() : ?int
     {
         return $this->unemallindex;
     }
 
     /**
-     * @param int $unemallindex
-     * @return Unemprate
+     * @param null | int $unemallindex
+     * @return static
      */
-    public function withUnemallindex($unemallindex)
+    public function withUnemallindex(?int $unemallindex) : static
     {
         $new = clone $this;
         $new->unemallindex = $unemallindex;
 
         return $new;
     }
-
-
 }
 

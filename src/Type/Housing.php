@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class Housing
 {
+    /**
+     * Housing Type descriptor
+     *
+     * @var null | string
+     */
+    private ?string $cameoukhsg = null;
 
     /**
-     * @var string
+     * Housing Tenure descriptor
+     *
+     * @var null | string
      */
-    private $cameoukhsg;
+    private ?string $cameoukten = null;
 
     /**
-     * @var string
+     * Index of property price against national average
+     *
+     * @var null | int
      */
-    private $cameoukten;
+    private ?int $natprice = null;
 
     /**
-     * @var int
+     * Index of property price against regional average
+     *
+     * @var null | int
      */
-    private $natprice;
+    private ?int $regprice = null;
 
     /**
-     * @var int
+     * @return null | string
      */
-    private $regprice;
-
-    /**
-     * @return string
-     */
-    public function getCameoukhsg()
+    public function getCameoukhsg() : ?string
     {
         return $this->cameoukhsg;
     }
 
     /**
-     * @param string $cameoukhsg
-     * @return Housing
+     * @param null | string $cameoukhsg
+     * @return static
      */
-    public function withCameoukhsg($cameoukhsg)
+    public function withCameoukhsg(?string $cameoukhsg) : static
     {
         $new = clone $this;
         $new->cameoukhsg = $cameoukhsg;
@@ -46,18 +53,18 @@ class Housing
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCameoukten()
+    public function getCameoukten() : ?string
     {
         return $this->cameoukten;
     }
 
     /**
-     * @param string $cameoukten
-     * @return Housing
+     * @param null | string $cameoukten
+     * @return static
      */
-    public function withCameoukten($cameoukten)
+    public function withCameoukten(?string $cameoukten) : static
     {
         $new = clone $this;
         $new->cameoukten = $cameoukten;
@@ -66,18 +73,18 @@ class Housing
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getNatprice()
+    public function getNatprice() : ?int
     {
         return $this->natprice;
     }
 
     /**
-     * @param int $natprice
-     * @return Housing
+     * @param null | int $natprice
+     * @return static
      */
-    public function withNatprice($natprice)
+    public function withNatprice(?int $natprice) : static
     {
         $new = clone $this;
         $new->natprice = $natprice;
@@ -86,25 +93,23 @@ class Housing
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getRegprice()
+    public function getRegprice() : ?int
     {
         return $this->regprice;
     }
 
     /**
-     * @param int $regprice
-     * @return Housing
+     * @param null | int $regprice
+     * @return static
      */
-    public function withRegprice($regprice)
+    public function withRegprice(?int $regprice) : static
     {
         $new = clone $this;
         $new->regprice = $regprice;
 
         return $new;
     }
-
-
 }
 

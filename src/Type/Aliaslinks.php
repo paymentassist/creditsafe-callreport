@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Aliaslinks
 {
+    /**
+     * Set of Alias links
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputaliaslink>
+     */
+    private array $aliaslink;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaliaslink
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputaliaslink>
      */
-    private $aliaslink;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputaliaslink
-     */
-    public function getAliaslink()
+    public function getAliaslink() : array
     {
         return $this->aliaslink;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaliaslink $aliaslink
-     * @return Aliaslinks
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputaliaslink> $aliaslink
+     * @return static
      */
-    public function withAliaslink($aliaslink)
+    public function withAliaslink(array $aliaslink) : static
     {
         $new = clone $this;
         $new->aliaslink = $aliaslink;
 
         return $new;
     }
-
-
 }
 

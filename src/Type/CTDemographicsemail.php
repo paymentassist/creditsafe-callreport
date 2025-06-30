@@ -4,30 +4,34 @@ namespace PaymentAssist\Type;
 
 class CTDemographicsemail
 {
+    /**
+     * Email Type Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicsemailtype
+     *
+     * @var null | string
+     */
+    private ?string $type = null;
 
     /**
-     * @var string
+     * Email address
+     *
+     * @var null | string
      */
-    private $type;
+    private ?string $address = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $address;
-
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType() : ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
-     * @return CTDemographicsemail
+     * @param null | string $type
+     * @return static
      */
-    public function withType($type)
+    public function withType(?string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -36,25 +40,23 @@ class CTDemographicsemail
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getAddress()
+    public function getAddress() : ?string
     {
         return $this->address;
     }
 
     /**
-     * @param string $address
-     * @return CTDemographicsemail
+     * @param null | string $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(?string $address) : static
     {
         $new = clone $this;
         $new->address = $address;
 
         return $new;
     }
-
-
 }
 

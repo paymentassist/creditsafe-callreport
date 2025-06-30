@@ -4,90 +4,115 @@ namespace PaymentAssist\Type;
 
 class CTOutputsummaryblock
 {
-
     /**
-     * @var \PaymentAssist\Type\CTSummarysearches
+     * @var null | \PaymentAssist\Type\CTSummarysearches
      */
-    private $searches;
+    private ?\PaymentAssist\Type\CTSummarysearches $searches = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryjudgment
+     * Judgments Summary
+     *
+     * @var null | \PaymentAssist\Type\CTSummaryjudgment
      */
-    private $judgments;
+    private ?\PaymentAssist\Type\CTSummaryjudgment $judgments = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummarybai
+     * Insolvencies Summary
+     *
+     * @var null | \PaymentAssist\Type\CTSummarybai
      */
-    private $bais;
+    private ?\PaymentAssist\Type\CTSummarybai $bais = null;
 
     /**
+     * Notices Summary
+     *
      * @var \PaymentAssist\Type\CTSummarynotices
      */
-    private $notices;
+    private \PaymentAssist\Type\CTSummarynotices $notices;
 
     /**
-     * @var \PaymentAssist\Type\CTSummarylinks
+     * Links Summary
+     *
+     * @var null | \PaymentAssist\Type\CTSummarylinks
      */
-    private $links;
+    private ?\PaymentAssist\Type\CTSummarylinks $links = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummarycifas
+     * CIFAS Summary. Not returned if CIFAS is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummarycifas
      */
-    private $cifas;
+    private ?\PaymentAssist\Type\CTSummarycifas $cifas = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryrtr
+     * RTR Account Summary. Not returned if RTR data is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummaryrtr
      */
-    private $rtr;
+    private ?\PaymentAssist\Type\CTSummaryrtr $rtr = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryshare
+     * SHARE Account Summary. Not returned if SHARE data is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummaryshare
      */
-    private $share;
+    private ?\PaymentAssist\Type\CTSummaryshare $share = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummarybds
+     * Behavoural Data Summary. Not returned if Behavoural Data is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummarybds
      */
-    private $bds;
+    private ?\PaymentAssist\Type\CTSummarybds $bds = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryich
+     * Impaired Credit History Summary. Not returned if Impaired Credit History is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummaryich
      */
-    private $ich;
+    private ?\PaymentAssist\Type\CTSummaryich $ich = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryindebt
+     * Indebtiness Summary. Not returned if SHARE data is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummaryindebt
      */
-    private $indebt;
+    private ?\PaymentAssist\Type\CTSummaryindebt $indebt = null;
 
     /**
-     * @var \PaymentAssist\Type\CTSummarytpd
+     * Third Party Data Summary. Not returned if Third Party Data is not enabled or allowed
+     *
+     * @var null | \PaymentAssist\Type\CTSummarytpd
      */
-    private $tpd;
+    private ?\PaymentAssist\Type\CTSummarytpd $tpd = null;
 
     /**
+     * Summarised address confirmation for entered addresses.
+     *
      * @var \PaymentAssist\Type\CTSummaryaddress
      */
-    private $summaryaddress;
+    private \PaymentAssist\Type\CTSummaryaddress $summaryaddress;
 
     /**
-     * @var \PaymentAssist\Type\CTSummaryresidency
+     * Residency confirmations for each address (including current address)
+     *
+     * @var non-empty-array<int<0,max>, \PaymentAssist\Type\CTSummaryresidency>
      */
-    private $address;
+    private array $address;
 
     /**
-     * @return \PaymentAssist\Type\CTSummarysearches
+     * @return null | \PaymentAssist\Type\CTSummarysearches
      */
-    public function getSearches()
+    public function getSearches() : ?\PaymentAssist\Type\CTSummarysearches
     {
         return $this->searches;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarysearches $searches
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummarysearches $searches
+     * @return static
      */
-    public function withSearches($searches)
+    public function withSearches(?\PaymentAssist\Type\CTSummarysearches $searches) : static
     {
         $new = clone $this;
         $new->searches = $searches;
@@ -96,18 +121,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummaryjudgment
+     * @return null | \PaymentAssist\Type\CTSummaryjudgment
      */
-    public function getJudgments()
+    public function getJudgments() : ?\PaymentAssist\Type\CTSummaryjudgment
     {
         return $this->judgments;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryjudgment $judgments
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummaryjudgment $judgments
+     * @return static
      */
-    public function withJudgments($judgments)
+    public function withJudgments(?\PaymentAssist\Type\CTSummaryjudgment $judgments) : static
     {
         $new = clone $this;
         $new->judgments = $judgments;
@@ -116,18 +141,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummarybai
+     * @return null | \PaymentAssist\Type\CTSummarybai
      */
-    public function getBais()
+    public function getBais() : ?\PaymentAssist\Type\CTSummarybai
     {
         return $this->bais;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarybai $bais
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummarybai $bais
+     * @return static
      */
-    public function withBais($bais)
+    public function withBais(?\PaymentAssist\Type\CTSummarybai $bais) : static
     {
         $new = clone $this;
         $new->bais = $bais;
@@ -138,16 +163,16 @@ class CTOutputsummaryblock
     /**
      * @return \PaymentAssist\Type\CTSummarynotices
      */
-    public function getNotices()
+    public function getNotices() : \PaymentAssist\Type\CTSummarynotices
     {
         return $this->notices;
     }
 
     /**
      * @param \PaymentAssist\Type\CTSummarynotices $notices
-     * @return CTOutputsummaryblock
+     * @return static
      */
-    public function withNotices($notices)
+    public function withNotices(\PaymentAssist\Type\CTSummarynotices $notices) : static
     {
         $new = clone $this;
         $new->notices = $notices;
@@ -156,18 +181,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummarylinks
+     * @return null | \PaymentAssist\Type\CTSummarylinks
      */
-    public function getLinks()
+    public function getLinks() : ?\PaymentAssist\Type\CTSummarylinks
     {
         return $this->links;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarylinks $links
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummarylinks $links
+     * @return static
      */
-    public function withLinks($links)
+    public function withLinks(?\PaymentAssist\Type\CTSummarylinks $links) : static
     {
         $new = clone $this;
         $new->links = $links;
@@ -176,18 +201,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummarycifas
+     * @return null | \PaymentAssist\Type\CTSummarycifas
      */
-    public function getCifas()
+    public function getCifas() : ?\PaymentAssist\Type\CTSummarycifas
     {
         return $this->cifas;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarycifas $cifas
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummarycifas $cifas
+     * @return static
      */
-    public function withCifas($cifas)
+    public function withCifas(?\PaymentAssist\Type\CTSummarycifas $cifas) : static
     {
         $new = clone $this;
         $new->cifas = $cifas;
@@ -196,18 +221,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummaryrtr
+     * @return null | \PaymentAssist\Type\CTSummaryrtr
      */
-    public function getRtr()
+    public function getRtr() : ?\PaymentAssist\Type\CTSummaryrtr
     {
         return $this->rtr;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryrtr $rtr
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummaryrtr $rtr
+     * @return static
      */
-    public function withRtr($rtr)
+    public function withRtr(?\PaymentAssist\Type\CTSummaryrtr $rtr) : static
     {
         $new = clone $this;
         $new->rtr = $rtr;
@@ -216,18 +241,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummaryshare
+     * @return null | \PaymentAssist\Type\CTSummaryshare
      */
-    public function getShare()
+    public function getShare() : ?\PaymentAssist\Type\CTSummaryshare
     {
         return $this->share;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryshare $share
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummaryshare $share
+     * @return static
      */
-    public function withShare($share)
+    public function withShare(?\PaymentAssist\Type\CTSummaryshare $share) : static
     {
         $new = clone $this;
         $new->share = $share;
@@ -236,18 +261,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummarybds
+     * @return null | \PaymentAssist\Type\CTSummarybds
      */
-    public function getBds()
+    public function getBds() : ?\PaymentAssist\Type\CTSummarybds
     {
         return $this->bds;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarybds $bds
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummarybds $bds
+     * @return static
      */
-    public function withBds($bds)
+    public function withBds(?\PaymentAssist\Type\CTSummarybds $bds) : static
     {
         $new = clone $this;
         $new->bds = $bds;
@@ -256,18 +281,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummaryich
+     * @return null | \PaymentAssist\Type\CTSummaryich
      */
-    public function getIch()
+    public function getIch() : ?\PaymentAssist\Type\CTSummaryich
     {
         return $this->ich;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryich $ich
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummaryich $ich
+     * @return static
      */
-    public function withIch($ich)
+    public function withIch(?\PaymentAssist\Type\CTSummaryich $ich) : static
     {
         $new = clone $this;
         $new->ich = $ich;
@@ -276,18 +301,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummaryindebt
+     * @return null | \PaymentAssist\Type\CTSummaryindebt
      */
-    public function getIndebt()
+    public function getIndebt() : ?\PaymentAssist\Type\CTSummaryindebt
     {
         return $this->indebt;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryindebt $indebt
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummaryindebt $indebt
+     * @return static
      */
-    public function withIndebt($indebt)
+    public function withIndebt(?\PaymentAssist\Type\CTSummaryindebt $indebt) : static
     {
         $new = clone $this;
         $new->indebt = $indebt;
@@ -296,18 +321,18 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummarytpd
+     * @return null | \PaymentAssist\Type\CTSummarytpd
      */
-    public function getTpd()
+    public function getTpd() : ?\PaymentAssist\Type\CTSummarytpd
     {
         return $this->tpd;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummarytpd $tpd
-     * @return CTOutputsummaryblock
+     * @param null | \PaymentAssist\Type\CTSummarytpd $tpd
+     * @return static
      */
-    public function withTpd($tpd)
+    public function withTpd(?\PaymentAssist\Type\CTSummarytpd $tpd) : static
     {
         $new = clone $this;
         $new->tpd = $tpd;
@@ -318,16 +343,16 @@ class CTOutputsummaryblock
     /**
      * @return \PaymentAssist\Type\CTSummaryaddress
      */
-    public function getSummaryaddress()
+    public function getSummaryaddress() : \PaymentAssist\Type\CTSummaryaddress
     {
         return $this->summaryaddress;
     }
 
     /**
      * @param \PaymentAssist\Type\CTSummaryaddress $summaryaddress
-     * @return CTOutputsummaryblock
+     * @return static
      */
-    public function withSummaryaddress($summaryaddress)
+    public function withSummaryaddress(\PaymentAssist\Type\CTSummaryaddress $summaryaddress) : static
     {
         $new = clone $this;
         $new->summaryaddress = $summaryaddress;
@@ -336,25 +361,23 @@ class CTOutputsummaryblock
     }
 
     /**
-     * @return \PaymentAssist\Type\CTSummaryresidency
+     * @return non-empty-array<int<0,max>, \PaymentAssist\Type\CTSummaryresidency>
      */
-    public function getAddress()
+    public function getAddress() : array
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTSummaryresidency $address
-     * @return CTOutputsummaryblock
+     * @param non-empty-array<int<0,max>, \PaymentAssist\Type\CTSummaryresidency> $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(array $address) : static
     {
         $new = clone $this;
         $new->address = $address;
 
         return $new;
     }
-
-
 }
 

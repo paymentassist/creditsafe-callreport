@@ -4,30 +4,34 @@ namespace PaymentAssist\Type;
 
 class CTSupplierdetails
 {
+    /**
+     * Supplier name
+     *
+     * @var null | string
+     */
+    private ?string $suppliername = null;
 
     /**
-     * @var string
+     * Supplier type code
+     * The list of possible values can be obtained from the web method LookupData07a table id = suppliertype
+     *
+     * @var null | string
      */
-    private $suppliername;
+    private ?string $suppliertypecode = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $suppliertypecode;
-
-    /**
-     * @return string
-     */
-    public function getSuppliername()
+    public function getSuppliername() : ?string
     {
         return $this->suppliername;
     }
 
     /**
-     * @param string $suppliername
-     * @return CTSupplierdetails
+     * @param null | string $suppliername
+     * @return static
      */
-    public function withSuppliername($suppliername)
+    public function withSuppliername(?string $suppliername) : static
     {
         $new = clone $this;
         $new->suppliername = $suppliername;
@@ -36,25 +40,23 @@ class CTSupplierdetails
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getSuppliertypecode()
+    public function getSuppliertypecode() : ?string
     {
         return $this->suppliertypecode;
     }
 
     /**
-     * @param string $suppliertypecode
-     * @return CTSupplierdetails
+     * @param null | string $suppliertypecode
+     * @return static
      */
-    public function withSuppliertypecode($suppliertypecode)
+    public function withSuppliertypecode(?string $suppliertypecode) : static
     {
         $new = clone $this;
         $new->suppliertypecode = $suppliertypecode;
 
         return $new;
     }
-
-
 }
 

@@ -4,32 +4,29 @@ namespace PaymentAssist\Type;
 
 class CTTestResult
 {
-
     /**
      * @var \DateTimeInterface
      */
-    private $datetime;
+    private \DateTimeInterface $datetime;
 
     /**
      * @return \DateTimeInterface
      */
-    public function getDatetime()
+    public function getDatetime() : \DateTimeInterface
     {
         return $this->datetime;
     }
 
     /**
      * @param \DateTimeInterface $datetime
-     * @return CTTestResult
+     * @return static
      */
-    public function withDatetime($datetime)
+    public function withDatetime(\DateTimeInterface $datetime) : static
     {
         $new = clone $this;
         $new->datetime = $datetime;
 
         return $new;
     }
-
-
 }
 

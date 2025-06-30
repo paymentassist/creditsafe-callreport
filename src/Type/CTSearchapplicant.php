@@ -4,50 +4,61 @@ namespace PaymentAssist\Type;
 
 class CTSearchapplicant
 {
+    /**
+     * Set of addresses (current and previous) for a specific applicant
+     *
+     * @var non-empty-array<int<0,2>, \PaymentAssist\Type\CTInputaddress>
+     */
+    private array $address;
 
     /**
-     * @var \PaymentAssist\Type\CTInputaddress
+     * Set of names (current and aliases) for a specific applicant
+     *
+     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\CTInputname>
      */
-    private $address;
+    private array $name;
 
     /**
-     * @var \PaymentAssist\Type\CTInputname
+     * Applicant's date of birth
+     *
+     * @var null | \DateTimeInterface
      */
-    private $name;
+    private ?\DateTimeInterface $dob = null;
 
     /**
-     * @var \DateTimeInterface
+     * A value of 1 indicates a household override check is requested for the applicant
+     *
+     * @var null | int
      */
-    private $dob;
+    private ?int $hho = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that the applicant has opted out of use of third party data
+     *
+     * @var null | int
      */
-    private $hho;
+    private ?int $tpoptout = null;
 
     /**
-     * @var int
+     * Demographic information for the applicant
+     *
+     * @var null | \PaymentAssist\Type\CTApplicantdemographics
      */
-    private $tpoptout;
+    private ?\PaymentAssist\Type\CTApplicantdemographics $applicantdemographics = null;
 
     /**
-     * @var \PaymentAssist\Type\CTApplicantdemographics
+     * @return non-empty-array<int<0,2>, \PaymentAssist\Type\CTInputaddress>
      */
-    private $applicantdemographics;
-
-    /**
-     * @return \PaymentAssist\Type\CTInputaddress
-     */
-    public function getAddress()
+    public function getAddress() : array
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTInputaddress $address
-     * @return CTSearchapplicant
+     * @param non-empty-array<int<0,2>, \PaymentAssist\Type\CTInputaddress> $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(array $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -56,18 +67,18 @@ class CTSearchapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\CTInputname
+     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\CTInputname>
      */
-    public function getName()
+    public function getName() : array
     {
         return $this->name;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTInputname $name
-     * @return CTSearchapplicant
+     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\CTInputname> $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(array $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -76,18 +87,18 @@ class CTSearchapplicant
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDob()
+    public function getDob() : ?\DateTimeInterface
     {
         return $this->dob;
     }
 
     /**
-     * @param \DateTimeInterface $dob
-     * @return CTSearchapplicant
+     * @param null | \DateTimeInterface $dob
+     * @return static
      */
-    public function withDob($dob)
+    public function withDob(?\DateTimeInterface $dob) : static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -96,18 +107,18 @@ class CTSearchapplicant
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getHho()
+    public function getHho() : ?int
     {
         return $this->hho;
     }
 
     /**
-     * @param int $hho
-     * @return CTSearchapplicant
+     * @param null | int $hho
+     * @return static
      */
-    public function withHho($hho)
+    public function withHho(?int $hho) : static
     {
         $new = clone $this;
         $new->hho = $hho;
@@ -116,18 +127,18 @@ class CTSearchapplicant
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTpoptout()
+    public function getTpoptout() : ?int
     {
         return $this->tpoptout;
     }
 
     /**
-     * @param int $tpoptout
-     * @return CTSearchapplicant
+     * @param null | int $tpoptout
+     * @return static
      */
-    public function withTpoptout($tpoptout)
+    public function withTpoptout(?int $tpoptout) : static
     {
         $new = clone $this;
         $new->tpoptout = $tpoptout;
@@ -136,25 +147,23 @@ class CTSearchapplicant
     }
 
     /**
-     * @return \PaymentAssist\Type\CTApplicantdemographics
+     * @return null | \PaymentAssist\Type\CTApplicantdemographics
      */
-    public function getApplicantdemographics()
+    public function getApplicantdemographics() : ?\PaymentAssist\Type\CTApplicantdemographics
     {
         return $this->applicantdemographics;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTApplicantdemographics $applicantdemographics
-     * @return CTSearchapplicant
+     * @param null | \PaymentAssist\Type\CTApplicantdemographics $applicantdemographics
+     * @return static
      */
-    public function withApplicantdemographics($applicantdemographics)
+    public function withApplicantdemographics(?\PaymentAssist\Type\CTApplicantdemographics $applicantdemographics) : static
     {
         $new = clone $this;
         $new->applicantdemographics = $applicantdemographics;
 
         return $new;
     }
-
-
 }
 

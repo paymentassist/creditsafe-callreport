@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Addressconfs
 {
+    /**
+     * Output structure for address confirmation
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputaddressconf>
+     */
+    private array $addressconf;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddressconf
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputaddressconf>
      */
-    private $addressconf;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputaddressconf
-     */
-    public function getAddressconf()
+    public function getAddressconf() : array
     {
         return $this->addressconf;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddressconf $addressconf
-     * @return Addressconfs
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputaddressconf> $addressconf
+     * @return static
      */
-    public function withAddressconf($addressconf)
+    public function withAddressconf(array $addressconf) : static
     {
         $new = clone $this;
         $new->addressconf = $addressconf;
 
         return $new;
     }
-
-
 }
 

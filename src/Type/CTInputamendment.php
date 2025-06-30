@@ -4,50 +4,62 @@ namespace PaymentAssist\Type;
 
 class CTInputamendment
 {
-
     /**
-     * @var int
+     * Change to balance or credit limit
+     *
+     * @var null | int
      */
-    private $balorlim;
+    private ?int $balorlim = null;
 
     /**
+     * Change to term of loan
+     *
+     * @var null | mixed
+     */
+    private mixed $term = null;
+
+    /**
+     * Additional address details
+     *
+     * @var null | \PaymentAssist\Type\CTInputaddress
+     */
+    private ?\PaymentAssist\Type\CTInputaddress $address = null;
+
+    /**
+     * Additional name details
+     *
+     * @var null | \PaymentAssist\Type\CTInputname
+     */
+    private ?\PaymentAssist\Type\CTInputname $name = null;
+
+    /**
+     * Name of node that amendment applies to
+     *
      * @var string
      */
-    private $term;
+    private string $amendmentname;
 
     /**
-     * @var \PaymentAssist\Type\CTInputaddress
-     */
-    private $address;
-
-    /**
-     * @var \PaymentAssist\Type\CTInputname
-     */
-    private $name;
-
-    /**
+     * Type of amendment - update or insert
+     * The list of possible values can be obtained from the web method LookupData07a table id = amendmenttype
+     *
      * @var string
      */
-    private $amendmentname;
+    private string $amendmenttype;
 
     /**
-     * @var string
+     * @return null | int
      */
-    private $amendmenttype;
-
-    /**
-     * @return int
-     */
-    public function getBalorlim()
+    public function getBalorlim() : ?int
     {
         return $this->balorlim;
     }
 
     /**
-     * @param int $balorlim
-     * @return CTInputamendment
+     * @param null | int $balorlim
+     * @return static
      */
-    public function withBalorlim($balorlim)
+    public function withBalorlim(?int $balorlim) : static
     {
         $new = clone $this;
         $new->balorlim = $balorlim;
@@ -56,18 +68,18 @@ class CTInputamendment
     }
 
     /**
-     * @return string
+     * @return null | mixed
      */
-    public function getTerm()
+    public function getTerm() : mixed
     {
         return $this->term;
     }
 
     /**
-     * @param string $term
-     * @return CTInputamendment
+     * @param null | mixed $term
+     * @return static
      */
-    public function withTerm($term)
+    public function withTerm(mixed $term) : static
     {
         $new = clone $this;
         $new->term = $term;
@@ -76,18 +88,18 @@ class CTInputamendment
     }
 
     /**
-     * @return \PaymentAssist\Type\CTInputaddress
+     * @return null | \PaymentAssist\Type\CTInputaddress
      */
-    public function getAddress()
+    public function getAddress() : ?\PaymentAssist\Type\CTInputaddress
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTInputaddress $address
-     * @return CTInputamendment
+     * @param null | \PaymentAssist\Type\CTInputaddress $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(?\PaymentAssist\Type\CTInputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -96,18 +108,18 @@ class CTInputamendment
     }
 
     /**
-     * @return \PaymentAssist\Type\CTInputname
+     * @return null | \PaymentAssist\Type\CTInputname
      */
-    public function getName()
+    public function getName() : ?\PaymentAssist\Type\CTInputname
     {
         return $this->name;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTInputname $name
-     * @return CTInputamendment
+     * @param null | \PaymentAssist\Type\CTInputname $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?\PaymentAssist\Type\CTInputname $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -118,16 +130,16 @@ class CTInputamendment
     /**
      * @return string
      */
-    public function getAmendmentname()
+    public function getAmendmentname() : string
     {
         return $this->amendmentname;
     }
 
     /**
      * @param string $amendmentname
-     * @return CTInputamendment
+     * @return static
      */
-    public function withAmendmentname($amendmentname)
+    public function withAmendmentname(string $amendmentname) : static
     {
         $new = clone $this;
         $new->amendmentname = $amendmentname;
@@ -138,23 +150,21 @@ class CTInputamendment
     /**
      * @return string
      */
-    public function getAmendmenttype()
+    public function getAmendmenttype() : string
     {
         return $this->amendmenttype;
     }
 
     /**
      * @param string $amendmenttype
-     * @return CTInputamendment
+     * @return static
      */
-    public function withAmendmenttype($amendmenttype)
+    public function withAmendmenttype(string $amendmenttype) : static
     {
         $new = clone $this;
         $new->amendmenttype = $amendmenttype;
 
         return $new;
     }
-
-
 }
 

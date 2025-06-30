@@ -4,70 +4,89 @@ namespace PaymentAssist\Type;
 
 class Age
 {
+    /**
+     * Age 0-17 Index
+     *
+     * @var null | int
+     */
+    private ?int $age0_17 = null;
 
     /**
-     * @var int
+     * Age 18-24 Index
+     *
+     * @var null | int
      */
-    private $age0_17;
+    private ?int $age18_24 = null;
 
     /**
-     * @var int
+     * Age 25-35 Index
+     *
+     * @var null | int
      */
-    private $age18_24;
+    private ?int $age25_34 = null;
 
     /**
-     * @var int
+     * Age 35-44 Index
+     *
+     * @var null | int
      */
-    private $age25_34;
+    private ?int $age35_44 = null;
 
     /**
-     * @var int
+     * Age 45-54 Index
+     *
+     * @var null | int
      */
-    private $age35_44;
+    private ?int $age45_54 = null;
 
     /**
-     * @var int
+     * Age 55-64 Index
+     *
+     * @var null | int
      */
-    private $age45_54;
+    private ?int $age55_64 = null;
 
     /**
-     * @var int
+     * Age 65-74 Index
+     *
+     * @var null | int
      */
-    private $age55_64;
+    private ?int $age65_74 = null;
 
     /**
-     * @var int
+     * Age 75 plus Index
+     *
+     * @var null | int
      */
-    private $age65_74;
+    private ?int $age75pl = null;
 
     /**
-     * @var int
+     * Age Score
+     *
+     * @var null | float
      */
-    private $age75pl;
+    private ?float $agescore = null;
 
     /**
-     * @var float
+     * Age Band
+     *
+     * @var null | int
      */
-    private $agescore;
+    private ?int $ageband = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $ageband;
-
-    /**
-     * @return int
-     */
-    public function getAge0_17()
+    public function getAge0_17() : ?int
     {
         return $this->age0_17;
     }
 
     /**
-     * @param int $age0_17
-     * @return Age
+     * @param null | int $age0_17
+     * @return static
      */
-    public function withAge0_17($age0_17)
+    public function withAge0_17(?int $age0_17) : static
     {
         $new = clone $this;
         $new->age0_17 = $age0_17;
@@ -76,18 +95,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge18_24()
+    public function getAge18_24() : ?int
     {
         return $this->age18_24;
     }
 
     /**
-     * @param int $age18_24
-     * @return Age
+     * @param null | int $age18_24
+     * @return static
      */
-    public function withAge18_24($age18_24)
+    public function withAge18_24(?int $age18_24) : static
     {
         $new = clone $this;
         $new->age18_24 = $age18_24;
@@ -96,18 +115,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge25_34()
+    public function getAge25_34() : ?int
     {
         return $this->age25_34;
     }
 
     /**
-     * @param int $age25_34
-     * @return Age
+     * @param null | int $age25_34
+     * @return static
      */
-    public function withAge25_34($age25_34)
+    public function withAge25_34(?int $age25_34) : static
     {
         $new = clone $this;
         $new->age25_34 = $age25_34;
@@ -116,18 +135,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge35_44()
+    public function getAge35_44() : ?int
     {
         return $this->age35_44;
     }
 
     /**
-     * @param int $age35_44
-     * @return Age
+     * @param null | int $age35_44
+     * @return static
      */
-    public function withAge35_44($age35_44)
+    public function withAge35_44(?int $age35_44) : static
     {
         $new = clone $this;
         $new->age35_44 = $age35_44;
@@ -136,18 +155,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge45_54()
+    public function getAge45_54() : ?int
     {
         return $this->age45_54;
     }
 
     /**
-     * @param int $age45_54
-     * @return Age
+     * @param null | int $age45_54
+     * @return static
      */
-    public function withAge45_54($age45_54)
+    public function withAge45_54(?int $age45_54) : static
     {
         $new = clone $this;
         $new->age45_54 = $age45_54;
@@ -156,18 +175,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge55_64()
+    public function getAge55_64() : ?int
     {
         return $this->age55_64;
     }
 
     /**
-     * @param int $age55_64
-     * @return Age
+     * @param null | int $age55_64
+     * @return static
      */
-    public function withAge55_64($age55_64)
+    public function withAge55_64(?int $age55_64) : static
     {
         $new = clone $this;
         $new->age55_64 = $age55_64;
@@ -176,18 +195,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge65_74()
+    public function getAge65_74() : ?int
     {
         return $this->age65_74;
     }
 
     /**
-     * @param int $age65_74
-     * @return Age
+     * @param null | int $age65_74
+     * @return static
      */
-    public function withAge65_74($age65_74)
+    public function withAge65_74(?int $age65_74) : static
     {
         $new = clone $this;
         $new->age65_74 = $age65_74;
@@ -196,18 +215,18 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAge75pl()
+    public function getAge75pl() : ?int
     {
         return $this->age75pl;
     }
 
     /**
-     * @param int $age75pl
-     * @return Age
+     * @param null | int $age75pl
+     * @return static
      */
-    public function withAge75pl($age75pl)
+    public function withAge75pl(?int $age75pl) : static
     {
         $new = clone $this;
         $new->age75pl = $age75pl;
@@ -216,18 +235,18 @@ class Age
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getAgescore()
+    public function getAgescore() : ?float
     {
         return $this->agescore;
     }
 
     /**
-     * @param float $agescore
-     * @return Age
+     * @param null | float $agescore
+     * @return static
      */
-    public function withAgescore($agescore)
+    public function withAgescore(?float $agescore) : static
     {
         $new = clone $this;
         $new->agescore = $agescore;
@@ -236,25 +255,23 @@ class Age
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAgeband()
+    public function getAgeband() : ?int
     {
         return $this->ageband;
     }
 
     /**
-     * @param int $ageband
-     * @return Age
+     * @param null | int $ageband
+     * @return static
      */
-    public function withAgeband($ageband)
+    public function withAgeband(?int $ageband) : static
     {
         $new = clone $this;
         $new->ageband = $ageband;
 
         return $new;
     }
-
-
 }
 

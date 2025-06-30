@@ -4,60 +4,77 @@ namespace PaymentAssist\Type;
 
 class CTOutputcifassubject
 {
-
     /**
-     * @var \PaymentAssist\Type\Person
+     * Person details for a CIFAS Case against a person
+     *
+     * @var null | \PaymentAssist\Type\Person
      */
-    private $person;
+    private ?\PaymentAssist\Type\Person $person = null;
 
     /**
-     * @var \PaymentAssist\Type\Company
+     * Company details for a CIFAS CASE against a company
+     *
+     * @var null | \PaymentAssist\Type\Company
      */
-    private $company;
+    private ?\PaymentAssist\Type\Company $company = null;
 
     /**
+     * The home telephone number of a Subject.
+     *
+     * @var null | string
+     */
+    private ?string $hometelephone = null;
+
+    /**
+     * The mobile telephone number of a Subject
+     *
+     * @var null | string
+     */
+    private ?string $mobiletelephone = null;
+
+    /**
+     * The email address of a Subject
+     *
+     * @var null | string
+     */
+    private ?string $email = null;
+
+    /**
+     * Each Subject involved with a CIFAS Case has an indication of the type of its involvement with the Case
+     * The list of possible values can be obtained from the web method LookupData07a table id = cifassubjectrole
+     *
      * @var string
      */
-    private $hometelephone;
+    private string $subjectrole;
 
     /**
+     * Each Subject's role within the Case is further qualified
+     * The list of possible values can be obtained from the web method LookupData07a table id = cifassubjectrolequalifier
+     *
      * @var string
      */
-    private $mobiletelephone;
+    private string $subjectrolequalifier;
 
     /**
-     * @var string
+     * An indiviudal address held against a subject
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputcifasaddress>
      */
-    private $email;
+    private array $addressdata;
 
     /**
-     * @var string
+     * @return null | \PaymentAssist\Type\Person
      */
-    private $subjectrole;
-
-    /**
-     * @var string
-     */
-    private $subjectrolequalifier;
-
-    /**
-     * @var \PaymentAssist\Type\CTOutputcifasaddress
-     */
-    private $addressdata;
-
-    /**
-     * @return \PaymentAssist\Type\Person
-     */
-    public function getPerson()
+    public function getPerson() : ?\PaymentAssist\Type\Person
     {
         return $this->person;
     }
 
     /**
-     * @param \PaymentAssist\Type\Person $person
-     * @return CTOutputcifassubject
+     * @param null | \PaymentAssist\Type\Person $person
+     * @return static
      */
-    public function withPerson($person)
+    public function withPerson(?\PaymentAssist\Type\Person $person) : static
     {
         $new = clone $this;
         $new->person = $person;
@@ -66,18 +83,18 @@ class CTOutputcifassubject
     }
 
     /**
-     * @return \PaymentAssist\Type\Company
+     * @return null | \PaymentAssist\Type\Company
      */
-    public function getCompany()
+    public function getCompany() : ?\PaymentAssist\Type\Company
     {
         return $this->company;
     }
 
     /**
-     * @param \PaymentAssist\Type\Company $company
-     * @return CTOutputcifassubject
+     * @param null | \PaymentAssist\Type\Company $company
+     * @return static
      */
-    public function withCompany($company)
+    public function withCompany(?\PaymentAssist\Type\Company $company) : static
     {
         $new = clone $this;
         $new->company = $company;
@@ -86,18 +103,18 @@ class CTOutputcifassubject
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getHometelephone()
+    public function getHometelephone() : ?string
     {
         return $this->hometelephone;
     }
 
     /**
-     * @param string $hometelephone
-     * @return CTOutputcifassubject
+     * @param null | string $hometelephone
+     * @return static
      */
-    public function withHometelephone($hometelephone)
+    public function withHometelephone(?string $hometelephone) : static
     {
         $new = clone $this;
         $new->hometelephone = $hometelephone;
@@ -106,18 +123,18 @@ class CTOutputcifassubject
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getMobiletelephone()
+    public function getMobiletelephone() : ?string
     {
         return $this->mobiletelephone;
     }
 
     /**
-     * @param string $mobiletelephone
-     * @return CTOutputcifassubject
+     * @param null | string $mobiletelephone
+     * @return static
      */
-    public function withMobiletelephone($mobiletelephone)
+    public function withMobiletelephone(?string $mobiletelephone) : static
     {
         $new = clone $this;
         $new->mobiletelephone = $mobiletelephone;
@@ -126,18 +143,18 @@ class CTOutputcifassubject
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getEmail()
+    public function getEmail() : ?string
     {
         return $this->email;
     }
 
     /**
-     * @param string $email
-     * @return CTOutputcifassubject
+     * @param null | string $email
+     * @return static
      */
-    public function withEmail($email)
+    public function withEmail(?string $email) : static
     {
         $new = clone $this;
         $new->email = $email;
@@ -148,16 +165,16 @@ class CTOutputcifassubject
     /**
      * @return string
      */
-    public function getSubjectrole()
+    public function getSubjectrole() : string
     {
         return $this->subjectrole;
     }
 
     /**
      * @param string $subjectrole
-     * @return CTOutputcifassubject
+     * @return static
      */
-    public function withSubjectrole($subjectrole)
+    public function withSubjectrole(string $subjectrole) : static
     {
         $new = clone $this;
         $new->subjectrole = $subjectrole;
@@ -168,16 +185,16 @@ class CTOutputcifassubject
     /**
      * @return string
      */
-    public function getSubjectrolequalifier()
+    public function getSubjectrolequalifier() : string
     {
         return $this->subjectrolequalifier;
     }
 
     /**
      * @param string $subjectrolequalifier
-     * @return CTOutputcifassubject
+     * @return static
      */
-    public function withSubjectrolequalifier($subjectrolequalifier)
+    public function withSubjectrolequalifier(string $subjectrolequalifier) : static
     {
         $new = clone $this;
         $new->subjectrolequalifier = $subjectrolequalifier;
@@ -186,25 +203,23 @@ class CTOutputcifassubject
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputcifasaddress
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputcifasaddress>
      */
-    public function getAddressdata()
+    public function getAddressdata() : array
     {
         return $this->addressdata;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputcifasaddress $addressdata
-     * @return CTOutputcifassubject
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputcifasaddress> $addressdata
+     * @return static
      */
-    public function withAddressdata($addressdata)
+    public function withAddressdata(array $addressdata) : static
     {
         $new = clone $this;
         $new->addressdata = $addressdata;
 
         return $new;
     }
-
-
 }
 

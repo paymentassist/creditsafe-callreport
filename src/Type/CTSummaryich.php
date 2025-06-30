@@ -4,50 +4,61 @@ namespace PaymentAssist\Type;
 
 class CTSummaryich
 {
-
     /**
+     * A value of 1 indicates that Impaired Credit History has been detected
+     *
      * @var int
      */
-    private $impairedcredit;
+    private int $impairedcredit;
 
     /**
-     * @var int
+     * A value of 1 indicates that a mortgage account with a payment status of 3 or more in the last 24 months has been found
+     *
+     * @var null | int
      */
-    private $secured;
+    private ?int $secured = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that a loan accounts with a payment status of 3 or more in the last 24 months has been found
+     *
+     * @var null | int
      */
-    private $unsecured;
+    private ?int $unsecured = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that a Judgment with a total value greater than £500, in the last 36 months has been found
+     *
+     * @var null | int
      */
-    private $judgment;
+    private ?int $judgment = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that a Individual Voluntary Arrangement, Administration Order, Debt Arrangement Scheme, Fast Track Voluntary Arrangement or Trust Deed in the last 36 months has been found
+     *
+     * @var null | int
      */
-    private $iva;
+    private ?int $iva = null;
 
     /**
-     * @var int
+     * A value of 1 indicates that a Bankruptcy Order or Scottish Sequestration recorded in the last 36 months has been found
+     *
+     * @var null | int
      */
-    private $boss;
+    private ?int $boss = null;
 
     /**
      * @return int
      */
-    public function getImpairedcredit()
+    public function getImpairedcredit() : int
     {
         return $this->impairedcredit;
     }
 
     /**
      * @param int $impairedcredit
-     * @return CTSummaryich
+     * @return static
      */
-    public function withImpairedcredit($impairedcredit)
+    public function withImpairedcredit(int $impairedcredit) : static
     {
         $new = clone $this;
         $new->impairedcredit = $impairedcredit;
@@ -56,18 +67,18 @@ class CTSummaryich
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getSecured()
+    public function getSecured() : ?int
     {
         return $this->secured;
     }
 
     /**
-     * @param int $secured
-     * @return CTSummaryich
+     * @param null | int $secured
+     * @return static
      */
-    public function withSecured($secured)
+    public function withSecured(?int $secured) : static
     {
         $new = clone $this;
         $new->secured = $secured;
@@ -76,18 +87,18 @@ class CTSummaryich
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getUnsecured()
+    public function getUnsecured() : ?int
     {
         return $this->unsecured;
     }
 
     /**
-     * @param int $unsecured
-     * @return CTSummaryich
+     * @param null | int $unsecured
+     * @return static
      */
-    public function withUnsecured($unsecured)
+    public function withUnsecured(?int $unsecured) : static
     {
         $new = clone $this;
         $new->unsecured = $unsecured;
@@ -96,18 +107,18 @@ class CTSummaryich
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getJudgment()
+    public function getJudgment() : ?int
     {
         return $this->judgment;
     }
 
     /**
-     * @param int $judgment
-     * @return CTSummaryich
+     * @param null | int $judgment
+     * @return static
      */
-    public function withJudgment($judgment)
+    public function withJudgment(?int $judgment) : static
     {
         $new = clone $this;
         $new->judgment = $judgment;
@@ -116,18 +127,18 @@ class CTSummaryich
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getIva()
+    public function getIva() : ?int
     {
         return $this->iva;
     }
 
     /**
-     * @param int $iva
-     * @return CTSummaryich
+     * @param null | int $iva
+     * @return static
      */
-    public function withIva($iva)
+    public function withIva(?int $iva) : static
     {
         $new = clone $this;
         $new->iva = $iva;
@@ -136,25 +147,23 @@ class CTSummaryich
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getBoss()
+    public function getBoss() : ?int
     {
         return $this->boss;
     }
 
     /**
-     * @param int $boss
-     * @return CTSummaryich
+     * @param null | int $boss
+     * @return static
      */
-    public function withBoss($boss)
+    public function withBoss(?int $boss) : static
     {
         $new = clone $this;
         $new->boss = $boss;
 
         return $new;
     }
-
-
 }
 

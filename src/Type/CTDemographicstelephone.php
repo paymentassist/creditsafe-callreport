@@ -4,40 +4,48 @@ namespace PaymentAssist\Type;
 
 class CTDemographicstelephone
 {
+    /**
+     * Telephone Type Code
+     * The list of possible values can be obtained from the web method LookupData07a table id = demographicstelephonetype
+     *
+     * @var null | string
+     */
+    private ?string $type = null;
 
     /**
-     * @var string
+     * Telephone STD Code
+     *
+     * @var null | string
      */
-    private $type;
+    private ?string $std = null;
 
     /**
-     * @var string
+     * Telephone Number
+     *
+     * @var null | string
      */
-    private $std;
+    private ?string $number = null;
 
     /**
-     * @var string
+     * Telephone Extension Number
+     *
+     * @var null | string
      */
-    private $number;
+    private ?string $extension = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $extension;
-
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType() : ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
-     * @return CTDemographicstelephone
+     * @param null | string $type
+     * @return static
      */
-    public function withType($type)
+    public function withType(?string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -46,18 +54,18 @@ class CTDemographicstelephone
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getStd()
+    public function getStd() : ?string
     {
         return $this->std;
     }
 
     /**
-     * @param string $std
-     * @return CTDemographicstelephone
+     * @param null | string $std
+     * @return static
      */
-    public function withStd($std)
+    public function withStd(?string $std) : static
     {
         $new = clone $this;
         $new->std = $std;
@@ -66,18 +74,18 @@ class CTDemographicstelephone
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getNumber()
+    public function getNumber() : ?string
     {
         return $this->number;
     }
 
     /**
-     * @param string $number
-     * @return CTDemographicstelephone
+     * @param null | string $number
+     * @return static
      */
-    public function withNumber($number)
+    public function withNumber(?string $number) : static
     {
         $new = clone $this;
         $new->number = $number;
@@ -86,25 +94,23 @@ class CTDemographicstelephone
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getExtension()
+    public function getExtension() : ?string
     {
         return $this->extension;
     }
 
     /**
-     * @param string $extension
-     * @return CTDemographicstelephone
+     * @param null | string $extension
+     * @return static
      */
-    public function withExtension($extension)
+    public function withExtension(?string $extension) : static
     {
         $new = clone $this;
         $new->extension = $extension;
 
         return $new;
     }
-
-
 }
 

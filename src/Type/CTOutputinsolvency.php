@@ -4,95 +4,126 @@ namespace PaymentAssist\Type;
 
 class CTOutputinsolvency
 {
-
     /**
-     * @var \DateTimeInterface
+     * The end date of the Insolvency
+     *
+     * @var null | \DateTimeInterface
      */
-    private $dischargedate;
+    private ?\DateTimeInterface $dischargedate = null;
 
     /**
+     * Line of Business
+     *
+     * @var null | string
+     */
+    private ?string $lineofbusiness = null;
+
+    /**
+     * Court name
+     *
+     * @var null | string
+     */
+    private ?string $courtname = null;
+
+    /**
+     * Current status of the Insolvency
+     * The list of possible values can be obtained from the web method LookupData07a table id = insolvencystatus
+     *
      * @var string
      */
-    private $lineofbusiness;
+    private string $currentstatus;
 
     /**
+     * Total amount of the Insolvency
+     *
+     * @var null | int
+     */
+    private ?int $amount = null;
+
+    /**
+     * Type of Insolvency
+     * The list of possible values can be obtained from the web method LookupData07a table id = insolvencytype
+     *
      * @var string
      */
-    private $courtname;
+    private string $ordertype;
 
     /**
-     * @var string
+     * Start date of the Insolvency
+     *
+     * @var null | \DateTimeInterface
      */
-    private $currentstatus;
+    private ?\DateTimeInterface $orderdate = null;
 
     /**
-     * @var int
+     * Case Year
+     *
+     * @var null | int
      */
-    private $amount;
+    private ?int $caseyear = null;
 
     /**
-     * @var string
+     * Case reference
+     *
+     * @var null | string
      */
-    private $ordertype;
+    private ?string $caseref = null;
 
     /**
-     * @var \DateTimeInterface
+     * Restriction information
+     *
+     * @var null | \PaymentAssist\Type\Restriction
      */
-    private $orderdate;
+    private ?\PaymentAssist\Type\Restriction $restriction = null;
 
     /**
-     * @var int
+     * Name details as provided on the Insolvency
+     *
+     * @var null | string
      */
-    private $caseyear;
+    private ?string $name = null;
 
     /**
-     * @var string
+     * Trading name
+     *
+     * @var null | string
      */
-    private $caseref;
+    private ?string $tradingname = null;
 
     /**
-     * @var \PaymentAssist\Type\Restriction
+     * Address details as provided on the Insolvency
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddress
      */
-    private $restriction;
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
 
     /**
-     * @var string
+     * Date of birth
+     *
+     * @var null | \DateTimeInterface
      */
-    private $name;
+    private ?\DateTimeInterface $dob = null;
 
     /**
-     * @var string
+     * Set of Dispute and Correction Notices against the Insolvency
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $tradingname;
+    private array $notice;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * @return null | \DateTimeInterface
      */
-    private $address;
-
-    /**
-     * @var \DateTimeInterface
-     */
-    private $dob;
-
-    /**
-     * @var \PaymentAssist\Type\CTOutputnotice
-     */
-    private $notice;
-
-    /**
-     * @return \DateTimeInterface
-     */
-    public function getDischargedate()
+    public function getDischargedate() : ?\DateTimeInterface
     {
         return $this->dischargedate;
     }
 
     /**
-     * @param \DateTimeInterface $dischargedate
-     * @return CTOutputinsolvency
+     * @param null | \DateTimeInterface $dischargedate
+     * @return static
      */
-    public function withDischargedate($dischargedate)
+    public function withDischargedate(?\DateTimeInterface $dischargedate) : static
     {
         $new = clone $this;
         $new->dischargedate = $dischargedate;
@@ -101,18 +132,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getLineofbusiness()
+    public function getLineofbusiness() : ?string
     {
         return $this->lineofbusiness;
     }
 
     /**
-     * @param string $lineofbusiness
-     * @return CTOutputinsolvency
+     * @param null | string $lineofbusiness
+     * @return static
      */
-    public function withLineofbusiness($lineofbusiness)
+    public function withLineofbusiness(?string $lineofbusiness) : static
     {
         $new = clone $this;
         $new->lineofbusiness = $lineofbusiness;
@@ -121,18 +152,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCourtname()
+    public function getCourtname() : ?string
     {
         return $this->courtname;
     }
 
     /**
-     * @param string $courtname
-     * @return CTOutputinsolvency
+     * @param null | string $courtname
+     * @return static
      */
-    public function withCourtname($courtname)
+    public function withCourtname(?string $courtname) : static
     {
         $new = clone $this;
         $new->courtname = $courtname;
@@ -143,16 +174,16 @@ class CTOutputinsolvency
     /**
      * @return string
      */
-    public function getCurrentstatus()
+    public function getCurrentstatus() : string
     {
         return $this->currentstatus;
     }
 
     /**
      * @param string $currentstatus
-     * @return CTOutputinsolvency
+     * @return static
      */
-    public function withCurrentstatus($currentstatus)
+    public function withCurrentstatus(string $currentstatus) : static
     {
         $new = clone $this;
         $new->currentstatus = $currentstatus;
@@ -161,18 +192,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAmount()
+    public function getAmount() : ?int
     {
         return $this->amount;
     }
 
     /**
-     * @param int $amount
-     * @return CTOutputinsolvency
+     * @param null | int $amount
+     * @return static
      */
-    public function withAmount($amount)
+    public function withAmount(?int $amount) : static
     {
         $new = clone $this;
         $new->amount = $amount;
@@ -183,16 +214,16 @@ class CTOutputinsolvency
     /**
      * @return string
      */
-    public function getOrdertype()
+    public function getOrdertype() : string
     {
         return $this->ordertype;
     }
 
     /**
      * @param string $ordertype
-     * @return CTOutputinsolvency
+     * @return static
      */
-    public function withOrdertype($ordertype)
+    public function withOrdertype(string $ordertype) : static
     {
         $new = clone $this;
         $new->ordertype = $ordertype;
@@ -201,18 +232,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getOrderdate()
+    public function getOrderdate() : ?\DateTimeInterface
     {
         return $this->orderdate;
     }
 
     /**
-     * @param \DateTimeInterface $orderdate
-     * @return CTOutputinsolvency
+     * @param null | \DateTimeInterface $orderdate
+     * @return static
      */
-    public function withOrderdate($orderdate)
+    public function withOrderdate(?\DateTimeInterface $orderdate) : static
     {
         $new = clone $this;
         $new->orderdate = $orderdate;
@@ -221,18 +252,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getCaseyear()
+    public function getCaseyear() : ?int
     {
         return $this->caseyear;
     }
 
     /**
-     * @param int $caseyear
-     * @return CTOutputinsolvency
+     * @param null | int $caseyear
+     * @return static
      */
-    public function withCaseyear($caseyear)
+    public function withCaseyear(?int $caseyear) : static
     {
         $new = clone $this;
         $new->caseyear = $caseyear;
@@ -241,18 +272,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCaseref()
+    public function getCaseref() : ?string
     {
         return $this->caseref;
     }
 
     /**
-     * @param string $caseref
-     * @return CTOutputinsolvency
+     * @param null | string $caseref
+     * @return static
      */
-    public function withCaseref($caseref)
+    public function withCaseref(?string $caseref) : static
     {
         $new = clone $this;
         $new->caseref = $caseref;
@@ -261,18 +292,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return \PaymentAssist\Type\Restriction
+     * @return null | \PaymentAssist\Type\Restriction
      */
-    public function getRestriction()
+    public function getRestriction() : ?\PaymentAssist\Type\Restriction
     {
         return $this->restriction;
     }
 
     /**
-     * @param \PaymentAssist\Type\Restriction $restriction
-     * @return CTOutputinsolvency
+     * @param null | \PaymentAssist\Type\Restriction $restriction
+     * @return static
      */
-    public function withRestriction($restriction)
+    public function withRestriction(?\PaymentAssist\Type\Restriction $restriction) : static
     {
         $new = clone $this;
         $new->restriction = $restriction;
@@ -281,18 +312,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return CTOutputinsolvency
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -301,18 +332,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getTradingname()
+    public function getTradingname() : ?string
     {
         return $this->tradingname;
     }
 
     /**
-     * @param string $tradingname
-     * @return CTOutputinsolvency
+     * @param null | string $tradingname
+     * @return static
      */
-    public function withTradingname($tradingname)
+    public function withTradingname(?string $tradingname) : static
     {
         $new = clone $this;
         $new->tradingname = $tradingname;
@@ -321,18 +352,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress()
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return CTOutputinsolvency
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -341,18 +372,18 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDob()
+    public function getDob() : ?\DateTimeInterface
     {
         return $this->dob;
     }
 
     /**
-     * @param \DateTimeInterface $dob
-     * @return CTOutputinsolvency
+     * @param null | \DateTimeInterface $dob
+     * @return static
      */
-    public function withDob($dob)
+    public function withDob(?\DateTimeInterface $dob) : static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -361,25 +392,23 @@ class CTOutputinsolvency
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputinsolvency
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
 
         return $new;
     }
-
-
 }
 

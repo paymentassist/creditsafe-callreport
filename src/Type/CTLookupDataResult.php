@@ -4,30 +4,29 @@ namespace PaymentAssist\Type;
 
 class CTLookupDataResult
 {
-
     /**
-     * @var \PaymentAssist\Type\Table
+     * @var non-empty-array<int<0,max>, \PaymentAssist\Type\Table>
      */
-    private $table;
+    private array $table;
 
     /**
      * @var string
      */
-    private $version;
+    private string $version;
 
     /**
-     * @return \PaymentAssist\Type\Table
+     * @return non-empty-array<int<0,max>, \PaymentAssist\Type\Table>
      */
-    public function getTable()
+    public function getTable() : array
     {
         return $this->table;
     }
 
     /**
-     * @param \PaymentAssist\Type\Table $table
-     * @return CTLookupDataResult
+     * @param non-empty-array<int<0,max>, \PaymentAssist\Type\Table> $table
+     * @return static
      */
-    public function withTable($table)
+    public function withTable(array $table) : static
     {
         $new = clone $this;
         $new->table = $table;
@@ -38,23 +37,21 @@ class CTLookupDataResult
     /**
      * @return string
      */
-    public function getVersion()
+    public function getVersion() : string
     {
         return $this->version;
     }
 
     /**
      * @param string $version
-     * @return CTLookupDataResult
+     * @return static
      */
-    public function withVersion($version)
+    public function withVersion(string $version) : static
     {
         $new = clone $this;
         $new->version = $version;
 
         return $new;
     }
-
-
 }
 

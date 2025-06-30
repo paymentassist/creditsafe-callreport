@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class Name
 {
-
     /**
+     * Name details as entered by the user
+     *
      * @var \PaymentAssist\Type\CTInputname
      */
-    private $nameinput;
+    private \PaymentAssist\Type\CTInputname $nameinput;
 
     /**
+     * Contains a set of name matches for this specific named individual
+     *
      * @var \PaymentAssist\Type\Namematches
      */
-    private $namematches;
+    private \PaymentAssist\Type\Namematches $namematches;
 
     /**
-     * @var int
+     * Name identifier
+     *
+     * @var null | int
      */
-    private $nameid;
+    private ?int $nameid = null;
 
     /**
      * @return \PaymentAssist\Type\CTInputname
      */
-    public function getNameinput()
+    public function getNameinput() : \PaymentAssist\Type\CTInputname
     {
         return $this->nameinput;
     }
 
     /**
      * @param \PaymentAssist\Type\CTInputname $nameinput
-     * @return Name
+     * @return static
      */
-    public function withNameinput($nameinput)
+    public function withNameinput(\PaymentAssist\Type\CTInputname $nameinput) : static
     {
         $new = clone $this;
         $new->nameinput = $nameinput;
@@ -43,16 +48,16 @@ class Name
     /**
      * @return \PaymentAssist\Type\Namematches
      */
-    public function getNamematches()
+    public function getNamematches() : \PaymentAssist\Type\Namematches
     {
         return $this->namematches;
     }
 
     /**
      * @param \PaymentAssist\Type\Namematches $namematches
-     * @return Name
+     * @return static
      */
-    public function withNamematches($namematches)
+    public function withNamematches(\PaymentAssist\Type\Namematches $namematches) : static
     {
         $new = clone $this;
         $new->namematches = $namematches;
@@ -61,25 +66,23 @@ class Name
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getNameid()
+    public function getNameid() : ?int
     {
         return $this->nameid;
     }
 
     /**
-     * @param int $nameid
-     * @return Name
+     * @param null | int $nameid
+     * @return static
      */
-    public function withNameid($nameid)
+    public function withNameid(?int $nameid) : static
     {
         $new = clone $this;
         $new->nameid = $nameid;
 
         return $new;
     }
-
-
 }
 

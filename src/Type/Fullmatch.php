@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class Fullmatch
 {
-
     /**
+     * Matched address details as recorded on the database
+     *
      * @var \PaymentAssist\Type\Addressmatch
      */
-    private $addressmatch;
+    private \PaymentAssist\Type\Addressmatch $addressmatch;
 
     /**
-     * @var string
+     * Input name details and a set of name matches for either the primary name or an alias
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\Name>
      */
-    private $name;
+    private array $name;
 
     /**
-     * @var int
+     * A value of 1 indicates that this address match is selected
+     *
+     * @var null | int
      */
-    private $selected;
+    private ?int $selected = null;
 
     /**
      * @return \PaymentAssist\Type\Addressmatch
      */
-    public function getAddressmatch()
+    public function getAddressmatch() : \PaymentAssist\Type\Addressmatch
     {
         return $this->addressmatch;
     }
 
     /**
      * @param \PaymentAssist\Type\Addressmatch $addressmatch
-     * @return Fullmatch
+     * @return static
      */
-    public function withAddressmatch($addressmatch)
+    public function withAddressmatch(\PaymentAssist\Type\Addressmatch $addressmatch) : static
     {
         $new = clone $this;
         $new->addressmatch = $addressmatch;
@@ -41,18 +46,18 @@ class Fullmatch
     }
 
     /**
-     * @return string
+     * @return array<int<0,max>, \PaymentAssist\Type\Name>
      */
-    public function getName()
+    public function getName() : array
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return Fullmatch
+     * @param array<int<0,max>, \PaymentAssist\Type\Name> $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(array $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -61,25 +66,23 @@ class Fullmatch
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getSelected()
+    public function getSelected() : ?int
     {
         return $this->selected;
     }
 
     /**
-     * @param int $selected
-     * @return Fullmatch
+     * @param null | int $selected
+     * @return static
      */
-    public function withSelected($selected)
+    public function withSelected(?int $selected) : static
     {
         $new = clone $this;
         $new->selected = $selected;
 
         return $new;
     }
-
-
 }
 

@@ -4,35 +4,39 @@ namespace PaymentAssist\Type;
 
 class CTOutputaddress
 {
-
     /**
+     * Output structure for a single address line
+     *
      * @var string
      */
-    private $_;
+    private string $_;
 
     /**
      * @var int
      */
-    private $current;
+    private int $current;
 
     /**
-     * @var int
+     * The type of undeclared address
+     * The list of possible values can be obtained from the web method LookupData07a table id = undeclaredaddresstype
+     *
+     * @var null | int
      */
-    private $undeclaredaddresstype;
+    private ?int $undeclaredaddresstype = null;
 
     /**
      * @return string
      */
-    public function get_()
+    public function get_() : string
     {
         return $this->_;
     }
 
     /**
      * @param string $_
-     * @return CTOutputaddress
+     * @return static
      */
-    public function with_($_)
+    public function with_(string $_) : static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -43,16 +47,16 @@ class CTOutputaddress
     /**
      * @return int
      */
-    public function getCurrent()
+    public function getCurrent() : int
     {
         return $this->current;
     }
 
     /**
      * @param int $current
-     * @return CTOutputaddress
+     * @return static
      */
-    public function withCurrent($current)
+    public function withCurrent(int $current) : static
     {
         $new = clone $this;
         $new->current = $current;
@@ -61,25 +65,23 @@ class CTOutputaddress
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getUndeclaredaddresstype()
+    public function getUndeclaredaddresstype() : ?int
     {
         return $this->undeclaredaddresstype;
     }
 
     /**
-     * @param int $undeclaredaddresstype
-     * @return CTOutputaddress
+     * @param null | int $undeclaredaddresstype
+     * @return static
      */
-    public function withUndeclaredaddresstype($undeclaredaddresstype)
+    public function withUndeclaredaddresstype(?int $undeclaredaddresstype) : static
     {
         $new = clone $this;
         $new->undeclaredaddresstype = $undeclaredaddresstype;
 
         return $new;
     }
-
-
 }
 

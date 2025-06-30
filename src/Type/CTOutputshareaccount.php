@@ -4,55 +4,68 @@ namespace PaymentAssist\Type;
 
 class CTOutputshareaccount
 {
-
     /**
+     * Supplier related details
+     *
      * @var \PaymentAssist\Type\Supplierdetails
      */
-    private $supplierdetails;
+    private \PaymentAssist\Type\Supplierdetails $supplierdetails;
 
     /**
+     * Account holder related details
+     *
      * @var \PaymentAssist\Type\Accholderdetails
      */
-    private $accholderdetails;
+    private \PaymentAssist\Type\Accholderdetails $accholderdetails;
 
     /**
-     * @var \PaymentAssist\Type\DefaultType
+     * Default related details
+     *
+     * @var null | \PaymentAssist\Type\DefaultType
      */
-    private $default;
+    private ?\PaymentAssist\Type\DefaultType $default = null;
 
     /**
-     * @var \PaymentAssist\Type\Delinquent
+     * Delinquency related details
+     *
+     * @var null | \PaymentAssist\Type\Delinquent
      */
-    private $delinquent;
+    private ?\PaymentAssist\Type\Delinquent $delinquent = null;
 
     /**
+     * Account history
+     *
      * @var \PaymentAssist\Type\Acchistory
      */
-    private $acchistory;
+    private \PaymentAssist\Type\Acchistory $acchistory;
 
     /**
+     * General account details
+     *
      * @var \PaymentAssist\Type\Accdetails
      */
-    private $accdetails;
+    private \PaymentAssist\Type\Accdetails $accdetails;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of Dispute and Correction Notices against an Account
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
      * @return \PaymentAssist\Type\Supplierdetails
      */
-    public function getSupplierdetails()
+    public function getSupplierdetails() : \PaymentAssist\Type\Supplierdetails
     {
         return $this->supplierdetails;
     }
 
     /**
      * @param \PaymentAssist\Type\Supplierdetails $supplierdetails
-     * @return CTOutputshareaccount
+     * @return static
      */
-    public function withSupplierdetails($supplierdetails)
+    public function withSupplierdetails(\PaymentAssist\Type\Supplierdetails $supplierdetails) : static
     {
         $new = clone $this;
         $new->supplierdetails = $supplierdetails;
@@ -63,16 +76,16 @@ class CTOutputshareaccount
     /**
      * @return \PaymentAssist\Type\Accholderdetails
      */
-    public function getAccholderdetails()
+    public function getAccholderdetails() : \PaymentAssist\Type\Accholderdetails
     {
         return $this->accholderdetails;
     }
 
     /**
      * @param \PaymentAssist\Type\Accholderdetails $accholderdetails
-     * @return CTOutputshareaccount
+     * @return static
      */
-    public function withAccholderdetails($accholderdetails)
+    public function withAccholderdetails(\PaymentAssist\Type\Accholderdetails $accholderdetails) : static
     {
         $new = clone $this;
         $new->accholderdetails = $accholderdetails;
@@ -81,18 +94,18 @@ class CTOutputshareaccount
     }
 
     /**
-     * @return \PaymentAssist\Type\DefaultType
+     * @return null | \PaymentAssist\Type\DefaultType
      */
-    public function getDefault()
+    public function getDefault() : ?\PaymentAssist\Type\DefaultType
     {
         return $this->default;
     }
 
     /**
-     * @param \PaymentAssist\Type\DefaultType $default
-     * @return CTOutputshareaccount
+     * @param null | \PaymentAssist\Type\DefaultType $default
+     * @return static
      */
-    public function withDefault($default)
+    public function withDefault(?\PaymentAssist\Type\DefaultType $default) : static
     {
         $new = clone $this;
         $new->default = $default;
@@ -101,18 +114,18 @@ class CTOutputshareaccount
     }
 
     /**
-     * @return \PaymentAssist\Type\Delinquent
+     * @return null | \PaymentAssist\Type\Delinquent
      */
-    public function getDelinquent()
+    public function getDelinquent() : ?\PaymentAssist\Type\Delinquent
     {
         return $this->delinquent;
     }
 
     /**
-     * @param \PaymentAssist\Type\Delinquent $delinquent
-     * @return CTOutputshareaccount
+     * @param null | \PaymentAssist\Type\Delinquent $delinquent
+     * @return static
      */
-    public function withDelinquent($delinquent)
+    public function withDelinquent(?\PaymentAssist\Type\Delinquent $delinquent) : static
     {
         $new = clone $this;
         $new->delinquent = $delinquent;
@@ -123,16 +136,16 @@ class CTOutputshareaccount
     /**
      * @return \PaymentAssist\Type\Acchistory
      */
-    public function getAcchistory()
+    public function getAcchistory() : \PaymentAssist\Type\Acchistory
     {
         return $this->acchistory;
     }
 
     /**
      * @param \PaymentAssist\Type\Acchistory $acchistory
-     * @return CTOutputshareaccount
+     * @return static
      */
-    public function withAcchistory($acchistory)
+    public function withAcchistory(\PaymentAssist\Type\Acchistory $acchistory) : static
     {
         $new = clone $this;
         $new->acchistory = $acchistory;
@@ -143,16 +156,16 @@ class CTOutputshareaccount
     /**
      * @return \PaymentAssist\Type\Accdetails
      */
-    public function getAccdetails()
+    public function getAccdetails() : \PaymentAssist\Type\Accdetails
     {
         return $this->accdetails;
     }
 
     /**
      * @param \PaymentAssist\Type\Accdetails $accdetails
-     * @return CTOutputshareaccount
+     * @return static
      */
-    public function withAccdetails($accdetails)
+    public function withAccdetails(\PaymentAssist\Type\Accdetails $accdetails) : static
     {
         $new = clone $this;
         $new->accdetails = $accdetails;
@@ -161,25 +174,23 @@ class CTOutputshareaccount
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputshareaccount
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
 
         return $new;
     }
-
-
 }
 

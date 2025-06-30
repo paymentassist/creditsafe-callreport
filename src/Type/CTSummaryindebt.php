@@ -4,50 +4,61 @@ namespace PaymentAssist\Type;
 
 class CTSummaryindebt
 {
+    /**
+     * Total balances for all active Accounts
+     *
+     * @var null | int
+     */
+    private ?int $totalbalancesactive = null;
 
     /**
-     * @var int
+     * Total balances for all account group 3 Accounts (Revolving Credit and Budget)
+     *
+     * @var null | int
      */
-    private $totalbalancesactive;
+    private ?int $totalbalancesrevolve = null;
 
     /**
-     * @var int
+     * % ratio of balance to limits for all account group 3 Accounts (Revolving Credit and Budget)
+     *
+     * @var null | int
      */
-    private $totalbalancesrevolve;
+    private ?int $balancelimitratiorevolve = null;
 
     /**
-     * @var int
+     * Total limits for all active account group 3 Accounts (Revolving Credit and Budget)
+     *
+     * @var null | int
      */
-    private $balancelimitratiorevolve;
+    private ?int $totallimitsrevolve = null;
 
     /**
-     * @var int
+     * Total balances for all account group 1 accounts (Loans/Installment Credit)
+     *
+     * @var null | int
      */
-    private $totallimitsrevolve;
+    private ?int $totalbalancesloans = null;
 
     /**
-     * @var int
+     * Total balances for all account group 2 accounts (Mortgage Accounts)
+     *
+     * @var null | int
      */
-    private $totalbalancesloans;
+    private ?int $totalbalancesmortgages = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $totalbalancesmortgages;
-
-    /**
-     * @return int
-     */
-    public function getTotalbalancesactive()
+    public function getTotalbalancesactive() : ?int
     {
         return $this->totalbalancesactive;
     }
 
     /**
-     * @param int $totalbalancesactive
-     * @return CTSummaryindebt
+     * @param null | int $totalbalancesactive
+     * @return static
      */
-    public function withTotalbalancesactive($totalbalancesactive)
+    public function withTotalbalancesactive(?int $totalbalancesactive) : static
     {
         $new = clone $this;
         $new->totalbalancesactive = $totalbalancesactive;
@@ -56,18 +67,18 @@ class CTSummaryindebt
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalbalancesrevolve()
+    public function getTotalbalancesrevolve() : ?int
     {
         return $this->totalbalancesrevolve;
     }
 
     /**
-     * @param int $totalbalancesrevolve
-     * @return CTSummaryindebt
+     * @param null | int $totalbalancesrevolve
+     * @return static
      */
-    public function withTotalbalancesrevolve($totalbalancesrevolve)
+    public function withTotalbalancesrevolve(?int $totalbalancesrevolve) : static
     {
         $new = clone $this;
         $new->totalbalancesrevolve = $totalbalancesrevolve;
@@ -76,18 +87,18 @@ class CTSummaryindebt
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getBalancelimitratiorevolve()
+    public function getBalancelimitratiorevolve() : ?int
     {
         return $this->balancelimitratiorevolve;
     }
 
     /**
-     * @param int $balancelimitratiorevolve
-     * @return CTSummaryindebt
+     * @param null | int $balancelimitratiorevolve
+     * @return static
      */
-    public function withBalancelimitratiorevolve($balancelimitratiorevolve)
+    public function withBalancelimitratiorevolve(?int $balancelimitratiorevolve) : static
     {
         $new = clone $this;
         $new->balancelimitratiorevolve = $balancelimitratiorevolve;
@@ -96,18 +107,18 @@ class CTSummaryindebt
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotallimitsrevolve()
+    public function getTotallimitsrevolve() : ?int
     {
         return $this->totallimitsrevolve;
     }
 
     /**
-     * @param int $totallimitsrevolve
-     * @return CTSummaryindebt
+     * @param null | int $totallimitsrevolve
+     * @return static
      */
-    public function withTotallimitsrevolve($totallimitsrevolve)
+    public function withTotallimitsrevolve(?int $totallimitsrevolve) : static
     {
         $new = clone $this;
         $new->totallimitsrevolve = $totallimitsrevolve;
@@ -116,18 +127,18 @@ class CTSummaryindebt
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalbalancesloans()
+    public function getTotalbalancesloans() : ?int
     {
         return $this->totalbalancesloans;
     }
 
     /**
-     * @param int $totalbalancesloans
-     * @return CTSummaryindebt
+     * @param null | int $totalbalancesloans
+     * @return static
      */
-    public function withTotalbalancesloans($totalbalancesloans)
+    public function withTotalbalancesloans(?int $totalbalancesloans) : static
     {
         $new = clone $this;
         $new->totalbalancesloans = $totalbalancesloans;
@@ -136,25 +147,23 @@ class CTSummaryindebt
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalbalancesmortgages()
+    public function getTotalbalancesmortgages() : ?int
     {
         return $this->totalbalancesmortgages;
     }
 
     /**
-     * @param int $totalbalancesmortgages
-     * @return CTSummaryindebt
+     * @param null | int $totalbalancesmortgages
+     * @return static
      */
-    public function withTotalbalancesmortgages($totalbalancesmortgages)
+    public function withTotalbalancesmortgages(?int $totalbalancesmortgages) : static
     {
         $new = clone $this;
         $new->totalbalancesmortgages = $totalbalancesmortgages;
 
         return $new;
     }
-
-
 }
 

@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class International
 {
+    /**
+     * CAMEO International Code
+     *
+     * @var null | string
+     */
+    private ?string $cameointl = null;
 
     /**
-     * @var string
+     * @return null | string
      */
-    private $cameointl;
-
-    /**
-     * @return string
-     */
-    public function getCameointl()
+    public function getCameointl() : ?string
     {
         return $this->cameointl;
     }
 
     /**
-     * @param string $cameointl
-     * @return International
+     * @param null | string $cameointl
+     * @return static
      */
-    public function withCameointl($cameointl)
+    public function withCameointl(?string $cameointl) : static
     {
         $new = clone $this;
         $new->cameointl = $cameointl;
 
         return $new;
     }
-
-
 }
 

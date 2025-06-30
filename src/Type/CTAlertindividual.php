@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class CTAlertindividual
 {
+    /**
+     * Name of Alert Individual
+     *
+     * @var null | string
+     */
+    private ?string $name = null;
 
     /**
-     * @var string
+     * Set of Correction Notices against an Alert Individual
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $name;
+    private array $notice;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * @return null | string
      */
-    private $notice;
-
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return CTAlertindividual
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -36,25 +39,23 @@ class CTAlertindividual
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTAlertindividual
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
 
         return $new;
     }
-
-
 }
 

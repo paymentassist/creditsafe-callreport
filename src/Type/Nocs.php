@@ -4,32 +4,31 @@ namespace PaymentAssist\Type;
 
 class Nocs
 {
+    /**
+     * Output structure for Notice of Dispute or Correction
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
+     */
+    private array $noc;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $noc;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputnotice
-     */
-    public function getNoc()
+    public function getNoc() : array
     {
         return $this->noc;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $noc
-     * @return Nocs
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $noc
+     * @return static
      */
-    public function withNoc($noc)
+    public function withNoc(array $noc) : static
     {
         $new = clone $this;
         $new->noc = $noc;
 
         return $new;
     }
-
-
 }
 

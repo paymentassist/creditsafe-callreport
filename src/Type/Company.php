@@ -4,38 +4,43 @@ namespace PaymentAssist\Type;
 
 class Company
 {
+    /**
+     * Registered Company number
+     *
+     * @var null | string
+     */
+    private ?string $number = null;
 
     /**
+     * Company name
+     *
      * @var string
      */
-    private $number;
+    private string $name;
 
     /**
-     * @var string
+     * Address details
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddress
      */
-    private $name;
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * @return null | string
      */
-    private $address;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputaddress
-     */
-    public function getAddress()
+    public function getNumber() : ?string
     {
-        return $this->address;
+        return $this->number;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return Company
+     * @param null | string $number
+     * @return static
      */
-    public function withAddress($address)
+    public function withNumber(?string $number) : static
     {
         $new = clone $this;
-        $new->address = $address;
+        $new->number = $number;
 
         return $new;
     }
@@ -43,16 +48,16 @@ class Company
     /**
      * @return string
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
     /**
      * @param string $name
-     * @return Company
+     * @return static
      */
-    public function withName($name)
+    public function withName(string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -61,25 +66,23 @@ class Company
     }
 
     /**
-     * @return string
+     * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getNumber()
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
     {
-        return $this->number;
+        return $this->address;
     }
 
     /**
-     * @param string $number
-     * @return Company
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
+     * @return static
      */
-    public function withNumber($number)
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
-        $new->number = $number;
+        $new->address = $address;
 
         return $new;
     }
-
-
 }
 

@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class Holder
 {
-
     /**
+     * Account holder's name details
+     *
      * @var string
      */
-    private $name;
+    private string $name;
 
     /**
+     * Account holder's address
+     *
      * @var \PaymentAssist\Type\CTOutputaddress
      */
-    private $address;
+    private \PaymentAssist\Type\CTOutputaddress $address;
 
     /**
-     * @var \DateTimeInterface
+     * Account holder's date of birth
+     *
+     * @var null | \DateTimeInterface
      */
-    private $dob;
+    private ?\DateTimeInterface $dob = null;
 
     /**
      * @return string
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
     /**
      * @param string $name
-     * @return Holder
+     * @return static
      */
-    public function withName($name)
+    public function withName(string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -43,16 +48,16 @@ class Holder
     /**
      * @return \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress()
+    public function getAddress() : \PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
      * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return Holder
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -61,25 +66,23 @@ class Holder
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDob()
+    public function getDob() : ?\DateTimeInterface
     {
         return $this->dob;
     }
 
     /**
-     * @param \DateTimeInterface $dob
-     * @return Holder
+     * @param null | \DateTimeInterface $dob
+     * @return static
      */
-    public function withDob($dob)
+    public function withDob(?\DateTimeInterface $dob) : static
     {
         $new = clone $this;
         $new->dob = $dob;
 
         return $new;
     }
-
-
 }
 

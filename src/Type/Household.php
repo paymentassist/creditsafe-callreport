@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class Household
 {
+    /**
+     * Percentage of single adult households
+     *
+     * @var null | int
+     */
+    private ?int $adult_1 = null;
 
     /**
-     * @var int
+     * Percentage of two adult households
+     *
+     * @var null | int
      */
-    private $adult_1;
+    private ?int $adults_2 = null;
 
     /**
-     * @var int
+     * Percentage of three or more adult households
+     *
+     * @var null | int
      */
-    private $adults_2;
+    private ?int $adult_3pl = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $adult_3pl;
-
-    /**
-     * @return int
-     */
-    public function getAdult_1()
+    public function getAdult_1() : ?int
     {
         return $this->adult_1;
     }
 
     /**
-     * @param int $adult_1
-     * @return Household
+     * @param null | int $adult_1
+     * @return static
      */
-    public function withAdult_1($adult_1)
+    public function withAdult_1(?int $adult_1) : static
     {
         $new = clone $this;
         $new->adult_1 = $adult_1;
@@ -41,18 +46,18 @@ class Household
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAdults_2()
+    public function getAdults_2() : ?int
     {
         return $this->adults_2;
     }
 
     /**
-     * @param int $adults_2
-     * @return Household
+     * @param null | int $adults_2
+     * @return static
      */
-    public function withAdults_2($adults_2)
+    public function withAdults_2(?int $adults_2) : static
     {
         $new = clone $this;
         $new->adults_2 = $adults_2;
@@ -61,25 +66,23 @@ class Household
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAdult_3pl()
+    public function getAdult_3pl() : ?int
     {
         return $this->adult_3pl;
     }
 
     /**
-     * @param int $adult_3pl
-     * @return Household
+     * @param null | int $adult_3pl
+     * @return static
      */
-    public function withAdult_3pl($adult_3pl)
+    public function withAdult_3pl(?int $adult_3pl) : static
     {
         $new = clone $this;
         $new->adult_3pl = $adult_3pl;
 
         return $new;
     }
-
-
 }
 

@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class CTHho
 {
-
     /**
-     * @var \PaymentAssist\Type\Creditscores
+     * Summarised Scores for Household Override Individuals
+     *
+     * @var null | \PaymentAssist\Type\Creditscores
      */
-    private $creditscores;
+    private ?\PaymentAssist\Type\Creditscores $creditscores = null;
 
     /**
-     * @var \PaymentAssist\Type\CTHhosummary
+     * Household Override Summary Block
+     *
+     * @var null | \PaymentAssist\Type\CTHhosummary
      */
-    private $summary;
+    private ?\PaymentAssist\Type\CTHhosummary $summary = null;
 
     /**
+     * A value of 1 indicates that this applicant has a thin file required for consideration of HHO.
+     *
      * @var int
      */
-    private $thinfile;
+    private int $thinfile;
 
     /**
+     * Total number of Individuals that meet HHO criteria
+     *
      * @var int
      */
-    private $total;
+    private int $total;
 
     /**
-     * @return \PaymentAssist\Type\Creditscores
+     * @return null | \PaymentAssist\Type\Creditscores
      */
-    public function getCreditscores()
+    public function getCreditscores() : ?\PaymentAssist\Type\Creditscores
     {
         return $this->creditscores;
     }
 
     /**
-     * @param \PaymentAssist\Type\Creditscores $creditscores
-     * @return CTHho
+     * @param null | \PaymentAssist\Type\Creditscores $creditscores
+     * @return static
      */
-    public function withCreditscores($creditscores)
+    public function withCreditscores(?\PaymentAssist\Type\Creditscores $creditscores) : static
     {
         $new = clone $this;
         $new->creditscores = $creditscores;
@@ -46,18 +53,18 @@ class CTHho
     }
 
     /**
-     * @return \PaymentAssist\Type\CTHhosummary
+     * @return null | \PaymentAssist\Type\CTHhosummary
      */
-    public function getSummary()
+    public function getSummary() : ?\PaymentAssist\Type\CTHhosummary
     {
         return $this->summary;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTHhosummary $summary
-     * @return CTHho
+     * @param null | \PaymentAssist\Type\CTHhosummary $summary
+     * @return static
      */
-    public function withSummary($summary)
+    public function withSummary(?\PaymentAssist\Type\CTHhosummary $summary) : static
     {
         $new = clone $this;
         $new->summary = $summary;
@@ -68,16 +75,16 @@ class CTHho
     /**
      * @return int
      */
-    public function getThinfile()
+    public function getThinfile() : int
     {
         return $this->thinfile;
     }
 
     /**
      * @param int $thinfile
-     * @return CTHho
+     * @return static
      */
-    public function withThinfile($thinfile)
+    public function withThinfile(int $thinfile) : static
     {
         $new = clone $this;
         $new->thinfile = $thinfile;
@@ -88,23 +95,21 @@ class CTHho
     /**
      * @return int
      */
-    public function getTotal()
+    public function getTotal() : int
     {
         return $this->total;
     }
 
     /**
      * @param int $total
-     * @return CTHho
+     * @return static
      */
-    public function withTotal($total)
+    public function withTotal(int $total) : static
     {
         $new = clone $this;
         $new->total = $total;
 
         return $new;
     }
-
-
 }
 

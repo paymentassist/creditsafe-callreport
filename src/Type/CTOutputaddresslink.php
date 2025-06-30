@@ -4,50 +4,63 @@ namespace PaymentAssist\Type;
 
 class CTOutputaddresslink
 {
-
     /**
+     * Date that the supplied Address Link was created
+     *
      * @var \DateTimeInterface
      */
-    private $creationdate;
+    private \DateTimeInterface $creationdate;
 
     /**
+     * Most recent date that the supplied Address Link was confirmed
+     *
      * @var \DateTimeInterface
      */
-    private $lastconfdate;
+    private \DateTimeInterface $lastconfdate;
 
     /**
+     * Information regarding the supplier of the Address Link
+     *
      * @var \PaymentAssist\Type\CTSupplierdetails
      */
-    private $supplierdetails;
+    private \PaymentAssist\Type\CTSupplierdetails $supplierdetails;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of Dispute Notices against an Address Link
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
+     * The addressid that represents the from address of the Address Link
+     * The id relates to the addressid on one of the address elements within CT_outputlinkaddress
+     *
      * @var int
      */
-    private $from;
+    private int $from;
 
     /**
+     * The addressid that represents the to address of the Address Link
+     * The id relates to the addressid on one of the address elements within CT_outputlinkaddress
+     *
      * @var int
      */
-    private $to;
+    private int $to;
 
     /**
      * @return \DateTimeInterface
      */
-    public function getCreationdate()
+    public function getCreationdate() : \DateTimeInterface
     {
         return $this->creationdate;
     }
 
     /**
      * @param \DateTimeInterface $creationdate
-     * @return CTOutputaddresslink
+     * @return static
      */
-    public function withCreationdate($creationdate)
+    public function withCreationdate(\DateTimeInterface $creationdate) : static
     {
         $new = clone $this;
         $new->creationdate = $creationdate;
@@ -58,16 +71,16 @@ class CTOutputaddresslink
     /**
      * @return \DateTimeInterface
      */
-    public function getLastconfdate()
+    public function getLastconfdate() : \DateTimeInterface
     {
         return $this->lastconfdate;
     }
 
     /**
      * @param \DateTimeInterface $lastconfdate
-     * @return CTOutputaddresslink
+     * @return static
      */
-    public function withLastconfdate($lastconfdate)
+    public function withLastconfdate(\DateTimeInterface $lastconfdate) : static
     {
         $new = clone $this;
         $new->lastconfdate = $lastconfdate;
@@ -78,16 +91,16 @@ class CTOutputaddresslink
     /**
      * @return \PaymentAssist\Type\CTSupplierdetails
      */
-    public function getSupplierdetails()
+    public function getSupplierdetails() : \PaymentAssist\Type\CTSupplierdetails
     {
         return $this->supplierdetails;
     }
 
     /**
      * @param \PaymentAssist\Type\CTSupplierdetails $supplierdetails
-     * @return CTOutputaddresslink
+     * @return static
      */
-    public function withSupplierdetails($supplierdetails)
+    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails) : static
     {
         $new = clone $this;
         $new->supplierdetails = $supplierdetails;
@@ -96,18 +109,18 @@ class CTOutputaddresslink
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputaddresslink
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -118,16 +131,16 @@ class CTOutputaddresslink
     /**
      * @return int
      */
-    public function getFrom()
+    public function getFrom() : int
     {
         return $this->from;
     }
 
     /**
      * @param int $from
-     * @return CTOutputaddresslink
+     * @return static
      */
-    public function withFrom($from)
+    public function withFrom(int $from) : static
     {
         $new = clone $this;
         $new->from = $from;
@@ -138,23 +151,21 @@ class CTOutputaddresslink
     /**
      * @return int
      */
-    public function getTo()
+    public function getTo() : int
     {
         return $this->to;
     }
 
     /**
      * @param int $to
-     * @return CTOutputaddresslink
+     * @return static
      */
-    public function withTo($to)
+    public function withTo(int $to) : static
     {
         $new = clone $this;
         $new->to = $to;
 
         return $new;
     }
-
-
 }
 

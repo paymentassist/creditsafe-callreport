@@ -4,120 +4,159 @@ namespace PaymentAssist\Type;
 
 class Property
 {
+    /**
+     * Average House Age
+     *
+     * @var null | string
+     */
+    private ?string $houseage = null;
 
     /**
-     * @var string
+     * Household Density
+     *
+     * @var null | float
      */
-    private $houseage;
+    private ?float $hhlddensity = null;
 
     /**
-     * @var float
+     * Council Tax Band
+     *
+     * @var null | string
      */
-    private $hhlddensity;
+    private ?string $ctaxband = null;
 
     /**
-     * @var string
+     * Postcode Location Type
+     *
+     * @var null | int
      */
-    private $ctaxband;
+    private ?int $locationtype = null;
 
     /**
-     * @var int
+     * National Average House Price
+     *
+     * @var null | int
      */
-    private $locationtype;
+    private ?int $natavghouse = null;
 
     /**
-     * @var int
+     * Housing Type Score
+     *
+     * @var null | float
      */
-    private $natavghouse;
+    private ?float $housescore = null;
 
     /**
-     * @var float
+     * Housing Type Band
+     *
+     * @var null | int
      */
-    private $housescore;
+    private ?int $houseband = null;
 
     /**
-     * @var int
+     * National Average House Price Difference
+     *
+     * @var null | int
      */
-    private $houseband;
+    private ?int $pricediff = null;
 
     /**
-     * @var int
+     * House Price Index
+     *
+     * @var null | int
      */
-    private $pricediff;
+    private ?int $priceindex = null;
 
     /**
-     * @var int
+     * Level of Sales Activity Index
+     *
+     * @var null | int
      */
-    private $priceindex;
+    private ?int $activity = null;
 
     /**
-     * @var int
+     * Regional Banded House Price
+     *
+     * @var null | int
      */
-    private $activity;
+    private ?int $regionalband = null;
 
     /**
-     * @var int
+     * Average Detached Property Value
+     *
+     * @var null | int
      */
-    private $regionalband;
+    private ?int $avgdetvalue = null;
 
     /**
-     * @var int
+     * Detached Property Index
+     *
+     * @var null | int
      */
-    private $avgdetvalue;
+    private ?int $avgdetindex = null;
 
     /**
-     * @var int
+     * Average Semi-Detached Property Value
+     *
+     * @var null | int
      */
-    private $avgdetindex;
+    private ?int $avgsemivalue = null;
 
     /**
-     * @var int
+     * Semi-Detached Property Index
+     *
+     * @var null | int
      */
-    private $avgsemivalue;
+    private ?int $avgsemiindex = null;
 
     /**
-     * @var int
+     * Average Terraced Property Value
+     *
+     * @var null | int
      */
-    private $avgsemiindex;
+    private ?int $avgterrvalue = null;
 
     /**
-     * @var int
+     * Terraced Property Index
+     *
+     * @var null | int
      */
-    private $avgterrvalue;
+    private ?int $avgterrindex = null;
 
     /**
-     * @var int
+     * Average Flat Property Value
+     *
+     * @var null | int
      */
-    private $avgterrindex;
+    private ?int $avgflatvalue = null;
 
     /**
-     * @var int
+     * Flat Property Index
+     *
+     * @var null | int
      */
-    private $avgflatvalue;
+    private ?int $avgflatindex = null;
 
     /**
-     * @var int
+     * Standard Region Code
+     *
+     * @var null | int
      */
-    private $avgflatindex;
+    private ?int $regioncode = null;
 
     /**
-     * @var int
+     * @return null | string
      */
-    private $regioncode;
-
-    /**
-     * @return string
-     */
-    public function getHouseage()
+    public function getHouseage() : ?string
     {
         return $this->houseage;
     }
 
     /**
-     * @param string $houseage
-     * @return Property
+     * @param null | string $houseage
+     * @return static
      */
-    public function withHouseage($houseage)
+    public function withHouseage(?string $houseage) : static
     {
         $new = clone $this;
         $new->houseage = $houseage;
@@ -126,18 +165,18 @@ class Property
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getHhlddensity()
+    public function getHhlddensity() : ?float
     {
         return $this->hhlddensity;
     }
 
     /**
-     * @param float $hhlddensity
-     * @return Property
+     * @param null | float $hhlddensity
+     * @return static
      */
-    public function withHhlddensity($hhlddensity)
+    public function withHhlddensity(?float $hhlddensity) : static
     {
         $new = clone $this;
         $new->hhlddensity = $hhlddensity;
@@ -146,18 +185,18 @@ class Property
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getCtaxband()
+    public function getCtaxband() : ?string
     {
         return $this->ctaxband;
     }
 
     /**
-     * @param string $ctaxband
-     * @return Property
+     * @param null | string $ctaxband
+     * @return static
      */
-    public function withCtaxband($ctaxband)
+    public function withCtaxband(?string $ctaxband) : static
     {
         $new = clone $this;
         $new->ctaxband = $ctaxband;
@@ -166,18 +205,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getLocationtype()
+    public function getLocationtype() : ?int
     {
         return $this->locationtype;
     }
 
     /**
-     * @param int $locationtype
-     * @return Property
+     * @param null | int $locationtype
+     * @return static
      */
-    public function withLocationtype($locationtype)
+    public function withLocationtype(?int $locationtype) : static
     {
         $new = clone $this;
         $new->locationtype = $locationtype;
@@ -186,18 +225,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getNatavghouse()
+    public function getNatavghouse() : ?int
     {
         return $this->natavghouse;
     }
 
     /**
-     * @param int $natavghouse
-     * @return Property
+     * @param null | int $natavghouse
+     * @return static
      */
-    public function withNatavghouse($natavghouse)
+    public function withNatavghouse(?int $natavghouse) : static
     {
         $new = clone $this;
         $new->natavghouse = $natavghouse;
@@ -206,18 +245,18 @@ class Property
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getHousescore()
+    public function getHousescore() : ?float
     {
         return $this->housescore;
     }
 
     /**
-     * @param float $housescore
-     * @return Property
+     * @param null | float $housescore
+     * @return static
      */
-    public function withHousescore($housescore)
+    public function withHousescore(?float $housescore) : static
     {
         $new = clone $this;
         $new->housescore = $housescore;
@@ -226,18 +265,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getHouseband()
+    public function getHouseband() : ?int
     {
         return $this->houseband;
     }
 
     /**
-     * @param int $houseband
-     * @return Property
+     * @param null | int $houseband
+     * @return static
      */
-    public function withHouseband($houseband)
+    public function withHouseband(?int $houseband) : static
     {
         $new = clone $this;
         $new->houseband = $houseband;
@@ -246,18 +285,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getPricediff()
+    public function getPricediff() : ?int
     {
         return $this->pricediff;
     }
 
     /**
-     * @param int $pricediff
-     * @return Property
+     * @param null | int $pricediff
+     * @return static
      */
-    public function withPricediff($pricediff)
+    public function withPricediff(?int $pricediff) : static
     {
         $new = clone $this;
         $new->pricediff = $pricediff;
@@ -266,18 +305,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getPriceindex()
+    public function getPriceindex() : ?int
     {
         return $this->priceindex;
     }
 
     /**
-     * @param int $priceindex
-     * @return Property
+     * @param null | int $priceindex
+     * @return static
      */
-    public function withPriceindex($priceindex)
+    public function withPriceindex(?int $priceindex) : static
     {
         $new = clone $this;
         $new->priceindex = $priceindex;
@@ -286,18 +325,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getActivity()
+    public function getActivity() : ?int
     {
         return $this->activity;
     }
 
     /**
-     * @param int $activity
-     * @return Property
+     * @param null | int $activity
+     * @return static
      */
-    public function withActivity($activity)
+    public function withActivity(?int $activity) : static
     {
         $new = clone $this;
         $new->activity = $activity;
@@ -306,18 +345,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getRegionalband()
+    public function getRegionalband() : ?int
     {
         return $this->regionalband;
     }
 
     /**
-     * @param int $regionalband
-     * @return Property
+     * @param null | int $regionalband
+     * @return static
      */
-    public function withRegionalband($regionalband)
+    public function withRegionalband(?int $regionalband) : static
     {
         $new = clone $this;
         $new->regionalband = $regionalband;
@@ -326,18 +365,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgdetvalue()
+    public function getAvgdetvalue() : ?int
     {
         return $this->avgdetvalue;
     }
 
     /**
-     * @param int $avgdetvalue
-     * @return Property
+     * @param null | int $avgdetvalue
+     * @return static
      */
-    public function withAvgdetvalue($avgdetvalue)
+    public function withAvgdetvalue(?int $avgdetvalue) : static
     {
         $new = clone $this;
         $new->avgdetvalue = $avgdetvalue;
@@ -346,18 +385,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgdetindex()
+    public function getAvgdetindex() : ?int
     {
         return $this->avgdetindex;
     }
 
     /**
-     * @param int $avgdetindex
-     * @return Property
+     * @param null | int $avgdetindex
+     * @return static
      */
-    public function withAvgdetindex($avgdetindex)
+    public function withAvgdetindex(?int $avgdetindex) : static
     {
         $new = clone $this;
         $new->avgdetindex = $avgdetindex;
@@ -366,18 +405,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgsemivalue()
+    public function getAvgsemivalue() : ?int
     {
         return $this->avgsemivalue;
     }
 
     /**
-     * @param int $avgsemivalue
-     * @return Property
+     * @param null | int $avgsemivalue
+     * @return static
      */
-    public function withAvgsemivalue($avgsemivalue)
+    public function withAvgsemivalue(?int $avgsemivalue) : static
     {
         $new = clone $this;
         $new->avgsemivalue = $avgsemivalue;
@@ -386,18 +425,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgsemiindex()
+    public function getAvgsemiindex() : ?int
     {
         return $this->avgsemiindex;
     }
 
     /**
-     * @param int $avgsemiindex
-     * @return Property
+     * @param null | int $avgsemiindex
+     * @return static
      */
-    public function withAvgsemiindex($avgsemiindex)
+    public function withAvgsemiindex(?int $avgsemiindex) : static
     {
         $new = clone $this;
         $new->avgsemiindex = $avgsemiindex;
@@ -406,18 +445,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgterrvalue()
+    public function getAvgterrvalue() : ?int
     {
         return $this->avgterrvalue;
     }
 
     /**
-     * @param int $avgterrvalue
-     * @return Property
+     * @param null | int $avgterrvalue
+     * @return static
      */
-    public function withAvgterrvalue($avgterrvalue)
+    public function withAvgterrvalue(?int $avgterrvalue) : static
     {
         $new = clone $this;
         $new->avgterrvalue = $avgterrvalue;
@@ -426,18 +465,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgterrindex()
+    public function getAvgterrindex() : ?int
     {
         return $this->avgterrindex;
     }
 
     /**
-     * @param int $avgterrindex
-     * @return Property
+     * @param null | int $avgterrindex
+     * @return static
      */
-    public function withAvgterrindex($avgterrindex)
+    public function withAvgterrindex(?int $avgterrindex) : static
     {
         $new = clone $this;
         $new->avgterrindex = $avgterrindex;
@@ -446,18 +485,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgflatvalue()
+    public function getAvgflatvalue() : ?int
     {
         return $this->avgflatvalue;
     }
 
     /**
-     * @param int $avgflatvalue
-     * @return Property
+     * @param null | int $avgflatvalue
+     * @return static
      */
-    public function withAvgflatvalue($avgflatvalue)
+    public function withAvgflatvalue(?int $avgflatvalue) : static
     {
         $new = clone $this;
         $new->avgflatvalue = $avgflatvalue;
@@ -466,18 +505,18 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getAvgflatindex()
+    public function getAvgflatindex() : ?int
     {
         return $this->avgflatindex;
     }
 
     /**
-     * @param int $avgflatindex
-     * @return Property
+     * @param null | int $avgflatindex
+     * @return static
      */
-    public function withAvgflatindex($avgflatindex)
+    public function withAvgflatindex(?int $avgflatindex) : static
     {
         $new = clone $this;
         $new->avgflatindex = $avgflatindex;
@@ -486,25 +525,23 @@ class Property
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getRegioncode()
+    public function getRegioncode() : ?int
     {
         return $this->regioncode;
     }
 
     /**
-     * @param int $regioncode
-     * @return Property
+     * @param null | int $regioncode
+     * @return static
      */
-    public function withRegioncode($regioncode)
+    public function withRegioncode(?int $regioncode) : static
     {
         $new = clone $this;
         $new->regioncode = $regioncode;
 
         return $new;
     }
-
-
 }
 

@@ -4,50 +4,62 @@ namespace PaymentAssist\Type;
 
 class CTOutputnotice
 {
+    /**
+     * Notice Type (Correction or Dispute)
+     * The list of possible values can be obtained from the web method LookupData07a table id = noticetype
+     *
+     * @var null | string
+     */
+    private ?string $type = null;
 
     /**
+     * Notice Reference Number
+     *
      * @var string
      */
-    private $type;
+    private string $refnum;
 
     /**
-     * @var string
-     */
-    private $refnum;
-
-    /**
+     * Date that the Notice was raised
+     *
      * @var \DateTimeInterface
      */
-    private $dateraised;
+    private \DateTimeInterface $dateraised;
 
     /**
-     * @var string
+     * Text for Notice of Correction
+     *
+     * @var null | string
      */
-    private $text;
+    private ?string $text = null;
 
     /**
-     * @var string
+     * Name details as provided on the Notice of Correction
+     *
+     * @var null | string
      */
-    private $name;
+    private ?string $name = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
+     * Address details as provided on the Notice of Correction
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddress
      */
-    private $address;
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getType()
+    public function getType() : ?string
     {
         return $this->type;
     }
 
     /**
-     * @param string $type
-     * @return CTOutputnotice
+     * @param null | string $type
+     * @return static
      */
-    public function withType($type)
+    public function withType(?string $type) : static
     {
         $new = clone $this;
         $new->type = $type;
@@ -58,16 +70,16 @@ class CTOutputnotice
     /**
      * @return string
      */
-    public function getRefnum()
+    public function getRefnum() : string
     {
         return $this->refnum;
     }
 
     /**
      * @param string $refnum
-     * @return CTOutputnotice
+     * @return static
      */
-    public function withRefnum($refnum)
+    public function withRefnum(string $refnum) : static
     {
         $new = clone $this;
         $new->refnum = $refnum;
@@ -78,16 +90,16 @@ class CTOutputnotice
     /**
      * @return \DateTimeInterface
      */
-    public function getDateraised()
+    public function getDateraised() : \DateTimeInterface
     {
         return $this->dateraised;
     }
 
     /**
      * @param \DateTimeInterface $dateraised
-     * @return CTOutputnotice
+     * @return static
      */
-    public function withDateraised($dateraised)
+    public function withDateraised(\DateTimeInterface $dateraised) : static
     {
         $new = clone $this;
         $new->dateraised = $dateraised;
@@ -96,18 +108,18 @@ class CTOutputnotice
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getText()
+    public function getText() : ?string
     {
         return $this->text;
     }
 
     /**
-     * @param string $text
-     * @return CTOutputnotice
+     * @param null | string $text
+     * @return static
      */
-    public function withText($text)
+    public function withText(?string $text) : static
     {
         $new = clone $this;
         $new->text = $text;
@@ -116,18 +128,18 @@ class CTOutputnotice
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return CTOutputnotice
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -136,25 +148,23 @@ class CTOutputnotice
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress()
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return CTOutputnotice
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
 
         return $new;
     }
-
-
 }
 

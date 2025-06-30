@@ -4,35 +4,40 @@ namespace PaymentAssist\Type;
 
 class CTLinkSearchDefinition
 {
+    /**
+     * Container for client's own data - returned in the response message
+     *
+     * @var null | \PaymentAssist\Type\CTPayload
+     */
+    private ?\PaymentAssist\Type\CTPayload $payload = null;
 
     /**
-     * @var \PaymentAssist\Type\CTPayload
+     * Your Reference will allow you to include a reference which can be used to internally identify applications
+     *
+     * @var null | string
      */
-    private $payload;
+    private ?string $yourreference = null;
 
     /**
-     * @var string
+     * Set of link search parameters to search
+     *
+     * @var null | \PaymentAssist\Type\CTLinkrequest
      */
-    private $yourreference;
+    private ?\PaymentAssist\Type\CTLinkrequest $linkrequest = null;
 
     /**
-     * @var \PaymentAssist\Type\CTLinkrequest
+     * @return null | \PaymentAssist\Type\CTPayload
      */
-    private $linkrequest;
-
-    /**
-     * @return \PaymentAssist\Type\CTPayload
-     */
-    public function getPayload()
+    public function getPayload() : ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTPayload $payload
-     * @return CTLinkSearchDefinition
+     * @param null | \PaymentAssist\Type\CTPayload $payload
+     * @return static
      */
-    public function withPayload($payload)
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -41,18 +46,18 @@ class CTLinkSearchDefinition
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getYourreference()
+    public function getYourreference() : ?string
     {
         return $this->yourreference;
     }
 
     /**
-     * @param string $yourreference
-     * @return CTLinkSearchDefinition
+     * @param null | string $yourreference
+     * @return static
      */
-    public function withYourreference($yourreference)
+    public function withYourreference(?string $yourreference) : static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -61,25 +66,23 @@ class CTLinkSearchDefinition
     }
 
     /**
-     * @return \PaymentAssist\Type\CTLinkrequest
+     * @return null | \PaymentAssist\Type\CTLinkrequest
      */
-    public function getLinkrequest()
+    public function getLinkrequest() : ?\PaymentAssist\Type\CTLinkrequest
     {
         return $this->linkrequest;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTLinkrequest $linkrequest
-     * @return CTLinkSearchDefinition
+     * @param null | \PaymentAssist\Type\CTLinkrequest $linkrequest
+     * @return static
      */
-    public function withLinkrequest($linkrequest)
+    public function withLinkrequest(?\PaymentAssist\Type\CTLinkrequest $linkrequest) : static
     {
         $new = clone $this;
         $new->linkrequest = $linkrequest;
 
         return $new;
     }
-
-
 }
 

@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class DefaultType
 {
-
     /**
-     * @var \DateTimeInterface
+     * Default date
+     *
+     * @var null | \DateTimeInterface
      */
-    private $defdate;
+    private ?\DateTimeInterface $defdate = null;
 
     /**
+     * Original default balance
+     *
      * @var int
      */
-    private $origdefbal;
+    private int $origdefbal;
 
     /**
-     * @var int
+     * Termination balance
+     *
+     * @var null | int
      */
-    private $termbal;
+    private ?int $termbal = null;
 
     /**
-     * @var \DateTimeInterface
+     * Default satisfaction date
+     *
+     * @var null | \DateTimeInterface
      */
-    private $defsatdate;
+    private ?\DateTimeInterface $defsatdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Repossession date
+     *
+     * @var null | \DateTimeInterface
      */
-    private $repodate;
+    private ?\DateTimeInterface $repodate = null;
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDefdate()
+    public function getDefdate() : ?\DateTimeInterface
     {
         return $this->defdate;
     }
 
     /**
-     * @param \DateTimeInterface $defdate
-     * @return DefaultType
+     * @param null | \DateTimeInterface $defdate
+     * @return static
      */
-    public function withDefdate($defdate)
+    public function withDefdate(?\DateTimeInterface $defdate) : static
     {
         $new = clone $this;
         $new->defdate = $defdate;
@@ -53,16 +62,16 @@ class DefaultType
     /**
      * @return int
      */
-    public function getOrigdefbal()
+    public function getOrigdefbal() : int
     {
         return $this->origdefbal;
     }
 
     /**
      * @param int $origdefbal
-     * @return DefaultType
+     * @return static
      */
-    public function withOrigdefbal($origdefbal)
+    public function withOrigdefbal(int $origdefbal) : static
     {
         $new = clone $this;
         $new->origdefbal = $origdefbal;
@@ -71,18 +80,18 @@ class DefaultType
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTermbal()
+    public function getTermbal() : ?int
     {
         return $this->termbal;
     }
 
     /**
-     * @param int $termbal
-     * @return DefaultType
+     * @param null | int $termbal
+     * @return static
      */
-    public function withTermbal($termbal)
+    public function withTermbal(?int $termbal) : static
     {
         $new = clone $this;
         $new->termbal = $termbal;
@@ -91,18 +100,18 @@ class DefaultType
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDefsatdate()
+    public function getDefsatdate() : ?\DateTimeInterface
     {
         return $this->defsatdate;
     }
 
     /**
-     * @param \DateTimeInterface $defsatdate
-     * @return DefaultType
+     * @param null | \DateTimeInterface $defsatdate
+     * @return static
      */
-    public function withDefsatdate($defsatdate)
+    public function withDefsatdate(?\DateTimeInterface $defsatdate) : static
     {
         $new = clone $this;
         $new->defsatdate = $defsatdate;
@@ -111,25 +120,23 @@ class DefaultType
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getRepodate()
+    public function getRepodate() : ?\DateTimeInterface
     {
         return $this->repodate;
     }
 
     /**
-     * @param \DateTimeInterface $repodate
-     * @return DefaultType
+     * @param null | \DateTimeInterface $repodate
+     * @return static
      */
-    public function withRepodate($repodate)
+    public function withRepodate(?\DateTimeInterface $repodate) : static
     {
         $new = clone $this;
         $new->repodate = $repodate;
 
         return $new;
     }
-
-
 }
 

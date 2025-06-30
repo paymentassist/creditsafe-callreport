@@ -4,35 +4,41 @@ namespace PaymentAssist\Type;
 
 class CTSummaryaddress
 {
-
     /**
+     * A value of 1 indicates that the address was found on the Postcode Address File
+     *
      * @var int
      */
-    private $pafvalid;
+    private int $pafvalid;
 
     /**
-     * @var int
+     * A value of 1 indicates that the Electoral Roll information is based on the rolling Electoral Roll
+     *
+     * @var null | int
      */
-    private $rollingroll;
+    private ?int $rollingroll = null;
 
     /**
+     * Message code indicating the level of confirmation (extended for current address)
+     * The list of possible values can be obtained from the web method LookupData07a table id = summaryresidencymessagecode
+     *
      * @var int
      */
-    private $messagecode;
+    private int $messagecode;
 
     /**
      * @return int
      */
-    public function getPafvalid()
+    public function getPafvalid() : int
     {
         return $this->pafvalid;
     }
 
     /**
      * @param int $pafvalid
-     * @return CTSummaryaddress
+     * @return static
      */
-    public function withPafvalid($pafvalid)
+    public function withPafvalid(int $pafvalid) : static
     {
         $new = clone $this;
         $new->pafvalid = $pafvalid;
@@ -41,18 +47,18 @@ class CTSummaryaddress
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getRollingroll()
+    public function getRollingroll() : ?int
     {
         return $this->rollingroll;
     }
 
     /**
-     * @param int $rollingroll
-     * @return CTSummaryaddress
+     * @param null | int $rollingroll
+     * @return static
      */
-    public function withRollingroll($rollingroll)
+    public function withRollingroll(?int $rollingroll) : static
     {
         $new = clone $this;
         $new->rollingroll = $rollingroll;
@@ -63,23 +69,21 @@ class CTSummaryaddress
     /**
      * @return int
      */
-    public function getMessagecode()
+    public function getMessagecode() : int
     {
         return $this->messagecode;
     }
 
     /**
      * @param int $messagecode
-     * @return CTSummaryaddress
+     * @return static
      */
-    public function withMessagecode($messagecode)
+    public function withMessagecode(int $messagecode) : static
     {
         $new = clone $this;
         $new->messagecode = $messagecode;
 
         return $new;
     }
-
-
 }
 

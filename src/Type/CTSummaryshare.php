@@ -4,65 +4,84 @@ namespace PaymentAssist\Type;
 
 class CTSummaryshare
 {
-
     /**
+     * Total number of SHARE Accounts
+     *
      * @var int
      */
-    private $totalaccounts;
+    private int $totalaccounts;
 
     /**
+     * Total number of active SHARE Accounts.
+     *
+     * @var null | int
+     */
+    private ?int $totalactiveaccs = null;
+
+    /**
+     * Total number of settled SHARE Accounts.
+     *
+     * @var null | int
+     */
+    private ?int $totalsettledaccs = null;
+
+    /**
+     * Total number of SHARE Accounts opened in the last 6 months.
+     *
      * @var int
      */
-    private $totalactiveaccs;
+    private int $totalopened6months;
 
     /**
+     * Worst payment status on SHARE Accounts in the last 12 months
+     * The list of possible values can be obtained from the web method LookupData07a table id = payment
+     *
+     * @var null | string
+     */
+    private ?string $worsepaystatus12months = null;
+
+    /**
+     * Worst payment status on SHARE Accounts in the last 36 months
+     * The list of possible values can be obtained from the web method LookupData07a table id = payment
+     *
+     * @var null | string
+     */
+    private ?string $worsepaystatus36months = null;
+
+    /**
+     * Total number of delinquent SHARE Accounts in the last 12 months
+     *
+     * @var null | int
+     */
+    private ?int $totaldelinqs12months = null;
+
+    /**
+     * Total number of SHARE Accounts that have defaulted in last 12 months
+     *
      * @var int
      */
-    private $totalsettledaccs;
+    private int $totaldefaults12months;
 
     /**
+     * Total number of SHARE Accounts that have defaulted in the last 36 months
+     *
      * @var int
      */
-    private $totalopened6months;
-
-    /**
-     * @var string
-     */
-    private $worsepaystatus12months;
-
-    /**
-     * @var string
-     */
-    private $worsepaystatus36months;
-
-    /**
-     * @var int
-     */
-    private $totaldelinqs12months;
-
-    /**
-     * @var int
-     */
-    private $totaldefaults12months;
-
-    /**
-     * @var int
-     */
-    private $totaldefaults36months;
+    private int $totaldefaults36months;
 
     /**
      * @return int
      */
-    public function getTotalaccounts()
+    public function getTotalaccounts() : int
     {
         return $this->totalaccounts;
     }
 
     /**
      * @param int $totalaccounts
-     * @return CTSummaryshare
+     * @return static
      */
-    public function withTotalaccounts($totalaccounts)
+    public function withTotalaccounts(int $totalaccounts) : static
     {
         $new = clone $this;
         $new->totalaccounts = $totalaccounts;
@@ -71,18 +90,18 @@ class CTSummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalactiveaccs()
+    public function getTotalactiveaccs() : ?int
     {
         return $this->totalactiveaccs;
     }
 
     /**
-     * @param int $totalactiveaccs
-     * @return CTSummaryshare
+     * @param null | int $totalactiveaccs
+     * @return static
      */
-    public function withTotalactiveaccs($totalactiveaccs)
+    public function withTotalactiveaccs(?int $totalactiveaccs) : static
     {
         $new = clone $this;
         $new->totalactiveaccs = $totalactiveaccs;
@@ -91,18 +110,18 @@ class CTSummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotalsettledaccs()
+    public function getTotalsettledaccs() : ?int
     {
         return $this->totalsettledaccs;
     }
 
     /**
-     * @param int $totalsettledaccs
-     * @return CTSummaryshare
+     * @param null | int $totalsettledaccs
+     * @return static
      */
-    public function withTotalsettledaccs($totalsettledaccs)
+    public function withTotalsettledaccs(?int $totalsettledaccs) : static
     {
         $new = clone $this;
         $new->totalsettledaccs = $totalsettledaccs;
@@ -113,16 +132,16 @@ class CTSummaryshare
     /**
      * @return int
      */
-    public function getTotalopened6months()
+    public function getTotalopened6months() : int
     {
         return $this->totalopened6months;
     }
 
     /**
      * @param int $totalopened6months
-     * @return CTSummaryshare
+     * @return static
      */
-    public function withTotalopened6months($totalopened6months)
+    public function withTotalopened6months(int $totalopened6months) : static
     {
         $new = clone $this;
         $new->totalopened6months = $totalopened6months;
@@ -131,18 +150,18 @@ class CTSummaryshare
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getWorsepaystatus12months()
+    public function getWorsepaystatus12months() : ?string
     {
         return $this->worsepaystatus12months;
     }
 
     /**
-     * @param string $worsepaystatus12months
-     * @return CTSummaryshare
+     * @param null | string $worsepaystatus12months
+     * @return static
      */
-    public function withWorsepaystatus12months($worsepaystatus12months)
+    public function withWorsepaystatus12months(?string $worsepaystatus12months) : static
     {
         $new = clone $this;
         $new->worsepaystatus12months = $worsepaystatus12months;
@@ -151,18 +170,18 @@ class CTSummaryshare
     }
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getWorsepaystatus36months()
+    public function getWorsepaystatus36months() : ?string
     {
         return $this->worsepaystatus36months;
     }
 
     /**
-     * @param string $worsepaystatus36months
-     * @return CTSummaryshare
+     * @param null | string $worsepaystatus36months
+     * @return static
      */
-    public function withWorsepaystatus36months($worsepaystatus36months)
+    public function withWorsepaystatus36months(?string $worsepaystatus36months) : static
     {
         $new = clone $this;
         $new->worsepaystatus36months = $worsepaystatus36months;
@@ -171,18 +190,18 @@ class CTSummaryshare
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getTotaldelinqs12months()
+    public function getTotaldelinqs12months() : ?int
     {
         return $this->totaldelinqs12months;
     }
 
     /**
-     * @param int $totaldelinqs12months
-     * @return CTSummaryshare
+     * @param null | int $totaldelinqs12months
+     * @return static
      */
-    public function withTotaldelinqs12months($totaldelinqs12months)
+    public function withTotaldelinqs12months(?int $totaldelinqs12months) : static
     {
         $new = clone $this;
         $new->totaldelinqs12months = $totaldelinqs12months;
@@ -193,16 +212,16 @@ class CTSummaryshare
     /**
      * @return int
      */
-    public function getTotaldefaults12months()
+    public function getTotaldefaults12months() : int
     {
         return $this->totaldefaults12months;
     }
 
     /**
      * @param int $totaldefaults12months
-     * @return CTSummaryshare
+     * @return static
      */
-    public function withTotaldefaults12months($totaldefaults12months)
+    public function withTotaldefaults12months(int $totaldefaults12months) : static
     {
         $new = clone $this;
         $new->totaldefaults12months = $totaldefaults12months;
@@ -213,23 +232,21 @@ class CTSummaryshare
     /**
      * @return int
      */
-    public function getTotaldefaults36months()
+    public function getTotaldefaults36months() : int
     {
         return $this->totaldefaults36months;
     }
 
     /**
      * @param int $totaldefaults36months
-     * @return CTSummaryshare
+     * @return static
      */
-    public function withTotaldefaults36months($totaldefaults36months)
+    public function withTotaldefaults36months(int $totaldefaults36months) : static
     {
         $new = clone $this;
         $new->totaldefaults36months = $totaldefaults36months;
 
         return $new;
     }
-
-
 }
 

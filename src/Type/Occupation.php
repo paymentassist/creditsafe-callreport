@@ -4,30 +4,33 @@ namespace PaymentAssist\Type;
 
 class Occupation
 {
+    /**
+     * Occupation Score
+     *
+     * @var null | float
+     */
+    private ?float $occscore = null;
 
     /**
-     * @var float
+     * Occupation Band
+     *
+     * @var null | int
      */
-    private $occscore;
+    private ?int $occband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $occband;
-
-    /**
-     * @return float
-     */
-    public function getOccscore()
+    public function getOccscore() : ?float
     {
         return $this->occscore;
     }
 
     /**
-     * @param float $occscore
-     * @return Occupation
+     * @param null | float $occscore
+     * @return static
      */
-    public function withOccscore($occscore)
+    public function withOccscore(?float $occscore) : static
     {
         $new = clone $this;
         $new->occscore = $occscore;
@@ -36,25 +39,23 @@ class Occupation
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getOccband()
+    public function getOccband() : ?int
     {
         return $this->occband;
     }
 
     /**
-     * @param int $occband
-     * @return Occupation
+     * @param null | int $occband
+     * @return static
      */
-    public function withOccband($occband)
+    public function withOccband(?int $occband) : static
     {
         $new = clone $this;
         $new->occband = $occband;
 
         return $new;
     }
-
-
 }
 

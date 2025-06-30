@@ -2,32 +2,35 @@
 
 namespace PaymentAssist\Type;
 
-class Applicant
+class Applicant extends CTOutputapplicant
 {
+    /**
+     * Alert Decision, Alert Review and Household Override Information
+     *
+     * @var null | \PaymentAssist\Type\CTOutputthirdpartyalerts
+     */
+    private ?\PaymentAssist\Type\CTOutputthirdpartyalerts $tpd = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputthirdpartyalerts
+     * A collection of Opt-In Associate Credit Reports
+     *
+     * @var null | \PaymentAssist\Type\Oias
      */
-    private $tpd;
+    private ?\PaymentAssist\Type\Oias $oias = null;
 
     /**
-     * @var \PaymentAssist\Type\Oias
+     * @return null | \PaymentAssist\Type\CTOutputthirdpartyalerts
      */
-    private $oias;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputthirdpartyalerts
-     */
-    public function getTpd()
+    public function getTpd() : ?\PaymentAssist\Type\CTOutputthirdpartyalerts
     {
         return $this->tpd;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputthirdpartyalerts $tpd
-     * @return Applicant
+     * @param null | \PaymentAssist\Type\CTOutputthirdpartyalerts $tpd
+     * @return static
      */
-    public function withTpd($tpd)
+    public function withTpd(?\PaymentAssist\Type\CTOutputthirdpartyalerts $tpd) : static
     {
         $new = clone $this;
         $new->tpd = $tpd;
@@ -36,25 +39,23 @@ class Applicant
     }
 
     /**
-     * @return \PaymentAssist\Type\Oias
+     * @return null | \PaymentAssist\Type\Oias
      */
-    public function getOias()
+    public function getOias() : ?\PaymentAssist\Type\Oias
     {
         return $this->oias;
     }
 
     /**
-     * @param \PaymentAssist\Type\Oias $oias
-     * @return Applicant
+     * @param null | \PaymentAssist\Type\Oias $oias
+     * @return static
      */
-    public function withOias($oias)
+    public function withOias(?\PaymentAssist\Type\Oias $oias) : static
     {
         $new = clone $this;
         $new->oias = $oias;
 
         return $new;
     }
-
-
 }
 

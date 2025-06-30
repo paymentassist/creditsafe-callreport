@@ -4,30 +4,35 @@ namespace PaymentAssist\Type;
 
 class Cifas
 {
+    /**
+     * Output structure for a CIFAS Filing
+     * This is only returned if CIFAS data is setup to be returned in admin
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputcifasfiling>
+     */
+    private array $filing;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputcifasfiling
+     * Output structure for a CIFAS Plus Case
+     * This is only returned if CIFAS+ data is setup to be returned in admin
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputcifascase>
      */
-    private $filing;
+    private array $case;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputcifascase
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputcifasfiling>
      */
-    private $case;
-
-    /**
-     * @return \PaymentAssist\Type\CTOutputcifasfiling
-     */
-    public function getFiling()
+    public function getFiling() : array
     {
         return $this->filing;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputcifasfiling $filing
-     * @return Cifas
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputcifasfiling> $filing
+     * @return static
      */
-    public function withFiling($filing)
+    public function withFiling(array $filing) : static
     {
         $new = clone $this;
         $new->filing = $filing;
@@ -36,25 +41,23 @@ class Cifas
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputcifascase
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputcifascase>
      */
-    public function getCase()
+    public function getCase() : array
     {
         return $this->case;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputcifascase $case
-     * @return Cifas
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputcifascase> $case
+     * @return static
      */
-    public function withCase($case)
+    public function withCase(array $case) : static
     {
         $new = clone $this;
         $new->case = $case;
 
         return $new;
     }
-
-
 }
 

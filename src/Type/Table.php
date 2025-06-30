@@ -4,35 +4,34 @@ namespace PaymentAssist\Type;
 
 class Table
 {
-
     /**
-     * @var \PaymentAssist\Type\Row
+     * @var non-empty-array<int<0,max>, \PaymentAssist\Type\Row>
      */
-    private $row;
-
-    /**
-     * @var string
-     */
-    private $id;
+    private array $row;
 
     /**
      * @var string
      */
-    private $desc;
+    private string $id;
 
     /**
-     * @return \PaymentAssist\Type\Row
+     * @var string
      */
-    public function getRow()
+    private string $desc;
+
+    /**
+     * @return non-empty-array<int<0,max>, \PaymentAssist\Type\Row>
+     */
+    public function getRow() : array
     {
         return $this->row;
     }
 
     /**
-     * @param \PaymentAssist\Type\Row $row
-     * @return Table
+     * @param non-empty-array<int<0,max>, \PaymentAssist\Type\Row> $row
+     * @return static
      */
-    public function withRow($row)
+    public function withRow(array $row) : static
     {
         $new = clone $this;
         $new->row = $row;
@@ -43,16 +42,16 @@ class Table
     /**
      * @return string
      */
-    public function getId()
+    public function getId() : string
     {
         return $this->id;
     }
 
     /**
      * @param string $id
-     * @return Table
+     * @return static
      */
-    public function withId($id)
+    public function withId(string $id) : static
     {
         $new = clone $this;
         $new->id = $id;
@@ -63,23 +62,21 @@ class Table
     /**
      * @return string
      */
-    public function getDesc()
+    public function getDesc() : string
     {
         return $this->desc;
     }
 
     /**
      * @param string $desc
-     * @return Table
+     * @return static
      */
-    public function withDesc($desc)
+    public function withDesc(string $desc) : static
     {
         $new = clone $this;
         $new->desc = $desc;
 
         return $new;
     }
-
-
 }
 

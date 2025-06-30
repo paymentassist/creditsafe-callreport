@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class Socialclass
 {
+    /**
+     * Social Class AB Indices
+     *
+     * @var null | int
+     */
+    private ?int $ab_ind = null;
 
     /**
-     * @var int
+     * Social Class C1 Indices
+     *
+     * @var null | int
      */
-    private $ab_ind;
+    private ?int $c1_ind = null;
 
     /**
-     * @var int
+     * Social Class C2 Indices
+     *
+     * @var null | int
      */
-    private $c1_ind;
+    private ?int $c2_ind = null;
 
     /**
-     * @var int
+     * Social Class DE Indices
+     *
+     * @var null | int
      */
-    private $c2_ind;
+    private ?int $de_ind = null;
 
     /**
-     * @var int
+     * @return null | int
      */
-    private $de_ind;
-
-    /**
-     * @return int
-     */
-    public function getAb_ind()
+    public function getAb_ind() : ?int
     {
         return $this->ab_ind;
     }
 
     /**
-     * @param int $ab_ind
-     * @return Socialclass
+     * @param null | int $ab_ind
+     * @return static
      */
-    public function withAb_ind($ab_ind)
+    public function withAb_ind(?int $ab_ind) : static
     {
         $new = clone $this;
         $new->ab_ind = $ab_ind;
@@ -46,18 +53,18 @@ class Socialclass
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getC1_ind()
+    public function getC1_ind() : ?int
     {
         return $this->c1_ind;
     }
 
     /**
-     * @param int $c1_ind
-     * @return Socialclass
+     * @param null | int $c1_ind
+     * @return static
      */
-    public function withC1_ind($c1_ind)
+    public function withC1_ind(?int $c1_ind) : static
     {
         $new = clone $this;
         $new->c1_ind = $c1_ind;
@@ -66,18 +73,18 @@ class Socialclass
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getC2_ind()
+    public function getC2_ind() : ?int
     {
         return $this->c2_ind;
     }
 
     /**
-     * @param int $c2_ind
-     * @return Socialclass
+     * @param null | int $c2_ind
+     * @return static
      */
-    public function withC2_ind($c2_ind)
+    public function withC2_ind(?int $c2_ind) : static
     {
         $new = clone $this;
         $new->c2_ind = $c2_ind;
@@ -86,25 +93,23 @@ class Socialclass
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getDe_ind()
+    public function getDe_ind() : ?int
     {
         return $this->de_ind;
     }
 
     /**
-     * @param int $de_ind
-     * @return Socialclass
+     * @param null | int $de_ind
+     * @return static
      */
-    public function withDe_ind($de_ind)
+    public function withDe_ind(?int $de_ind) : static
     {
         $new = clone $this;
         $new->de_ind = $de_ind;
 
         return $new;
     }
-
-
 }
 

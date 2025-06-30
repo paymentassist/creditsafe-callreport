@@ -24,3 +24,7 @@ See `example.php`.
 
 [1]: https://www.creditsafe.com/gb/en.html
 [2]: https://getcomposer.org/
+
+### Regenerating class maps
+
+```./vendor/bin/soap-client generate:classmap --config=./config/soap-client.php```

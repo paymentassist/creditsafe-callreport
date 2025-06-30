@@ -6,32 +6,31 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class CTLookupDataResponse implements ResultInterface
 {
+    /**
+     * Response type for Lookup Data Web Method
+     *
+     * @var null | \PaymentAssist\Type\CTLookupDataResult
+     */
+    private ?\PaymentAssist\Type\CTLookupDataResult $LookupDataResult = null;
 
     /**
-     * @var \PaymentAssist\Type\CTLookupDataResult
+     * @return null | \PaymentAssist\Type\CTLookupDataResult
      */
-    private $LookupDataResult;
-
-    /**
-     * @return \PaymentAssist\Type\CTLookupDataResult
-     */
-    public function getLookupDataResult()
+    public function getLookupDataResult() : ?\PaymentAssist\Type\CTLookupDataResult
     {
         return $this->LookupDataResult;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTLookupDataResult $LookupDataResult
-     * @return CTLookupDataResponse
+     * @param null | \PaymentAssist\Type\CTLookupDataResult $LookupDataResult
+     * @return static
      */
-    public function withLookupDataResult($LookupDataResult)
+    public function withLookupDataResult(?\PaymentAssist\Type\CTLookupDataResult $LookupDataResult) : static
     {
         $new = clone $this;
         $new->LookupDataResult = $LookupDataResult;
 
         return $new;
     }
-
-
 }
 

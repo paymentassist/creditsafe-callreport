@@ -4,50 +4,61 @@ namespace PaymentAssist\Type;
 
 class Unemployment
 {
+    /**
+     * Long Term Male Unemployment
+     *
+     * @var null | float
+     */
+    private ?float $unemmalelt = null;
 
     /**
-     * @var float
+     * Unemployment among 18 to 24 year olds
+     *
+     * @var null | float
      */
-    private $unemmalelt;
+    private ?float $unem1824 = null;
 
     /**
-     * @var float
+     * Unemployment among 25 to 39 year olds
+     *
+     * @var null | float
      */
-    private $unem1824;
+    private ?float $unem2539 = null;
 
     /**
-     * @var float
+     * Unemployment among those aged 40 and over
+     *
+     * @var null | float
      */
-    private $unem2539;
+    private ?float $unem40pl = null;
 
     /**
-     * @var float
+     * Unemployment Score
+     *
+     * @var null | float
      */
-    private $unem40pl;
+    private ?float $unemscore = null;
 
     /**
-     * @var float
+     * Unemployment Band
+     *
+     * @var null | int
      */
-    private $unemscore;
+    private ?int $unemband = null;
 
     /**
-     * @var int
+     * @return null | float
      */
-    private $unemband;
-
-    /**
-     * @return float
-     */
-    public function getUnemmalelt()
+    public function getUnemmalelt() : ?float
     {
         return $this->unemmalelt;
     }
 
     /**
-     * @param float $unemmalelt
-     * @return Unemployment
+     * @param null | float $unemmalelt
+     * @return static
      */
-    public function withUnemmalelt($unemmalelt)
+    public function withUnemmalelt(?float $unemmalelt) : static
     {
         $new = clone $this;
         $new->unemmalelt = $unemmalelt;
@@ -56,18 +67,18 @@ class Unemployment
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getUnem1824()
+    public function getUnem1824() : ?float
     {
         return $this->unem1824;
     }
 
     /**
-     * @param float $unem1824
-     * @return Unemployment
+     * @param null | float $unem1824
+     * @return static
      */
-    public function withUnem1824($unem1824)
+    public function withUnem1824(?float $unem1824) : static
     {
         $new = clone $this;
         $new->unem1824 = $unem1824;
@@ -76,18 +87,18 @@ class Unemployment
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getUnem2539()
+    public function getUnem2539() : ?float
     {
         return $this->unem2539;
     }
 
     /**
-     * @param float $unem2539
-     * @return Unemployment
+     * @param null | float $unem2539
+     * @return static
      */
-    public function withUnem2539($unem2539)
+    public function withUnem2539(?float $unem2539) : static
     {
         $new = clone $this;
         $new->unem2539 = $unem2539;
@@ -96,18 +107,18 @@ class Unemployment
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getUnem40pl()
+    public function getUnem40pl() : ?float
     {
         return $this->unem40pl;
     }
 
     /**
-     * @param float $unem40pl
-     * @return Unemployment
+     * @param null | float $unem40pl
+     * @return static
      */
-    public function withUnem40pl($unem40pl)
+    public function withUnem40pl(?float $unem40pl) : static
     {
         $new = clone $this;
         $new->unem40pl = $unem40pl;
@@ -116,18 +127,18 @@ class Unemployment
     }
 
     /**
-     * @return float
+     * @return null | float
      */
-    public function getUnemscore()
+    public function getUnemscore() : ?float
     {
         return $this->unemscore;
     }
 
     /**
-     * @param float $unemscore
-     * @return Unemployment
+     * @param null | float $unemscore
+     * @return static
      */
-    public function withUnemscore($unemscore)
+    public function withUnemscore(?float $unemscore) : static
     {
         $new = clone $this;
         $new->unemscore = $unemscore;
@@ -136,25 +147,23 @@ class Unemployment
     }
 
     /**
-     * @return int
+     * @return null | int
      */
-    public function getUnemband()
+    public function getUnemband() : ?int
     {
         return $this->unemband;
     }
 
     /**
-     * @param int $unemband
-     * @return Unemployment
+     * @param null | int $unemband
+     * @return static
      */
-    public function withUnemband($unemband)
+    public function withUnemband(?int $unemband) : static
     {
         $new = clone $this;
         $new->unemband = $unemband;
 
         return $new;
     }
-
-
 }
 

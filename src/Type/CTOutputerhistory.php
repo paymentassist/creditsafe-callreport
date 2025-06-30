@@ -4,45 +4,54 @@ namespace PaymentAssist\Type;
 
 class CTOutputerhistory
 {
-
     /**
+     * Start date for this Electoral Roll history period
+     *
      * @var \DateTimeInterface
      */
-    private $startdate;
+    private \DateTimeInterface $startdate;
 
     /**
-     * @var \DateTimeInterface
+     * End date for this Electoral Roll history period
+     *
+     * @var null | \DateTimeInterface
      */
-    private $enddate;
+    private ?\DateTimeInterface $enddate = null;
 
     /**
+     * A value of 1 indicates that this Electoral Roll history is opted out
+     *
      * @var int
      */
-    private $optout;
+    private int $optout;
 
     /**
+     * A value of 1 indicates that this Electoral Roll history is based on the Rolling Electoral Roll
+     *
      * @var int
      */
-    private $rollingroll;
+    private int $rollingroll;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of dispute and correction notices against a period of Electoral Roll history
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
      * @return \DateTimeInterface
      */
-    public function getStartdate()
+    public function getStartdate() : \DateTimeInterface
     {
         return $this->startdate;
     }
 
     /**
      * @param \DateTimeInterface $startdate
-     * @return CTOutputerhistory
+     * @return static
      */
-    public function withStartdate($startdate)
+    public function withStartdate(\DateTimeInterface $startdate) : static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -51,18 +60,18 @@ class CTOutputerhistory
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getEnddate()
+    public function getEnddate() : ?\DateTimeInterface
     {
         return $this->enddate;
     }
 
     /**
-     * @param \DateTimeInterface $enddate
-     * @return CTOutputerhistory
+     * @param null | \DateTimeInterface $enddate
+     * @return static
      */
-    public function withEnddate($enddate)
+    public function withEnddate(?\DateTimeInterface $enddate) : static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -73,16 +82,16 @@ class CTOutputerhistory
     /**
      * @return int
      */
-    public function getOptout()
+    public function getOptout() : int
     {
         return $this->optout;
     }
 
     /**
      * @param int $optout
-     * @return CTOutputerhistory
+     * @return static
      */
-    public function withOptout($optout)
+    public function withOptout(int $optout) : static
     {
         $new = clone $this;
         $new->optout = $optout;
@@ -93,16 +102,16 @@ class CTOutputerhistory
     /**
      * @return int
      */
-    public function getRollingroll()
+    public function getRollingroll() : int
     {
         return $this->rollingroll;
     }
 
     /**
      * @param int $rollingroll
-     * @return CTOutputerhistory
+     * @return static
      */
-    public function withRollingroll($rollingroll)
+    public function withRollingroll(int $rollingroll) : static
     {
         $new = clone $this;
         $new->rollingroll = $rollingroll;
@@ -111,25 +120,23 @@ class CTOutputerhistory
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputerhistory
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
 
         return $new;
     }
-
-
 }
 

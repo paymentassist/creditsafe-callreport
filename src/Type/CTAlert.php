@@ -4,40 +4,47 @@ namespace PaymentAssist\Type;
 
 class CTAlert
 {
-
     /**
-     * @var \PaymentAssist\Type\CTAlertindividual
+     * Name and Notice of Correction information for each Alert Individual
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTAlertindividual>
      */
-    private $alertindividual;
+    private array $alertindividual;
 
     /**
-     * @var \PaymentAssist\Type\Creditscores
+     * Summarised Scores for Alert Individuals (these scores will not be returned for Alert Review)
+     *
+     * @var null | \PaymentAssist\Type\Creditscores
      */
-    private $creditscores;
+    private ?\PaymentAssist\Type\Creditscores $creditscores = null;
 
     /**
-     * @var \PaymentAssist\Type\CTAlertsummary
+     * Alert Summary Block
+     *
+     * @var null | \PaymentAssist\Type\CTAlertsummary
      */
-    private $summary;
+    private ?\PaymentAssist\Type\CTAlertsummary $summary = null;
 
     /**
+     * Total number of Individuals that meet Alert criteria (either Alert Decision or Alert Review)
+     *
      * @var int
      */
-    private $total;
+    private int $total;
 
     /**
-     * @return \PaymentAssist\Type\CTAlertindividual
+     * @return array<int<0,max>, \PaymentAssist\Type\CTAlertindividual>
      */
-    public function getAlertindividual()
+    public function getAlertindividual() : array
     {
         return $this->alertindividual;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAlertindividual $alertindividual
-     * @return CTAlert
+     * @param array<int<0,max>, \PaymentAssist\Type\CTAlertindividual> $alertindividual
+     * @return static
      */
-    public function withAlertindividual($alertindividual)
+    public function withAlertindividual(array $alertindividual) : static
     {
         $new = clone $this;
         $new->alertindividual = $alertindividual;
@@ -46,18 +53,18 @@ class CTAlert
     }
 
     /**
-     * @return \PaymentAssist\Type\Creditscores
+     * @return null | \PaymentAssist\Type\Creditscores
      */
-    public function getCreditscores()
+    public function getCreditscores() : ?\PaymentAssist\Type\Creditscores
     {
         return $this->creditscores;
     }
 
     /**
-     * @param \PaymentAssist\Type\Creditscores $creditscores
-     * @return CTAlert
+     * @param null | \PaymentAssist\Type\Creditscores $creditscores
+     * @return static
      */
-    public function withCreditscores($creditscores)
+    public function withCreditscores(?\PaymentAssist\Type\Creditscores $creditscores) : static
     {
         $new = clone $this;
         $new->creditscores = $creditscores;
@@ -66,18 +73,18 @@ class CTAlert
     }
 
     /**
-     * @return \PaymentAssist\Type\CTAlertsummary
+     * @return null | \PaymentAssist\Type\CTAlertsummary
      */
-    public function getSummary()
+    public function getSummary() : ?\PaymentAssist\Type\CTAlertsummary
     {
         return $this->summary;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTAlertsummary $summary
-     * @return CTAlert
+     * @param null | \PaymentAssist\Type\CTAlertsummary $summary
+     * @return static
      */
-    public function withSummary($summary)
+    public function withSummary(?\PaymentAssist\Type\CTAlertsummary $summary) : static
     {
         $new = clone $this;
         $new->summary = $summary;
@@ -88,23 +95,21 @@ class CTAlert
     /**
      * @return int
      */
-    public function getTotal()
+    public function getTotal() : int
     {
         return $this->total;
     }
 
     /**
      * @param int $total
-     * @return CTAlert
+     * @return static
      */
-    public function withTotal($total)
+    public function withTotal(int $total) : static
     {
         $new = clone $this;
         $new->total = $total;
 
         return $new;
     }
-
-
 }
 

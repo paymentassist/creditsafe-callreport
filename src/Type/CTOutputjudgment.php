@@ -4,75 +4,98 @@ namespace PaymentAssist\Type;
 
 class CTOutputjudgment
 {
+    /**
+     * Name details as provided on the Judgment
+     *
+     * @var null | string
+     */
+    private ?string $name = null;
 
     /**
+     * Address details as provided on the Judgment
+     *
+     * @var null | \PaymentAssist\Type\CTOutputaddress
+     */
+    private ?\PaymentAssist\Type\CTOutputaddress $address = null;
+
+    /**
+     * Date of birth
+     *
+     * @var null | \DateTimeInterface
+     */
+    private ?\DateTimeInterface $dob = null;
+
+    /**
+     * Court name
+     *
      * @var string
      */
-    private $name;
+    private string $courtname;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputaddress
-     */
-    private $address;
-
-    /**
-     * @var \DateTimeInterface
-     */
-    private $dob;
-
-    /**
-     * @var string
-     */
-    private $courtname;
-
-    /**
+     * Court type
+     * The list of possible values can be obtained from the web method LookupData07a table id = courttype
+     *
      * @var int
      */
-    private $courttype;
+    private int $courttype;
 
     /**
+     * Case number
+     *
      * @var string
      */
-    private $casenumber;
+    private string $casenumber;
 
     /**
+     * Status of Judgment
+     * The list of possible values can be obtained from the web method LookupData07a table id = judgmentstatus
+     *
      * @var string
      */
-    private $status;
+    private string $status;
 
     /**
+     * Total amount of the Judgment
+     *
      * @var int
      */
-    private $amount;
+    private int $amount;
 
     /**
-     * @var \DateTimeInterface
+     * Date of the Judgment
+     *
+     * @var null | \DateTimeInterface
      */
-    private $judgmentdate;
+    private ?\DateTimeInterface $judgmentdate = null;
 
     /**
-     * @var \DateTimeInterface
+     * Date that the Judgment was satisfied
+     *
+     * @var null | \DateTimeInterface
      */
-    private $datesatisfied;
+    private ?\DateTimeInterface $datesatisfied = null;
 
     /**
-     * @var \PaymentAssist\Type\CTOutputnotice
+     * Set of Dispute and Correction Notices against the Judgment
+     *
+     * @var array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    private $notice;
+    private array $notice;
 
     /**
-     * @return string
+     * @return null | string
      */
-    public function getName()
+    public function getName() : ?string
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
-     * @return CTOutputjudgment
+     * @param null | string $name
+     * @return static
      */
-    public function withName($name)
+    public function withName(?string $name) : static
     {
         $new = clone $this;
         $new->name = $name;
@@ -81,18 +104,18 @@ class CTOutputjudgment
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputaddress
+     * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress()
+    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputaddress $address
-     * @return CTOutputjudgment
+     * @param null | \PaymentAssist\Type\CTOutputaddress $address
+     * @return static
      */
-    public function withAddress($address)
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
     {
         $new = clone $this;
         $new->address = $address;
@@ -101,18 +124,18 @@ class CTOutputjudgment
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDob()
+    public function getDob() : ?\DateTimeInterface
     {
         return $this->dob;
     }
 
     /**
-     * @param \DateTimeInterface $dob
-     * @return CTOutputjudgment
+     * @param null | \DateTimeInterface $dob
+     * @return static
      */
-    public function withDob($dob)
+    public function withDob(?\DateTimeInterface $dob) : static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -123,16 +146,16 @@ class CTOutputjudgment
     /**
      * @return string
      */
-    public function getCourtname()
+    public function getCourtname() : string
     {
         return $this->courtname;
     }
 
     /**
      * @param string $courtname
-     * @return CTOutputjudgment
+     * @return static
      */
-    public function withCourtname($courtname)
+    public function withCourtname(string $courtname) : static
     {
         $new = clone $this;
         $new->courtname = $courtname;
@@ -143,16 +166,16 @@ class CTOutputjudgment
     /**
      * @return int
      */
-    public function getCourttype()
+    public function getCourttype() : int
     {
         return $this->courttype;
     }
 
     /**
      * @param int $courttype
-     * @return CTOutputjudgment
+     * @return static
      */
-    public function withCourttype($courttype)
+    public function withCourttype(int $courttype) : static
     {
         $new = clone $this;
         $new->courttype = $courttype;
@@ -163,16 +186,16 @@ class CTOutputjudgment
     /**
      * @return string
      */
-    public function getCasenumber()
+    public function getCasenumber() : string
     {
         return $this->casenumber;
     }
 
     /**
      * @param string $casenumber
-     * @return CTOutputjudgment
+     * @return static
      */
-    public function withCasenumber($casenumber)
+    public function withCasenumber(string $casenumber) : static
     {
         $new = clone $this;
         $new->casenumber = $casenumber;
@@ -183,16 +206,16 @@ class CTOutputjudgment
     /**
      * @return string
      */
-    public function getStatus()
+    public function getStatus() : string
     {
         return $this->status;
     }
 
     /**
      * @param string $status
-     * @return CTOutputjudgment
+     * @return static
      */
-    public function withStatus($status)
+    public function withStatus(string $status) : static
     {
         $new = clone $this;
         $new->status = $status;
@@ -203,16 +226,16 @@ class CTOutputjudgment
     /**
      * @return int
      */
-    public function getAmount()
+    public function getAmount() : int
     {
         return $this->amount;
     }
 
     /**
      * @param int $amount
-     * @return CTOutputjudgment
+     * @return static
      */
-    public function withAmount($amount)
+    public function withAmount(int $amount) : static
     {
         $new = clone $this;
         $new->amount = $amount;
@@ -221,18 +244,18 @@ class CTOutputjudgment
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getJudgmentdate()
+    public function getJudgmentdate() : ?\DateTimeInterface
     {
         return $this->judgmentdate;
     }
 
     /**
-     * @param \DateTimeInterface $judgmentdate
-     * @return CTOutputjudgment
+     * @param null | \DateTimeInterface $judgmentdate
+     * @return static
      */
-    public function withJudgmentdate($judgmentdate)
+    public function withJudgmentdate(?\DateTimeInterface $judgmentdate) : static
     {
         $new = clone $this;
         $new->judgmentdate = $judgmentdate;
@@ -241,18 +264,18 @@ class CTOutputjudgment
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return null | \DateTimeInterface
      */
-    public function getDatesatisfied()
+    public function getDatesatisfied() : ?\DateTimeInterface
     {
         return $this->datesatisfied;
     }
 
     /**
-     * @param \DateTimeInterface $datesatisfied
-     * @return CTOutputjudgment
+     * @param null | \DateTimeInterface $datesatisfied
+     * @return static
      */
-    public function withDatesatisfied($datesatisfied)
+    public function withDatesatisfied(?\DateTimeInterface $datesatisfied) : static
     {
         $new = clone $this;
         $new->datesatisfied = $datesatisfied;
@@ -261,25 +284,23 @@ class CTOutputjudgment
     }
 
     /**
-     * @return \PaymentAssist\Type\CTOutputnotice
+     * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice()
+    public function getNotice() : array
     {
         return $this->notice;
     }
 
     /**
-     * @param \PaymentAssist\Type\CTOutputnotice $notice
-     * @return CTOutputjudgment
+     * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
+     * @return static
      */
-    public function withNotice($notice)
+    public function withNotice(array $notice) : static
     {
         $new = clone $this;
         $new->notice = $notice;
 
         return $new;
     }
-
-
 }
 
