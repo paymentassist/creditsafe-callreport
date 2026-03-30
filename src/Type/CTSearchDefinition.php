@@ -42,7 +42,7 @@ class CTSearchDefinition
     /**
      * @return null | \PaymentAssist\Type\CTPayload
      */
-    public function getPayload() : ?\PaymentAssist\Type\CTPayload
+    public function getPayload(): ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
@@ -51,7 +51,7 @@ class CTSearchDefinition
      * @param null | \PaymentAssist\Type\CTPayload $payload
      * @return static
      */
-    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload): static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -62,7 +62,7 @@ class CTSearchDefinition
     /**
      * @return null | string
      */
-    public function getYourreference() : ?string
+    public function getYourreference(): ?string
     {
         return $this->yourreference;
     }
@@ -71,7 +71,7 @@ class CTSearchDefinition
      * @param null | string $yourreference
      * @return static
      */
-    public function withYourreference(?string $yourreference) : static
+    public function withYourreference(?string $yourreference): static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -82,7 +82,7 @@ class CTSearchDefinition
     /**
      * @return null | \PaymentAssist\Type\CTSearchrequest
      */
-    public function getCreditrequest() : ?\PaymentAssist\Type\CTSearchrequest
+    public function getCreditrequest(): ?\PaymentAssist\Type\CTSearchrequest
     {
         return $this->creditrequest;
     }
@@ -91,7 +91,7 @@ class CTSearchDefinition
      * @param null | \PaymentAssist\Type\CTSearchrequest $creditrequest
      * @return static
      */
-    public function withCreditrequest(?\PaymentAssist\Type\CTSearchrequest $creditrequest) : static
+    public function withCreditrequest(?\PaymentAssist\Type\CTSearchrequest $creditrequest): static
     {
         $new = clone $this;
         $new->creditrequest = $creditrequest;
@@ -102,7 +102,7 @@ class CTSearchDefinition
     /**
      * @return null | \PaymentAssist\Type\CTApipicklist
      */
-    public function getPicklist() : ?\PaymentAssist\Type\CTApipicklist
+    public function getPicklist(): ?\PaymentAssist\Type\CTApipicklist
     {
         return $this->picklist;
     }
@@ -111,7 +111,7 @@ class CTSearchDefinition
      * @param null | \PaymentAssist\Type\CTApipicklist $picklist
      * @return static
      */
-    public function withPicklist(?\PaymentAssist\Type\CTApipicklist $picklist) : static
+    public function withPicklist(?\PaymentAssist\Type\CTApipicklist $picklist): static
     {
         $new = clone $this;
         $new->picklist = $picklist;
@@ -122,7 +122,7 @@ class CTSearchDefinition
     /**
      * @return null | string
      */
-    public function getToken() : ?string
+    public function getToken(): ?string
     {
         return $this->token;
     }
@@ -131,7 +131,7 @@ class CTSearchDefinition
      * @param null | string $token
      * @return static
      */
-    public function withToken(?string $token) : static
+    public function withToken(?string $token): static
     {
         $new = clone $this;
         $new->token = $token;

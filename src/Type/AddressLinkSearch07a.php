@@ -26,7 +26,7 @@ class AddressLinkSearch07a implements RequestInterface
     /**
      * @return null | \PaymentAssist\Type\CTLinkSearchDefinition
      */
-    public function getSearchDefinition() : ?\PaymentAssist\Type\CTLinkSearchDefinition
+    public function getSearchDefinition(): ?\PaymentAssist\Type\CTLinkSearchDefinition
     {
         return $this->SearchDefinition;
     }
@@ -35,7 +35,7 @@ class AddressLinkSearch07a implements RequestInterface
      * @param null | \PaymentAssist\Type\CTLinkSearchDefinition $SearchDefinition
      * @return static
      */
-    public function withSearchDefinition(?\PaymentAssist\Type\CTLinkSearchDefinition $SearchDefinition) : static
+    public function withSearchDefinition(?\PaymentAssist\Type\CTLinkSearchDefinition $SearchDefinition): static
     {
         $new = clone $this;
         $new->SearchDefinition = $SearchDefinition;

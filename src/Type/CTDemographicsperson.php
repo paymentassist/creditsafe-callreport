@@ -45,7 +45,7 @@ class CTDemographicsperson
     /**
      * @return null | string
      */
-    public function getCustomerstatus() : ?string
+    public function getCustomerstatus(): ?string
     {
         return $this->customerstatus;
     }
@@ -54,7 +54,7 @@ class CTDemographicsperson
      * @param null | string $customerstatus
      * @return static
      */
-    public function withCustomerstatus(?string $customerstatus) : static
+    public function withCustomerstatus(?string $customerstatus): static
     {
         $new = clone $this;
         $new->customerstatus = $customerstatus;
@@ -65,7 +65,7 @@ class CTDemographicsperson
     /**
      * @return null | string
      */
-    public function getMaritalstatus() : ?string
+    public function getMaritalstatus(): ?string
     {
         return $this->maritalstatus;
     }
@@ -74,7 +74,7 @@ class CTDemographicsperson
      * @param null | string $maritalstatus
      * @return static
      */
-    public function withMaritalstatus(?string $maritalstatus) : static
+    public function withMaritalstatus(?string $maritalstatus): static
     {
         $new = clone $this;
         $new->maritalstatus = $maritalstatus;
@@ -85,7 +85,7 @@ class CTDemographicsperson
     /**
      * @return null | int
      */
-    public function getTotaldependents() : ?int
+    public function getTotaldependents(): ?int
     {
         return $this->totaldependents;
     }
@@ -94,7 +94,7 @@ class CTDemographicsperson
      * @param null | int $totaldependents
      * @return static
      */
-    public function withTotaldependents(?int $totaldependents) : static
+    public function withTotaldependents(?int $totaldependents): static
     {
         $new = clone $this;
         $new->totaldependents = $totaldependents;
@@ -105,7 +105,7 @@ class CTDemographicsperson
     /**
      * @return null | string
      */
-    public function getLanguage() : ?string
+    public function getLanguage(): ?string
     {
         return $this->language;
     }
@@ -114,7 +114,7 @@ class CTDemographicsperson
      * @param null | string $language
      * @return static
      */
-    public function withLanguage(?string $language) : static
+    public function withLanguage(?string $language): static
     {
         $new = clone $this;
         $new->language = $language;
@@ -125,7 +125,7 @@ class CTDemographicsperson
     /**
      * @return array<int<0,3>, \PaymentAssist\Type\CTDemographicsidentity>
      */
-    public function getIdentity() : array
+    public function getIdentity(): array
     {
         return $this->identity;
     }
@@ -134,7 +134,7 @@ class CTDemographicsperson
      * @param array<int<0,3>, \PaymentAssist\Type\CTDemographicsidentity> $identity
      * @return static
      */
-    public function withIdentity(array $identity) : static
+    public function withIdentity(array $identity): static
     {
         $new = clone $this;
         $new->identity = $identity;

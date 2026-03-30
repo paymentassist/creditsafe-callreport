@@ -70,7 +70,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTJobdetails
      */
-    public function getJobdetails() : ?\PaymentAssist\Type\CTJobdetails
+    public function getJobdetails(): ?\PaymentAssist\Type\CTJobdetails
     {
         return $this->jobdetails;
     }
@@ -79,7 +79,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTJobdetails $jobdetails
      * @return static
      */
-    public function withJobdetails(?\PaymentAssist\Type\CTJobdetails $jobdetails) : static
+    public function withJobdetails(?\PaymentAssist\Type\CTJobdetails $jobdetails): static
     {
         $new = clone $this;
         $new->jobdetails = $jobdetails;
@@ -90,7 +90,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTPayload
      */
-    public function getPayload() : ?\PaymentAssist\Type\CTPayload
+    public function getPayload(): ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
@@ -99,7 +99,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTPayload $payload
      * @return static
      */
-    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload): static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -110,7 +110,7 @@ class CTSearchResult
     /**
      * @return null | string
      */
-    public function getYourreference() : ?string
+    public function getYourreference(): ?string
     {
         return $this->yourreference;
     }
@@ -119,7 +119,7 @@ class CTSearchResult
      * @param null | string $yourreference
      * @return static
      */
-    public function withYourreference(?string $yourreference) : static
+    public function withYourreference(?string $yourreference): static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -130,7 +130,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTLinkrequest
      */
-    public function getLinkrequest() : ?\PaymentAssist\Type\CTLinkrequest
+    public function getLinkrequest(): ?\PaymentAssist\Type\CTLinkrequest
     {
         return $this->linkrequest;
     }
@@ -139,7 +139,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTLinkrequest $linkrequest
      * @return static
      */
-    public function withLinkrequest(?\PaymentAssist\Type\CTLinkrequest $linkrequest) : static
+    public function withLinkrequest(?\PaymentAssist\Type\CTLinkrequest $linkrequest): static
     {
         $new = clone $this;
         $new->linkrequest = $linkrequest;
@@ -150,7 +150,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTAmendsubsequent
      */
-    public function getSecondaryrequest() : ?\PaymentAssist\Type\CTAmendsubsequent
+    public function getSecondaryrequest(): ?\PaymentAssist\Type\CTAmendsubsequent
     {
         return $this->secondaryrequest;
     }
@@ -159,7 +159,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTAmendsubsequent $secondaryrequest
      * @return static
      */
-    public function withSecondaryrequest(?\PaymentAssist\Type\CTAmendsubsequent $secondaryrequest) : static
+    public function withSecondaryrequest(?\PaymentAssist\Type\CTAmendsubsequent $secondaryrequest): static
     {
         $new = clone $this;
         $new->secondaryrequest = $secondaryrequest;
@@ -170,7 +170,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTSearchrequest
      */
-    public function getCreditrequest() : ?\PaymentAssist\Type\CTSearchrequest
+    public function getCreditrequest(): ?\PaymentAssist\Type\CTSearchrequest
     {
         return $this->creditrequest;
     }
@@ -179,7 +179,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTSearchrequest $creditrequest
      * @return static
      */
-    public function withCreditrequest(?\PaymentAssist\Type\CTSearchrequest $creditrequest) : static
+    public function withCreditrequest(?\PaymentAssist\Type\CTSearchrequest $creditrequest): static
     {
         $new = clone $this;
         $new->creditrequest = $creditrequest;
@@ -190,7 +190,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTApipicklist
      */
-    public function getPicklist() : ?\PaymentAssist\Type\CTApipicklist
+    public function getPicklist(): ?\PaymentAssist\Type\CTApipicklist
     {
         return $this->picklist;
     }
@@ -199,7 +199,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTApipicklist $picklist
      * @return static
      */
-    public function withPicklist(?\PaymentAssist\Type\CTApipicklist $picklist) : static
+    public function withPicklist(?\PaymentAssist\Type\CTApipicklist $picklist): static
     {
         $new = clone $this;
         $new->picklist = $picklist;
@@ -210,7 +210,7 @@ class CTSearchResult
     /**
      * @return null | string
      */
-    public function getToken() : ?string
+    public function getToken(): ?string
     {
         return $this->token;
     }
@@ -219,7 +219,7 @@ class CTSearchResult
      * @param null | string $token
      * @return static
      */
-    public function withToken(?string $token) : static
+    public function withToken(?string $token): static
     {
         $new = clone $this;
         $new->token = $token;
@@ -230,7 +230,7 @@ class CTSearchResult
     /**
      * @return null | \PaymentAssist\Type\CTCreditreport
      */
-    public function getCreditreport() : ?\PaymentAssist\Type\CTCreditreport
+    public function getCreditreport(): ?\PaymentAssist\Type\CTCreditreport
     {
         return $this->creditreport;
     }
@@ -239,7 +239,7 @@ class CTSearchResult
      * @param null | \PaymentAssist\Type\CTCreditreport $creditreport
      * @return static
      */
-    public function withCreditreport(?\PaymentAssist\Type\CTCreditreport $creditreport) : static
+    public function withCreditreport(?\PaymentAssist\Type\CTCreditreport $creditreport): static
     {
         $new = clone $this;
         $new->creditreport = $creditreport;

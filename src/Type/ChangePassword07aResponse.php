@@ -16,7 +16,7 @@ class ChangePassword07aResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function getPwdchanged() : bool
+    public function getPwdchanged(): bool
     {
         return $this->pwdchanged;
     }
@@ -25,7 +25,7 @@ class ChangePassword07aResponse implements ResultInterface
      * @param bool $pwdchanged
      * @return static
      */
-    public function withPwdchanged(bool $pwdchanged) : static
+    public function withPwdchanged(bool $pwdchanged): static
     {
         $new = clone $this;
         $new->pwdchanged = $pwdchanged;

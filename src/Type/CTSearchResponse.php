@@ -2,9 +2,7 @@
 
 namespace PaymentAssist\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
-
-class CTSearchResponse implements ResultInterface
+class CTSearchResponse
 {
     /**
      * Response type for Credit Search Web Methods
@@ -16,7 +14,7 @@ class CTSearchResponse implements ResultInterface
     /**
      * @return null | \PaymentAssist\Type\CTSearchResult
      */
-    public function getSearchResult() : ?\PaymentAssist\Type\CTSearchResult
+    public function getSearchResult(): ?\PaymentAssist\Type\CTSearchResult
     {
         return $this->SearchResult;
     }
@@ -25,7 +23,7 @@ class CTSearchResponse implements ResultInterface
      * @param null | \PaymentAssist\Type\CTSearchResult $SearchResult
      * @return static
      */
-    public function withSearchResult(?\PaymentAssist\Type\CTSearchResult $SearchResult) : static
+    public function withSearchResult(?\PaymentAssist\Type\CTSearchResult $SearchResult): static
     {
         $new = clone $this;
         $new->SearchResult = $SearchResult;

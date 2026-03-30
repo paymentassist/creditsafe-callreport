@@ -22,7 +22,7 @@ class CTSupplierdetails
     /**
      * @return null | string
      */
-    public function getSuppliername() : ?string
+    public function getSuppliername(): ?string
     {
         return $this->suppliername;
     }
@@ -31,7 +31,7 @@ class CTSupplierdetails
      * @param null | string $suppliername
      * @return static
      */
-    public function withSuppliername(?string $suppliername) : static
+    public function withSuppliername(?string $suppliername): static
     {
         $new = clone $this;
         $new->suppliername = $suppliername;
@@ -42,7 +42,7 @@ class CTSupplierdetails
     /**
      * @return null | string
      */
-    public function getSuppliertypecode() : ?string
+    public function getSuppliertypecode(): ?string
     {
         return $this->suppliertypecode;
     }
@@ -51,7 +51,7 @@ class CTSupplierdetails
      * @param null | string $suppliertypecode
      * @return static
      */
-    public function withSuppliertypecode(?string $suppliertypecode) : static
+    public function withSuppliertypecode(?string $suppliertypecode): static
     {
         $new = clone $this;
         $new->suppliertypecode = $suppliertypecode;

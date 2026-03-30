@@ -15,7 +15,7 @@ class CTDemographicsidentity
     /**
      * @return null | string
      */
-    public function getType() : ?string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -24,7 +24,7 @@ class CTDemographicsidentity
      * @param null | string $type
      * @return static
      */
-    public function withType(?string $type) : static
+    public function withType(?string $type): static
     {
         $new = clone $this;
         $new->type = $type;

@@ -14,9 +14,9 @@ class CTAmendsubsequent
     /**
      * Amended subsequent search amendments
      *
-     * @var null | \PaymentAssist\Type\Amendments
+     * @var null | \PaymentAssist\Type\CTAmendsubsequentAmendments
      */
-    private ?\PaymentAssist\Type\Amendments $amendments = null;
+    private ?\PaymentAssist\Type\CTAmendsubsequentAmendments $amendments = null;
 
     /**
      * The version of the schema that is being adhered to. This should be in the form Major.Minor E.g. 7.0
@@ -45,7 +45,7 @@ class CTAmendsubsequent
     /**
      * @return string
      */
-    public function getOrigsrchid() : string
+    public function getOrigsrchid(): string
     {
         return $this->origsrchid;
     }
@@ -54,7 +54,7 @@ class CTAmendsubsequent
      * @param string $origsrchid
      * @return static
      */
-    public function withOrigsrchid(string $origsrchid) : static
+    public function withOrigsrchid(string $origsrchid): static
     {
         $new = clone $this;
         $new->origsrchid = $origsrchid;
@@ -63,18 +63,18 @@ class CTAmendsubsequent
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Amendments
+     * @return null | \PaymentAssist\Type\CTAmendsubsequentAmendments
      */
-    public function getAmendments() : ?\PaymentAssist\Type\Amendments
+    public function getAmendments(): ?\PaymentAssist\Type\CTAmendsubsequentAmendments
     {
         return $this->amendments;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Amendments $amendments
+     * @param null | \PaymentAssist\Type\CTAmendsubsequentAmendments $amendments
      * @return static
      */
-    public function withAmendments(?\PaymentAssist\Type\Amendments $amendments) : static
+    public function withAmendments(?\PaymentAssist\Type\CTAmendsubsequentAmendments $amendments): static
     {
         $new = clone $this;
         $new->amendments = $amendments;
@@ -85,7 +85,7 @@ class CTAmendsubsequent
     /**
      * @return string
      */
-    public function getSchemaversion() : string
+    public function getSchemaversion(): string
     {
         return $this->schemaversion;
     }
@@ -94,7 +94,7 @@ class CTAmendsubsequent
      * @param string $schemaversion
      * @return static
      */
-    public function withSchemaversion(string $schemaversion) : static
+    public function withSchemaversion(string $schemaversion): static
     {
         $new = clone $this;
         $new->schemaversion = $schemaversion;
@@ -105,7 +105,7 @@ class CTAmendsubsequent
     /**
      * @return int
      */
-    public function getDatasets() : int
+    public function getDatasets(): int
     {
         return $this->datasets;
     }
@@ -114,7 +114,7 @@ class CTAmendsubsequent
      * @param int $datasets
      * @return static
      */
-    public function withDatasets(int $datasets) : static
+    public function withDatasets(int $datasets): static
     {
         $new = clone $this;
         $new->datasets = $datasets;

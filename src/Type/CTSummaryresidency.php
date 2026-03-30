@@ -42,7 +42,7 @@ class CTSummaryresidency extends CTOutputaddress
     /**
      * @return string
      */
-    public function get_() : string
+    public function get_(): string
     {
         return $this->_;
     }
@@ -51,7 +51,7 @@ class CTSummaryresidency extends CTOutputaddress
      * @param string $_
      * @return static
      */
-    public function with_(string $_) : static
+    public function with_(string $_): static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -62,7 +62,7 @@ class CTSummaryresidency extends CTOutputaddress
     /**
      * @return int
      */
-    public function getCurrent() : int
+    public function getCurrent(): int
     {
         return $this->current;
     }
@@ -71,7 +71,7 @@ class CTSummaryresidency extends CTOutputaddress
      * @param int $current
      * @return static
      */
-    public function withCurrent(int $current) : static
+    public function withCurrent(int $current): static
     {
         $new = clone $this;
         $new->current = $current;
@@ -82,7 +82,7 @@ class CTSummaryresidency extends CTOutputaddress
     /**
      * @return null | int
      */
-    public function getUndeclaredaddresstype() : ?int
+    public function getUndeclaredaddresstype(): ?int
     {
         return $this->undeclaredaddresstype;
     }
@@ -91,7 +91,7 @@ class CTSummaryresidency extends CTOutputaddress
      * @param null | int $undeclaredaddresstype
      * @return static
      */
-    public function withUndeclaredaddresstype(?int $undeclaredaddresstype) : static
+    public function withUndeclaredaddresstype(?int $undeclaredaddresstype): static
     {
         $new = clone $this;
         $new->undeclaredaddresstype = $undeclaredaddresstype;
@@ -102,7 +102,7 @@ class CTSummaryresidency extends CTOutputaddress
     /**
      * @return null | int
      */
-    public function getMessagecode() : ?int
+    public function getMessagecode(): ?int
     {
         return $this->messagecode;
     }
@@ -111,7 +111,7 @@ class CTSummaryresidency extends CTOutputaddress
      * @param null | int $messagecode
      * @return static
      */
-    public function withMessagecode(?int $messagecode) : static
+    public function withMessagecode(?int $messagecode): static
     {
         $new = clone $this;
         $new->messagecode = $messagecode;
@@ -122,7 +122,7 @@ class CTSummaryresidency extends CTOutputaddress
     /**
      * @return null | int
      */
-    public function getId() : ?int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -131,7 +131,7 @@ class CTSummaryresidency extends CTOutputaddress
      * @param null | int $id
      * @return static
      */
-    public function withId(?int $id) : static
+    public function withId(?int $id): static
     {
         $new = clone $this;
         $new->id = $id;

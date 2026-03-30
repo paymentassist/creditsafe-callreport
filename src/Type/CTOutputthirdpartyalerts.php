@@ -28,7 +28,7 @@ class CTOutputthirdpartyalerts
     /**
      * @return null | \PaymentAssist\Type\CTAlert
      */
-    public function getDecision() : ?\PaymentAssist\Type\CTAlert
+    public function getDecision(): ?\PaymentAssist\Type\CTAlert
     {
         return $this->decision;
     }
@@ -37,7 +37,7 @@ class CTOutputthirdpartyalerts
      * @param null | \PaymentAssist\Type\CTAlert $decision
      * @return static
      */
-    public function withDecision(?\PaymentAssist\Type\CTAlert $decision) : static
+    public function withDecision(?\PaymentAssist\Type\CTAlert $decision): static
     {
         $new = clone $this;
         $new->decision = $decision;
@@ -48,7 +48,7 @@ class CTOutputthirdpartyalerts
     /**
      * @return null | \PaymentAssist\Type\CTAlert
      */
-    public function getReview() : ?\PaymentAssist\Type\CTAlert
+    public function getReview(): ?\PaymentAssist\Type\CTAlert
     {
         return $this->review;
     }
@@ -57,7 +57,7 @@ class CTOutputthirdpartyalerts
      * @param null | \PaymentAssist\Type\CTAlert $review
      * @return static
      */
-    public function withReview(?\PaymentAssist\Type\CTAlert $review) : static
+    public function withReview(?\PaymentAssist\Type\CTAlert $review): static
     {
         $new = clone $this;
         $new->review = $review;
@@ -68,7 +68,7 @@ class CTOutputthirdpartyalerts
     /**
      * @return null | \PaymentAssist\Type\CTHho
      */
-    public function getHho() : ?\PaymentAssist\Type\CTHho
+    public function getHho(): ?\PaymentAssist\Type\CTHho
     {
         return $this->hho;
     }
@@ -77,7 +77,7 @@ class CTOutputthirdpartyalerts
      * @param null | \PaymentAssist\Type\CTHho $hho
      * @return static
      */
-    public function withHho(?\PaymentAssist\Type\CTHho $hho) : static
+    public function withHho(?\PaymentAssist\Type\CTHho $hho): static
     {
         $new = clone $this;
         $new->hho = $hho;

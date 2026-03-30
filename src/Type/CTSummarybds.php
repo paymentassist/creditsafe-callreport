@@ -35,7 +35,7 @@ class CTSummarybds
     /**
      * @return null | int
      */
-    public function getTotalminpayments12months() : ?int
+    public function getTotalminpayments12months(): ?int
     {
         return $this->totalminpayments12months;
     }
@@ -44,7 +44,7 @@ class CTSummarybds
      * @param null | int $totalminpayments12months
      * @return static
      */
-    public function withTotalminpayments12months(?int $totalminpayments12months) : static
+    public function withTotalminpayments12months(?int $totalminpayments12months): static
     {
         $new = clone $this;
         $new->totalminpayments12months = $totalminpayments12months;
@@ -55,7 +55,7 @@ class CTSummarybds
     /**
      * @return null | int
      */
-    public function getTotalminpayments36months() : ?int
+    public function getTotalminpayments36months(): ?int
     {
         return $this->totalminpayments36months;
     }
@@ -64,7 +64,7 @@ class CTSummarybds
      * @param null | int $totalminpayments36months
      * @return static
      */
-    public function withTotalminpayments36months(?int $totalminpayments36months) : static
+    public function withTotalminpayments36months(?int $totalminpayments36months): static
     {
         $new = clone $this;
         $new->totalminpayments36months = $totalminpayments36months;
@@ -75,7 +75,7 @@ class CTSummarybds
     /**
      * @return null | int
      */
-    public function getTotalvaluecashadvances12months() : ?int
+    public function getTotalvaluecashadvances12months(): ?int
     {
         return $this->totalvaluecashadvances12months;
     }
@@ -84,7 +84,7 @@ class CTSummarybds
      * @param null | int $totalvaluecashadvances12months
      * @return static
      */
-    public function withTotalvaluecashadvances12months(?int $totalvaluecashadvances12months) : static
+    public function withTotalvaluecashadvances12months(?int $totalvaluecashadvances12months): static
     {
         $new = clone $this;
         $new->totalvaluecashadvances12months = $totalvaluecashadvances12months;
@@ -95,7 +95,7 @@ class CTSummarybds
     /**
      * @return null | int
      */
-    public function getTotalvaluecashadvances36months() : ?int
+    public function getTotalvaluecashadvances36months(): ?int
     {
         return $this->totalvaluecashadvances36months;
     }
@@ -104,7 +104,7 @@ class CTSummarybds
      * @param null | int $totalvaluecashadvances36months
      * @return static
      */
-    public function withTotalvaluecashadvances36months(?int $totalvaluecashadvances36months) : static
+    public function withTotalvaluecashadvances36months(?int $totalvaluecashadvances36months): static
     {
         $new = clone $this;
         $new->totalvaluecashadvances36months = $totalvaluecashadvances36months;

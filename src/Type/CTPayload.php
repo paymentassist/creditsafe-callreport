@@ -14,7 +14,7 @@ class CTPayload
     /**
      * @return array<int<0,max>, string>
      */
-    public function getAny() : array
+    public function getAny(): array
     {
         return $this->any;
     }
@@ -23,7 +23,7 @@ class CTPayload
      * @param array<int<0,max>, string> $any
      * @return static
      */
-    public function withAny(array $any) : static
+    public function withAny(array $any): static
     {
         $new = clone $this;
         $new->any = $any;

@@ -42,7 +42,7 @@ class CTInputname
     /**
      * @return null | string
      */
-    public function getTitle() : ?string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -51,7 +51,7 @@ class CTInputname
      * @param null | string $title
      * @return static
      */
-    public function withTitle(?string $title) : static
+    public function withTitle(?string $title): static
     {
         $new = clone $this;
         $new->title = $title;
@@ -62,7 +62,7 @@ class CTInputname
     /**
      * @return null | string
      */
-    public function getForename() : ?string
+    public function getForename(): ?string
     {
         return $this->forename;
     }
@@ -71,7 +71,7 @@ class CTInputname
      * @param null | string $forename
      * @return static
      */
-    public function withForename(?string $forename) : static
+    public function withForename(?string $forename): static
     {
         $new = clone $this;
         $new->forename = $forename;
@@ -82,7 +82,7 @@ class CTInputname
     /**
      * @return null | string
      */
-    public function getOthernames() : ?string
+    public function getOthernames(): ?string
     {
         return $this->othernames;
     }
@@ -91,7 +91,7 @@ class CTInputname
      * @param null | string $othernames
      * @return static
      */
-    public function withOthernames(?string $othernames) : static
+    public function withOthernames(?string $othernames): static
     {
         $new = clone $this;
         $new->othernames = $othernames;
@@ -102,7 +102,7 @@ class CTInputname
     /**
      * @return string
      */
-    public function getSurname() : string
+    public function getSurname(): string
     {
         return $this->surname;
     }
@@ -111,7 +111,7 @@ class CTInputname
      * @param string $surname
      * @return static
      */
-    public function withSurname(string $surname) : static
+    public function withSurname(string $surname): static
     {
         $new = clone $this;
         $new->surname = $surname;
@@ -122,7 +122,7 @@ class CTInputname
     /**
      * @return null | string
      */
-    public function getSuffix() : ?string
+    public function getSuffix(): ?string
     {
         return $this->suffix;
     }
@@ -131,7 +131,7 @@ class CTInputname
      * @param null | string $suffix
      * @return static
      */
-    public function withSuffix(?string $suffix) : static
+    public function withSuffix(?string $suffix): static
     {
         $new = clone $this;
         $new->suffix = $suffix;

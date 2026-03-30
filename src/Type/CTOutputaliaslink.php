@@ -56,7 +56,7 @@ class CTOutputaliaslink
     /**
      * @return null | string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -65,7 +65,7 @@ class CTOutputaliaslink
      * @param null | string $name
      * @return static
      */
-    public function withName(?string $name) : static
+    public function withName(?string $name): static
     {
         $new = clone $this;
         $new->name = $name;
@@ -76,7 +76,7 @@ class CTOutputaliaslink
     /**
      * @return null | string
      */
-    public function getAlias() : ?string
+    public function getAlias(): ?string
     {
         return $this->alias;
     }
@@ -85,7 +85,7 @@ class CTOutputaliaslink
      * @param null | string $alias
      * @return static
      */
-    public function withAlias(?string $alias) : static
+    public function withAlias(?string $alias): static
     {
         $new = clone $this;
         $new->alias = $alias;
@@ -96,7 +96,7 @@ class CTOutputaliaslink
     /**
      * @return \DateTimeInterface
      */
-    public function getCreationdate() : \DateTimeInterface
+    public function getCreationdate(): \DateTimeInterface
     {
         return $this->creationdate;
     }
@@ -105,7 +105,7 @@ class CTOutputaliaslink
      * @param \DateTimeInterface $creationdate
      * @return static
      */
-    public function withCreationdate(\DateTimeInterface $creationdate) : static
+    public function withCreationdate(\DateTimeInterface $creationdate): static
     {
         $new = clone $this;
         $new->creationdate = $creationdate;
@@ -116,7 +116,7 @@ class CTOutputaliaslink
     /**
      * @return \DateTimeInterface
      */
-    public function getLastconfdate() : \DateTimeInterface
+    public function getLastconfdate(): \DateTimeInterface
     {
         return $this->lastconfdate;
     }
@@ -125,7 +125,7 @@ class CTOutputaliaslink
      * @param \DateTimeInterface $lastconfdate
      * @return static
      */
-    public function withLastconfdate(\DateTimeInterface $lastconfdate) : static
+    public function withLastconfdate(\DateTimeInterface $lastconfdate): static
     {
         $new = clone $this;
         $new->lastconfdate = $lastconfdate;
@@ -136,7 +136,7 @@ class CTOutputaliaslink
     /**
      * @return \PaymentAssist\Type\CTSupplierdetails
      */
-    public function getSupplierdetails() : \PaymentAssist\Type\CTSupplierdetails
+    public function getSupplierdetails(): \PaymentAssist\Type\CTSupplierdetails
     {
         return $this->supplierdetails;
     }
@@ -145,7 +145,7 @@ class CTOutputaliaslink
      * @param \PaymentAssist\Type\CTSupplierdetails $supplierdetails
      * @return static
      */
-    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails) : static
+    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails): static
     {
         $new = clone $this;
         $new->supplierdetails = $supplierdetails;
@@ -156,7 +156,7 @@ class CTOutputaliaslink
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -165,7 +165,7 @@ class CTOutputaliaslink
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -176,7 +176,7 @@ class CTOutputaliaslink
     /**
      * @return int
      */
-    public function getDeclared() : int
+    public function getDeclared(): int
     {
         return $this->declared;
     }
@@ -185,7 +185,7 @@ class CTOutputaliaslink
      * @param int $declared
      * @return static
      */
-    public function withDeclared(int $declared) : static
+    public function withDeclared(int $declared): static
     {
         $new = clone $this;
         $new->declared = $declared;

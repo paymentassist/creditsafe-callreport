@@ -29,7 +29,7 @@ class CTPicklistapplicant
     /**
      * @return non-empty-array<int<0,max>, \PaymentAssist\Type\CTInputaddressandmatches>
      */
-    public function getAddress() : array
+    public function getAddress(): array
     {
         return $this->address;
     }
@@ -38,7 +38,7 @@ class CTPicklistapplicant
      * @param non-empty-array<int<0,max>, \PaymentAssist\Type\CTInputaddressandmatches> $address
      * @return static
      */
-    public function withAddress(array $address) : static
+    public function withAddress(array $address): static
     {
         $new = clone $this;
         $new->address = $address;
@@ -49,7 +49,7 @@ class CTPicklistapplicant
     /**
      * @return null | int
      */
-    public function getId() : ?int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -58,7 +58,7 @@ class CTPicklistapplicant
      * @param null | int $id
      * @return static
      */
-    public function withId(?int $id) : static
+    public function withId(?int $id): static
     {
         $new = clone $this;
         $new->id = $id;
@@ -69,7 +69,7 @@ class CTPicklistapplicant
     /**
      * @return null | string
      */
-    public function getReporttype() : ?string
+    public function getReporttype(): ?string
     {
         return $this->reporttype;
     }
@@ -78,7 +78,7 @@ class CTPicklistapplicant
      * @param null | string $reporttype
      * @return static
      */
-    public function withReporttype(?string $reporttype) : static
+    public function withReporttype(?string $reporttype): static
     {
         $new = clone $this;
         $new->reporttype = $reporttype;

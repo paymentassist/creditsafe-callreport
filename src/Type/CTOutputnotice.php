@@ -50,7 +50,7 @@ class CTOutputnotice
     /**
      * @return null | string
      */
-    public function getType() : ?string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -59,7 +59,7 @@ class CTOutputnotice
      * @param null | string $type
      * @return static
      */
-    public function withType(?string $type) : static
+    public function withType(?string $type): static
     {
         $new = clone $this;
         $new->type = $type;
@@ -70,7 +70,7 @@ class CTOutputnotice
     /**
      * @return string
      */
-    public function getRefnum() : string
+    public function getRefnum(): string
     {
         return $this->refnum;
     }
@@ -79,7 +79,7 @@ class CTOutputnotice
      * @param string $refnum
      * @return static
      */
-    public function withRefnum(string $refnum) : static
+    public function withRefnum(string $refnum): static
     {
         $new = clone $this;
         $new->refnum = $refnum;
@@ -90,7 +90,7 @@ class CTOutputnotice
     /**
      * @return \DateTimeInterface
      */
-    public function getDateraised() : \DateTimeInterface
+    public function getDateraised(): \DateTimeInterface
     {
         return $this->dateraised;
     }
@@ -99,7 +99,7 @@ class CTOutputnotice
      * @param \DateTimeInterface $dateraised
      * @return static
      */
-    public function withDateraised(\DateTimeInterface $dateraised) : static
+    public function withDateraised(\DateTimeInterface $dateraised): static
     {
         $new = clone $this;
         $new->dateraised = $dateraised;
@@ -110,7 +110,7 @@ class CTOutputnotice
     /**
      * @return null | string
      */
-    public function getText() : ?string
+    public function getText(): ?string
     {
         return $this->text;
     }
@@ -119,7 +119,7 @@ class CTOutputnotice
      * @param null | string $text
      * @return static
      */
-    public function withText(?string $text) : static
+    public function withText(?string $text): static
     {
         $new = clone $this;
         $new->text = $text;
@@ -130,7 +130,7 @@ class CTOutputnotice
     /**
      * @return null | string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -139,7 +139,7 @@ class CTOutputnotice
      * @param null | string $name
      * @return static
      */
-    public function withName(?string $name) : static
+    public function withName(?string $name): static
     {
         $new = clone $this;
         $new->name = $name;
@@ -150,7 +150,7 @@ class CTOutputnotice
     /**
      * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
+    public function getAddress(): ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
@@ -159,7 +159,7 @@ class CTOutputnotice
      * @param null | \PaymentAssist\Type\CTOutputaddress $address
      * @return static
      */
-    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address): static
     {
         $new = clone $this;
         $new->address = $address;

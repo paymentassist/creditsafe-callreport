@@ -14,7 +14,7 @@ class CTOutputaddresslinks
     /**
      * @return non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputaddresslink>
      */
-    public function getLink() : array
+    public function getLink(): array
     {
         return $this->link;
     }
@@ -23,7 +23,7 @@ class CTOutputaddresslinks
      * @param non-empty-array<int<0,max>, \PaymentAssist\Type\CTOutputaddresslink> $link
      * @return static
      */
-    public function withLink(array $link) : static
+    public function withLink(array $link): static
     {
         $new = clone $this;
         $new->link = $link;

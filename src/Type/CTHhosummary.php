@@ -28,7 +28,7 @@ class CTHhosummary
     /**
      * @return null | \PaymentAssist\Type\CTSummaryjudgment
      */
-    public function getJudgments() : ?\PaymentAssist\Type\CTSummaryjudgment
+    public function getJudgments(): ?\PaymentAssist\Type\CTSummaryjudgment
     {
         return $this->judgments;
     }
@@ -37,7 +37,7 @@ class CTHhosummary
      * @param null | \PaymentAssist\Type\CTSummaryjudgment $judgments
      * @return static
      */
-    public function withJudgments(?\PaymentAssist\Type\CTSummaryjudgment $judgments) : static
+    public function withJudgments(?\PaymentAssist\Type\CTSummaryjudgment $judgments): static
     {
         $new = clone $this;
         $new->judgments = $judgments;
@@ -48,7 +48,7 @@ class CTHhosummary
     /**
      * @return null | \PaymentAssist\Type\CTSummarybai
      */
-    public function getBais() : ?\PaymentAssist\Type\CTSummarybai
+    public function getBais(): ?\PaymentAssist\Type\CTSummarybai
     {
         return $this->bais;
     }
@@ -57,7 +57,7 @@ class CTHhosummary
      * @param null | \PaymentAssist\Type\CTSummarybai $bais
      * @return static
      */
-    public function withBais(?\PaymentAssist\Type\CTSummarybai $bais) : static
+    public function withBais(?\PaymentAssist\Type\CTSummarybai $bais): static
     {
         $new = clone $this;
         $new->bais = $bais;
@@ -68,7 +68,7 @@ class CTHhosummary
     /**
      * @return null | \PaymentAssist\Type\CTAlertsummaryshare
      */
-    public function getShare() : ?\PaymentAssist\Type\CTAlertsummaryshare
+    public function getShare(): ?\PaymentAssist\Type\CTAlertsummaryshare
     {
         return $this->share;
     }
@@ -77,7 +77,7 @@ class CTHhosummary
      * @param null | \PaymentAssist\Type\CTAlertsummaryshare $share
      * @return static
      */
-    public function withShare(?\PaymentAssist\Type\CTAlertsummaryshare $share) : static
+    public function withShare(?\PaymentAssist\Type\CTAlertsummaryshare $share): static
     {
         $new = clone $this;
         $new->share = $share;

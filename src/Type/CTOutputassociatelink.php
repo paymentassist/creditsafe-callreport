@@ -63,7 +63,7 @@ class CTOutputassociatelink
     /**
      * @return null | string
      */
-    public function getNavlinkid() : ?string
+    public function getNavlinkid(): ?string
     {
         return $this->navlinkid;
     }
@@ -72,7 +72,7 @@ class CTOutputassociatelink
      * @param null | string $navlinkid
      * @return static
      */
-    public function withNavlinkid(?string $navlinkid) : static
+    public function withNavlinkid(?string $navlinkid): static
     {
         $new = clone $this;
         $new->navlinkid = $navlinkid;
@@ -83,7 +83,7 @@ class CTOutputassociatelink
     /**
      * @return null | string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -92,7 +92,7 @@ class CTOutputassociatelink
      * @param null | string $name
      * @return static
      */
-    public function withName(?string $name) : static
+    public function withName(?string $name): static
     {
         $new = clone $this;
         $new->name = $name;
@@ -103,7 +103,7 @@ class CTOutputassociatelink
     /**
      * @return \DateTimeInterface
      */
-    public function getCreationdate() : \DateTimeInterface
+    public function getCreationdate(): \DateTimeInterface
     {
         return $this->creationdate;
     }
@@ -112,7 +112,7 @@ class CTOutputassociatelink
      * @param \DateTimeInterface $creationdate
      * @return static
      */
-    public function withCreationdate(\DateTimeInterface $creationdate) : static
+    public function withCreationdate(\DateTimeInterface $creationdate): static
     {
         $new = clone $this;
         $new->creationdate = $creationdate;
@@ -123,7 +123,7 @@ class CTOutputassociatelink
     /**
      * @return \DateTimeInterface
      */
-    public function getLastconfdate() : \DateTimeInterface
+    public function getLastconfdate(): \DateTimeInterface
     {
         return $this->lastconfdate;
     }
@@ -132,7 +132,7 @@ class CTOutputassociatelink
      * @param \DateTimeInterface $lastconfdate
      * @return static
      */
-    public function withLastconfdate(\DateTimeInterface $lastconfdate) : static
+    public function withLastconfdate(\DateTimeInterface $lastconfdate): static
     {
         $new = clone $this;
         $new->lastconfdate = $lastconfdate;
@@ -143,7 +143,7 @@ class CTOutputassociatelink
     /**
      * @return \PaymentAssist\Type\CTSupplierdetails
      */
-    public function getSupplierdetails() : \PaymentAssist\Type\CTSupplierdetails
+    public function getSupplierdetails(): \PaymentAssist\Type\CTSupplierdetails
     {
         return $this->supplierdetails;
     }
@@ -152,7 +152,7 @@ class CTOutputassociatelink
      * @param \PaymentAssist\Type\CTSupplierdetails $supplierdetails
      * @return static
      */
-    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails) : static
+    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails): static
     {
         $new = clone $this;
         $new->supplierdetails = $supplierdetails;
@@ -163,7 +163,7 @@ class CTOutputassociatelink
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -172,7 +172,7 @@ class CTOutputassociatelink
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -183,7 +183,7 @@ class CTOutputassociatelink
     /**
      * @return int
      */
-    public function getDeclaredaddress() : int
+    public function getDeclaredaddress(): int
     {
         return $this->declaredaddress;
     }
@@ -192,7 +192,7 @@ class CTOutputassociatelink
      * @param int $declaredaddress
      * @return static
      */
-    public function withDeclaredaddress(int $declaredaddress) : static
+    public function withDeclaredaddress(int $declaredaddress): static
     {
         $new = clone $this;
         $new->declaredaddress = $declaredaddress;
@@ -203,7 +203,7 @@ class CTOutputassociatelink
     /**
      * @return null | int
      */
-    public function getOiaid() : ?int
+    public function getOiaid(): ?int
     {
         return $this->oiaid;
     }
@@ -212,7 +212,7 @@ class CTOutputassociatelink
      * @param null | int $oiaid
      * @return static
      */
-    public function withOiaid(?int $oiaid) : static
+    public function withOiaid(?int $oiaid): static
     {
         $new = clone $this;
         $new->oiaid = $oiaid;

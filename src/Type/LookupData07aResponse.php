@@ -16,7 +16,7 @@ class LookupData07aResponse implements ResultInterface
     /**
      * @return null | \PaymentAssist\Type\CTLookupDataResult
      */
-    public function getLookupDataResult() : ?\PaymentAssist\Type\CTLookupDataResult
+    public function getLookupDataResult(): ?\PaymentAssist\Type\CTLookupDataResult
     {
         return $this->LookupDataResult;
     }
@@ -25,7 +25,7 @@ class LookupData07aResponse implements ResultInterface
      * @param null | \PaymentAssist\Type\CTLookupDataResult $LookupDataResult
      * @return static
      */
-    public function withLookupDataResult(?\PaymentAssist\Type\CTLookupDataResult $LookupDataResult) : static
+    public function withLookupDataResult(?\PaymentAssist\Type\CTLookupDataResult $LookupDataResult): static
     {
         $new = clone $this;
         $new->LookupDataResult = $LookupDataResult;

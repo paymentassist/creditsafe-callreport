@@ -21,9 +21,9 @@ class CTApplicantdemographics
     /**
      * Customer Contact Details for Applicant
      *
-     * @var null | \PaymentAssist\Type\Contact
+     * @var null | \PaymentAssist\Type\CTApplicantdemographicsContact
      */
-    private ?\PaymentAssist\Type\Contact $contact = null;
+    private ?\PaymentAssist\Type\CTApplicantdemographicsContact $contact = null;
 
     /**
      * Applicant's Employment Details
@@ -56,7 +56,7 @@ class CTApplicantdemographics
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsperson
      */
-    public function getPerson() : ?\PaymentAssist\Type\CTDemographicsperson
+    public function getPerson(): ?\PaymentAssist\Type\CTDemographicsperson
     {
         return $this->person;
     }
@@ -65,7 +65,7 @@ class CTApplicantdemographics
      * @param null | \PaymentAssist\Type\CTDemographicsperson $person
      * @return static
      */
-    public function withPerson(?\PaymentAssist\Type\CTDemographicsperson $person) : static
+    public function withPerson(?\PaymentAssist\Type\CTDemographicsperson $person): static
     {
         $new = clone $this;
         $new->person = $person;
@@ -76,7 +76,7 @@ class CTApplicantdemographics
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsaccommodation
      */
-    public function getAccommodation() : ?\PaymentAssist\Type\CTDemographicsaccommodation
+    public function getAccommodation(): ?\PaymentAssist\Type\CTDemographicsaccommodation
     {
         return $this->accommodation;
     }
@@ -85,7 +85,7 @@ class CTApplicantdemographics
      * @param null | \PaymentAssist\Type\CTDemographicsaccommodation $accommodation
      * @return static
      */
-    public function withAccommodation(?\PaymentAssist\Type\CTDemographicsaccommodation $accommodation) : static
+    public function withAccommodation(?\PaymentAssist\Type\CTDemographicsaccommodation $accommodation): static
     {
         $new = clone $this;
         $new->accommodation = $accommodation;
@@ -94,18 +94,18 @@ class CTApplicantdemographics
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Contact
+     * @return null | \PaymentAssist\Type\CTApplicantdemographicsContact
      */
-    public function getContact() : ?\PaymentAssist\Type\Contact
+    public function getContact(): ?\PaymentAssist\Type\CTApplicantdemographicsContact
     {
         return $this->contact;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Contact $contact
+     * @param null | \PaymentAssist\Type\CTApplicantdemographicsContact $contact
      * @return static
      */
-    public function withContact(?\PaymentAssist\Type\Contact $contact) : static
+    public function withContact(?\PaymentAssist\Type\CTApplicantdemographicsContact $contact): static
     {
         $new = clone $this;
         $new->contact = $contact;
@@ -116,7 +116,7 @@ class CTApplicantdemographics
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsemployment
      */
-    public function getEmployment() : ?\PaymentAssist\Type\CTDemographicsemployment
+    public function getEmployment(): ?\PaymentAssist\Type\CTDemographicsemployment
     {
         return $this->employment;
     }
@@ -125,7 +125,7 @@ class CTApplicantdemographics
      * @param null | \PaymentAssist\Type\CTDemographicsemployment $employment
      * @return static
      */
-    public function withEmployment(?\PaymentAssist\Type\CTDemographicsemployment $employment) : static
+    public function withEmployment(?\PaymentAssist\Type\CTDemographicsemployment $employment): static
     {
         $new = clone $this;
         $new->employment = $employment;
@@ -136,7 +136,7 @@ class CTApplicantdemographics
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsaccount
      */
-    public function getAccount() : ?\PaymentAssist\Type\CTDemographicsaccount
+    public function getAccount(): ?\PaymentAssist\Type\CTDemographicsaccount
     {
         return $this->account;
     }
@@ -145,7 +145,7 @@ class CTApplicantdemographics
      * @param null | \PaymentAssist\Type\CTDemographicsaccount $account
      * @return static
      */
-    public function withAccount(?\PaymentAssist\Type\CTDemographicsaccount $account) : static
+    public function withAccount(?\PaymentAssist\Type\CTDemographicsaccount $account): static
     {
         $new = clone $this;
         $new->account = $account;
@@ -156,7 +156,7 @@ class CTApplicantdemographics
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsexpenditure
      */
-    public function getExpenditure() : ?\PaymentAssist\Type\CTDemographicsexpenditure
+    public function getExpenditure(): ?\PaymentAssist\Type\CTDemographicsexpenditure
     {
         return $this->expenditure;
     }
@@ -165,7 +165,7 @@ class CTApplicantdemographics
      * @param null | \PaymentAssist\Type\CTDemographicsexpenditure $expenditure
      * @return static
      */
-    public function withExpenditure(?\PaymentAssist\Type\CTDemographicsexpenditure $expenditure) : static
+    public function withExpenditure(?\PaymentAssist\Type\CTDemographicsexpenditure $expenditure): static
     {
         $new = clone $this;
         $new->expenditure = $expenditure;
@@ -176,7 +176,7 @@ class CTApplicantdemographics
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsincome
      */
-    public function getIncome() : ?\PaymentAssist\Type\CTDemographicsincome
+    public function getIncome(): ?\PaymentAssist\Type\CTDemographicsincome
     {
         return $this->income;
     }
@@ -185,7 +185,7 @@ class CTApplicantdemographics
      * @param null | \PaymentAssist\Type\CTDemographicsincome $income
      * @return static
      */
-    public function withIncome(?\PaymentAssist\Type\CTDemographicsincome $income) : static
+    public function withIncome(?\PaymentAssist\Type\CTDemographicsincome $income): static
     {
         $new = clone $this;
         $new->income = $income;

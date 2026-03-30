@@ -14,7 +14,7 @@ class CTSummaryrtr
     /**
      * @return null | int
      */
-    public function getHasupdates() : ?int
+    public function getHasupdates(): ?int
     {
         return $this->hasupdates;
     }
@@ -23,7 +23,7 @@ class CTSummaryrtr
      * @param null | int $hasupdates
      * @return static
      */
-    public function withHasupdates(?int $hasupdates) : static
+    public function withHasupdates(?int $hasupdates): static
     {
         $new = clone $this;
         $new->hasupdates = $hasupdates;

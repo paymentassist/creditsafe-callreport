@@ -49,7 +49,7 @@ class CTSummaryich
     /**
      * @return int
      */
-    public function getImpairedcredit() : int
+    public function getImpairedcredit(): int
     {
         return $this->impairedcredit;
     }
@@ -58,7 +58,7 @@ class CTSummaryich
      * @param int $impairedcredit
      * @return static
      */
-    public function withImpairedcredit(int $impairedcredit) : static
+    public function withImpairedcredit(int $impairedcredit): static
     {
         $new = clone $this;
         $new->impairedcredit = $impairedcredit;
@@ -69,7 +69,7 @@ class CTSummaryich
     /**
      * @return null | int
      */
-    public function getSecured() : ?int
+    public function getSecured(): ?int
     {
         return $this->secured;
     }
@@ -78,7 +78,7 @@ class CTSummaryich
      * @param null | int $secured
      * @return static
      */
-    public function withSecured(?int $secured) : static
+    public function withSecured(?int $secured): static
     {
         $new = clone $this;
         $new->secured = $secured;
@@ -89,7 +89,7 @@ class CTSummaryich
     /**
      * @return null | int
      */
-    public function getUnsecured() : ?int
+    public function getUnsecured(): ?int
     {
         return $this->unsecured;
     }
@@ -98,7 +98,7 @@ class CTSummaryich
      * @param null | int $unsecured
      * @return static
      */
-    public function withUnsecured(?int $unsecured) : static
+    public function withUnsecured(?int $unsecured): static
     {
         $new = clone $this;
         $new->unsecured = $unsecured;
@@ -109,7 +109,7 @@ class CTSummaryich
     /**
      * @return null | int
      */
-    public function getJudgment() : ?int
+    public function getJudgment(): ?int
     {
         return $this->judgment;
     }
@@ -118,7 +118,7 @@ class CTSummaryich
      * @param null | int $judgment
      * @return static
      */
-    public function withJudgment(?int $judgment) : static
+    public function withJudgment(?int $judgment): static
     {
         $new = clone $this;
         $new->judgment = $judgment;
@@ -129,7 +129,7 @@ class CTSummaryich
     /**
      * @return null | int
      */
-    public function getIva() : ?int
+    public function getIva(): ?int
     {
         return $this->iva;
     }
@@ -138,7 +138,7 @@ class CTSummaryich
      * @param null | int $iva
      * @return static
      */
-    public function withIva(?int $iva) : static
+    public function withIva(?int $iva): static
     {
         $new = clone $this;
         $new->iva = $iva;
@@ -149,7 +149,7 @@ class CTSummaryich
     /**
      * @return null | int
      */
-    public function getBoss() : ?int
+    public function getBoss(): ?int
     {
         return $this->boss;
     }
@@ -158,7 +158,7 @@ class CTSummaryich
      * @param null | int $boss
      * @return static
      */
-    public function withBoss(?int $boss) : static
+    public function withBoss(?int $boss): static
     {
         $new = clone $this;
         $new->boss = $boss;

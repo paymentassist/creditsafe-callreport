@@ -49,7 +49,7 @@ class CTSummaryjudgment
     /**
      * @return null | int
      */
-    public function getTotal36m() : ?int
+    public function getTotal36m(): ?int
     {
         return $this->total36m;
     }
@@ -58,7 +58,7 @@ class CTSummaryjudgment
      * @param null | int $total36m
      * @return static
      */
-    public function withTotal36m(?int $total36m) : static
+    public function withTotal36m(?int $total36m): static
     {
         $new = clone $this;
         $new->total36m = $total36m;
@@ -69,7 +69,7 @@ class CTSummaryjudgment
     /**
      * @return null | int
      */
-    public function getTotal() : ?int
+    public function getTotal(): ?int
     {
         return $this->total;
     }
@@ -78,7 +78,7 @@ class CTSummaryjudgment
      * @param null | int $total
      * @return static
      */
-    public function withTotal(?int $total) : static
+    public function withTotal(?int $total): static
     {
         $new = clone $this;
         $new->total = $total;
@@ -89,7 +89,7 @@ class CTSummaryjudgment
     /**
      * @return null | int
      */
-    public function getTotalactive() : ?int
+    public function getTotalactive(): ?int
     {
         return $this->totalactive;
     }
@@ -98,7 +98,7 @@ class CTSummaryjudgment
      * @param null | int $totalactive
      * @return static
      */
-    public function withTotalactive(?int $totalactive) : static
+    public function withTotalactive(?int $totalactive): static
     {
         $new = clone $this;
         $new->totalactive = $totalactive;
@@ -109,7 +109,7 @@ class CTSummaryjudgment
     /**
      * @return null | int
      */
-    public function getTotalsatisfied() : ?int
+    public function getTotalsatisfied(): ?int
     {
         return $this->totalsatisfied;
     }
@@ -118,7 +118,7 @@ class CTSummaryjudgment
      * @param null | int $totalsatisfied
      * @return static
      */
-    public function withTotalsatisfied(?int $totalsatisfied) : static
+    public function withTotalsatisfied(?int $totalsatisfied): static
     {
         $new = clone $this;
         $new->totalsatisfied = $totalsatisfied;
@@ -129,7 +129,7 @@ class CTSummaryjudgment
     /**
      * @return null | int
      */
-    public function getTotalactiveamount() : ?int
+    public function getTotalactiveamount(): ?int
     {
         return $this->totalactiveamount;
     }
@@ -138,7 +138,7 @@ class CTSummaryjudgment
      * @param null | int $totalactiveamount
      * @return static
      */
-    public function withTotalactiveamount(?int $totalactiveamount) : static
+    public function withTotalactiveamount(?int $totalactiveamount): static
     {
         $new = clone $this;
         $new->totalactiveamount = $totalactiveamount;
@@ -149,7 +149,7 @@ class CTSummaryjudgment
     /**
      * @return null | int
      */
-    public function getTotalsatisfiedamount() : ?int
+    public function getTotalsatisfiedamount(): ?int
     {
         return $this->totalsatisfiedamount;
     }
@@ -158,7 +158,7 @@ class CTSummaryjudgment
      * @param null | int $totalsatisfiedamount
      * @return static
      */
-    public function withTotalsatisfiedamount(?int $totalsatisfiedamount) : static
+    public function withTotalsatisfiedamount(?int $totalsatisfiedamount): static
     {
         $new = clone $this;
         $new->totalsatisfiedamount = $totalsatisfiedamount;

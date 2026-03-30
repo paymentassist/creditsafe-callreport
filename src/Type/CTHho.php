@@ -7,9 +7,9 @@ class CTHho
     /**
      * Summarised Scores for Household Override Individuals
      *
-     * @var null | \PaymentAssist\Type\Creditscores
+     * @var null | \PaymentAssist\Type\CTHhoCreditscores
      */
-    private ?\PaymentAssist\Type\Creditscores $creditscores = null;
+    private ?\PaymentAssist\Type\CTHhoCreditscores $creditscores = null;
 
     /**
      * Household Override Summary Block
@@ -33,18 +33,18 @@ class CTHho
     private int $total;
 
     /**
-     * @return null | \PaymentAssist\Type\Creditscores
+     * @return null | \PaymentAssist\Type\CTHhoCreditscores
      */
-    public function getCreditscores() : ?\PaymentAssist\Type\Creditscores
+    public function getCreditscores(): ?\PaymentAssist\Type\CTHhoCreditscores
     {
         return $this->creditscores;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Creditscores $creditscores
+     * @param null | \PaymentAssist\Type\CTHhoCreditscores $creditscores
      * @return static
      */
-    public function withCreditscores(?\PaymentAssist\Type\Creditscores $creditscores) : static
+    public function withCreditscores(?\PaymentAssist\Type\CTHhoCreditscores $creditscores): static
     {
         $new = clone $this;
         $new->creditscores = $creditscores;
@@ -55,7 +55,7 @@ class CTHho
     /**
      * @return null | \PaymentAssist\Type\CTHhosummary
      */
-    public function getSummary() : ?\PaymentAssist\Type\CTHhosummary
+    public function getSummary(): ?\PaymentAssist\Type\CTHhosummary
     {
         return $this->summary;
     }
@@ -64,7 +64,7 @@ class CTHho
      * @param null | \PaymentAssist\Type\CTHhosummary $summary
      * @return static
      */
-    public function withSummary(?\PaymentAssist\Type\CTHhosummary $summary) : static
+    public function withSummary(?\PaymentAssist\Type\CTHhosummary $summary): static
     {
         $new = clone $this;
         $new->summary = $summary;
@@ -75,7 +75,7 @@ class CTHho
     /**
      * @return int
      */
-    public function getThinfile() : int
+    public function getThinfile(): int
     {
         return $this->thinfile;
     }
@@ -84,7 +84,7 @@ class CTHho
      * @param int $thinfile
      * @return static
      */
-    public function withThinfile(int $thinfile) : static
+    public function withThinfile(int $thinfile): static
     {
         $new = clone $this;
         $new->thinfile = $thinfile;
@@ -95,7 +95,7 @@ class CTHho
     /**
      * @return int
      */
-    public function getTotal() : int
+    public function getTotal(): int
     {
         return $this->total;
     }
@@ -104,7 +104,7 @@ class CTHho
      * @param int $total
      * @return static
      */
-    public function withTotal(int $total) : static
+    public function withTotal(int $total): static
     {
         $new = clone $this;
         $new->total = $total;

@@ -21,7 +21,7 @@ class CTSummarynotices
     /**
      * @return int
      */
-    public function getNocflag() : int
+    public function getNocflag(): int
     {
         return $this->nocflag;
     }
@@ -30,7 +30,7 @@ class CTSummarynotices
      * @param int $nocflag
      * @return static
      */
-    public function withNocflag(int $nocflag) : static
+    public function withNocflag(int $nocflag): static
     {
         $new = clone $this;
         $new->nocflag = $nocflag;
@@ -41,7 +41,7 @@ class CTSummarynotices
     /**
      * @return int
      */
-    public function getTotaldisputes() : int
+    public function getTotaldisputes(): int
     {
         return $this->totaldisputes;
     }
@@ -50,7 +50,7 @@ class CTSummarynotices
      * @param int $totaldisputes
      * @return static
      */
-    public function withTotaldisputes(int $totaldisputes) : static
+    public function withTotaldisputes(int $totaldisputes): static
     {
         $new = clone $this;
         $new->totaldisputes = $totaldisputes;

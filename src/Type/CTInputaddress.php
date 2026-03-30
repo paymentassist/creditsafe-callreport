@@ -28,7 +28,7 @@ class CTInputaddress extends CTAddress
     /**
      * @return null | \DateTimeInterface
      */
-    public function getStartdate() : ?\DateTimeInterface
+    public function getStartdate(): ?\DateTimeInterface
     {
         return $this->startdate;
     }
@@ -37,7 +37,7 @@ class CTInputaddress extends CTAddress
      * @param null | \DateTimeInterface $startdate
      * @return static
      */
-    public function withStartdate(?\DateTimeInterface $startdate) : static
+    public function withStartdate(?\DateTimeInterface $startdate): static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -48,7 +48,7 @@ class CTInputaddress extends CTAddress
     /**
      * @return null | \DateTimeInterface
      */
-    public function getEnddate() : ?\DateTimeInterface
+    public function getEnddate(): ?\DateTimeInterface
     {
         return $this->enddate;
     }
@@ -57,7 +57,7 @@ class CTInputaddress extends CTAddress
      * @param null | \DateTimeInterface $enddate
      * @return static
      */
-    public function withEnddate(?\DateTimeInterface $enddate) : static
+    public function withEnddate(?\DateTimeInterface $enddate): static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -68,7 +68,7 @@ class CTInputaddress extends CTAddress
     /**
      * @return null | mixed
      */
-    public function getDuration() : mixed
+    public function getDuration(): mixed
     {
         return $this->duration;
     }
@@ -77,7 +77,7 @@ class CTInputaddress extends CTAddress
      * @param null | mixed $duration
      * @return static
      */
-    public function withDuration(mixed $duration) : static
+    public function withDuration(mixed $duration): static
     {
         $new = clone $this;
         $new->duration = $duration;

@@ -77,98 +77,98 @@ class CTOutputdemographics2006
     /**
      * Age
      *
-     * @var null | \PaymentAssist\Type\Age
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Age
      */
-    private ?\PaymentAssist\Type\Age $age = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Age $age = null;
 
     /**
      * Tenure
      *
-     * @var null | \PaymentAssist\Type\Tenure
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Tenure
      */
-    private ?\PaymentAssist\Type\Tenure $tenure = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Tenure $tenure = null;
 
     /**
      * Household Composition
      *
-     * @var null | \PaymentAssist\Type\Hhcomp
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Hhcomp
      */
-    private ?\PaymentAssist\Type\Hhcomp $hhcomp = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Hhcomp $hhcomp = null;
 
     /**
      * Economic Activity
      *
-     * @var null | \PaymentAssist\Type\Economic
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Economic
      */
-    private ?\PaymentAssist\Type\Economic $economic = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Economic $economic = null;
 
     /**
      * Lifestage
      *
-     * @var null | \PaymentAssist\Type\Lifestage
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Lifestage
      */
-    private ?\PaymentAssist\Type\Lifestage $lifestage = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Lifestage $lifestage = null;
 
     /**
      * Social Class
      *
-     * @var null | \PaymentAssist\Type\Social
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Social
      */
-    private ?\PaymentAssist\Type\Social $social = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Social $social = null;
 
     /**
      * Occupation
      *
-     * @var null | \PaymentAssist\Type\Occupation
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Occupation
      */
-    private ?\PaymentAssist\Type\Occupation $occupation = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Occupation $occupation = null;
 
     /**
      * Mortgage and House Size
      *
-     * @var null | \PaymentAssist\Type\Mortgage
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Mortgage
      */
-    private ?\PaymentAssist\Type\Mortgage $mortgage = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Mortgage $mortgage = null;
 
     /**
      * Shareholding
      *
-     * @var null | \PaymentAssist\Type\Sharehld
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Sharehld
      */
-    private ?\PaymentAssist\Type\Sharehld $sharehld = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Sharehld $sharehld = null;
 
     /**
      * Unemployment
      *
-     * @var null | \PaymentAssist\Type\Unemployment
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Unemployment
      */
-    private ?\PaymentAssist\Type\Unemployment $unemployment = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Unemployment $unemployment = null;
 
     /**
      * Unemployment Rate
      *
-     * @var null | \PaymentAssist\Type\Unemprate
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Unemprate
      */
-    private ?\PaymentAssist\Type\Unemprate $unemprate = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Unemprate $unemprate = null;
 
     /**
      * Property
      *
-     * @var null | \PaymentAssist\Type\Property
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006Property
      */
-    private ?\PaymentAssist\Type\Property $property = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006Property $property = null;
 
     /**
      * International
      *
-     * @var null | \PaymentAssist\Type\International
+     * @var null | \PaymentAssist\Type\CTOutputdemographics2006International
      */
-    private ?\PaymentAssist\Type\International $international = null;
+    private ?\PaymentAssist\Type\CTOutputdemographics2006International $international = null;
 
     /**
      * @return null | string
      */
-    public function getCameouk() : ?string
+    public function getCameouk(): ?string
     {
         return $this->cameouk;
     }
@@ -177,7 +177,7 @@ class CTOutputdemographics2006
      * @param null | string $cameouk
      * @return static
      */
-    public function withCameouk(?string $cameouk) : static
+    public function withCameouk(?string $cameouk): static
     {
         $new = clone $this;
         $new->cameouk = $cameouk;
@@ -188,7 +188,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameoukg() : ?string
+    public function getCameoukg(): ?string
     {
         return $this->cameoukg;
     }
@@ -197,7 +197,7 @@ class CTOutputdemographics2006
      * @param null | string $cameoukg
      * @return static
      */
-    public function withCameoukg(?string $cameoukg) : static
+    public function withCameoukg(?string $cameoukg): static
     {
         $new = clone $this;
         $new->cameoukg = $cameoukg;
@@ -208,7 +208,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameoincome() : ?string
+    public function getCameoincome(): ?string
     {
         return $this->cameoincome;
     }
@@ -217,7 +217,7 @@ class CTOutputdemographics2006
      * @param null | string $cameoincome
      * @return static
      */
-    public function withCameoincome(?string $cameoincome) : static
+    public function withCameoincome(?string $cameoincome): static
     {
         $new = clone $this;
         $new->cameoincome = $cameoincome;
@@ -228,7 +228,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameoincg() : ?string
+    public function getCameoincg(): ?string
     {
         return $this->cameoincg;
     }
@@ -237,7 +237,7 @@ class CTOutputdemographics2006
      * @param null | string $cameoincg
      * @return static
      */
-    public function withCameoincg(?string $cameoincg) : static
+    public function withCameoincg(?string $cameoincg): static
     {
         $new = clone $this;
         $new->cameoincg = $cameoincg;
@@ -248,7 +248,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameoinvestor() : ?string
+    public function getCameoinvestor(): ?string
     {
         return $this->cameoinvestor;
     }
@@ -257,7 +257,7 @@ class CTOutputdemographics2006
      * @param null | string $cameoinvestor
      * @return static
      */
-    public function withCameoinvestor(?string $cameoinvestor) : static
+    public function withCameoinvestor(?string $cameoinvestor): static
     {
         $new = clone $this;
         $new->cameoinvestor = $cameoinvestor;
@@ -268,7 +268,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameoinvg() : ?string
+    public function getCameoinvg(): ?string
     {
         return $this->cameoinvg;
     }
@@ -277,7 +277,7 @@ class CTOutputdemographics2006
      * @param null | string $cameoinvg
      * @return static
      */
-    public function withCameoinvg(?string $cameoinvg) : static
+    public function withCameoinvg(?string $cameoinvg): static
     {
         $new = clone $this;
         $new->cameoinvg = $cameoinvg;
@@ -288,7 +288,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameoproperty() : ?string
+    public function getCameoproperty(): ?string
     {
         return $this->cameoproperty;
     }
@@ -297,7 +297,7 @@ class CTOutputdemographics2006
      * @param null | string $cameoproperty
      * @return static
      */
-    public function withCameoproperty(?string $cameoproperty) : static
+    public function withCameoproperty(?string $cameoproperty): static
     {
         $new = clone $this;
         $new->cameoproperty = $cameoproperty;
@@ -308,7 +308,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameofinance() : ?string
+    public function getCameofinance(): ?string
     {
         return $this->cameofinance;
     }
@@ -317,7 +317,7 @@ class CTOutputdemographics2006
      * @param null | string $cameofinance
      * @return static
      */
-    public function withCameofinance(?string $cameofinance) : static
+    public function withCameofinance(?string $cameofinance): static
     {
         $new = clone $this;
         $new->cameofinance = $cameofinance;
@@ -328,7 +328,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameofing() : ?string
+    public function getCameofing(): ?string
     {
         return $this->cameofing;
     }
@@ -337,7 +337,7 @@ class CTOutputdemographics2006
      * @param null | string $cameofing
      * @return static
      */
-    public function withCameofing(?string $cameofing) : static
+    public function withCameofing(?string $cameofing): static
     {
         $new = clone $this;
         $new->cameofing = $cameofing;
@@ -348,7 +348,7 @@ class CTOutputdemographics2006
     /**
      * @return null | string
      */
-    public function getCameounemploy() : ?string
+    public function getCameounemploy(): ?string
     {
         return $this->cameounemploy;
     }
@@ -357,7 +357,7 @@ class CTOutputdemographics2006
      * @param null | string $cameounemploy
      * @return static
      */
-    public function withCameounemploy(?string $cameounemploy) : static
+    public function withCameounemploy(?string $cameounemploy): static
     {
         $new = clone $this;
         $new->cameounemploy = $cameounemploy;
@@ -366,18 +366,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Age
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Age
      */
-    public function getAge() : ?\PaymentAssist\Type\Age
+    public function getAge(): ?\PaymentAssist\Type\CTOutputdemographics2006Age
     {
         return $this->age;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Age $age
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Age $age
      * @return static
      */
-    public function withAge(?\PaymentAssist\Type\Age $age) : static
+    public function withAge(?\PaymentAssist\Type\CTOutputdemographics2006Age $age): static
     {
         $new = clone $this;
         $new->age = $age;
@@ -386,18 +386,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Tenure
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Tenure
      */
-    public function getTenure() : ?\PaymentAssist\Type\Tenure
+    public function getTenure(): ?\PaymentAssist\Type\CTOutputdemographics2006Tenure
     {
         return $this->tenure;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Tenure $tenure
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Tenure $tenure
      * @return static
      */
-    public function withTenure(?\PaymentAssist\Type\Tenure $tenure) : static
+    public function withTenure(?\PaymentAssist\Type\CTOutputdemographics2006Tenure $tenure): static
     {
         $new = clone $this;
         $new->tenure = $tenure;
@@ -406,18 +406,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Hhcomp
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Hhcomp
      */
-    public function getHhcomp() : ?\PaymentAssist\Type\Hhcomp
+    public function getHhcomp(): ?\PaymentAssist\Type\CTOutputdemographics2006Hhcomp
     {
         return $this->hhcomp;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Hhcomp $hhcomp
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Hhcomp $hhcomp
      * @return static
      */
-    public function withHhcomp(?\PaymentAssist\Type\Hhcomp $hhcomp) : static
+    public function withHhcomp(?\PaymentAssist\Type\CTOutputdemographics2006Hhcomp $hhcomp): static
     {
         $new = clone $this;
         $new->hhcomp = $hhcomp;
@@ -426,18 +426,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Economic
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Economic
      */
-    public function getEconomic() : ?\PaymentAssist\Type\Economic
+    public function getEconomic(): ?\PaymentAssist\Type\CTOutputdemographics2006Economic
     {
         return $this->economic;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Economic $economic
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Economic $economic
      * @return static
      */
-    public function withEconomic(?\PaymentAssist\Type\Economic $economic) : static
+    public function withEconomic(?\PaymentAssist\Type\CTOutputdemographics2006Economic $economic): static
     {
         $new = clone $this;
         $new->economic = $economic;
@@ -446,18 +446,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Lifestage
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Lifestage
      */
-    public function getLifestage() : ?\PaymentAssist\Type\Lifestage
+    public function getLifestage(): ?\PaymentAssist\Type\CTOutputdemographics2006Lifestage
     {
         return $this->lifestage;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Lifestage $lifestage
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Lifestage $lifestage
      * @return static
      */
-    public function withLifestage(?\PaymentAssist\Type\Lifestage $lifestage) : static
+    public function withLifestage(?\PaymentAssist\Type\CTOutputdemographics2006Lifestage $lifestage): static
     {
         $new = clone $this;
         $new->lifestage = $lifestage;
@@ -466,18 +466,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Social
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Social
      */
-    public function getSocial() : ?\PaymentAssist\Type\Social
+    public function getSocial(): ?\PaymentAssist\Type\CTOutputdemographics2006Social
     {
         return $this->social;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Social $social
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Social $social
      * @return static
      */
-    public function withSocial(?\PaymentAssist\Type\Social $social) : static
+    public function withSocial(?\PaymentAssist\Type\CTOutputdemographics2006Social $social): static
     {
         $new = clone $this;
         $new->social = $social;
@@ -486,18 +486,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Occupation
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Occupation
      */
-    public function getOccupation() : ?\PaymentAssist\Type\Occupation
+    public function getOccupation(): ?\PaymentAssist\Type\CTOutputdemographics2006Occupation
     {
         return $this->occupation;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Occupation $occupation
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Occupation $occupation
      * @return static
      */
-    public function withOccupation(?\PaymentAssist\Type\Occupation $occupation) : static
+    public function withOccupation(?\PaymentAssist\Type\CTOutputdemographics2006Occupation $occupation): static
     {
         $new = clone $this;
         $new->occupation = $occupation;
@@ -506,18 +506,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Mortgage
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Mortgage
      */
-    public function getMortgage() : ?\PaymentAssist\Type\Mortgage
+    public function getMortgage(): ?\PaymentAssist\Type\CTOutputdemographics2006Mortgage
     {
         return $this->mortgage;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Mortgage $mortgage
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Mortgage $mortgage
      * @return static
      */
-    public function withMortgage(?\PaymentAssist\Type\Mortgage $mortgage) : static
+    public function withMortgage(?\PaymentAssist\Type\CTOutputdemographics2006Mortgage $mortgage): static
     {
         $new = clone $this;
         $new->mortgage = $mortgage;
@@ -526,18 +526,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Sharehld
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Sharehld
      */
-    public function getSharehld() : ?\PaymentAssist\Type\Sharehld
+    public function getSharehld(): ?\PaymentAssist\Type\CTOutputdemographics2006Sharehld
     {
         return $this->sharehld;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Sharehld $sharehld
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Sharehld $sharehld
      * @return static
      */
-    public function withSharehld(?\PaymentAssist\Type\Sharehld $sharehld) : static
+    public function withSharehld(?\PaymentAssist\Type\CTOutputdemographics2006Sharehld $sharehld): static
     {
         $new = clone $this;
         $new->sharehld = $sharehld;
@@ -546,18 +546,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Unemployment
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Unemployment
      */
-    public function getUnemployment() : ?\PaymentAssist\Type\Unemployment
+    public function getUnemployment(): ?\PaymentAssist\Type\CTOutputdemographics2006Unemployment
     {
         return $this->unemployment;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Unemployment $unemployment
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Unemployment $unemployment
      * @return static
      */
-    public function withUnemployment(?\PaymentAssist\Type\Unemployment $unemployment) : static
+    public function withUnemployment(?\PaymentAssist\Type\CTOutputdemographics2006Unemployment $unemployment): static
     {
         $new = clone $this;
         $new->unemployment = $unemployment;
@@ -566,18 +566,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Unemprate
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Unemprate
      */
-    public function getUnemprate() : ?\PaymentAssist\Type\Unemprate
+    public function getUnemprate(): ?\PaymentAssist\Type\CTOutputdemographics2006Unemprate
     {
         return $this->unemprate;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Unemprate $unemprate
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Unemprate $unemprate
      * @return static
      */
-    public function withUnemprate(?\PaymentAssist\Type\Unemprate $unemprate) : static
+    public function withUnemprate(?\PaymentAssist\Type\CTOutputdemographics2006Unemprate $unemprate): static
     {
         $new = clone $this;
         $new->unemprate = $unemprate;
@@ -586,18 +586,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Property
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006Property
      */
-    public function getProperty() : ?\PaymentAssist\Type\Property
+    public function getProperty(): ?\PaymentAssist\Type\CTOutputdemographics2006Property
     {
         return $this->property;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Property $property
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006Property $property
      * @return static
      */
-    public function withProperty(?\PaymentAssist\Type\Property $property) : static
+    public function withProperty(?\PaymentAssist\Type\CTOutputdemographics2006Property $property): static
     {
         $new = clone $this;
         $new->property = $property;
@@ -606,18 +606,18 @@ class CTOutputdemographics2006
     }
 
     /**
-     * @return null | \PaymentAssist\Type\International
+     * @return null | \PaymentAssist\Type\CTOutputdemographics2006International
      */
-    public function getInternational() : ?\PaymentAssist\Type\International
+    public function getInternational(): ?\PaymentAssist\Type\CTOutputdemographics2006International
     {
         return $this->international;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\International $international
+     * @param null | \PaymentAssist\Type\CTOutputdemographics2006International $international
      * @return static
      */
-    public function withInternational(?\PaymentAssist\Type\International $international) : static
+    public function withInternational(?\PaymentAssist\Type\CTOutputdemographics2006International $international): static
     {
         $new = clone $this;
         $new->international = $international;

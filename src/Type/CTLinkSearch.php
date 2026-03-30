@@ -14,7 +14,7 @@ class CTLinkSearch
     /**
      * @return null | \PaymentAssist\Type\CTLinkSearchDefinition
      */
-    public function getSearchDefinition() : ?\PaymentAssist\Type\CTLinkSearchDefinition
+    public function getSearchDefinition(): ?\PaymentAssist\Type\CTLinkSearchDefinition
     {
         return $this->SearchDefinition;
     }
@@ -23,7 +23,7 @@ class CTLinkSearch
      * @param null | \PaymentAssist\Type\CTLinkSearchDefinition $SearchDefinition
      * @return static
      */
-    public function withSearchDefinition(?\PaymentAssist\Type\CTLinkSearchDefinition $SearchDefinition) : static
+    public function withSearchDefinition(?\PaymentAssist\Type\CTLinkSearchDefinition $SearchDefinition): static
     {
         $new = clone $this;
         $new->SearchDefinition = $SearchDefinition;

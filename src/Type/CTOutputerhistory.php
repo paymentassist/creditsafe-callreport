@@ -42,7 +42,7 @@ class CTOutputerhistory
     /**
      * @return \DateTimeInterface
      */
-    public function getStartdate() : \DateTimeInterface
+    public function getStartdate(): \DateTimeInterface
     {
         return $this->startdate;
     }
@@ -51,7 +51,7 @@ class CTOutputerhistory
      * @param \DateTimeInterface $startdate
      * @return static
      */
-    public function withStartdate(\DateTimeInterface $startdate) : static
+    public function withStartdate(\DateTimeInterface $startdate): static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -62,7 +62,7 @@ class CTOutputerhistory
     /**
      * @return null | \DateTimeInterface
      */
-    public function getEnddate() : ?\DateTimeInterface
+    public function getEnddate(): ?\DateTimeInterface
     {
         return $this->enddate;
     }
@@ -71,7 +71,7 @@ class CTOutputerhistory
      * @param null | \DateTimeInterface $enddate
      * @return static
      */
-    public function withEnddate(?\DateTimeInterface $enddate) : static
+    public function withEnddate(?\DateTimeInterface $enddate): static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -82,7 +82,7 @@ class CTOutputerhistory
     /**
      * @return int
      */
-    public function getOptout() : int
+    public function getOptout(): int
     {
         return $this->optout;
     }
@@ -91,7 +91,7 @@ class CTOutputerhistory
      * @param int $optout
      * @return static
      */
-    public function withOptout(int $optout) : static
+    public function withOptout(int $optout): static
     {
         $new = clone $this;
         $new->optout = $optout;
@@ -102,7 +102,7 @@ class CTOutputerhistory
     /**
      * @return int
      */
-    public function getRollingroll() : int
+    public function getRollingroll(): int
     {
         return $this->rollingroll;
     }
@@ -111,7 +111,7 @@ class CTOutputerhistory
      * @param int $rollingroll
      * @return static
      */
-    public function withRollingroll(int $rollingroll) : static
+    public function withRollingroll(int $rollingroll): static
     {
         $new = clone $this;
         $new->rollingroll = $rollingroll;
@@ -122,7 +122,7 @@ class CTOutputerhistory
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -131,7 +131,7 @@ class CTOutputerhistory
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;

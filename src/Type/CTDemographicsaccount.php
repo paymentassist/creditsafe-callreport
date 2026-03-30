@@ -44,7 +44,7 @@ class CTDemographicsaccount
     /**
      * @return null | string
      */
-    public function getSortcode() : ?string
+    public function getSortcode(): ?string
     {
         return $this->sortcode;
     }
@@ -53,7 +53,7 @@ class CTDemographicsaccount
      * @param null | string $sortcode
      * @return static
      */
-    public function withSortcode(?string $sortcode) : static
+    public function withSortcode(?string $sortcode): static
     {
         $new = clone $this;
         $new->sortcode = $sortcode;
@@ -64,7 +64,7 @@ class CTDemographicsaccount
     /**
      * @return null | string
      */
-    public function getAccountnumber() : ?string
+    public function getAccountnumber(): ?string
     {
         return $this->accountnumber;
     }
@@ -73,7 +73,7 @@ class CTDemographicsaccount
      * @param null | string $accountnumber
      * @return static
      */
-    public function withAccountnumber(?string $accountnumber) : static
+    public function withAccountnumber(?string $accountnumber): static
     {
         $new = clone $this;
         $new->accountnumber = $accountnumber;
@@ -84,7 +84,7 @@ class CTDemographicsaccount
     /**
      * @return null | mixed
      */
-    public function getTimeatbank() : mixed
+    public function getTimeatbank(): mixed
     {
         return $this->timeatbank;
     }
@@ -93,7 +93,7 @@ class CTDemographicsaccount
      * @param null | mixed $timeatbank
      * @return static
      */
-    public function withTimeatbank(mixed $timeatbank) : static
+    public function withTimeatbank(mixed $timeatbank): static
     {
         $new = clone $this;
         $new->timeatbank = $timeatbank;
@@ -104,7 +104,7 @@ class CTDemographicsaccount
     /**
      * @return null | string
      */
-    public function getPaymentmethod() : ?string
+    public function getPaymentmethod(): ?string
     {
         return $this->paymentmethod;
     }
@@ -113,7 +113,7 @@ class CTDemographicsaccount
      * @param null | string $paymentmethod
      * @return static
      */
-    public function withPaymentmethod(?string $paymentmethod) : static
+    public function withPaymentmethod(?string $paymentmethod): static
     {
         $new = clone $this;
         $new->paymentmethod = $paymentmethod;
@@ -124,7 +124,7 @@ class CTDemographicsaccount
     /**
      * @return null | string
      */
-    public function getFinancetype() : ?string
+    public function getFinancetype(): ?string
     {
         return $this->financetype;
     }
@@ -133,7 +133,7 @@ class CTDemographicsaccount
      * @param null | string $financetype
      * @return static
      */
-    public function withFinancetype(?string $financetype) : static
+    public function withFinancetype(?string $financetype): static
     {
         $new = clone $this;
         $new->financetype = $financetype;

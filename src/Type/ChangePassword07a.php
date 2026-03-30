@@ -35,7 +35,7 @@ class ChangePassword07a implements RequestInterface
     /**
      * @return string
      */
-    public function getNewpwd() : string
+    public function getNewpwd(): string
     {
         return $this->newpwd;
     }
@@ -44,7 +44,7 @@ class ChangePassword07a implements RequestInterface
      * @param string $newpwd
      * @return static
      */
-    public function withNewpwd(string $newpwd) : static
+    public function withNewpwd(string $newpwd): static
     {
         $new = clone $this;
         $new->newpwd = $newpwd;
@@ -55,7 +55,7 @@ class ChangePassword07a implements RequestInterface
     /**
      * @return null | string
      */
-    public function getConfirmpwd() : ?string
+    public function getConfirmpwd(): ?string
     {
         return $this->confirmpwd;
     }
@@ -64,7 +64,7 @@ class ChangePassword07a implements RequestInterface
      * @param null | string $confirmpwd
      * @return static
      */
-    public function withConfirmpwd(?string $confirmpwd) : static
+    public function withConfirmpwd(?string $confirmpwd): static
     {
         $new = clone $this;
         $new->confirmpwd = $confirmpwd;

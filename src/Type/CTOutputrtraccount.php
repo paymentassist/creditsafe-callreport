@@ -7,9 +7,9 @@ class CTOutputrtraccount
     /**
      * Account holder related details
      *
-     * @var \PaymentAssist\Type\Holder
+     * @var \PaymentAssist\Type\CTOutputrtraccountHolder
      */
-    private \PaymentAssist\Type\Holder $holder;
+    private \PaymentAssist\Type\CTOutputrtraccountHolder $holder;
 
     /**
      * Organisation type code
@@ -142,18 +142,18 @@ class CTOutputrtraccount
     private \DateTimeInterface $updated;
 
     /**
-     * @return \PaymentAssist\Type\Holder
+     * @return \PaymentAssist\Type\CTOutputrtraccountHolder
      */
-    public function getHolder() : \PaymentAssist\Type\Holder
+    public function getHolder(): \PaymentAssist\Type\CTOutputrtraccountHolder
     {
         return $this->holder;
     }
 
     /**
-     * @param \PaymentAssist\Type\Holder $holder
+     * @param \PaymentAssist\Type\CTOutputrtraccountHolder $holder
      * @return static
      */
-    public function withHolder(\PaymentAssist\Type\Holder $holder) : static
+    public function withHolder(\PaymentAssist\Type\CTOutputrtraccountHolder $holder): static
     {
         $new = clone $this;
         $new->holder = $holder;
@@ -164,7 +164,7 @@ class CTOutputrtraccount
     /**
      * @return string
      */
-    public function getOrgtypecode() : string
+    public function getOrgtypecode(): string
     {
         return $this->orgtypecode;
     }
@@ -173,7 +173,7 @@ class CTOutputrtraccount
      * @param string $orgtypecode
      * @return static
      */
-    public function withOrgtypecode(string $orgtypecode) : static
+    public function withOrgtypecode(string $orgtypecode): static
     {
         $new = clone $this;
         $new->orgtypecode = $orgtypecode;
@@ -184,7 +184,7 @@ class CTOutputrtraccount
     /**
      * @return null | string
      */
-    public function getOrgname() : ?string
+    public function getOrgname(): ?string
     {
         return $this->orgname;
     }
@@ -193,7 +193,7 @@ class CTOutputrtraccount
      * @param null | string $orgname
      * @return static
      */
-    public function withOrgname(?string $orgname) : static
+    public function withOrgname(?string $orgname): static
     {
         $new = clone $this;
         $new->orgname = $orgname;
@@ -204,7 +204,7 @@ class CTOutputrtraccount
     /**
      * @return null | string
      */
-    public function getAccnum() : ?string
+    public function getAccnum(): ?string
     {
         return $this->accnum;
     }
@@ -213,7 +213,7 @@ class CTOutputrtraccount
      * @param null | string $accnum
      * @return static
      */
-    public function withAccnum(?string $accnum) : static
+    public function withAccnum(?string $accnum): static
     {
         $new = clone $this;
         $new->accnum = $accnum;
@@ -224,7 +224,7 @@ class CTOutputrtraccount
     /**
      * @return null | int
      */
-    public function getAccsuffix() : ?int
+    public function getAccsuffix(): ?int
     {
         return $this->accsuffix;
     }
@@ -233,7 +233,7 @@ class CTOutputrtraccount
      * @param null | int $accsuffix
      * @return static
      */
-    public function withAccsuffix(?int $accsuffix) : static
+    public function withAccsuffix(?int $accsuffix): static
     {
         $new = clone $this;
         $new->accsuffix = $accsuffix;
@@ -244,7 +244,7 @@ class CTOutputrtraccount
     /**
      * @return string
      */
-    public function getAcctypecode() : string
+    public function getAcctypecode(): string
     {
         return $this->acctypecode;
     }
@@ -253,7 +253,7 @@ class CTOutputrtraccount
      * @param string $acctypecode
      * @return static
      */
-    public function withAcctypecode(string $acctypecode) : static
+    public function withAcctypecode(string $acctypecode): static
     {
         $new = clone $this;
         $new->acctypecode = $acctypecode;
@@ -264,7 +264,7 @@ class CTOutputrtraccount
     /**
      * @return int
      */
-    public function getBalance() : int
+    public function getBalance(): int
     {
         return $this->balance;
     }
@@ -273,7 +273,7 @@ class CTOutputrtraccount
      * @param int $balance
      * @return static
      */
-    public function withBalance(int $balance) : static
+    public function withBalance(int $balance): static
     {
         $new = clone $this;
         $new->balance = $balance;
@@ -284,7 +284,7 @@ class CTOutputrtraccount
     /**
      * @return null | int
      */
-    public function getLimit() : ?int
+    public function getLimit(): ?int
     {
         return $this->limit;
     }
@@ -293,7 +293,7 @@ class CTOutputrtraccount
      * @param null | int $limit
      * @return static
      */
-    public function withLimit(?int $limit) : static
+    public function withLimit(?int $limit): static
     {
         $new = clone $this;
         $new->limit = $limit;
@@ -304,7 +304,7 @@ class CTOutputrtraccount
     /**
      * @return null | \DateTimeInterface
      */
-    public function getStartdate() : ?\DateTimeInterface
+    public function getStartdate(): ?\DateTimeInterface
     {
         return $this->startdate;
     }
@@ -313,7 +313,7 @@ class CTOutputrtraccount
      * @param null | \DateTimeInterface $startdate
      * @return static
      */
-    public function withStartdate(?\DateTimeInterface $startdate) : static
+    public function withStartdate(?\DateTimeInterface $startdate): static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -324,7 +324,7 @@ class CTOutputrtraccount
     /**
      * @return null | \DateTimeInterface
      */
-    public function getEnddate() : ?\DateTimeInterface
+    public function getEnddate(): ?\DateTimeInterface
     {
         return $this->enddate;
     }
@@ -333,7 +333,7 @@ class CTOutputrtraccount
      * @param null | \DateTimeInterface $enddate
      * @return static
      */
-    public function withEnddate(?\DateTimeInterface $enddate) : static
+    public function withEnddate(?\DateTimeInterface $enddate): static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -344,7 +344,7 @@ class CTOutputrtraccount
     /**
      * @return string
      */
-    public function getAccstatuscode() : string
+    public function getAccstatuscode(): string
     {
         return $this->accstatuscode;
     }
@@ -353,7 +353,7 @@ class CTOutputrtraccount
      * @param string $accstatuscode
      * @return static
      */
-    public function withAccstatuscode(string $accstatuscode) : static
+    public function withAccstatuscode(string $accstatuscode): static
     {
         $new = clone $this;
         $new->accstatuscode = $accstatuscode;
@@ -364,7 +364,7 @@ class CTOutputrtraccount
     /**
      * @return null | string
      */
-    public function getRepayfreqcode() : ?string
+    public function getRepayfreqcode(): ?string
     {
         return $this->repayfreqcode;
     }
@@ -373,7 +373,7 @@ class CTOutputrtraccount
      * @param null | string $repayfreqcode
      * @return static
      */
-    public function withRepayfreqcode(?string $repayfreqcode) : static
+    public function withRepayfreqcode(?string $repayfreqcode): static
     {
         $new = clone $this;
         $new->repayfreqcode = $repayfreqcode;
@@ -384,7 +384,7 @@ class CTOutputrtraccount
     /**
      * @return null | int
      */
-    public function getNumoverdue() : ?int
+    public function getNumoverdue(): ?int
     {
         return $this->numoverdue;
     }
@@ -393,7 +393,7 @@ class CTOutputrtraccount
      * @param null | int $numoverdue
      * @return static
      */
-    public function withNumoverdue(?int $numoverdue) : static
+    public function withNumoverdue(?int $numoverdue): static
     {
         $new = clone $this;
         $new->numoverdue = $numoverdue;
@@ -404,7 +404,7 @@ class CTOutputrtraccount
     /**
      * @return int
      */
-    public function getRollover() : int
+    public function getRollover(): int
     {
         return $this->rollover;
     }
@@ -413,7 +413,7 @@ class CTOutputrtraccount
      * @param int $rollover
      * @return static
      */
-    public function withRollover(int $rollover) : static
+    public function withRollover(int $rollover): static
     {
         $new = clone $this;
         $new->rollover = $rollover;
@@ -424,7 +424,7 @@ class CTOutputrtraccount
     /**
      * @return int
      */
-    public function getCreditext() : int
+    public function getCreditext(): int
     {
         return $this->creditext;
     }
@@ -433,7 +433,7 @@ class CTOutputrtraccount
      * @param int $creditext
      * @return static
      */
-    public function withCreditext(int $creditext) : static
+    public function withCreditext(int $creditext): static
     {
         $new = clone $this;
         $new->creditext = $creditext;
@@ -444,7 +444,7 @@ class CTOutputrtraccount
     /**
      * @return int
      */
-    public function getChangepay() : int
+    public function getChangepay(): int
     {
         return $this->changepay;
     }
@@ -453,7 +453,7 @@ class CTOutputrtraccount
      * @param int $changepay
      * @return static
      */
-    public function withChangepay(int $changepay) : static
+    public function withChangepay(int $changepay): static
     {
         $new = clone $this;
         $new->changepay = $changepay;
@@ -464,7 +464,7 @@ class CTOutputrtraccount
     /**
      * @return null | int
      */
-    public function getNextpayamount() : ?int
+    public function getNextpayamount(): ?int
     {
         return $this->nextpayamount;
     }
@@ -473,7 +473,7 @@ class CTOutputrtraccount
      * @param null | int $nextpayamount
      * @return static
      */
-    public function withNextpayamount(?int $nextpayamount) : static
+    public function withNextpayamount(?int $nextpayamount): static
     {
         $new = clone $this;
         $new->nextpayamount = $nextpayamount;
@@ -484,7 +484,7 @@ class CTOutputrtraccount
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -493,7 +493,7 @@ class CTOutputrtraccount
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -504,7 +504,7 @@ class CTOutputrtraccount
     /**
      * @return \DateTimeInterface
      */
-    public function getUpdated() : \DateTimeInterface
+    public function getUpdated(): \DateTimeInterface
     {
         return $this->updated;
     }
@@ -513,7 +513,7 @@ class CTOutputrtraccount
      * @param \DateTimeInterface $updated
      * @return static
      */
-    public function withUpdated(\DateTimeInterface $updated) : static
+    public function withUpdated(\DateTimeInterface $updated): static
     {
         $new = clone $this;
         $new->updated = $updated;
