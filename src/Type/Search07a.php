@@ -26,7 +26,7 @@ class Search07a implements RequestInterface
     /**
      * @return null | \PaymentAssist\Type\CTSearchDefinition
      */
-    public function getSearchDefinition() : ?\PaymentAssist\Type\CTSearchDefinition
+    public function getSearchDefinition(): ?\PaymentAssist\Type\CTSearchDefinition
     {
         return $this->SearchDefinition;
     }
@@ -35,7 +35,7 @@ class Search07a implements RequestInterface
      * @param null | \PaymentAssist\Type\CTSearchDefinition $SearchDefinition
      * @return static
      */
-    public function withSearchDefinition(?\PaymentAssist\Type\CTSearchDefinition $SearchDefinition) : static
+    public function withSearchDefinition(?\PaymentAssist\Type\CTSearchDefinition $SearchDefinition): static
     {
         $new = clone $this;
         $new->SearchDefinition = $SearchDefinition;

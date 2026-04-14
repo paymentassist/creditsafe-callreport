@@ -42,7 +42,7 @@ class CTApipicklist
     /**
      * @return non-empty-array<int<0,1>, \PaymentAssist\Type\CTPicklistapplicant>
      */
-    public function getApplicant() : array
+    public function getApplicant(): array
     {
         return $this->applicant;
     }
@@ -51,7 +51,7 @@ class CTApipicklist
      * @param non-empty-array<int<0,1>, \PaymentAssist\Type\CTPicklistapplicant> $applicant
      * @return static
      */
-    public function withApplicant(array $applicant) : static
+    public function withApplicant(array $applicant): static
     {
         $new = clone $this;
         $new->applicant = $applicant;
@@ -62,7 +62,7 @@ class CTApipicklist
     /**
      * @return int
      */
-    public function getMaxaddressitems() : int
+    public function getMaxaddressitems(): int
     {
         return $this->maxaddressitems;
     }
@@ -71,7 +71,7 @@ class CTApipicklist
      * @param int $maxaddressitems
      * @return static
      */
-    public function withMaxaddressitems(int $maxaddressitems) : static
+    public function withMaxaddressitems(int $maxaddressitems): static
     {
         $new = clone $this;
         $new->maxaddressitems = $maxaddressitems;
@@ -82,7 +82,7 @@ class CTApipicklist
     /**
      * @return int
      */
-    public function getMaxnameitems() : int
+    public function getMaxnameitems(): int
     {
         return $this->maxnameitems;
     }
@@ -91,7 +91,7 @@ class CTApipicklist
      * @param int $maxnameitems
      * @return static
      */
-    public function withMaxnameitems(int $maxnameitems) : static
+    public function withMaxnameitems(int $maxnameitems): static
     {
         $new = clone $this;
         $new->maxnameitems = $maxnameitems;
@@ -102,7 +102,7 @@ class CTApipicklist
     /**
      * @return int
      */
-    public function getPicklist() : int
+    public function getPicklist(): int
     {
         return $this->picklist;
     }
@@ -111,7 +111,7 @@ class CTApipicklist
      * @param int $picklist
      * @return static
      */
-    public function withPicklist(int $picklist) : static
+    public function withPicklist(int $picklist): static
     {
         $new = clone $this;
         $new->picklist = $picklist;
@@ -122,7 +122,7 @@ class CTApipicklist
     /**
      * @return null | int
      */
-    public function getRegenerated() : ?int
+    public function getRegenerated(): ?int
     {
         return $this->regenerated;
     }
@@ -131,7 +131,7 @@ class CTApipicklist
      * @param null | int $regenerated
      * @return static
      */
-    public function withRegenerated(?int $regenerated) : static
+    public function withRegenerated(?int $regenerated): static
     {
         $new = clone $this;
         $new->regenerated = $regenerated;

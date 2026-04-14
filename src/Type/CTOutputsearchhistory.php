@@ -165,7 +165,7 @@ class CTOutputsearchhistory
     /**
      * @return string
      */
-    public function getSearchref() : string
+    public function getSearchref(): string
     {
         return $this->searchref;
     }
@@ -174,7 +174,7 @@ class CTOutputsearchhistory
      * @param string $searchref
      * @return static
      */
-    public function withSearchref(string $searchref) : static
+    public function withSearchref(string $searchref): static
     {
         $new = clone $this;
         $new->searchref = $searchref;
@@ -185,7 +185,7 @@ class CTOutputsearchhistory
     /**
      * @return string
      */
-    public function getSearchorgtype() : string
+    public function getSearchorgtype(): string
     {
         return $this->searchorgtype;
     }
@@ -194,7 +194,7 @@ class CTOutputsearchhistory
      * @param string $searchorgtype
      * @return static
      */
-    public function withSearchorgtype(string $searchorgtype) : static
+    public function withSearchorgtype(string $searchorgtype): static
     {
         $new = clone $this;
         $new->searchorgtype = $searchorgtype;
@@ -205,7 +205,7 @@ class CTOutputsearchhistory
     /**
      * @return null | string
      */
-    public function getSearchorgname() : ?string
+    public function getSearchorgname(): ?string
     {
         return $this->searchorgname;
     }
@@ -214,7 +214,7 @@ class CTOutputsearchhistory
      * @param null | string $searchorgname
      * @return static
      */
-    public function withSearchorgname(?string $searchorgname) : static
+    public function withSearchorgname(?string $searchorgname): static
     {
         $new = clone $this;
         $new->searchorgname = $searchorgname;
@@ -225,7 +225,7 @@ class CTOutputsearchhistory
     /**
      * @return null | string
      */
-    public function getYourreference() : ?string
+    public function getYourreference(): ?string
     {
         return $this->yourreference;
     }
@@ -234,7 +234,7 @@ class CTOutputsearchhistory
      * @param null | string $yourreference
      * @return static
      */
-    public function withYourreference(?string $yourreference) : static
+    public function withYourreference(?string $yourreference): static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -245,7 +245,7 @@ class CTOutputsearchhistory
     /**
      * @return null | string
      */
-    public function getSearchunitname() : ?string
+    public function getSearchunitname(): ?string
     {
         return $this->searchunitname;
     }
@@ -254,7 +254,7 @@ class CTOutputsearchhistory
      * @param null | string $searchunitname
      * @return static
      */
-    public function withSearchunitname(?string $searchunitname) : static
+    public function withSearchunitname(?string $searchunitname): static
     {
         $new = clone $this;
         $new->searchunitname = $searchunitname;
@@ -265,7 +265,7 @@ class CTOutputsearchhistory
     /**
      * @return int
      */
-    public function getOwnsearch() : int
+    public function getOwnsearch(): int
     {
         return $this->ownsearch;
     }
@@ -274,7 +274,7 @@ class CTOutputsearchhistory
      * @param int $ownsearch
      * @return static
      */
-    public function withOwnsearch(int $ownsearch) : static
+    public function withOwnsearch(int $ownsearch): static
     {
         $new = clone $this;
         $new->ownsearch = $ownsearch;
@@ -285,7 +285,7 @@ class CTOutputsearchhistory
     /**
      * @return int
      */
-    public function getSubsequentenquiry() : int
+    public function getSubsequentenquiry(): int
     {
         return $this->subsequentenquiry;
     }
@@ -294,7 +294,7 @@ class CTOutputsearchhistory
      * @param int $subsequentenquiry
      * @return static
      */
-    public function withSubsequentenquiry(int $subsequentenquiry) : static
+    public function withSubsequentenquiry(int $subsequentenquiry): static
     {
         $new = clone $this;
         $new->subsequentenquiry = $subsequentenquiry;
@@ -305,7 +305,7 @@ class CTOutputsearchhistory
     /**
      * @return null | string
      */
-    public function getUsername() : ?string
+    public function getUsername(): ?string
     {
         return $this->username;
     }
@@ -314,7 +314,7 @@ class CTOutputsearchhistory
      * @param null | string $username
      * @return static
      */
-    public function withUsername(?string $username) : static
+    public function withUsername(?string $username): static
     {
         $new = clone $this;
         $new->username = $username;
@@ -325,7 +325,7 @@ class CTOutputsearchhistory
     /**
      * @return string
      */
-    public function getSearchpurpose() : string
+    public function getSearchpurpose(): string
     {
         return $this->searchpurpose;
     }
@@ -334,7 +334,7 @@ class CTOutputsearchhistory
      * @param string $searchpurpose
      * @return static
      */
-    public function withSearchpurpose(string $searchpurpose) : static
+    public function withSearchpurpose(string $searchpurpose): static
     {
         $new = clone $this;
         $new->searchpurpose = $searchpurpose;
@@ -345,7 +345,7 @@ class CTOutputsearchhistory
     /**
      * @return null | string
      */
-    public function getCredittype() : ?string
+    public function getCredittype(): ?string
     {
         return $this->credittype;
     }
@@ -354,7 +354,7 @@ class CTOutputsearchhistory
      * @param null | string $credittype
      * @return static
      */
-    public function withCredittype(?string $credittype) : static
+    public function withCredittype(?string $credittype): static
     {
         $new = clone $this;
         $new->credittype = $credittype;
@@ -365,7 +365,7 @@ class CTOutputsearchhistory
     /**
      * @return null | int
      */
-    public function getBalance() : ?int
+    public function getBalance(): ?int
     {
         return $this->balance;
     }
@@ -374,7 +374,7 @@ class CTOutputsearchhistory
      * @param null | int $balance
      * @return static
      */
-    public function withBalance(?int $balance) : static
+    public function withBalance(?int $balance): static
     {
         $new = clone $this;
         $new->balance = $balance;
@@ -385,7 +385,7 @@ class CTOutputsearchhistory
     /**
      * @return null | int
      */
-    public function getTerm() : ?int
+    public function getTerm(): ?int
     {
         return $this->term;
     }
@@ -394,7 +394,7 @@ class CTOutputsearchhistory
      * @param null | int $term
      * @return static
      */
-    public function withTerm(?int $term) : static
+    public function withTerm(?int $term): static
     {
         $new = clone $this;
         $new->term = $term;
@@ -405,7 +405,7 @@ class CTOutputsearchhistory
     /**
      * @return int
      */
-    public function getJointapplication() : int
+    public function getJointapplication(): int
     {
         return $this->jointapplication;
     }
@@ -414,7 +414,7 @@ class CTOutputsearchhistory
      * @param int $jointapplication
      * @return static
      */
-    public function withJointapplication(int $jointapplication) : static
+    public function withJointapplication(int $jointapplication): static
     {
         $new = clone $this;
         $new->jointapplication = $jointapplication;
@@ -425,7 +425,7 @@ class CTOutputsearchhistory
     /**
      * @return null | \DateTimeInterface
      */
-    public function getSearchdate() : ?\DateTimeInterface
+    public function getSearchdate(): ?\DateTimeInterface
     {
         return $this->searchdate;
     }
@@ -434,7 +434,7 @@ class CTOutputsearchhistory
      * @param null | \DateTimeInterface $searchdate
      * @return static
      */
-    public function withSearchdate(?\DateTimeInterface $searchdate) : static
+    public function withSearchdate(?\DateTimeInterface $searchdate): static
     {
         $new = clone $this;
         $new->searchdate = $searchdate;
@@ -445,7 +445,7 @@ class CTOutputsearchhistory
     /**
      * @return null | string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -454,7 +454,7 @@ class CTOutputsearchhistory
      * @param null | string $name
      * @return static
      */
-    public function withName(?string $name) : static
+    public function withName(?string $name): static
     {
         $new = clone $this;
         $new->name = $name;
@@ -465,7 +465,7 @@ class CTOutputsearchhistory
     /**
      * @return null | \DateTimeInterface
      */
-    public function getDob() : ?\DateTimeInterface
+    public function getDob(): ?\DateTimeInterface
     {
         return $this->dob;
     }
@@ -474,7 +474,7 @@ class CTOutputsearchhistory
      * @param null | \DateTimeInterface $dob
      * @return static
      */
-    public function withDob(?\DateTimeInterface $dob) : static
+    public function withDob(?\DateTimeInterface $dob): static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -485,7 +485,7 @@ class CTOutputsearchhistory
     /**
      * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
+    public function getAddress(): ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
@@ -494,7 +494,7 @@ class CTOutputsearchhistory
      * @param null | \PaymentAssist\Type\CTOutputaddress $address
      * @return static
      */
-    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address): static
     {
         $new = clone $this;
         $new->address = $address;
@@ -505,7 +505,7 @@ class CTOutputsearchhistory
     /**
      * @return null | \DateTimeInterface
      */
-    public function getStartdate() : ?\DateTimeInterface
+    public function getStartdate(): ?\DateTimeInterface
     {
         return $this->startdate;
     }
@@ -514,7 +514,7 @@ class CTOutputsearchhistory
      * @param null | \DateTimeInterface $startdate
      * @return static
      */
-    public function withStartdate(?\DateTimeInterface $startdate) : static
+    public function withStartdate(?\DateTimeInterface $startdate): static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -525,7 +525,7 @@ class CTOutputsearchhistory
     /**
      * @return null | \DateTimeInterface
      */
-    public function getEnddate() : ?\DateTimeInterface
+    public function getEnddate(): ?\DateTimeInterface
     {
         return $this->enddate;
     }
@@ -534,7 +534,7 @@ class CTOutputsearchhistory
      * @param null | \DateTimeInterface $enddate
      * @return static
      */
-    public function withEnddate(?\DateTimeInterface $enddate) : static
+    public function withEnddate(?\DateTimeInterface $enddate): static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -545,7 +545,7 @@ class CTOutputsearchhistory
     /**
      * @return null | int
      */
-    public function getTpoptout() : ?int
+    public function getTpoptout(): ?int
     {
         return $this->tpoptout;
     }
@@ -554,7 +554,7 @@ class CTOutputsearchhistory
      * @param null | int $tpoptout
      * @return static
      */
-    public function withTpoptout(?int $tpoptout) : static
+    public function withTpoptout(?int $tpoptout): static
     {
         $new = clone $this;
         $new->tpoptout = $tpoptout;
@@ -565,7 +565,7 @@ class CTOutputsearchhistory
     /**
      * @return null | int
      */
-    public function getTransient() : ?int
+    public function getTransient(): ?int
     {
         return $this->transient;
     }
@@ -574,7 +574,7 @@ class CTOutputsearchhistory
      * @param null | int $transient
      * @return static
      */
-    public function withTransient(?int $transient) : static
+    public function withTransient(?int $transient): static
     {
         $new = clone $this;
         $new->transient = $transient;
@@ -585,7 +585,7 @@ class CTOutputsearchhistory
     /**
      * @return null | int
      */
-    public function getLinktype() : ?int
+    public function getLinktype(): ?int
     {
         return $this->linktype;
     }
@@ -594,7 +594,7 @@ class CTOutputsearchhistory
      * @param null | int $linktype
      * @return static
      */
-    public function withLinktype(?int $linktype) : static
+    public function withLinktype(?int $linktype): static
     {
         $new = clone $this;
         $new->linktype = $linktype;

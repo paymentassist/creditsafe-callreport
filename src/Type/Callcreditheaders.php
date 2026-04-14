@@ -28,7 +28,7 @@ class Callcreditheaders
     /**
      * @return string
      */
-    public function getCompany() : string
+    public function getCompany(): string
     {
         return $this->company;
     }
@@ -37,7 +37,7 @@ class Callcreditheaders
      * @param string $company
      * @return static
      */
-    public function withCompany(string $company) : static
+    public function withCompany(string $company): static
     {
         $new = clone $this;
         $new->company = $company;
@@ -48,7 +48,7 @@ class Callcreditheaders
     /**
      * @return string
      */
-    public function getUsername() : string
+    public function getUsername(): string
     {
         return $this->username;
     }
@@ -57,7 +57,7 @@ class Callcreditheaders
      * @param string $username
      * @return static
      */
-    public function withUsername(string $username) : static
+    public function withUsername(string $username): static
     {
         $new = clone $this;
         $new->username = $username;
@@ -68,7 +68,7 @@ class Callcreditheaders
     /**
      * @return string
      */
-    public function getPassword() : string
+    public function getPassword(): string
     {
         return $this->password;
     }
@@ -77,7 +77,7 @@ class Callcreditheaders
      * @param string $password
      * @return static
      */
-    public function withPassword(string $password) : static
+    public function withPassword(string $password): static
     {
         $new = clone $this;
         $new->password = $password;

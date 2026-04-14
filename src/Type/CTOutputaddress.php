@@ -27,7 +27,7 @@ class CTOutputaddress
     /**
      * @return string
      */
-    public function get_() : string
+    public function get_(): string
     {
         return $this->_;
     }
@@ -36,7 +36,7 @@ class CTOutputaddress
      * @param string $_
      * @return static
      */
-    public function with_(string $_) : static
+    public function with_(string $_): static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -47,7 +47,7 @@ class CTOutputaddress
     /**
      * @return int
      */
-    public function getCurrent() : int
+    public function getCurrent(): int
     {
         return $this->current;
     }
@@ -56,7 +56,7 @@ class CTOutputaddress
      * @param int $current
      * @return static
      */
-    public function withCurrent(int $current) : static
+    public function withCurrent(int $current): static
     {
         $new = clone $this;
         $new->current = $current;
@@ -67,7 +67,7 @@ class CTOutputaddress
     /**
      * @return null | int
      */
-    public function getUndeclaredaddresstype() : ?int
+    public function getUndeclaredaddresstype(): ?int
     {
         return $this->undeclaredaddresstype;
     }
@@ -76,7 +76,7 @@ class CTOutputaddress
      * @param null | int $undeclaredaddresstype
      * @return static
      */
-    public function withUndeclaredaddresstype(?int $undeclaredaddresstype) : static
+    public function withUndeclaredaddresstype(?int $undeclaredaddresstype): static
     {
         $new = clone $this;
         $new->undeclaredaddresstype = $undeclaredaddresstype;

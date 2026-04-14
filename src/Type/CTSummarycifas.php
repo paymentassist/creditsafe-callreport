@@ -16,7 +16,7 @@ class CTSummarycifas
     /**
      * @return int
      */
-    public function getTotalcifas() : int
+    public function getTotalcifas(): int
     {
         return $this->totalcifas;
     }
@@ -25,7 +25,7 @@ class CTSummarycifas
      * @param int $totalcifas
      * @return static
      */
-    public function withTotalcifas(int $totalcifas) : static
+    public function withTotalcifas(int $totalcifas): static
     {
         $new = clone $this;
         $new->totalcifas = $totalcifas;

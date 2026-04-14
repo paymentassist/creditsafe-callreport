@@ -7,23 +7,23 @@ class CTOutputcifasfiling
     /**
      * Name and address details for a Filing against a person
      *
-     * @var null | \PaymentAssist\Type\Person
+     * @var null | \PaymentAssist\Type\CTOutputcifasfilingPerson
      */
-    private ?\PaymentAssist\Type\Person $person = null;
+    private ?\PaymentAssist\Type\CTOutputcifasfilingPerson $person = null;
 
     /**
      * Company name and address details for a Filing against a company
      *
-     * @var null | \PaymentAssist\Type\Company
+     * @var null | \PaymentAssist\Type\CTOutputcifasfilingCompany
      */
-    private ?\PaymentAssist\Type\Company $company = null;
+    private ?\PaymentAssist\Type\CTOutputcifasfilingCompany $company = null;
 
     /**
      * Filing details
      *
-     * @var \PaymentAssist\Type\Details
+     * @var \PaymentAssist\Type\CTOutputcifasfilingDetails
      */
-    private \PaymentAssist\Type\Details $details;
+    private \PaymentAssist\Type\CTOutputcifasfilingDetails $details;
 
     /**
      * Set of CIFAS Filing Dispute and Correction Notices
@@ -33,18 +33,18 @@ class CTOutputcifasfiling
     private array $notice;
 
     /**
-     * @return null | \PaymentAssist\Type\Person
+     * @return null | \PaymentAssist\Type\CTOutputcifasfilingPerson
      */
-    public function getPerson() : ?\PaymentAssist\Type\Person
+    public function getPerson(): ?\PaymentAssist\Type\CTOutputcifasfilingPerson
     {
         return $this->person;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Person $person
+     * @param null | \PaymentAssist\Type\CTOutputcifasfilingPerson $person
      * @return static
      */
-    public function withPerson(?\PaymentAssist\Type\Person $person) : static
+    public function withPerson(?\PaymentAssist\Type\CTOutputcifasfilingPerson $person): static
     {
         $new = clone $this;
         $new->person = $person;
@@ -53,18 +53,18 @@ class CTOutputcifasfiling
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Company
+     * @return null | \PaymentAssist\Type\CTOutputcifasfilingCompany
      */
-    public function getCompany() : ?\PaymentAssist\Type\Company
+    public function getCompany(): ?\PaymentAssist\Type\CTOutputcifasfilingCompany
     {
         return $this->company;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Company $company
+     * @param null | \PaymentAssist\Type\CTOutputcifasfilingCompany $company
      * @return static
      */
-    public function withCompany(?\PaymentAssist\Type\Company $company) : static
+    public function withCompany(?\PaymentAssist\Type\CTOutputcifasfilingCompany $company): static
     {
         $new = clone $this;
         $new->company = $company;
@@ -73,18 +73,18 @@ class CTOutputcifasfiling
     }
 
     /**
-     * @return \PaymentAssist\Type\Details
+     * @return \PaymentAssist\Type\CTOutputcifasfilingDetails
      */
-    public function getDetails() : \PaymentAssist\Type\Details
+    public function getDetails(): \PaymentAssist\Type\CTOutputcifasfilingDetails
     {
         return $this->details;
     }
 
     /**
-     * @param \PaymentAssist\Type\Details $details
+     * @param \PaymentAssist\Type\CTOutputcifasfilingDetails $details
      * @return static
      */
-    public function withDetails(\PaymentAssist\Type\Details $details) : static
+    public function withDetails(\PaymentAssist\Type\CTOutputcifasfilingDetails $details): static
     {
         $new = clone $this;
         $new->details = $details;
@@ -95,7 +95,7 @@ class CTOutputcifasfiling
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -104,7 +104,7 @@ class CTOutputcifasfiling
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;

@@ -53,7 +53,7 @@ class CTDemographicsemployment
     /**
      * @return null | string
      */
-    public function getOccupation() : ?string
+    public function getOccupation(): ?string
     {
         return $this->occupation;
     }
@@ -62,7 +62,7 @@ class CTDemographicsemployment
      * @param null | string $occupation
      * @return static
      */
-    public function withOccupation(?string $occupation) : static
+    public function withOccupation(?string $occupation): static
     {
         $new = clone $this;
         $new->occupation = $occupation;
@@ -73,7 +73,7 @@ class CTDemographicsemployment
     /**
      * @return null | string
      */
-    public function getEmploymentstatus() : ?string
+    public function getEmploymentstatus(): ?string
     {
         return $this->employmentstatus;
     }
@@ -82,7 +82,7 @@ class CTDemographicsemployment
      * @param null | string $employmentstatus
      * @return static
      */
-    public function withEmploymentstatus(?string $employmentstatus) : static
+    public function withEmploymentstatus(?string $employmentstatus): static
     {
         $new = clone $this;
         $new->employmentstatus = $employmentstatus;
@@ -93,7 +93,7 @@ class CTDemographicsemployment
     /**
      * @return null | \DateTimeInterface
      */
-    public function getExpirydate() : ?\DateTimeInterface
+    public function getExpirydate(): ?\DateTimeInterface
     {
         return $this->expirydate;
     }
@@ -102,7 +102,7 @@ class CTDemographicsemployment
      * @param null | \DateTimeInterface $expirydate
      * @return static
      */
-    public function withExpirydate(?\DateTimeInterface $expirydate) : static
+    public function withExpirydate(?\DateTimeInterface $expirydate): static
     {
         $new = clone $this;
         $new->expirydate = $expirydate;
@@ -113,7 +113,7 @@ class CTDemographicsemployment
     /**
      * @return null | string
      */
-    public function getEmploymentrecency() : ?string
+    public function getEmploymentrecency(): ?string
     {
         return $this->employmentrecency;
     }
@@ -122,7 +122,7 @@ class CTDemographicsemployment
      * @param null | string $employmentrecency
      * @return static
      */
-    public function withEmploymentrecency(?string $employmentrecency) : static
+    public function withEmploymentrecency(?string $employmentrecency): static
     {
         $new = clone $this;
         $new->employmentrecency = $employmentrecency;
@@ -133,7 +133,7 @@ class CTDemographicsemployment
     /**
      * @return null | string
      */
-    public function getEmployercategory() : ?string
+    public function getEmployercategory(): ?string
     {
         return $this->employercategory;
     }
@@ -142,7 +142,7 @@ class CTDemographicsemployment
      * @param null | string $employercategory
      * @return static
      */
-    public function withEmployercategory(?string $employercategory) : static
+    public function withEmployercategory(?string $employercategory): static
     {
         $new = clone $this;
         $new->employercategory = $employercategory;
@@ -153,7 +153,7 @@ class CTDemographicsemployment
     /**
      * @return null | mixed
      */
-    public function getTimeatcurrentemployer() : mixed
+    public function getTimeatcurrentemployer(): mixed
     {
         return $this->timeatcurrentemployer;
     }
@@ -162,7 +162,7 @@ class CTDemographicsemployment
      * @param null | mixed $timeatcurrentemployer
      * @return static
      */
-    public function withTimeatcurrentemployer(mixed $timeatcurrentemployer) : static
+    public function withTimeatcurrentemployer(mixed $timeatcurrentemployer): static
     {
         $new = clone $this;
         $new->timeatcurrentemployer = $timeatcurrentemployer;

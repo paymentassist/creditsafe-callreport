@@ -28,7 +28,7 @@ class CTLinkSearchDefinition
     /**
      * @return null | \PaymentAssist\Type\CTPayload
      */
-    public function getPayload() : ?\PaymentAssist\Type\CTPayload
+    public function getPayload(): ?\PaymentAssist\Type\CTPayload
     {
         return $this->payload;
     }
@@ -37,7 +37,7 @@ class CTLinkSearchDefinition
      * @param null | \PaymentAssist\Type\CTPayload $payload
      * @return static
      */
-    public function withPayload(?\PaymentAssist\Type\CTPayload $payload) : static
+    public function withPayload(?\PaymentAssist\Type\CTPayload $payload): static
     {
         $new = clone $this;
         $new->payload = $payload;
@@ -48,7 +48,7 @@ class CTLinkSearchDefinition
     /**
      * @return null | string
      */
-    public function getYourreference() : ?string
+    public function getYourreference(): ?string
     {
         return $this->yourreference;
     }
@@ -57,7 +57,7 @@ class CTLinkSearchDefinition
      * @param null | string $yourreference
      * @return static
      */
-    public function withYourreference(?string $yourreference) : static
+    public function withYourreference(?string $yourreference): static
     {
         $new = clone $this;
         $new->yourreference = $yourreference;
@@ -68,7 +68,7 @@ class CTLinkSearchDefinition
     /**
      * @return null | \PaymentAssist\Type\CTLinkrequest
      */
-    public function getLinkrequest() : ?\PaymentAssist\Type\CTLinkrequest
+    public function getLinkrequest(): ?\PaymentAssist\Type\CTLinkrequest
     {
         return $this->linkrequest;
     }
@@ -77,7 +77,7 @@ class CTLinkSearchDefinition
      * @param null | \PaymentAssist\Type\CTLinkrequest $linkrequest
      * @return static
      */
-    public function withLinkrequest(?\PaymentAssist\Type\CTLinkrequest $linkrequest) : static
+    public function withLinkrequest(?\PaymentAssist\Type\CTLinkrequest $linkrequest): static
     {
         $new = clone $this;
         $new->linkrequest = $linkrequest;

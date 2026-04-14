@@ -70,7 +70,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getAbodeno() : ?string
+    public function getAbodeno(): ?string
     {
         return $this->abodeno;
     }
@@ -79,7 +79,7 @@ class CTAddress
      * @param null | string $abodeno
      * @return static
      */
-    public function withAbodeno(?string $abodeno) : static
+    public function withAbodeno(?string $abodeno): static
     {
         $new = clone $this;
         $new->abodeno = $abodeno;
@@ -90,7 +90,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getBuildingno() : ?string
+    public function getBuildingno(): ?string
     {
         return $this->buildingno;
     }
@@ -99,7 +99,7 @@ class CTAddress
      * @param null | string $buildingno
      * @return static
      */
-    public function withBuildingno(?string $buildingno) : static
+    public function withBuildingno(?string $buildingno): static
     {
         $new = clone $this;
         $new->buildingno = $buildingno;
@@ -110,7 +110,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getBuildingname() : ?string
+    public function getBuildingname(): ?string
     {
         return $this->buildingname;
     }
@@ -119,7 +119,7 @@ class CTAddress
      * @param null | string $buildingname
      * @return static
      */
-    public function withBuildingname(?string $buildingname) : static
+    public function withBuildingname(?string $buildingname): static
     {
         $new = clone $this;
         $new->buildingname = $buildingname;
@@ -130,7 +130,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getStreet1() : ?string
+    public function getStreet1(): ?string
     {
         return $this->street1;
     }
@@ -139,7 +139,7 @@ class CTAddress
      * @param null | string $street1
      * @return static
      */
-    public function withStreet1(?string $street1) : static
+    public function withStreet1(?string $street1): static
     {
         $new = clone $this;
         $new->street1 = $street1;
@@ -150,7 +150,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getStreet2() : ?string
+    public function getStreet2(): ?string
     {
         return $this->street2;
     }
@@ -159,7 +159,7 @@ class CTAddress
      * @param null | string $street2
      * @return static
      */
-    public function withStreet2(?string $street2) : static
+    public function withStreet2(?string $street2): static
     {
         $new = clone $this;
         $new->street2 = $street2;
@@ -170,7 +170,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getSublocality() : ?string
+    public function getSublocality(): ?string
     {
         return $this->sublocality;
     }
@@ -179,7 +179,7 @@ class CTAddress
      * @param null | string $sublocality
      * @return static
      */
-    public function withSublocality(?string $sublocality) : static
+    public function withSublocality(?string $sublocality): static
     {
         $new = clone $this;
         $new->sublocality = $sublocality;
@@ -190,7 +190,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getLocality() : ?string
+    public function getLocality(): ?string
     {
         return $this->locality;
     }
@@ -199,7 +199,7 @@ class CTAddress
      * @param null | string $locality
      * @return static
      */
-    public function withLocality(?string $locality) : static
+    public function withLocality(?string $locality): static
     {
         $new = clone $this;
         $new->locality = $locality;
@@ -210,7 +210,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getPosttown() : ?string
+    public function getPosttown(): ?string
     {
         return $this->posttown;
     }
@@ -219,7 +219,7 @@ class CTAddress
      * @param null | string $posttown
      * @return static
      */
-    public function withPosttown(?string $posttown) : static
+    public function withPosttown(?string $posttown): static
     {
         $new = clone $this;
         $new->posttown = $posttown;
@@ -230,7 +230,7 @@ class CTAddress
     /**
      * @return null | string
      */
-    public function getPostcode() : ?string
+    public function getPostcode(): ?string
     {
         return $this->postcode;
     }
@@ -239,7 +239,7 @@ class CTAddress
      * @param null | string $postcode
      * @return static
      */
-    public function withPostcode(?string $postcode) : static
+    public function withPostcode(?string $postcode): static
     {
         $new = clone $this;
         $new->postcode = $postcode;

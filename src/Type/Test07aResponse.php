@@ -16,7 +16,7 @@ class Test07aResponse implements ResultInterface
     /**
      * @return null | \PaymentAssist\Type\CTTestResult
      */
-    public function getTestResult() : ?\PaymentAssist\Type\CTTestResult
+    public function getTestResult(): ?\PaymentAssist\Type\CTTestResult
     {
         return $this->TestResult;
     }
@@ -25,7 +25,7 @@ class Test07aResponse implements ResultInterface
      * @param null | \PaymentAssist\Type\CTTestResult $TestResult
      * @return static
      */
-    public function withTestResult(?\PaymentAssist\Type\CTTestResult $TestResult) : static
+    public function withTestResult(?\PaymentAssist\Type\CTTestResult $TestResult): static
     {
         $new = clone $this;
         $new->TestResult = $TestResult;

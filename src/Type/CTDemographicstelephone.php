@@ -36,7 +36,7 @@ class CTDemographicstelephone
     /**
      * @return null | string
      */
-    public function getType() : ?string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -45,7 +45,7 @@ class CTDemographicstelephone
      * @param null | string $type
      * @return static
      */
-    public function withType(?string $type) : static
+    public function withType(?string $type): static
     {
         $new = clone $this;
         $new->type = $type;
@@ -56,7 +56,7 @@ class CTDemographicstelephone
     /**
      * @return null | string
      */
-    public function getStd() : ?string
+    public function getStd(): ?string
     {
         return $this->std;
     }
@@ -65,7 +65,7 @@ class CTDemographicstelephone
      * @param null | string $std
      * @return static
      */
-    public function withStd(?string $std) : static
+    public function withStd(?string $std): static
     {
         $new = clone $this;
         $new->std = $std;
@@ -76,7 +76,7 @@ class CTDemographicstelephone
     /**
      * @return null | string
      */
-    public function getNumber() : ?string
+    public function getNumber(): ?string
     {
         return $this->number;
     }
@@ -85,7 +85,7 @@ class CTDemographicstelephone
      * @param null | string $number
      * @return static
      */
-    public function withNumber(?string $number) : static
+    public function withNumber(?string $number): static
     {
         $new = clone $this;
         $new->number = $number;
@@ -96,7 +96,7 @@ class CTDemographicstelephone
     /**
      * @return null | string
      */
-    public function getExtension() : ?string
+    public function getExtension(): ?string
     {
         return $this->extension;
     }
@@ -105,7 +105,7 @@ class CTDemographicstelephone
      * @param null | string $extension
      * @return static
      */
-    public function withExtension(?string $extension) : static
+    public function withExtension(?string $extension): static
     {
         $new = clone $this;
         $new->extension = $extension;

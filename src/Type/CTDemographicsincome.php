@@ -21,7 +21,7 @@ class CTDemographicsincome
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsincomedetails
      */
-    public function getPrimary() : ?\PaymentAssist\Type\CTDemographicsincomedetails
+    public function getPrimary(): ?\PaymentAssist\Type\CTDemographicsincomedetails
     {
         return $this->primary;
     }
@@ -30,7 +30,7 @@ class CTDemographicsincome
      * @param null | \PaymentAssist\Type\CTDemographicsincomedetails $primary
      * @return static
      */
-    public function withPrimary(?\PaymentAssist\Type\CTDemographicsincomedetails $primary) : static
+    public function withPrimary(?\PaymentAssist\Type\CTDemographicsincomedetails $primary): static
     {
         $new = clone $this;
         $new->primary = $primary;
@@ -41,7 +41,7 @@ class CTDemographicsincome
     /**
      * @return null | \PaymentAssist\Type\CTDemographicsincomedetails
      */
-    public function getAdditional() : ?\PaymentAssist\Type\CTDemographicsincomedetails
+    public function getAdditional(): ?\PaymentAssist\Type\CTDemographicsincomedetails
     {
         return $this->additional;
     }
@@ -50,7 +50,7 @@ class CTDemographicsincome
      * @param null | \PaymentAssist\Type\CTDemographicsincomedetails $additional
      * @return static
      */
-    public function withAdditional(?\PaymentAssist\Type\CTDemographicsincomedetails $additional) : static
+    public function withAdditional(?\PaymentAssist\Type\CTDemographicsincomedetails $additional): static
     {
         $new = clone $this;
         $new->additional = $additional;

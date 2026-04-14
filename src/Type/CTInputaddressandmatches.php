@@ -14,9 +14,9 @@ class CTInputaddressandmatches
     /**
      * Contains a set of matches for this specific address
      *
-     * @var \PaymentAssist\Type\Fullmatches
+     * @var \PaymentAssist\Type\CTInputaddressandmatchesFullmatches
      */
-    private \PaymentAssist\Type\Fullmatches $fullmatches;
+    private \PaymentAssist\Type\CTInputaddressandmatchesFullmatches $fullmatches;
 
     /**
      * Address identifier
@@ -28,7 +28,7 @@ class CTInputaddressandmatches
     /**
      * @return \PaymentAssist\Type\CTAddress
      */
-    public function getAddressinput() : \PaymentAssist\Type\CTAddress
+    public function getAddressinput(): \PaymentAssist\Type\CTAddress
     {
         return $this->addressinput;
     }
@@ -37,7 +37,7 @@ class CTInputaddressandmatches
      * @param \PaymentAssist\Type\CTAddress $addressinput
      * @return static
      */
-    public function withAddressinput(\PaymentAssist\Type\CTAddress $addressinput) : static
+    public function withAddressinput(\PaymentAssist\Type\CTAddress $addressinput): static
     {
         $new = clone $this;
         $new->addressinput = $addressinput;
@@ -46,18 +46,18 @@ class CTInputaddressandmatches
     }
 
     /**
-     * @return \PaymentAssist\Type\Fullmatches
+     * @return \PaymentAssist\Type\CTInputaddressandmatchesFullmatches
      */
-    public function getFullmatches() : \PaymentAssist\Type\Fullmatches
+    public function getFullmatches(): \PaymentAssist\Type\CTInputaddressandmatchesFullmatches
     {
         return $this->fullmatches;
     }
 
     /**
-     * @param \PaymentAssist\Type\Fullmatches $fullmatches
+     * @param \PaymentAssist\Type\CTInputaddressandmatchesFullmatches $fullmatches
      * @return static
      */
-    public function withFullmatches(\PaymentAssist\Type\Fullmatches $fullmatches) : static
+    public function withFullmatches(\PaymentAssist\Type\CTInputaddressandmatchesFullmatches $fullmatches): static
     {
         $new = clone $this;
         $new->fullmatches = $fullmatches;
@@ -68,7 +68,7 @@ class CTInputaddressandmatches
     /**
      * @return null | int
      */
-    public function getAddressid() : ?int
+    public function getAddressid(): ?int
     {
         return $this->addressid;
     }
@@ -77,7 +77,7 @@ class CTInputaddressandmatches
      * @param null | int $addressid
      * @return static
      */
-    public function withAddressid(?int $addressid) : static
+    public function withAddressid(?int $addressid): static
     {
         $new = clone $this;
         $new->addressid = $addressid;

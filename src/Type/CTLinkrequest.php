@@ -45,7 +45,7 @@ class CTLinkrequest
     /**
      * @return string
      */
-    public function getOrigsrchid() : string
+    public function getOrigsrchid(): string
     {
         return $this->origsrchid;
     }
@@ -54,7 +54,7 @@ class CTLinkrequest
      * @param string $origsrchid
      * @return static
      */
-    public function withOrigsrchid(string $origsrchid) : static
+    public function withOrigsrchid(string $origsrchid): static
     {
         $new = clone $this;
         $new->origsrchid = $origsrchid;
@@ -65,7 +65,7 @@ class CTLinkrequest
     /**
      * @return string
      */
-    public function getNavlinkid() : string
+    public function getNavlinkid(): string
     {
         return $this->navlinkid;
     }
@@ -74,7 +74,7 @@ class CTLinkrequest
      * @param string $navlinkid
      * @return static
      */
-    public function withNavlinkid(string $navlinkid) : static
+    public function withNavlinkid(string $navlinkid): static
     {
         $new = clone $this;
         $new->navlinkid = $navlinkid;
@@ -85,7 +85,7 @@ class CTLinkrequest
     /**
      * @return string
      */
-    public function getSchemaversion() : string
+    public function getSchemaversion(): string
     {
         return $this->schemaversion;
     }
@@ -94,7 +94,7 @@ class CTLinkrequest
      * @param string $schemaversion
      * @return static
      */
-    public function withSchemaversion(string $schemaversion) : static
+    public function withSchemaversion(string $schemaversion): static
     {
         $new = clone $this;
         $new->schemaversion = $schemaversion;
@@ -105,7 +105,7 @@ class CTLinkrequest
     /**
      * @return int
      */
-    public function getDatasets() : int
+    public function getDatasets(): int
     {
         return $this->datasets;
     }
@@ -114,7 +114,7 @@ class CTLinkrequest
      * @param int $datasets
      * @return static
      */
-    public function withDatasets(int $datasets) : static
+    public function withDatasets(int $datasets): static
     {
         $new = clone $this;
         $new->datasets = $datasets;

@@ -7,7 +7,7 @@ class CTCreditreport
     /**
      * Credit Report
      *
-     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
+     * @var non-empty-array<int<0,1>, \PaymentAssist\Type\CTCreditreportApplicant>
      */
     private array $applicant;
 
@@ -27,18 +27,18 @@ class CTCreditreport
     private int $linktype;
 
     /**
-     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant>
+     * @return non-empty-array<int<0,1>, \PaymentAssist\Type\CTCreditreportApplicant>
      */
-    public function getApplicant() : array
+    public function getApplicant(): array
     {
         return $this->applicant;
     }
 
     /**
-     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\Applicant> $applicant
+     * @param non-empty-array<int<0,1>, \PaymentAssist\Type\CTCreditreportApplicant> $applicant
      * @return static
      */
-    public function withApplicant(array $applicant) : static
+    public function withApplicant(array $applicant): static
     {
         $new = clone $this;
         $new->applicant = $applicant;
@@ -49,7 +49,7 @@ class CTCreditreport
     /**
      * @return string
      */
-    public function getSearchid() : string
+    public function getSearchid(): string
     {
         return $this->searchid;
     }
@@ -58,7 +58,7 @@ class CTCreditreport
      * @param string $searchid
      * @return static
      */
-    public function withSearchid(string $searchid) : static
+    public function withSearchid(string $searchid): static
     {
         $new = clone $this;
         $new->searchid = $searchid;
@@ -69,7 +69,7 @@ class CTCreditreport
     /**
      * @return int
      */
-    public function getLinktype() : int
+    public function getLinktype(): int
     {
         return $this->linktype;
     }
@@ -78,7 +78,7 @@ class CTCreditreport
      * @param int $linktype
      * @return static
      */
-    public function withLinktype(int $linktype) : static
+    public function withLinktype(int $linktype): static
     {
         $new = clone $this;
         $new->linktype = $linktype;

@@ -22,7 +22,7 @@ class CTOutputcifasaddress
     /**
      * @return string
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
@@ -31,7 +31,7 @@ class CTOutputcifasaddress
      * @param string $type
      * @return static
      */
-    public function withType(string $type) : static
+    public function withType(string $type): static
     {
         $new = clone $this;
         $new->type = $type;
@@ -42,7 +42,7 @@ class CTOutputcifasaddress
     /**
      * @return \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress() : \PaymentAssist\Type\CTOutputaddress
+    public function getAddress(): \PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
@@ -51,7 +51,7 @@ class CTOutputcifasaddress
      * @param \PaymentAssist\Type\CTOutputaddress $address
      * @return static
      */
-    public function withAddress(\PaymentAssist\Type\CTOutputaddress $address) : static
+    public function withAddress(\PaymentAssist\Type\CTOutputaddress $address): static
     {
         $new = clone $this;
         $new->address = $address;

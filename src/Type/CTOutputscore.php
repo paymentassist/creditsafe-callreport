@@ -7,30 +7,30 @@ class CTOutputscore
     /**
      * Calculated credit score
      *
-     * @var null | \PaymentAssist\Type\Score
+     * @var null | \PaymentAssist\Type\CTOutputscoreScore
      */
-    private ?\PaymentAssist\Type\Score $score = null;
+    private ?\PaymentAssist\Type\CTOutputscoreScore $score = null;
 
     /**
      * Set of reason codes for the credit score
      *
-     * @var null | \PaymentAssist\Type\Reasons
+     * @var null | \PaymentAssist\Type\CTOutputscoreReasons
      */
-    private ?\PaymentAssist\Type\Reasons $reasons = null;
+    private ?\PaymentAssist\Type\CTOutputscoreReasons $reasons = null;
 
     /**
-     * @return null | \PaymentAssist\Type\Score
+     * @return null | \PaymentAssist\Type\CTOutputscoreScore
      */
-    public function getScore() : ?\PaymentAssist\Type\Score
+    public function getScore(): ?\PaymentAssist\Type\CTOutputscoreScore
     {
         return $this->score;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Score $score
+     * @param null | \PaymentAssist\Type\CTOutputscoreScore $score
      * @return static
      */
-    public function withScore(?\PaymentAssist\Type\Score $score) : static
+    public function withScore(?\PaymentAssist\Type\CTOutputscoreScore $score): static
     {
         $new = clone $this;
         $new->score = $score;
@@ -39,18 +39,18 @@ class CTOutputscore
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Reasons
+     * @return null | \PaymentAssist\Type\CTOutputscoreReasons
      */
-    public function getReasons() : ?\PaymentAssist\Type\Reasons
+    public function getReasons(): ?\PaymentAssist\Type\CTOutputscoreReasons
     {
         return $this->reasons;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Reasons $reasons
+     * @param null | \PaymentAssist\Type\CTOutputscoreReasons $reasons
      * @return static
      */
-    public function withReasons(?\PaymentAssist\Type\Reasons $reasons) : static
+    public function withReasons(?\PaymentAssist\Type\CTOutputscoreReasons $reasons): static
     {
         $new = clone $this;
         $new->reasons = $reasons;

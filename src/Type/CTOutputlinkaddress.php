@@ -48,7 +48,7 @@ class CTOutputlinkaddress extends CTOutputaddress
     /**
      * @return string
      */
-    public function get_() : string
+    public function get_(): string
     {
         return $this->_;
     }
@@ -57,7 +57,7 @@ class CTOutputlinkaddress extends CTOutputaddress
      * @param string $_
      * @return static
      */
-    public function with_(string $_) : static
+    public function with_(string $_): static
     {
         $new = clone $this;
         $new->_ = $_;
@@ -68,7 +68,7 @@ class CTOutputlinkaddress extends CTOutputaddress
     /**
      * @return int
      */
-    public function getCurrent() : int
+    public function getCurrent(): int
     {
         return $this->current;
     }
@@ -77,7 +77,7 @@ class CTOutputlinkaddress extends CTOutputaddress
      * @param int $current
      * @return static
      */
-    public function withCurrent(int $current) : static
+    public function withCurrent(int $current): static
     {
         $new = clone $this;
         $new->current = $current;
@@ -88,7 +88,7 @@ class CTOutputlinkaddress extends CTOutputaddress
     /**
      * @return null | int
      */
-    public function getUndeclaredaddresstype() : ?int
+    public function getUndeclaredaddresstype(): ?int
     {
         return $this->undeclaredaddresstype;
     }
@@ -97,7 +97,7 @@ class CTOutputlinkaddress extends CTOutputaddress
      * @param null | int $undeclaredaddresstype
      * @return static
      */
-    public function withUndeclaredaddresstype(?int $undeclaredaddresstype) : static
+    public function withUndeclaredaddresstype(?int $undeclaredaddresstype): static
     {
         $new = clone $this;
         $new->undeclaredaddresstype = $undeclaredaddresstype;
@@ -108,7 +108,7 @@ class CTOutputlinkaddress extends CTOutputaddress
     /**
      * @return int
      */
-    public function getAddressid() : int
+    public function getAddressid(): int
     {
         return $this->addressid;
     }
@@ -117,7 +117,7 @@ class CTOutputlinkaddress extends CTOutputaddress
      * @param int $addressid
      * @return static
      */
-    public function withAddressid(int $addressid) : static
+    public function withAddressid(int $addressid): static
     {
         $new = clone $this;
         $new->addressid = $addressid;
@@ -128,7 +128,7 @@ class CTOutputlinkaddress extends CTOutputaddress
     /**
      * @return int
      */
-    public function getDeclared() : int
+    public function getDeclared(): int
     {
         return $this->declared;
     }
@@ -137,7 +137,7 @@ class CTOutputlinkaddress extends CTOutputaddress
      * @param int $declared
      * @return static
      */
-    public function withDeclared(int $declared) : static
+    public function withDeclared(int $declared): static
     {
         $new = clone $this;
         $new->declared = $declared;
@@ -148,7 +148,7 @@ class CTOutputlinkaddress extends CTOutputaddress
     /**
      * @return null | string
      */
-    public function getNavlinkid() : ?string
+    public function getNavlinkid(): ?string
     {
         return $this->navlinkid;
     }
@@ -157,7 +157,7 @@ class CTOutputlinkaddress extends CTOutputaddress
      * @param null | string $navlinkid
      * @return static
      */
-    public function withNavlinkid(?string $navlinkid) : static
+    public function withNavlinkid(?string $navlinkid): static
     {
         $new = clone $this;
         $new->navlinkid = $navlinkid;

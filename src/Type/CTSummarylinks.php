@@ -42,7 +42,7 @@ class CTSummarylinks
     /**
      * @return null | int
      */
-    public function getTotalundecaddresses() : ?int
+    public function getTotalundecaddresses(): ?int
     {
         return $this->totalundecaddresses;
     }
@@ -51,7 +51,7 @@ class CTSummarylinks
      * @param null | int $totalundecaddresses
      * @return static
      */
-    public function withTotalundecaddresses(?int $totalundecaddresses) : static
+    public function withTotalundecaddresses(?int $totalundecaddresses): static
     {
         $new = clone $this;
         $new->totalundecaddresses = $totalundecaddresses;
@@ -62,7 +62,7 @@ class CTSummarylinks
     /**
      * @return null | int
      */
-    public function getTotalundecaddressessearched() : ?int
+    public function getTotalundecaddressessearched(): ?int
     {
         return $this->totalundecaddressessearched;
     }
@@ -71,7 +71,7 @@ class CTSummarylinks
      * @param null | int $totalundecaddressessearched
      * @return static
      */
-    public function withTotalundecaddressessearched(?int $totalundecaddressessearched) : static
+    public function withTotalundecaddressessearched(?int $totalundecaddressessearched): static
     {
         $new = clone $this;
         $new->totalundecaddressessearched = $totalundecaddressessearched;
@@ -82,7 +82,7 @@ class CTSummarylinks
     /**
      * @return null | int
      */
-    public function getTotalundecaddressesunsearched() : ?int
+    public function getTotalundecaddressesunsearched(): ?int
     {
         return $this->totalundecaddressesunsearched;
     }
@@ -91,7 +91,7 @@ class CTSummarylinks
      * @param null | int $totalundecaddressesunsearched
      * @return static
      */
-    public function withTotalundecaddressesunsearched(?int $totalundecaddressesunsearched) : static
+    public function withTotalundecaddressesunsearched(?int $totalundecaddressesunsearched): static
     {
         $new = clone $this;
         $new->totalundecaddressesunsearched = $totalundecaddressesunsearched;
@@ -102,7 +102,7 @@ class CTSummarylinks
     /**
      * @return int
      */
-    public function getTotalundecaliases() : int
+    public function getTotalundecaliases(): int
     {
         return $this->totalundecaliases;
     }
@@ -111,7 +111,7 @@ class CTSummarylinks
      * @param int $totalundecaliases
      * @return static
      */
-    public function withTotalundecaliases(int $totalundecaliases) : static
+    public function withTotalundecaliases(int $totalundecaliases): static
     {
         $new = clone $this;
         $new->totalundecaliases = $totalundecaliases;
@@ -122,7 +122,7 @@ class CTSummarylinks
     /**
      * @return null | int
      */
-    public function getTotalundecassociates() : ?int
+    public function getTotalundecassociates(): ?int
     {
         return $this->totalundecassociates;
     }
@@ -131,7 +131,7 @@ class CTSummarylinks
      * @param null | int $totalundecassociates
      * @return static
      */
-    public function withTotalundecassociates(?int $totalundecassociates) : static
+    public function withTotalundecassociates(?int $totalundecassociates): static
     {
         $new = clone $this;
         $new->totalundecassociates = $totalundecassociates;

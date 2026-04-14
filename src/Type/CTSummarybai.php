@@ -28,7 +28,7 @@ class CTSummarybai
     /**
      * @return null | int
      */
-    public function getTotaldischarged() : ?int
+    public function getTotaldischarged(): ?int
     {
         return $this->totaldischarged;
     }
@@ -37,7 +37,7 @@ class CTSummarybai
      * @param null | int $totaldischarged
      * @return static
      */
-    public function withTotaldischarged(?int $totaldischarged) : static
+    public function withTotaldischarged(?int $totaldischarged): static
     {
         $new = clone $this;
         $new->totaldischarged = $totaldischarged;
@@ -48,7 +48,7 @@ class CTSummarybai
     /**
      * @return int
      */
-    public function getCurrentlyinsolvent() : int
+    public function getCurrentlyinsolvent(): int
     {
         return $this->currentlyinsolvent;
     }
@@ -57,7 +57,7 @@ class CTSummarybai
      * @param int $currentlyinsolvent
      * @return static
      */
-    public function withCurrentlyinsolvent(int $currentlyinsolvent) : static
+    public function withCurrentlyinsolvent(int $currentlyinsolvent): static
     {
         $new = clone $this;
         $new->currentlyinsolvent = $currentlyinsolvent;
@@ -68,7 +68,7 @@ class CTSummarybai
     /**
      * @return null | int
      */
-    public function getRestricted() : ?int
+    public function getRestricted(): ?int
     {
         return $this->restricted;
     }
@@ -77,7 +77,7 @@ class CTSummarybai
      * @param null | int $restricted
      * @return static
      */
-    public function withRestricted(?int $restricted) : static
+    public function withRestricted(?int $restricted): static
     {
         $new = clone $this;
         $new->restricted = $restricted;

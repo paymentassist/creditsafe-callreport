@@ -79,7 +79,7 @@ class CTAddressconfresident
     /**
      * @return null | string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -88,7 +88,7 @@ class CTAddressconfresident
      * @param null | string $name
      * @return static
      */
-    public function withName(?string $name) : static
+    public function withName(?string $name): static
     {
         $new = clone $this;
         $new->name = $name;
@@ -99,7 +99,7 @@ class CTAddressconfresident
     /**
      * @return null | mixed
      */
-    public function getDuration() : mixed
+    public function getDuration(): mixed
     {
         return $this->duration;
     }
@@ -108,7 +108,7 @@ class CTAddressconfresident
      * @param null | mixed $duration
      * @return static
      */
-    public function withDuration(mixed $duration) : static
+    public function withDuration(mixed $duration): static
     {
         $new = clone $this;
         $new->duration = $duration;
@@ -119,7 +119,7 @@ class CTAddressconfresident
     /**
      * @return null | \DateTimeInterface
      */
-    public function getStartdate() : ?\DateTimeInterface
+    public function getStartdate(): ?\DateTimeInterface
     {
         return $this->startdate;
     }
@@ -128,7 +128,7 @@ class CTAddressconfresident
      * @param null | \DateTimeInterface $startdate
      * @return static
      */
-    public function withStartdate(?\DateTimeInterface $startdate) : static
+    public function withStartdate(?\DateTimeInterface $startdate): static
     {
         $new = clone $this;
         $new->startdate = $startdate;
@@ -139,7 +139,7 @@ class CTAddressconfresident
     /**
      * @return null | \DateTimeInterface
      */
-    public function getEnddate() : ?\DateTimeInterface
+    public function getEnddate(): ?\DateTimeInterface
     {
         return $this->enddate;
     }
@@ -148,7 +148,7 @@ class CTAddressconfresident
      * @param null | \DateTimeInterface $enddate
      * @return static
      */
-    public function withEnddate(?\DateTimeInterface $enddate) : static
+    public function withEnddate(?\DateTimeInterface $enddate): static
     {
         $new = clone $this;
         $new->enddate = $enddate;
@@ -159,7 +159,7 @@ class CTAddressconfresident
     /**
      * @return int
      */
-    public function getErvalid() : int
+    public function getErvalid(): int
     {
         return $this->ervalid;
     }
@@ -168,7 +168,7 @@ class CTAddressconfresident
      * @param int $ervalid
      * @return static
      */
-    public function withErvalid(int $ervalid) : static
+    public function withErvalid(int $ervalid): static
     {
         $new = clone $this;
         $new->ervalid = $ervalid;
@@ -179,7 +179,7 @@ class CTAddressconfresident
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputerhistory>
      */
-    public function getErhistory() : array
+    public function getErhistory(): array
     {
         return $this->erhistory;
     }
@@ -188,7 +188,7 @@ class CTAddressconfresident
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputerhistory> $erhistory
      * @return static
      */
-    public function withErhistory(array $erhistory) : static
+    public function withErhistory(array $erhistory): static
     {
         $new = clone $this;
         $new->erhistory = $erhistory;
@@ -199,7 +199,7 @@ class CTAddressconfresident
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -208,7 +208,7 @@ class CTAddressconfresident
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -219,7 +219,7 @@ class CTAddressconfresident
     /**
      * @return string
      */
-    public function getMatchtype() : string
+    public function getMatchtype(): string
     {
         return $this->matchtype;
     }
@@ -228,7 +228,7 @@ class CTAddressconfresident
      * @param string $matchtype
      * @return static
      */
-    public function withMatchtype(string $matchtype) : static
+    public function withMatchtype(string $matchtype): static
     {
         $new = clone $this;
         $new->matchtype = $matchtype;
@@ -239,7 +239,7 @@ class CTAddressconfresident
     /**
      * @return int
      */
-    public function getCurrentname() : int
+    public function getCurrentname(): int
     {
         return $this->currentname;
     }
@@ -248,7 +248,7 @@ class CTAddressconfresident
      * @param int $currentname
      * @return static
      */
-    public function withCurrentname(int $currentname) : static
+    public function withCurrentname(int $currentname): static
     {
         $new = clone $this;
         $new->currentname = $currentname;
@@ -259,7 +259,7 @@ class CTAddressconfresident
     /**
      * @return int
      */
-    public function getDeclaredalias() : int
+    public function getDeclaredalias(): int
     {
         return $this->declaredalias;
     }
@@ -268,7 +268,7 @@ class CTAddressconfresident
      * @param int $declaredalias
      * @return static
      */
-    public function withDeclaredalias(int $declaredalias) : static
+    public function withDeclaredalias(int $declaredalias): static
     {
         $new = clone $this;
         $new->declaredalias = $declaredalias;

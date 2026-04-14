@@ -42,7 +42,7 @@ class CTJobdetails
     /**
      * @return null | string
      */
-    public function getSearchid() : ?string
+    public function getSearchid(): ?string
     {
         return $this->searchid;
     }
@@ -51,7 +51,7 @@ class CTJobdetails
      * @param null | string $searchid
      * @return static
      */
-    public function withSearchid(?string $searchid) : static
+    public function withSearchid(?string $searchid): static
     {
         $new = clone $this;
         $new->searchid = $searchid;
@@ -62,7 +62,7 @@ class CTJobdetails
     /**
      * @return null | string
      */
-    public function getCast() : ?string
+    public function getCast(): ?string
     {
         return $this->cast;
     }
@@ -71,7 +71,7 @@ class CTJobdetails
      * @param null | string $cast
      * @return static
      */
-    public function withCast(?string $cast) : static
+    public function withCast(?string $cast): static
     {
         $new = clone $this;
         $new->cast = $cast;
@@ -82,7 +82,7 @@ class CTJobdetails
     /**
      * @return null | int
      */
-    public function getPstv() : ?int
+    public function getPstv(): ?int
     {
         return $this->pstv;
     }
@@ -91,7 +91,7 @@ class CTJobdetails
      * @param null | int $pstv
      * @return static
      */
-    public function withPstv(?int $pstv) : static
+    public function withPstv(?int $pstv): static
     {
         $new = clone $this;
         $new->pstv = $pstv;
@@ -102,7 +102,7 @@ class CTJobdetails
     /**
      * @return null | int
      */
-    public function getLs() : ?int
+    public function getLs(): ?int
     {
         return $this->ls;
     }
@@ -111,7 +111,7 @@ class CTJobdetails
      * @param null | int $ls
      * @return static
      */
-    public function withLs(?int $ls) : static
+    public function withLs(?int $ls): static
     {
         $new = clone $this;
         $new->ls = $ls;
@@ -122,7 +122,7 @@ class CTJobdetails
     /**
      * @return null | \DateTimeInterface
      */
-    public function getSearchdate() : ?\DateTimeInterface
+    public function getSearchdate(): ?\DateTimeInterface
     {
         return $this->searchdate;
     }
@@ -131,7 +131,7 @@ class CTJobdetails
      * @param null | \DateTimeInterface $searchdate
      * @return static
      */
-    public function withSearchdate(?\DateTimeInterface $searchdate) : static
+    public function withSearchdate(?\DateTimeInterface $searchdate): static
     {
         $new = clone $this;
         $new->searchdate = $searchdate;

@@ -14,9 +14,9 @@ class CTAlert
     /**
      * Summarised Scores for Alert Individuals (these scores will not be returned for Alert Review)
      *
-     * @var null | \PaymentAssist\Type\Creditscores
+     * @var null | \PaymentAssist\Type\CTAlertCreditscores
      */
-    private ?\PaymentAssist\Type\Creditscores $creditscores = null;
+    private ?\PaymentAssist\Type\CTAlertCreditscores $creditscores = null;
 
     /**
      * Alert Summary Block
@@ -35,7 +35,7 @@ class CTAlert
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTAlertindividual>
      */
-    public function getAlertindividual() : array
+    public function getAlertindividual(): array
     {
         return $this->alertindividual;
     }
@@ -44,7 +44,7 @@ class CTAlert
      * @param array<int<0,max>, \PaymentAssist\Type\CTAlertindividual> $alertindividual
      * @return static
      */
-    public function withAlertindividual(array $alertindividual) : static
+    public function withAlertindividual(array $alertindividual): static
     {
         $new = clone $this;
         $new->alertindividual = $alertindividual;
@@ -53,18 +53,18 @@ class CTAlert
     }
 
     /**
-     * @return null | \PaymentAssist\Type\Creditscores
+     * @return null | \PaymentAssist\Type\CTAlertCreditscores
      */
-    public function getCreditscores() : ?\PaymentAssist\Type\Creditscores
+    public function getCreditscores(): ?\PaymentAssist\Type\CTAlertCreditscores
     {
         return $this->creditscores;
     }
 
     /**
-     * @param null | \PaymentAssist\Type\Creditscores $creditscores
+     * @param null | \PaymentAssist\Type\CTAlertCreditscores $creditscores
      * @return static
      */
-    public function withCreditscores(?\PaymentAssist\Type\Creditscores $creditscores) : static
+    public function withCreditscores(?\PaymentAssist\Type\CTAlertCreditscores $creditscores): static
     {
         $new = clone $this;
         $new->creditscores = $creditscores;
@@ -75,7 +75,7 @@ class CTAlert
     /**
      * @return null | \PaymentAssist\Type\CTAlertsummary
      */
-    public function getSummary() : ?\PaymentAssist\Type\CTAlertsummary
+    public function getSummary(): ?\PaymentAssist\Type\CTAlertsummary
     {
         return $this->summary;
     }
@@ -84,7 +84,7 @@ class CTAlert
      * @param null | \PaymentAssist\Type\CTAlertsummary $summary
      * @return static
      */
-    public function withSummary(?\PaymentAssist\Type\CTAlertsummary $summary) : static
+    public function withSummary(?\PaymentAssist\Type\CTAlertsummary $summary): static
     {
         $new = clone $this;
         $new->summary = $summary;
@@ -95,7 +95,7 @@ class CTAlert
     /**
      * @return int
      */
-    public function getTotal() : int
+    public function getTotal(): int
     {
         return $this->total;
     }
@@ -104,7 +104,7 @@ class CTAlert
      * @param int $total
      * @return static
      */
-    public function withTotal(int $total) : static
+    public function withTotal(int $total): static
     {
         $new = clone $this;
         $new->total = $total;

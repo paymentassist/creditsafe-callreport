@@ -2,9 +2,7 @@
 
 namespace PaymentAssist\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
-
-class CTTestResponse implements ResultInterface
+class CTTestResponse
 {
     /**
      * Response type for Lookup Data Web Method
@@ -16,7 +14,7 @@ class CTTestResponse implements ResultInterface
     /**
      * @return null | \PaymentAssist\Type\CTTestResult
      */
-    public function getTestResult() : ?\PaymentAssist\Type\CTTestResult
+    public function getTestResult(): ?\PaymentAssist\Type\CTTestResult
     {
         return $this->TestResult;
     }
@@ -25,7 +23,7 @@ class CTTestResponse implements ResultInterface
      * @param null | \PaymentAssist\Type\CTTestResult $TestResult
      * @return static
      */
-    public function withTestResult(?\PaymentAssist\Type\CTTestResult $TestResult) : static
+    public function withTestResult(?\PaymentAssist\Type\CTTestResult $TestResult): static
     {
         $new = clone $this;
         $new->TestResult = $TestResult;

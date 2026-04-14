@@ -2,9 +2,7 @@
 
 namespace PaymentAssist\Type;
 
-use Phpro\SoapClient\Type\ResultInterface;
-
-class CTLookupDataResponse implements ResultInterface
+class CTLookupDataResponse
 {
     /**
      * Response type for Lookup Data Web Method
@@ -16,7 +14,7 @@ class CTLookupDataResponse implements ResultInterface
     /**
      * @return null | \PaymentAssist\Type\CTLookupDataResult
      */
-    public function getLookupDataResult() : ?\PaymentAssist\Type\CTLookupDataResult
+    public function getLookupDataResult(): ?\PaymentAssist\Type\CTLookupDataResult
     {
         return $this->LookupDataResult;
     }
@@ -25,7 +23,7 @@ class CTLookupDataResponse implements ResultInterface
      * @param null | \PaymentAssist\Type\CTLookupDataResult $LookupDataResult
      * @return static
      */
-    public function withLookupDataResult(?\PaymentAssist\Type\CTLookupDataResult $LookupDataResult) : static
+    public function withLookupDataResult(?\PaymentAssist\Type\CTLookupDataResult $LookupDataResult): static
     {
         $new = clone $this;
         $new->LookupDataResult = $LookupDataResult;

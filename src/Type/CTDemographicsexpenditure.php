@@ -28,7 +28,7 @@ class CTDemographicsexpenditure
     /**
      * @return null | int
      */
-    public function getTotaldebitcards() : ?int
+    public function getTotaldebitcards(): ?int
     {
         return $this->totaldebitcards;
     }
@@ -37,7 +37,7 @@ class CTDemographicsexpenditure
      * @param null | int $totaldebitcards
      * @return static
      */
-    public function withTotaldebitcards(?int $totaldebitcards) : static
+    public function withTotaldebitcards(?int $totaldebitcards): static
     {
         $new = clone $this;
         $new->totaldebitcards = $totaldebitcards;
@@ -48,7 +48,7 @@ class CTDemographicsexpenditure
     /**
      * @return null | int
      */
-    public function getTotalcreditcards() : ?int
+    public function getTotalcreditcards(): ?int
     {
         return $this->totalcreditcards;
     }
@@ -57,7 +57,7 @@ class CTDemographicsexpenditure
      * @param null | int $totalcreditcards
      * @return static
      */
-    public function withTotalcreditcards(?int $totalcreditcards) : static
+    public function withTotalcreditcards(?int $totalcreditcards): static
     {
         $new = clone $this;
         $new->totalcreditcards = $totalcreditcards;
@@ -68,7 +68,7 @@ class CTDemographicsexpenditure
     /**
      * @return null | int
      */
-    public function getMonthlyunsecuredamount() : ?int
+    public function getMonthlyunsecuredamount(): ?int
     {
         return $this->monthlyunsecuredamount;
     }
@@ -77,7 +77,7 @@ class CTDemographicsexpenditure
      * @param null | int $monthlyunsecuredamount
      * @return static
      */
-    public function withMonthlyunsecuredamount(?int $monthlyunsecuredamount) : static
+    public function withMonthlyunsecuredamount(?int $monthlyunsecuredamount): static
     {
         $new = clone $this;
         $new->monthlyunsecuredamount = $monthlyunsecuredamount;

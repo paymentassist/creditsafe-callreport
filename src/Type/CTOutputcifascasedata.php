@@ -64,19 +64,19 @@ class CTOutputcifascasedata
     private ?\DateTimeInterface $applicationdate = null;
 
     /**
-     * @var \PaymentAssist\Type\Filingreasons
+     * @var \PaymentAssist\Type\CTOutputcifascasedataFilingreasons
      */
-    private \PaymentAssist\Type\Filingreasons $filingreasons;
+    private \PaymentAssist\Type\CTOutputcifascasedataFilingreasons $filingreasons;
 
     /**
-     * @var \PaymentAssist\Type\Subjects
+     * @var \PaymentAssist\Type\CTOutputcifascasedataSubjects
      */
-    private \PaymentAssist\Type\Subjects $subjects;
+    private \PaymentAssist\Type\CTOutputcifascasedataSubjects $subjects;
 
     /**
      * @return int
      */
-    public function getOwningmember() : int
+    public function getOwningmember(): int
     {
         return $this->owningmember;
     }
@@ -85,7 +85,7 @@ class CTOutputcifascasedata
      * @param int $owningmember
      * @return static
      */
-    public function withOwningmember(int $owningmember) : static
+    public function withOwningmember(int $owningmember): static
     {
         $new = clone $this;
         $new->owningmember = $owningmember;
@@ -96,7 +96,7 @@ class CTOutputcifascasedata
     /**
      * @return int
      */
-    public function getManagingmember() : int
+    public function getManagingmember(): int
     {
         return $this->managingmember;
     }
@@ -105,7 +105,7 @@ class CTOutputcifascasedata
      * @param int $managingmember
      * @return static
      */
-    public function withManagingmember(int $managingmember) : static
+    public function withManagingmember(int $managingmember): static
     {
         $new = clone $this;
         $new->managingmember = $managingmember;
@@ -116,7 +116,7 @@ class CTOutputcifascasedata
     /**
      * @return string
      */
-    public function getCasetype() : string
+    public function getCasetype(): string
     {
         return $this->casetype;
     }
@@ -125,7 +125,7 @@ class CTOutputcifascasedata
      * @param string $casetype
      * @return static
      */
-    public function withCasetype(string $casetype) : static
+    public function withCasetype(string $casetype): static
     {
         $new = clone $this;
         $new->casetype = $casetype;
@@ -136,7 +136,7 @@ class CTOutputcifascasedata
     /**
      * @return string
      */
-    public function getProductcode() : string
+    public function getProductcode(): string
     {
         return $this->productcode;
     }
@@ -145,7 +145,7 @@ class CTOutputcifascasedata
      * @param string $productcode
      * @return static
      */
-    public function withProductcode(string $productcode) : static
+    public function withProductcode(string $productcode): static
     {
         $new = clone $this;
         $new->productcode = $productcode;
@@ -156,7 +156,7 @@ class CTOutputcifascasedata
     /**
      * @return string
      */
-    public function getFacility() : string
+    public function getFacility(): string
     {
         return $this->facility;
     }
@@ -165,7 +165,7 @@ class CTOutputcifascasedata
      * @param string $facility
      * @return static
      */
-    public function withFacility(string $facility) : static
+    public function withFacility(string $facility): static
     {
         $new = clone $this;
         $new->facility = $facility;
@@ -176,7 +176,7 @@ class CTOutputcifascasedata
     /**
      * @return \DateTimeInterface
      */
-    public function getSupplydate() : \DateTimeInterface
+    public function getSupplydate(): \DateTimeInterface
     {
         return $this->supplydate;
     }
@@ -185,7 +185,7 @@ class CTOutputcifascasedata
      * @param \DateTimeInterface $supplydate
      * @return static
      */
-    public function withSupplydate(\DateTimeInterface $supplydate) : static
+    public function withSupplydate(\DateTimeInterface $supplydate): static
     {
         $new = clone $this;
         $new->supplydate = $supplydate;
@@ -196,7 +196,7 @@ class CTOutputcifascasedata
     /**
      * @return \DateTimeInterface
      */
-    public function getExpirydate() : \DateTimeInterface
+    public function getExpirydate(): \DateTimeInterface
     {
         return $this->expirydate;
     }
@@ -205,7 +205,7 @@ class CTOutputcifascasedata
      * @param \DateTimeInterface $expirydate
      * @return static
      */
-    public function withExpirydate(\DateTimeInterface $expirydate) : static
+    public function withExpirydate(\DateTimeInterface $expirydate): static
     {
         $new = clone $this;
         $new->expirydate = $expirydate;
@@ -216,7 +216,7 @@ class CTOutputcifascasedata
     /**
      * @return null | \DateTimeInterface
      */
-    public function getApplicationdate() : ?\DateTimeInterface
+    public function getApplicationdate(): ?\DateTimeInterface
     {
         return $this->applicationdate;
     }
@@ -225,7 +225,7 @@ class CTOutputcifascasedata
      * @param null | \DateTimeInterface $applicationdate
      * @return static
      */
-    public function withApplicationdate(?\DateTimeInterface $applicationdate) : static
+    public function withApplicationdate(?\DateTimeInterface $applicationdate): static
     {
         $new = clone $this;
         $new->applicationdate = $applicationdate;
@@ -234,18 +234,18 @@ class CTOutputcifascasedata
     }
 
     /**
-     * @return \PaymentAssist\Type\Filingreasons
+     * @return \PaymentAssist\Type\CTOutputcifascasedataFilingreasons
      */
-    public function getFilingreasons() : \PaymentAssist\Type\Filingreasons
+    public function getFilingreasons(): \PaymentAssist\Type\CTOutputcifascasedataFilingreasons
     {
         return $this->filingreasons;
     }
 
     /**
-     * @param \PaymentAssist\Type\Filingreasons $filingreasons
+     * @param \PaymentAssist\Type\CTOutputcifascasedataFilingreasons $filingreasons
      * @return static
      */
-    public function withFilingreasons(\PaymentAssist\Type\Filingreasons $filingreasons) : static
+    public function withFilingreasons(\PaymentAssist\Type\CTOutputcifascasedataFilingreasons $filingreasons): static
     {
         $new = clone $this;
         $new->filingreasons = $filingreasons;
@@ -254,18 +254,18 @@ class CTOutputcifascasedata
     }
 
     /**
-     * @return \PaymentAssist\Type\Subjects
+     * @return \PaymentAssist\Type\CTOutputcifascasedataSubjects
      */
-    public function getSubjects() : \PaymentAssist\Type\Subjects
+    public function getSubjects(): \PaymentAssist\Type\CTOutputcifascasedataSubjects
     {
         return $this->subjects;
     }
 
     /**
-     * @param \PaymentAssist\Type\Subjects $subjects
+     * @param \PaymentAssist\Type\CTOutputcifascasedataSubjects $subjects
      * @return static
      */
-    public function withSubjects(\PaymentAssist\Type\Subjects $subjects) : static
+    public function withSubjects(\PaymentAssist\Type\CTOutputcifascasedataSubjects $subjects): static
     {
         $new = clone $this;
         $new->subjects = $subjects;

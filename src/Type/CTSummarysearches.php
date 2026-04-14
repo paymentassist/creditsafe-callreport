@@ -28,7 +28,7 @@ class CTSummarysearches
     /**
      * @return int
      */
-    public function getTotalsearches3months() : int
+    public function getTotalsearches3months(): int
     {
         return $this->totalsearches3months;
     }
@@ -37,7 +37,7 @@ class CTSummarysearches
      * @param int $totalsearches3months
      * @return static
      */
-    public function withTotalsearches3months(int $totalsearches3months) : static
+    public function withTotalsearches3months(int $totalsearches3months): static
     {
         $new = clone $this;
         $new->totalsearches3months = $totalsearches3months;
@@ -48,7 +48,7 @@ class CTSummarysearches
     /**
      * @return int
      */
-    public function getTotalsearches12months() : int
+    public function getTotalsearches12months(): int
     {
         return $this->totalsearches12months;
     }
@@ -57,7 +57,7 @@ class CTSummarysearches
      * @param int $totalsearches12months
      * @return static
      */
-    public function withTotalsearches12months(int $totalsearches12months) : static
+    public function withTotalsearches12months(int $totalsearches12months): static
     {
         $new = clone $this;
         $new->totalsearches12months = $totalsearches12months;
@@ -68,7 +68,7 @@ class CTSummarysearches
     /**
      * @return int
      */
-    public function getTotalhomecreditsearches3months() : int
+    public function getTotalhomecreditsearches3months(): int
     {
         return $this->totalhomecreditsearches3months;
     }
@@ -77,7 +77,7 @@ class CTSummarysearches
      * @param int $totalhomecreditsearches3months
      * @return static
      */
-    public function withTotalhomecreditsearches3months(int $totalhomecreditsearches3months) : static
+    public function withTotalhomecreditsearches3months(int $totalhomecreditsearches3months): static
     {
         $new = clone $this;
         $new->totalhomecreditsearches3months = $totalhomecreditsearches3months;

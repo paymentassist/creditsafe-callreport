@@ -86,7 +86,7 @@ class CTOutputjudgment
     /**
      * @return null | string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -95,7 +95,7 @@ class CTOutputjudgment
      * @param null | string $name
      * @return static
      */
-    public function withName(?string $name) : static
+    public function withName(?string $name): static
     {
         $new = clone $this;
         $new->name = $name;
@@ -106,7 +106,7 @@ class CTOutputjudgment
     /**
      * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
+    public function getAddress(): ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
@@ -115,7 +115,7 @@ class CTOutputjudgment
      * @param null | \PaymentAssist\Type\CTOutputaddress $address
      * @return static
      */
-    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address): static
     {
         $new = clone $this;
         $new->address = $address;
@@ -126,7 +126,7 @@ class CTOutputjudgment
     /**
      * @return null | \DateTimeInterface
      */
-    public function getDob() : ?\DateTimeInterface
+    public function getDob(): ?\DateTimeInterface
     {
         return $this->dob;
     }
@@ -135,7 +135,7 @@ class CTOutputjudgment
      * @param null | \DateTimeInterface $dob
      * @return static
      */
-    public function withDob(?\DateTimeInterface $dob) : static
+    public function withDob(?\DateTimeInterface $dob): static
     {
         $new = clone $this;
         $new->dob = $dob;
@@ -146,7 +146,7 @@ class CTOutputjudgment
     /**
      * @return string
      */
-    public function getCourtname() : string
+    public function getCourtname(): string
     {
         return $this->courtname;
     }
@@ -155,7 +155,7 @@ class CTOutputjudgment
      * @param string $courtname
      * @return static
      */
-    public function withCourtname(string $courtname) : static
+    public function withCourtname(string $courtname): static
     {
         $new = clone $this;
         $new->courtname = $courtname;
@@ -166,7 +166,7 @@ class CTOutputjudgment
     /**
      * @return int
      */
-    public function getCourttype() : int
+    public function getCourttype(): int
     {
         return $this->courttype;
     }
@@ -175,7 +175,7 @@ class CTOutputjudgment
      * @param int $courttype
      * @return static
      */
-    public function withCourttype(int $courttype) : static
+    public function withCourttype(int $courttype): static
     {
         $new = clone $this;
         $new->courttype = $courttype;
@@ -186,7 +186,7 @@ class CTOutputjudgment
     /**
      * @return string
      */
-    public function getCasenumber() : string
+    public function getCasenumber(): string
     {
         return $this->casenumber;
     }
@@ -195,7 +195,7 @@ class CTOutputjudgment
      * @param string $casenumber
      * @return static
      */
-    public function withCasenumber(string $casenumber) : static
+    public function withCasenumber(string $casenumber): static
     {
         $new = clone $this;
         $new->casenumber = $casenumber;
@@ -206,7 +206,7 @@ class CTOutputjudgment
     /**
      * @return string
      */
-    public function getStatus() : string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -215,7 +215,7 @@ class CTOutputjudgment
      * @param string $status
      * @return static
      */
-    public function withStatus(string $status) : static
+    public function withStatus(string $status): static
     {
         $new = clone $this;
         $new->status = $status;
@@ -226,7 +226,7 @@ class CTOutputjudgment
     /**
      * @return int
      */
-    public function getAmount() : int
+    public function getAmount(): int
     {
         return $this->amount;
     }
@@ -235,7 +235,7 @@ class CTOutputjudgment
      * @param int $amount
      * @return static
      */
-    public function withAmount(int $amount) : static
+    public function withAmount(int $amount): static
     {
         $new = clone $this;
         $new->amount = $amount;
@@ -246,7 +246,7 @@ class CTOutputjudgment
     /**
      * @return null | \DateTimeInterface
      */
-    public function getJudgmentdate() : ?\DateTimeInterface
+    public function getJudgmentdate(): ?\DateTimeInterface
     {
         return $this->judgmentdate;
     }
@@ -255,7 +255,7 @@ class CTOutputjudgment
      * @param null | \DateTimeInterface $judgmentdate
      * @return static
      */
-    public function withJudgmentdate(?\DateTimeInterface $judgmentdate) : static
+    public function withJudgmentdate(?\DateTimeInterface $judgmentdate): static
     {
         $new = clone $this;
         $new->judgmentdate = $judgmentdate;
@@ -266,7 +266,7 @@ class CTOutputjudgment
     /**
      * @return null | \DateTimeInterface
      */
-    public function getDatesatisfied() : ?\DateTimeInterface
+    public function getDatesatisfied(): ?\DateTimeInterface
     {
         return $this->datesatisfied;
     }
@@ -275,7 +275,7 @@ class CTOutputjudgment
      * @param null | \DateTimeInterface $datesatisfied
      * @return static
      */
-    public function withDatesatisfied(?\DateTimeInterface $datesatisfied) : static
+    public function withDatesatisfied(?\DateTimeInterface $datesatisfied): static
     {
         $new = clone $this;
         $new->datesatisfied = $datesatisfied;
@@ -286,7 +286,7 @@ class CTOutputjudgment
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -295,7 +295,7 @@ class CTOutputjudgment
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;

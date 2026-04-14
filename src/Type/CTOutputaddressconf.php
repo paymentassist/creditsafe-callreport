@@ -35,7 +35,7 @@ class CTOutputaddressconf
     /**
      * @return null | \PaymentAssist\Type\CTOutputaddress
      */
-    public function getAddress() : ?\PaymentAssist\Type\CTOutputaddress
+    public function getAddress(): ?\PaymentAssist\Type\CTOutputaddress
     {
         return $this->address;
     }
@@ -44,7 +44,7 @@ class CTOutputaddressconf
      * @param null | \PaymentAssist\Type\CTOutputaddress $address
      * @return static
      */
-    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address) : static
+    public function withAddress(?\PaymentAssist\Type\CTOutputaddress $address): static
     {
         $new = clone $this;
         $new->address = $address;
@@ -55,7 +55,7 @@ class CTOutputaddressconf
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTAddressconfresident>
      */
-    public function getResident() : array
+    public function getResident(): array
     {
         return $this->resident;
     }
@@ -64,7 +64,7 @@ class CTOutputaddressconf
      * @param array<int<0,max>, \PaymentAssist\Type\CTAddressconfresident> $resident
      * @return static
      */
-    public function withResident(array $resident) : static
+    public function withResident(array $resident): static
     {
         $new = clone $this;
         $new->resident = $resident;
@@ -75,7 +75,7 @@ class CTOutputaddressconf
     /**
      * @return null | int
      */
-    public function getPafvalid() : ?int
+    public function getPafvalid(): ?int
     {
         return $this->pafvalid;
     }
@@ -84,7 +84,7 @@ class CTOutputaddressconf
      * @param null | int $pafvalid
      * @return static
      */
-    public function withPafvalid(?int $pafvalid) : static
+    public function withPafvalid(?int $pafvalid): static
     {
         $new = clone $this;
         $new->pafvalid = $pafvalid;
@@ -95,7 +95,7 @@ class CTOutputaddressconf
     /**
      * @return null | int
      */
-    public function getOtherresidents() : ?int
+    public function getOtherresidents(): ?int
     {
         return $this->otherresidents;
     }
@@ -104,7 +104,7 @@ class CTOutputaddressconf
      * @param null | int $otherresidents
      * @return static
      */
-    public function withOtherresidents(?int $otherresidents) : static
+    public function withOtherresidents(?int $otherresidents): static
     {
         $new = clone $this;
         $new->otherresidents = $otherresidents;

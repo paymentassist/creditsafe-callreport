@@ -29,7 +29,7 @@ class CTSummaryaddress
     /**
      * @return int
      */
-    public function getPafvalid() : int
+    public function getPafvalid(): int
     {
         return $this->pafvalid;
     }
@@ -38,7 +38,7 @@ class CTSummaryaddress
      * @param int $pafvalid
      * @return static
      */
-    public function withPafvalid(int $pafvalid) : static
+    public function withPafvalid(int $pafvalid): static
     {
         $new = clone $this;
         $new->pafvalid = $pafvalid;
@@ -49,7 +49,7 @@ class CTSummaryaddress
     /**
      * @return null | int
      */
-    public function getRollingroll() : ?int
+    public function getRollingroll(): ?int
     {
         return $this->rollingroll;
     }
@@ -58,7 +58,7 @@ class CTSummaryaddress
      * @param null | int $rollingroll
      * @return static
      */
-    public function withRollingroll(?int $rollingroll) : static
+    public function withRollingroll(?int $rollingroll): static
     {
         $new = clone $this;
         $new->rollingroll = $rollingroll;
@@ -69,7 +69,7 @@ class CTSummaryaddress
     /**
      * @return int
      */
-    public function getMessagecode() : int
+    public function getMessagecode(): int
     {
         return $this->messagecode;
     }
@@ -78,7 +78,7 @@ class CTSummaryaddress
      * @param int $messagecode
      * @return static
      */
-    public function withMessagecode(int $messagecode) : static
+    public function withMessagecode(int $messagecode): static
     {
         $new = clone $this;
         $new->messagecode = $messagecode;

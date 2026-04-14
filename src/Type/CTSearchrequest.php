@@ -96,7 +96,7 @@ class CTSearchrequest
     /**
      * @return non-empty-array<int<0,1>, \PaymentAssist\Type\CTSearchapplicant>
      */
-    public function getApplicant() : array
+    public function getApplicant(): array
     {
         return $this->applicant;
     }
@@ -105,7 +105,7 @@ class CTSearchrequest
      * @param non-empty-array<int<0,1>, \PaymentAssist\Type\CTSearchapplicant> $applicant
      * @return static
      */
-    public function withApplicant(array $applicant) : static
+    public function withApplicant(array $applicant): static
     {
         $new = clone $this;
         $new->applicant = $applicant;
@@ -116,7 +116,7 @@ class CTSearchrequest
     /**
      * @return null | int
      */
-    public function getScore() : ?int
+    public function getScore(): ?int
     {
         return $this->score;
     }
@@ -125,7 +125,7 @@ class CTSearchrequest
      * @param null | int $score
      * @return static
      */
-    public function withScore(?int $score) : static
+    public function withScore(?int $score): static
     {
         $new = clone $this;
         $new->score = $score;
@@ -136,7 +136,7 @@ class CTSearchrequest
     /**
      * @return string
      */
-    public function getPurpose() : string
+    public function getPurpose(): string
     {
         return $this->purpose;
     }
@@ -145,7 +145,7 @@ class CTSearchrequest
      * @param string $purpose
      * @return static
      */
-    public function withPurpose(string $purpose) : static
+    public function withPurpose(string $purpose): static
     {
         $new = clone $this;
         $new->purpose = $purpose;
@@ -156,7 +156,7 @@ class CTSearchrequest
     /**
      * @return null | string
      */
-    public function getCredittype() : ?string
+    public function getCredittype(): ?string
     {
         return $this->credittype;
     }
@@ -165,7 +165,7 @@ class CTSearchrequest
      * @param null | string $credittype
      * @return static
      */
-    public function withCredittype(?string $credittype) : static
+    public function withCredittype(?string $credittype): static
     {
         $new = clone $this;
         $new->credittype = $credittype;
@@ -176,7 +176,7 @@ class CTSearchrequest
     /**
      * @return null | int
      */
-    public function getBalorlim() : ?int
+    public function getBalorlim(): ?int
     {
         return $this->balorlim;
     }
@@ -185,7 +185,7 @@ class CTSearchrequest
      * @param null | int $balorlim
      * @return static
      */
-    public function withBalorlim(?int $balorlim) : static
+    public function withBalorlim(?int $balorlim): static
     {
         $new = clone $this;
         $new->balorlim = $balorlim;
@@ -196,7 +196,7 @@ class CTSearchrequest
     /**
      * @return null | mixed
      */
-    public function getTerm() : mixed
+    public function getTerm(): mixed
     {
         return $this->term;
     }
@@ -205,7 +205,7 @@ class CTSearchrequest
      * @param null | mixed $term
      * @return static
      */
-    public function withTerm(mixed $term) : static
+    public function withTerm(mixed $term): static
     {
         $new = clone $this;
         $new->term = $term;
@@ -216,7 +216,7 @@ class CTSearchrequest
     /**
      * @return null | int
      */
-    public function getTransient() : ?int
+    public function getTransient(): ?int
     {
         return $this->transient;
     }
@@ -225,7 +225,7 @@ class CTSearchrequest
      * @param null | int $transient
      * @return static
      */
-    public function withTransient(?int $transient) : static
+    public function withTransient(?int $transient): static
     {
         $new = clone $this;
         $new->transient = $transient;
@@ -236,7 +236,7 @@ class CTSearchrequest
     /**
      * @return null | int
      */
-    public function getAutosearch() : ?int
+    public function getAutosearch(): ?int
     {
         return $this->autosearch;
     }
@@ -245,7 +245,7 @@ class CTSearchrequest
      * @param null | int $autosearch
      * @return static
      */
-    public function withAutosearch(?int $autosearch) : static
+    public function withAutosearch(?int $autosearch): static
     {
         $new = clone $this;
         $new->autosearch = $autosearch;
@@ -256,7 +256,7 @@ class CTSearchrequest
     /**
      * @return null | int
      */
-    public function getAutosearchmaximum() : ?int
+    public function getAutosearchmaximum(): ?int
     {
         return $this->autosearchmaximum;
     }
@@ -265,7 +265,7 @@ class CTSearchrequest
      * @param null | int $autosearchmaximum
      * @return static
      */
-    public function withAutosearchmaximum(?int $autosearchmaximum) : static
+    public function withAutosearchmaximum(?int $autosearchmaximum): static
     {
         $new = clone $this;
         $new->autosearchmaximum = $autosearchmaximum;
@@ -276,7 +276,7 @@ class CTSearchrequest
     /**
      * @return string
      */
-    public function getSchemaversion() : string
+    public function getSchemaversion(): string
     {
         return $this->schemaversion;
     }
@@ -285,7 +285,7 @@ class CTSearchrequest
      * @param string $schemaversion
      * @return static
      */
-    public function withSchemaversion(string $schemaversion) : static
+    public function withSchemaversion(string $schemaversion): static
     {
         $new = clone $this;
         $new->schemaversion = $schemaversion;
@@ -296,7 +296,7 @@ class CTSearchrequest
     /**
      * @return int
      */
-    public function getDatasets() : int
+    public function getDatasets(): int
     {
         return $this->datasets;
     }
@@ -305,7 +305,7 @@ class CTSearchrequest
      * @param int $datasets
      * @return static
      */
-    public function withDatasets(int $datasets) : static
+    public function withDatasets(int $datasets): static
     {
         $new = clone $this;
         $new->datasets = $datasets;

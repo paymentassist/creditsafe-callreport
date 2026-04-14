@@ -12,7 +12,7 @@ class CTTestResult
     /**
      * @return \DateTimeInterface
      */
-    public function getDatetime() : \DateTimeInterface
+    public function getDatetime(): \DateTimeInterface
     {
         return $this->datetime;
     }
@@ -21,7 +21,7 @@ class CTTestResult
      * @param \DateTimeInterface $datetime
      * @return static
      */
-    public function withDatetime(\DateTimeInterface $datetime) : static
+    public function withDatetime(\DateTimeInterface $datetime): static
     {
         $new = clone $this;
         $new->datetime = $datetime;

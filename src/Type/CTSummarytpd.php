@@ -31,7 +31,7 @@ class CTSummarytpd
     /**
      * @return int
      */
-    public function getAlertdecision() : int
+    public function getAlertdecision(): int
     {
         return $this->alertdecision;
     }
@@ -40,7 +40,7 @@ class CTSummarytpd
      * @param int $alertdecision
      * @return static
      */
-    public function withAlertdecision(int $alertdecision) : static
+    public function withAlertdecision(int $alertdecision): static
     {
         $new = clone $this;
         $new->alertdecision = $alertdecision;
@@ -51,7 +51,7 @@ class CTSummarytpd
     /**
      * @return int
      */
-    public function getAlertreview() : int
+    public function getAlertreview(): int
     {
         return $this->alertreview;
     }
@@ -60,7 +60,7 @@ class CTSummarytpd
      * @param int $alertreview
      * @return static
      */
-    public function withAlertreview(int $alertreview) : static
+    public function withAlertreview(int $alertreview): static
     {
         $new = clone $this;
         $new->alertreview = $alertreview;
@@ -71,7 +71,7 @@ class CTSummarytpd
     /**
      * @return int
      */
-    public function getHho() : int
+    public function getHho(): int
     {
         return $this->hho;
     }
@@ -80,7 +80,7 @@ class CTSummarytpd
      * @param int $hho
      * @return static
      */
-    public function withHho(int $hho) : static
+    public function withHho(int $hho): static
     {
         $new = clone $this;
         $new->hho = $hho;

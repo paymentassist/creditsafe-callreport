@@ -51,7 +51,7 @@ class CTOutputaddresslink
     /**
      * @return \DateTimeInterface
      */
-    public function getCreationdate() : \DateTimeInterface
+    public function getCreationdate(): \DateTimeInterface
     {
         return $this->creationdate;
     }
@@ -60,7 +60,7 @@ class CTOutputaddresslink
      * @param \DateTimeInterface $creationdate
      * @return static
      */
-    public function withCreationdate(\DateTimeInterface $creationdate) : static
+    public function withCreationdate(\DateTimeInterface $creationdate): static
     {
         $new = clone $this;
         $new->creationdate = $creationdate;
@@ -71,7 +71,7 @@ class CTOutputaddresslink
     /**
      * @return \DateTimeInterface
      */
-    public function getLastconfdate() : \DateTimeInterface
+    public function getLastconfdate(): \DateTimeInterface
     {
         return $this->lastconfdate;
     }
@@ -80,7 +80,7 @@ class CTOutputaddresslink
      * @param \DateTimeInterface $lastconfdate
      * @return static
      */
-    public function withLastconfdate(\DateTimeInterface $lastconfdate) : static
+    public function withLastconfdate(\DateTimeInterface $lastconfdate): static
     {
         $new = clone $this;
         $new->lastconfdate = $lastconfdate;
@@ -91,7 +91,7 @@ class CTOutputaddresslink
     /**
      * @return \PaymentAssist\Type\CTSupplierdetails
      */
-    public function getSupplierdetails() : \PaymentAssist\Type\CTSupplierdetails
+    public function getSupplierdetails(): \PaymentAssist\Type\CTSupplierdetails
     {
         return $this->supplierdetails;
     }
@@ -100,7 +100,7 @@ class CTOutputaddresslink
      * @param \PaymentAssist\Type\CTSupplierdetails $supplierdetails
      * @return static
      */
-    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails) : static
+    public function withSupplierdetails(\PaymentAssist\Type\CTSupplierdetails $supplierdetails): static
     {
         $new = clone $this;
         $new->supplierdetails = $supplierdetails;
@@ -111,7 +111,7 @@ class CTOutputaddresslink
     /**
      * @return array<int<0,max>, \PaymentAssist\Type\CTOutputnotice>
      */
-    public function getNotice() : array
+    public function getNotice(): array
     {
         return $this->notice;
     }
@@ -120,7 +120,7 @@ class CTOutputaddresslink
      * @param array<int<0,max>, \PaymentAssist\Type\CTOutputnotice> $notice
      * @return static
      */
-    public function withNotice(array $notice) : static
+    public function withNotice(array $notice): static
     {
         $new = clone $this;
         $new->notice = $notice;
@@ -131,7 +131,7 @@ class CTOutputaddresslink
     /**
      * @return int
      */
-    public function getFrom() : int
+    public function getFrom(): int
     {
         return $this->from;
     }
@@ -140,7 +140,7 @@ class CTOutputaddresslink
      * @param int $from
      * @return static
      */
-    public function withFrom(int $from) : static
+    public function withFrom(int $from): static
     {
         $new = clone $this;
         $new->from = $from;
@@ -151,7 +151,7 @@ class CTOutputaddresslink
     /**
      * @return int
      */
-    public function getTo() : int
+    public function getTo(): int
     {
         return $this->to;
     }
@@ -160,7 +160,7 @@ class CTOutputaddresslink
      * @param int $to
      * @return static
      */
-    public function withTo(int $to) : static
+    public function withTo(int $to): static
     {
         $new = clone $this;
         $new->to = $to;
